@@ -62,9 +62,11 @@ body{padding-top:0!important}
 
 /* 2단 레이아웃 */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
-@media (max-width:900px){.layout{grid-template-columns:1fr;gap:32px}}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
 body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
-@media (max-width:900px){body.item-view .layout{grid-template-columns:1fr}}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
 
 /* 목록: 날짜 라벨 + 카드 */
 h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
