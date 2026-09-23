@@ -1,0 +1,338 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>미국 고용 16.2만명, 예상 밖 금리 인상까지</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">미국 고용 16.2만명, 예상 밖 금리 인상까지</h3><div class="post-body"><p class="deck">미국 8월 고용이 예상보다 훨씬 강하게 나오자 연준은 9월 16일 3년 만에 금리를 올렸어요. 고용보고서에서 뭘 봐야 하는지 정리했어요.</p><figure class="cover"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@b6548a8f3bbf792ab2aed1ac8ea43dc1d6616fd3/illus/2026-09-23-us-jobs-report-fed-rate-hike-2026-62ea399b.jpg" alt="고용지표 하나가 금리로 이어지는 길" loading="lazy"/><figcaption>고용지표 하나가 금리로 이어지는 길 · 일러스트(AI 생성)</figcaption></figure><div class="kv">
+<div><b>16.2만명</b><span>8월 미국 비농업 고용 증가</span><i>예상(5.5만명)의 3배</i></div>
+<div><b>4.1%</b><span>8월 실업률</span><i>전월과 동일</i></div>
+<div><b>+5.5만명</b><span>6·7월 수정치 합계</span><i>둘 다 상향 조정</i></div>
+<div><b>3.75~4.00%</b><span>9월 16일 새 기준금리</span><i>2023년 이후 첫 인상</i></div>
+</div>
+
+<div class="tldr"><b>요약</b><ul>
+<li><b>예상의 3배</b>: 8월 미국 비농업 고용은 16.2만명 늘어 시장 예상 5.5만명을 크게 웃돌았어요.</li>
+<li><b>그래서 증시는 떨어졌어요</b>: 좋은 고용 지표가 금리 인상 우려를 키워 다우·S&P500·나스닥이 모두 내렸어요.</li>
+<li><b>12일 뒤 실제로 올랐어요</b>: 연준은 9월 16일 기준금리를 3.75~4.00%로 올렸어요. <u>다음 고용보고서(10월 2일)</u>부터 확인해 보세요.</li>
+</ul></div><!--more-->
+
+<p>16만2000명. 이 숫자 하나가 발표 당일 미국 증시를 흔들었어요. 12일 뒤엔 실제로 금리 인상으로도 이어졌어요.</p>
+<p>고용 지표가 왜 이렇게 큰 힘을 갖는지 처음 보면 잘 안 와닿으실 거예요. 8월 미국 고용보고서 하나를 따라가 보면 그 흐름이 보여요.</p>
+<h2>📋 고용보고서에서 봐야 할 다섯 숫자</h2>
+<p><strong>8월 고용보고서에서 시장을 움직인 숫자는 다섯 개예요.</strong> 미국 노동통계국(BLS)이 매달 첫째 주 금요일에 내놓는 이 보고서 하나로 그날 증시와 채권 금리가 크게 흔들려요.</p>
+<details class="term"><summary>비농업 고용지수(Nonfarm Payrolls)가 뭐예요?</summary><p>농업을 뺀 미국 전체 사업장의 급여 명부를 조사해서 한 달 사이 일자리가 몇 개 늘었는지 센 숫자예요. 미국 노동통계국이 매달 발표하고, 미국 경제의 온도를 가장 빨리 보여 주는 지표로 꼽혀요.</p></details>
+
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th style="text-align: right;">8월 수치</th>
+<th>무슨 뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>비농업 고용 증감</td>
+<td style="text-align: right;">+16.2만명</td>
+<td>시장 예상(5.5만명)의 3배</td>
+</tr>
+<tr>
+<td>실업률</td>
+<td style="text-align: right;">4.1%</td>
+<td>전월과 동일</td>
+</tr>
+<tr>
+<td>경제활동참가율</td>
+<td style="text-align: right;">61.6%</td>
+<td>소폭 상승</td>
+</tr>
+<tr>
+<td>시간당 평균임금(전년비)</td>
+<td style="text-align: right;">+3.1%</td>
+<td>여전히 3%대</td>
+</tr>
+<tr>
+<td>전월 수정치 합계</td>
+<td style="text-align: right;">+5.5만명</td>
+<td>6·7월이 상향 조정됨</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 美 노동통계국(BLS), 2026년 8월 고용상황 보고서(2026.9.4 발표).</p>
+
+<p>표만 보면 다섯 숫자가 다 따로 노는 것처럼 보이지만 실제로는 첫 번째 숫자가 나머지를 끌고 가요. <strong>비농업 고용 16.2만명이 예상치를 크게 웃돈 게 그날 반응의 출발점이었어요</strong>. 여기에 6월(+1.1만명)과 7월(+4.4만명) 수정치까지 위로 잡히면서 시장은 "고용시장이 식고 있다"던 그동안의 그림을 다시 그려야 했어요.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="월별 비농업 고용 증감 (수정치 반영, 명)" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">월별 비농업 고용 증감 (수정치 반영, 명)</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">0명</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">49,312.5명</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">98,625명</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">147,937.5명</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">197,250명</text><text x="56.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2026.06</text><text x="338.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2026.07</text><text x="620.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2026.08</text><polyline points="56.0,249.7 338.0,262.0 620.0,87.6" fill="none" stroke="var(--accent,#1F5AF6)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="249.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="56.0" y="239.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">31,000명</text><circle cx="338.0" cy="262.0" r="4" fill="var(--accent,#1F5AF6)"/><text x="338.0" y="252.0" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">21,000명</text><circle cx="620.0" cy="87.6" r="4" fill="var(--accent,#1F5AF6)"/><text x="620.0" y="77.6" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">162,000명</text><rect x="56" y="326" width="10" height="10" rx="2" fill="var(--accent,#1F5AF6)"/><text x="70" y="335" font-size="11" fill="var(--muted,#8A94A0)">비농업 고용 증감</text><polyline points="56.0,249.7 338.0,249.7 620.0,249.7" fill="none" stroke="#E0873A" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="249.7" r="4" fill="#E0873A"/><text x="56.0" y="239.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">31,000명</text><circle cx="338.0" cy="249.7" r="4" fill="#E0873A"/><text x="338.0" y="239.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">31,000명</text><circle cx="620.0" cy="249.7" r="4" fill="#E0873A"/><text x="620.0" y="239.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">31,000명</text><rect x="186" y="326" width="10" height="10" rx="2" fill="#E0873A"/><text x="200" y="335" font-size="11" fill="var(--muted,#8A94A0)">최근 12개월 평균</text></svg><figcaption>자료: <a href="https://www.bls.gov/news.release/empsit.nr0.htm" rel="nofollow">美 노동통계국(BLS), 2026년 8월 고용상황 보고서</a></figcaption></figure>
+
+<h2>📉 왜 좋은 지표에 증시는 떨어졌을까?</h2>
+<p><strong>고용이 좋을수록 오히려 증시엔 나쁜 신호가 될 수 있어요.</strong> 발표 다음 거래일인 9월 3일, 다우존스는 300.92포인트(0.58%) 내렸고 나스닥은 1.08% 빠졌어요.</p>
+<p>노동시장은 자동차 엔진과 비슷해요. 너무 빨리 돌면, 즉 고용이 예상보다 뜨거우면 연준은 브레이크, 즉 금리 인상을 밟을 준비를 해요. 임금이 오르고 물가가 다시 들썩일 위험이 커지기 때문이에요.</p>
+<p>실제로 이날 미국 국채 10년물 금리는 4.77%까지 올랐어요. 트레이더들이 반영한 9월 금리 인상 확률도 전날 50%대에서 58~60%로 뛰었어요. 연준 의장 케빈 워시가 잭슨홀 연설에서 인플레이션 우려를 강하게 짚은 직후라 이 숫자 하나가 더 크게 읽힌 거예요.</p>
+<p>이 흐름은 남 얘기가 아니에요. 한미 금리차가 벌어질수록 원/달러 환율은 오르는 쪽으로 힘을 받아요. 실제로 9월 20일 환율은 1,389원까지 올라와 있었어요.</p>
+<h2>🏦 실제로 9월 16일 금리가 올랐어요</h2>
+<p><strong>연준은 9월 16일 기준금리를 3.75~4.00%로 0.25%p 올렸어요.</strong> 위원 12명 전원 찬성이었어요. 2023년 이후 첫 인상이기도 했어요.</p>
+<details class="term"><summary>FOMC가 뭐예요?</summary><p>미국의 기준금리를 정하는 연방준비제도 산하 위원회예요. 1년에 여덟 번 만나 고용·물가 지표를 보고 금리를 올릴지 내릴지 정해요.</p></details>
+
+<p>워시 의장은 "인플레이션은 명백히 너무 높고 그 상태가 너무 오래갔다"고 밝히며 세계 곳곳의 지정학적 불안도 함께 짚었어요. KB증권 리포트를 보면 위원 18명 중 16명은 올해 안에 추가 인상 가능성을 열어 뒀어요. 점도표 중간값도 2026년 4.1%로 나왔어요.</p>
+<details class="term"><summary>점도표(Dot Plot)가 뭐예요?</summary><p>FOMC 위원 각자가 생각하는 향후 기준금리 수준을 점 하나씩 찍어 표시한 그래프예요. 위원들의 생각이 얼마나 모이거나 갈리는지를 한눈에 보여 줘요.</p></details>
+
+<p>한국 입장에서는 한미 금리차가 더 벌어졌다는 게 핵심이에요. <em>원화 약세 압력이 커지면 수입 원자재 단가가 오르고</em>, 삼성전자처럼 반도체 장비 대금을 달러로 치르는 기업은 증설 비용 부담이 커지는 구조예요.</p>
+<div class="me"><b>제 경우</b>
+저는 미국·한국 주식과 채권형 상품에 나눠 투자하고 있어요. 이번처럼 미국 금리가 오르면 제가 들고 있는 채권형 상품 쪽엔 부담이 되는 방향이에요. 최근 국내 주식에서도 손실을 본 입장이라, 이번 인상이 국내 증시에 또 다른 부담으로 번지는지부터 지켜보고 있어요. 제 입장이라면 지금 포지션을 서둘러 바꾸기보다는 10월 FOMC까지 채권 비중을 그대로 가져가겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 워시 의장은 매파적이었지만 다른 위원들의 생각까지 다 같은 건 아니에요. 9월 고용보고서(10월 2일)가 예상보다 약하게 나오면 추가 인상 없이 여기서 멈출 여지도 남아 있어요.</li>
+<li><b>구조</b> 미국 노동부가 고용자 수를 발표하면 연준은 그 숫자로 경기 과열 여부를 가늠해요. 노동시장이 예상보다 뜨거우면 임금이 오르고, 임금이 오르면 물가에 다시 반영될 위험이 커지니 연준은 금리를 올려 수요를 눌러요.</li>
+<li><b>다음에 볼 것</b> 9월 고용보고서는 <b>10월 2일</b>, 다음 FOMC 회의는 <b>10월 27~28일</b>에 있어요. 두 일정 모두 이번 인상이 한 번으로 끝날지를 가를 숫자예요.</li>
+</ul></div>
+
+<div class="check"><b>지금 확인할 것</b><ul>
+<li><b>10월 2일 캘린더에 표시하기</b>: 다음 FOMC 전 마지막 큰 고용 지표라 파장이 커요.</li>
+<li><b>환전 앱에서 원/달러 환율 확인하기</b>: 금리차가 벌어지는 국면이라 환율 변동폭이 커질 수 있어요.</li>
+<li><b>보유 중인 예금·채권형 상품 금리 안내 확인하기</b>: 미국 금리 인상이 시차를 두고 국내 상품에도 영향을 줄 수 있어요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>고용지표가 좋으면 무조건 증시에 좋은 거 아닌가요?</dt>
+<dd>아니에요. 고용이 예상보다 너무 뜨거우면 금리 인상 우려가 커져서 오히려 증시가 떨어질 수 있어요. 실제로 8월 고용 발표 다음 거래일에 다우·S&P500·나스닥이 모두 내렸어요.</dd>
+<dt>미국이 금리를 올리면 제 대출 이자도 바로 오르나요?</dt>
+<dd>바로 오르진 않아요. 미국 기준금리는 한국 대출 금리에 곧바로 연동되지 않고 한국은행의 별도 결정을 거쳐요. 다만 한미 금리차가 벌어지면 원화 약세 압력이 먼저 커지고, 이게 수입 물가나 환전 비용에 먼저 나타나요.</dd>
+</dl></div>
+
+<p>저라면 이번 인상 하나로 앞으로도 계속 오를 거라 단정하지 않고 <strong>10월 2일 9월 고용보고서부터 확인하겠어요.</strong></p>
+<p class="notice">여기 적는 건 투자 권유가 아니에요. 숫자는 발표 원문에서 다시 확인해 보세요.</p>
+<h2>참고</h2>
+<ul>
+<li>[공식] 美 노동통계국(BLS), 2026년 8월 고용상황 보고서(2026.9.4): https://www.bls.gov/news.release/empsit.nr0.htm</li>
+<li>[공식] 美 노동통계국(BLS), 고용상황 보고서 발표 일정(10월): https://www.bls.gov/schedule/2026/10_sched_list.htm</li>
+<li>[공식] Federal Reserve, FOMC 회의 일정: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm</li>
+<li>[언론] 파이낸셜뉴스, 美 8월 비농업 신규 고용 16만2천명(2026.9.4): https://www.fnnews.com/news/202609042138232840</li>
+<li>[언론] Yahoo Finance, Stock market today(2026.9.3): https://finance.yahoo.com/markets/live/stock-market-today-friday-september-3-dow-sp-500-nasdaq-august-jobs-report-081005475.html</li>
+<li>[언론] Fox Business, Federal Reserve interest rate decision(2026.9.16): https://www.foxbusiness.com/economy/federal-reserve-interest-rate-decision-september-16-2026</li>
+<li>[언론] 글로벌이코노믹, 워시 연준과 한국 반도체 증설 비용(2026.9.20): https://www.g-enews.com/article/Global-Biz/2026/09/202609200806291068fbbec65dfb_1</li>
+<li>[기타] KB증권, 2026년 9월 FOMC Comments: https://kbthink.com/investment/deepdive/tip/260917.html</li>
+</ul><!--post:2026-09-23-us-jobs-report-fed-rate-hike-2026--></div>
+</div></div></main></div></div></body></html>
