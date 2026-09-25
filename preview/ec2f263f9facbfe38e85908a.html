@@ -1,0 +1,424 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>How to Make Bulgogi at Home: A Recipe in Exact Grams</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">How to Make Bulgogi at Home: A Recipe in Exact Grams</h3><div class="post-body"><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/76/Bulgogi_3.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="" width="1200" height="675" loading="lazy"/><p class="deck">A bulgogi recipe in exact grams from Korea's official recipe site, the beef cut that actually works abroad, and the mistake that turns it chewy.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>One official recipe, four servings</b>: hansik.or.kr, run by Korea's own Food Promotion Institute, marinates 500g of sirloin with a bowl of vegetables and one fixed marinade.</li>
+<li><b>Twenty minutes decides it</b>: that's the official marinating time, and thin-sliced beef doesn't need much longer.</li>
+<li><b>Check first</b>: <u>slice the beef paper-thin or buy it pre-sliced</u>, since a thick cut is the one mistake the marinade can't fix.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Bulgogi_3.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Bulgogi glazed and sizzling on a hot plate, finished with sesame seeds" width="1200" height="1200" loading="lazy"/><figcaption>Bulgogi glazed and sizzling on a hot plate, finished with sesame seeds · Photo: <a href="https://commons.wikimedia.org/wiki/File:Bulgogi_3.jpg" rel="nofollow">Debbie Tingzon</a> / Wikimedia Commons (CC BY 2.0)</figcaption></figure><div class="kv">
+<div><b>4</b><span>🍖 servings</span><i>hansik.or.kr's official recipe</i></div>
+<div><b>500g</b><span>🥩 beef sirloin</span><i>thinly sliced, the one non-negotiable</i></div>
+<div><b>20 min</b><span>⏰ marinate</span><i>the official time; thin-sliced beef needs little more</i></div>
+<div><b>$35.99</b><span>💵 pre-sliced bulgogi beef</span><i>H Mart, 2lb (907g)</i></div>
+</div>
+
+
+
+<p>Six ingredients in one bowl, twenty minutes of marinating, a few minutes in a hot pan: that's most of what separates bulgogi that tastes like a Seoul restaurant from beef that tastes like boiled meat with soy sauce poured over it. The kitchen starts to smell like it before the pan even goes on. Garlic and scallion work into sugar and soy until the whole bowl turns dark and a little sticky.</p>
+<p>Once the beef hits the heat, that sugar catches at the edges before the center's even cooked through, and that's the smell that pulls people out of the next room. It's a dish most people outside Korea already know by name, and one of the easier ones to actually get right at home.</p>
+<p>Get the cut and the marinating time right, and the pan does almost all the rest.</p>
+<details class="term"><summary>What is bulgogi (불고기)?</summary><p><i>Bul</i> means fire, <i>gogi</i> means meat, and the Korean dictionary defines it plainly as thin-sliced beef, marinated, then grilled over an open flame. Most home versions today trade the open flame for a hot pan, and the marinade is the part that actually carries the dish.</p></details>
+
+<h2>🥩 The recipe: bulgogi for four</h2>
+<p><strong>Four servings, 500 grams of beef, and one bowl for the marinade.</strong> That's <a href="https://www.hansik.or.kr/board/re/view/323?bbsSeq=56912&amp;bbsId=323&amp;curPage=7&amp;bbsType=re&amp;menuSn=193">hansik.or.kr</a>'s official version of bulgogi, published by Korea's own Food Promotion Institute.</p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th style="text-align: right;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beef sirloin, thinly sliced</td>
+<td style="text-align: right;">500g</td>
+</tr>
+<tr>
+<td>Onion</td>
+<td style="text-align: right;">1 (200g)</td>
+</tr>
+<tr>
+<td>Shiitake or oyster mushroom</td>
+<td style="text-align: right;">3 (90g)</td>
+</tr>
+<tr>
+<td>Green onion</td>
+<td style="text-align: right;">6 stalks (60g)</td>
+</tr>
+<tr>
+<td>Cooking oil</td>
+<td style="text-align: right;">1 tbsp</td>
+</tr>
+<tr>
+<td>Soy sauce</td>
+<td style="text-align: right;">5 tbsp</td>
+</tr>
+<tr>
+<td>Sugar</td>
+<td style="text-align: right;">3 tbsp</td>
+</tr>
+<tr>
+<td>Green onion, minced</td>
+<td style="text-align: right;">2 tbsp</td>
+</tr>
+<tr>
+<td>Garlic, minced</td>
+<td style="text-align: right;">1 tbsp</td>
+</tr>
+<tr>
+<td>Sesame oil</td>
+<td style="text-align: right;">1 tbsp</td>
+</tr>
+<tr>
+<td>Black pepper</td>
+<td style="text-align: right;">1/2 tsp</td>
+</tr>
+<tr>
+<td>Sesame seeds</td>
+<td style="text-align: right;">1 tbsp</td>
+</tr>
+<tr>
+<td>Asian pear, grated (optional)</td>
+<td style="text-align: right;">1/4 (150g), or 5 tbsp pear juice</td>
+</tr>
+<tr>
+<td>Cooking wine (optional)</td>
+<td style="text-align: right;">2 tbsp</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Everything above except the pear and cooking wine is fixed, not a range to eyeball from.</strong> hansik.or.kr marks only those two as optional; the rest of the marinade is the whole recipe.</p>
+<ol>
+<li>
+<p>Slice the beef thin, about 2mm, trim any excess fat, and pat it dry. Cut the onion into strips, slice the mushrooms thin, and cut the green onion into roughly 4cm pieces.</p>
+</li>
+<li>
+<p>Grate the pear, or measure out the pear juice, and mix it with the soy sauce, sugar, minced garlic, minced green onion, sesame oil, black pepper and sesame seeds into one marinade.</p>
+</li>
+<li>
+<p>Coat the sliced beef in the marinade and let it sit for 20 minutes.</p>
+</li>
+<li>
+<p>Add the onion and mushroom to the marinated beef, drop in the scallion pieces too, and toss it all together.</p>
+</li>
+<li>
+<p>Heat the oil in a pan and stir-fry on high heat until the beef is just cooked through, or grill it directly over an open flame, the original method the recipe also lists.</p>
+</li>
+</ol>
+<details class="term"><summary>What is neobiani (너비아니)?</summary><p>Bulgogi's older, more formal name, served at the Joseon-dynasty royal court and cut into broader, flatter slices than most home versions today. The dish traces back further still, to skewered beef called <i>maekjeok</i> in the Goguryeo era, and the everyday name and marinade spread nationwide only after Korean War refugees carried the Pyongan-style version south.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Korean.cuisine-Bulgogi-01.jpg/1280px-Korean.cuisine-Bulgogi-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Raw beef marinating with mushrooms and scallions, arranged and ready for the pan" width="1200" height="900" loading="lazy"/><figcaption>Raw beef marinating with mushrooms and scallions, arranged and ready for the pan · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korean.cuisine-Bulgogi-01.jpg" rel="nofollow">by ayustety</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure>
+
+<h2>🔥 Where bulgogi usually goes wrong</h2>
+<p><strong>The marinade rarely fails. The slicing does.</strong> Beef cut too thick stays chewy no matter how long it sits in soy sauce, and a home kitchen without a meat slicer struggles to match a butcher's blade.</p>
+<p>The fix costs nothing: partially freeze the beef for about an hour, until it's firm but not solid, then cut it across the grain into slices about 1/8 inch (3mm) thick. Skip that step and even a good marinade can't save a piece of meat closer to a steak than a stir-fry.</p>
+<p><em>The second failure point is the pan, not the marinade either.</em> Crowd the beef in, or leave it over the heat too long, and it steams instead of searing, drying out in the process. Cook it in batches if the pan looks full, and pull it the moment the pink disappears.</p>
+<figure class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Bulgogi_1.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Bulgogi stir-frying in a metal pan with onion and glass noodles, steam rising" width="1200" height="1200" loading="lazy"/><figcaption>Bulgogi stir-frying in a metal pan with onion and glass noodles, steam rising · Photo: <a href="https://commons.wikimedia.org/wiki/File:Bulgogi_1.jpg" rel="nofollow">Debbie Tingzon</a> / Wikimedia Commons (CC BY 2.0)</figcaption></figure>
+
+<h2>🛒 Buying the ingredients outside Korea</h2>
+<p><strong>Rib eye isn't in the official recipe, but it's the cut most home cooks outside Korea reach for anyway.</strong> Its marbling keeps thin slices from drying out; chuck eye and sirloin work well too, and tenderloin is the gentlest choice for anyone who wants a softer bite.</p>
+<p>H Mart sells a pre-sliced, pre-marinated version, 2lb (907g) of thin ribeye roll bulgogi for $35.99, if slicing at home isn't worth the effort; that package covers this recipe with roughly 400g left over to freeze.</p>
+<table>
+<thead>
+<tr>
+<th>Cut</th>
+<th>Works for bulgogi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rib eye</td>
+<td>Most cooks' first choice outside Korea; well marbled</td>
+</tr>
+<tr>
+<td>Chuck eye</td>
+<td>Good substitute, usually cheaper</td>
+</tr>
+<tr>
+<td>Sirloin</td>
+<td>hansik.or.kr's own choice</td>
+</tr>
+<tr>
+<td>Tenderloin</td>
+<td>Gentlest bite, good for older or younger eaters</td>
+</tr>
+</tbody>
+</table>
+<details class="term"><summary>What does the Asian pear actually do?</summary><p>Grate it into the marinade and the beef comes out closer to a restaurant's than a plain soy-sauce soak, and the reason is chemical: pear carries enzymes that break down the same proteins that make meat tough, the way a store-bought tenderizer does. A Bosc pear or a sweet apple stands in almost as well if Asian pear isn't sold nearby; kiwi and pineapple work faster, but use more than a spoon of either and the beef turns mushy instead of tender.</p></details>
+
+<p>A single Asian pear runs $3.29 at H Mart, and a quarter of one is all this recipe needs.</p>
+<div class="me"><b>My take</b>
+I eat out around Gangnam and Samseong more than I cook, and when I want bulgogi, it usually comes from a restaurant's hot plate, not my own stove. <em>If I were making hansik.or.kr's version for the first time</em>, the step I'd actually take seriously is the slicing, since a butcher's paper-thin cut is the one thing a home kitchen struggles to match, and the marinade forgives almost everything else once that's right. For a first Korean recipe to cook at home, this is the one I'd point a friend toward before anything spicier.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Grill the beef instead of pan-frying it. hansik.or.kr's own recipe lists an open flame as the original method, not just a pan, closer to what the dish's name, "fire meat," actually describes.</li>
+<li><b>What locals argue about</b> Dry versus wet bulgogi. Most home and restaurant versions are pan-grilled with little liquid left by the time they're done, but a hot-pot style called ttukbaegi bulgogi simmers the same marinated beef in extra broth at the table, and cooks argue over which one counts as the real version.</li>
+<li><b>Watch for</b> Over-tenderizing. Kiwi and pineapple break down protein faster than pear does, and a heavy hand with either turns the beef mushy instead of tender.</li>
+</ul></div>
+
+<div class="check"><b>Check before you go</b><ul>
+<li><b>Slice the beef paper-thin, or buy it pre-sliced</b>: a thick cut stays chewy no matter how long it marinates.</li>
+<li><b>Go easy on kiwi or pineapple if you use them instead of pear</b>: too much turns the beef mushy, not tender.</li>
+<li><b>Cook it in batches if the pan looks crowded</b>: an overloaded pan steams the meat instead of searing it.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Do I need Asian pear to make bulgogi?</dt>
+<dd>No. A Bosc pear or a sweet apple works almost as well, and hansik.or.kr's own recipe already lists the pear as optional. Go light if you swap in kiwi or pineapple instead, since both tenderize faster than pear does.</dd>
+<dt>Can I use a thick steak instead of thin-sliced beef?</dt>
+<dd>Not really. Partially freeze whatever cut you have for about an hour, then slice it yourself across the grain to about 1/8 inch, since thickness is the one mistake the marinade can't fix afterward.</dd>
+</dl></div>
+
+<p>This recipe survives almost any substitution except a thick cut of beef and an overcrowded pan. <strong>Slice it thin, marinate it for the twenty minutes hansik.or.kr actually calls for, and the rest mostly cooks itself.</strong> Cut the vegetables before the beef goes anywhere near the marinade, because once it's ready, bulgogi doesn't wait long either.</p>
+<p class="notice">Prices and hours were checked on 2026-09-25; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/how-to-make-kimchi-jjigae-real-recipe.html">How to Make Kimchi Jjigae: A Real Recipe in Grams</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/where-to-eat-in-jeonju-hanok-village-3.html">Where to Eat in Jeonju Hanok Village: 3 Real Picks</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://www.hansik.or.kr/board/re/view/323?bbsSeq=56912&amp;bbsId=323&amp;curPage=7&amp;bbsType=re&amp;menuSn=193">Korean Food Promotion Institute (한식진흥원), hansik.or.kr, "불고기" (bulgogi) recipe, reference recipe adapted for this post</a></li>
+<li>[other] <a href="https://www.koreanbapsang.com/bulgogi-korean-bbq-beef/">Korean Bapsang, "Bulgogi (Korean BBQ Beef)" (cuts, slicing technique, pear substitutes, cooking mistakes)</a></li>
+<li>[official] <a href="https://www.hmart.com/marinated-beef-thin-ribeye-roll-bulgogi-2lb-907g--1/p">H Mart, Marinated Beef Thin Ribeye Roll Bulgogi 2lb (907g), $35.99</a></li>
+<li>[official] <a href="https://hmartdelivery.com/products/asian-pears">H Mart Delivery, Asian Pear, 1 each, $3.29</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Bulgogi">Wikipedia, "Bulgogi" (etymology, history, regional variants)</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Neobiani">Wikipedia, "Neobiani"</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-09-25-bulgogi-recipe--></div>
+</div></div></main></div></div></body></html>
