@@ -1,0 +1,335 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>ETF 총보수 0%, 진짜 비용은 따로 있어요</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">ETF 총보수 0%, 진짜 비용은 따로 있어요</h3><div class="post-body"><img class="thumb" src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@00679efab57c39bfa39cbcf0e48841aeb238b534/illus/2026-09-25-etf-total-expense-ratio-check-da5c0a7f.jpg" alt="" width="1200" height="675" loading="lazy"/><p class="deck">ETF 총보수가 0%대여도 실부담비용률은 최대 16배까지 벌어져요. 금감원 사례와 금투협·코스콤 공식 사이트로 직접 확인하는 방법과 계산 예시를 정리했어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>총보수는 전체가 아니에요</b>: 광고에 흔히 나오는 총보수 뒤에 TER, 실부담비용률까지 두 단계가 더 있어요.</li>
+<li><b>격차가 16배까지 나요</b>: TIGER 미국S&P500은 총보수 0.0068%지만 실부담비용률은 0.1096%예요.</li>
+<li><b>비교는 두 곳에서 무료</b>: 금투협 전자공시서비스와 코스콤 ETF CHECK에서 총보수·TER·실부담비용률을 나란히 볼 수 있어요. <u>펀드별 보수비용비교 페이지</u>부터 열어보세요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@00679efab57c39bfa39cbcf0e48841aeb238b534/illus/2026-09-25-etf-total-expense-ratio-check-da5c0a7f.jpg" alt="광고에 적힌 총보수와 실제로 나가는 비용은 다를 수 있어요" width="1200" height="675" loading="lazy"/><figcaption>광고에 적힌 총보수와 실제로 나가는 비용은 다를 수 있어요 · 일러스트(AI 생성)</figcaption></figure><div class="kv">
+<div><b>0.1096%</b><span>TIGER 미국S&P500 실부담비용률</span><i>총보수(0.0068%)의 약 16배</i></div>
+<div><b>10건</b><span>금감원이 적시한 ETF 광고 오인 사례(3.5)</span><i>'총보수 0.00%대' 광고 포함</i></div>
+<div><b>0.9417%</b><span>국내 ETF 평균 TER (1월 말 기준)</span><i>평균 총보수는 0.8754%</i></div>
+<div><b>3개월</b><span>자산운용보고서 발급 주기</span><i>자본시장법 제88조제1항</i></div>
+</div>
+
+
+
+<p>0.0068%와 0.1096%. 같은 ETF를 두고 광고와 비용표에 각각 적힌 숫자예요. 자산 배분 얘기가 나올 때마다 ETF가 꼭 끼어들죠. "수수료가 싸다"는 말을 듣고 고른 상품이라면 그 싸다는 말이 정확히 어느 숫자를 가리키는지부터 짚어볼 필요가 있어요.</p>
+<h2>💰 총보수 0%인데 왜 비용이 나갈까</h2>
+<p><strong>총보수는 ETF 비용의 일부일 뿐이에요.</strong> 광고에 적힌 숫자 뒤에 TER(합성총보수)과 실부담비용률이라는 두 단계가 더 있거든요.</p>
+<p>증권사 앱에 "총보수 0.00%대"라고 뜨면 이 상품이 거의 공짜처럼 느껴져요. <em>총보수는 메뉴판에 적힌 음식 가격 같은 거예요.</em> 실제 결제 금액은 여기에 서비스료·배달비가 붙어야 완성되죠. 총보수는 운용보수에 판매·수탁·사무관리보수를 더한 값인데, 자산운용사가 직접 정하는 몫만 담고 있어요. 여기에 지수사용료·회계감사비·해외보관비 같은 기타 비용을 더하면 TER이 되고, 매매할 때 나가는 증권거래비용까지 더하면 실부담비용률이 돼요.</p>
+<details class="term"><summary>총보수·TER·실부담비용률이 뭐예요?</summary><p>총보수는 운용보수+판매·수탁·사무관리보수의 합이에요. TER(합성총보수)은 총보수에 지수사용료·회계감사비·해외보관비 등 기타 비용을 더한 값이고, 실부담비용률은 TER에 증권거래비용까지 더한 최종 수치예요. 광고에는 대부분 이 중 가장 작은 총보수만 나와요.</p></details>
+
+<p><strong>계산해 보면 차이가 만원 단위로 벌어져요.</strong> TIGER 미국S&amp;P500에 1000만원을 1년 넣어둔다고 가정하면, 총보수 0.0068%만 보면 1년 비용은 680원(1000만원×0.0068%)이에요. 그런데 실부담비용률 0.1096%로 계산하면 1년 비용은 10,960원(1000만원×0.1096%)이에요. 같은 1000만원을 넣었는데 어느 숫자로 계산하느냐에 따라 비용이 16배(10,960÷680) 벌어지는 거예요.</p>
+<h2>🔍 ETF 총보수, 정말 광고만큼 쌀까</h2>
+<p><strong>금융감독원은 3월 5일 ETF 광고 오인 사례 10건을 적시했어요.</strong> 그중 하나가 바로 "총보수 0.00%대"만 강조하고 나머지 비용을 빠뜨린 광고예요. 총보수는 낮은데 지수사용료를 포함한 TER은 오히려 더 높은 경우도 함께 지적됐어요.</p>
+<table>
+<thead>
+<tr>
+<th>ETF</th>
+<th style="text-align: right;">총보수율</th>
+<th style="text-align: right;">TER</th>
+<th style="text-align: right;">실부담비용률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TIGER 미국S&amp;P500</td>
+<td style="text-align: right;">0.0068%</td>
+<td style="text-align: right;">0.0700%</td>
+<td style="text-align: right;"><strong>0.1096%</strong></td>
+</tr>
+<tr>
+<td>KODEX 미국S&amp;P500</td>
+<td style="text-align: right;">0.0062%</td>
+<td style="text-align: right;">0.0700%</td>
+<td style="text-align: right;"><strong>0.1085%</strong></td>
+</tr>
+<tr>
+<td>ACE 미국S&amp;P500</td>
+<td style="text-align: right;">0.0047%</td>
+<td style="text-align: right;">0.0700%</td>
+<td style="text-align: right;"><strong>0.1012%</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 뉴스핌 보도(2026.3.9), 금융투자협회·금융감독원 자료 인용. TER 산정 시점 기준.</p>
+
+<p>표만 보면 총보수 차이가 승부를 가르는 것 같지만, 세 상품의 TER은 똑같이 0.07%로 나란해요. <em>실제로 부담하는 돈은 실부담비용률 쪽에서 더 크게 벌어져요.</em> 국내 ETF 전체로 봐도 1월 말 기준 평균 총보수는 0.8754%인데 TER은 0.9417%로 더 높아요.</p>
+<h2>ETF 총보수·TER, 어디서 직접 확인해요</h2>
+<p><strong>증권사 앱 대신 두 공식 사이트에서 직접 비교할 수 있어요.</strong> <a href="https://dis.kofia.or.kr/websquare/index.jsp?w2xPath=%2Fwq%2Ffundann%2FDISFundFeeCMS.xml&amp;divisionId=MDIS01005001000000&amp;serviceId=SDIS01005001000">금융투자협회 전자공시서비스</a>의 '펀드별 보수비용비교' 페이지에서 ETF 이름으로 검색하면 총보수와 TER이 나란히 뜨고, 코스콤이 운영하는 <a href="https://www.etfcheck.co.kr/">ETF CHECK</a>에서는 같은 화면에서 최대 4개 ETF의 수수료·세금·분배금 현황을 비교할 수 있고, 총보수율·TER·실부담비용률 개념도 함께 설명돼 있어요.</p>
+<details class="term"><summary>자산운용보고서가 뭐예요?</summary><p>자산운용사가 펀드·ETF의 운용 성과와 손익, 매매회전율 등을 정리해 투자자에게 주는 문서예요. 자본시장과 금융투자업에 관한 법률 제88조제1항에 따라 3개월마다 1회 이상 발급해야 해요.</p></details>
+
+<div class="me"><b>제 경우</b>
+저도 미국·한국 주식과 채권형 상품에 나눠 투자하고 있어요. 이번 숫자를 보고 나니 지금까지 총보수만 보고 넘긴 상품이 있을 수 있겠다는 생각이 들었어요. 앞으로는 새 ETF를 보기 전에 총보수 옆에 TER과 실부담비용률까지 나란히 확인하는 쪽으로 기준을 바꾸기로 했어요. 몇 배씩 벌어질 수 있는 숫자라면 그 차이는 제 계좌에서도 해마다 조금씩 쌓이는 돈이니까요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 실부담비용률도 완전한 숫자는 아니에요. 매매 시점과 시장 상황에 따라 증권거래비용이 달라지고, 추적오차나 괴리율처럼 보수와 별개로 수익률을 갉아먹는 요인도 있어요.</li>
+<li><b>구조</b> ETF 하나에는 자산운용사뿐 아니라 지수 제공사, 수탁은행, 사무관리회사, 지정참가회사(AP)까지 여러 주체가 계약으로 얽혀 있어요. 각자의 몫이 총보수·TER·실부담비용률로 층층이 쌓이는 구조라 광고 한 줄로는 다 안 보여요.</li>
+<li><b>다음에 볼 것</b> <b>9월 30일</b>에 3분기가 끝나요. 자본시장법상 3개월마다 나오는 자산운용보고서에서 이번 분기 매매회전율과 손익을 확인할 수 있어요.</li>
+</ul></div>
+
+<div class="check"><b>지금 확인할 것</b><ul>
+<li><b>보유 ETF, 금투협 사이트에서 검색</b>: 총보수와 TER을 나란히 봐야 진짜 격차가 보여요.</li>
+<li><b>실부담비용률로 다시 계산</b>: 투자금×실부담비용률로 1년 비용을 원 단위로 가늠해 보세요.</li>
+<li><b>투자설명서의 '보수 및 비용' 항목 확인</b>: 광고 문구가 아니라 원문에서 재확인하는 게 안전해요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>총보수가 0%대인 ETF는 정말 거의 무료인가요?</dt>
+<dd>아니에요. 총보수는 비용의 한 조각일 뿐이고, 여기에 기타 비용을 더한 TER과 증권거래비용까지 더한 실부담비용률이 실제로 부담하는 돈에 더 가까워요.</dd>
+<dt>총보수·TER·실부담비용률 중 뭘 봐야 하나요?</dt>
+<dd>실부담비용률을 보는 게 가장 정확해요. TER까지만 보면 증권거래비용이 빠지고, 총보수만 보면 기타 비용도 빠진 채 비교하게 돼요.</dd>
+</dl></div>
+
+<p>저라면 이제부터는 총보수 숫자만 보고 상품을 고르지 않고 <strong>금투협 사이트나 ETF CHECK에서 실부담비용률까지 확인하고 나서 판단하겠어요.</strong> 다음 확인 시점은 9월 30일 3분기 마감 뒤 나오는 자산운용보고서예요.</p>
+<p class="notice">여기 적는 건 투자 권유가 아니에요. 숫자는 발표 원문에서 다시 확인해 보세요.</p>
+<h2>참고</h2>
+<ul>
+<li>[언론] <a href="https://www.newspim.com/news/view/20260305000817">뉴스핌, 금감원 ETF 광고 오인 사례 10건 적시(2026.3.5)</a></li>
+<li>[언론] <a href="https://www.newspim.com/news/view/20260309000775">뉴스핌, '총보수 0.00%' 광고의 진실(2026.3.9)</a></li>
+<li>[언론] <a href="https://www.fntimes.com/html/view.php?ud=202606180836423153179ad43907_18">한국금융신문, 코스콤 ETF CHECK 소개(2026.6.18)</a></li>
+<li>[공식] <a href="https://dis.kofia.or.kr/websquare/index.jsp?w2xPath=%2Fwq%2Ffundann%2FDISFundFeeCMS.xml&amp;divisionId=MDIS01005001000000&amp;serviceId=SDIS01005001000">금융투자협회 전자공시서비스, 펀드별 보수비용비교</a></li>
+<li>[기타] <a href="https://www.etfcheck.co.kr/">코스콤 ETF CHECK</a></li>
+<li>[공식] <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&amp;csmSeq=572&amp;ccfNo=5&amp;cciNo=1&amp;cnpClsNo=3">법제처 찾기쉬운 생활법령정보, 자산운용보고서 발급(자본시장법 제88조제1항)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-09-25-etf-total-expense-ratio-check--></div>
+</div></div></main></div></div></body></html>
