@@ -1,0 +1,372 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Busan in Two Days: What Every Stop Actually Costs</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Busan in Two Days: What Every Stop Actually Costs</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Gamcheon_Culture_Village_March_30_2024_1.jpg/1280px-Gamcheon_Culture_Village_March_30_2024_1.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Seoul to Busan just got cheaper: the KTX fare fell to ₩54,400 in September. A real two-day route, with what every stop, ride and meal costs.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The fare just dropped</b>: KTX from Seoul to Busan is ₩54,400 one way since September 1, ₩5,400 less than a month earlier.</li>
+<li><b>Two days, two neighborhoods</b>: day one is Gamcheon and the old downtown, day two is the temple, the beach and the sky deck.</li>
+<li><b>Before you book</b>: <u>pick a specific KTX departure</u> and <u>check the observatory forecast</u> before paying for the view.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Gamcheon_Culture_Village_March_30_2024_1.jpg/1280px-Gamcheon_Culture_Village_March_30_2024_1.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Gamcheon Culture Village&#x27;s terraced, pastel-roofed houses climbing the hillside above Busan" width="1200" height="901" loading="lazy"/><figcaption>Gamcheon Culture Village&#x27;s terraced, pastel-roofed houses climbing the hillside above Busan · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gamcheon_Culture_Village_March_30_2024_1.jpg" rel="nofollow">S h y numis</a> / Wikimedia Commons (CC BY 4.0)</figcaption></figure><div class="kv">
+<div><b>₩54,400</b><span>🚄 KTX Seoul→Busan, one way</span><i>cut from ₩59,800 on Sept 1</i></div>
+<div><b>2h18m</b><span>⏱ fastest KTX, one way</span><i>Seoul Station to Busan Station</i></div>
+<div><b>₩1,600-1,900</b><span>🚇 Busan subway, one ride</span><i>Section 1/2, card or single ticket</i></div>
+<div><b>₩8,000 / ₩29,000</b><span>🌉 the two paid viewpoints</span><i>Busan Tower vs. Busan X the Sky</i></div>
+</div>
+
+
+
+<p>Step off the platform at Busan Station and salt air reaches you before the exit gates do. Two hours earlier you were underground in Seoul, and now the escalator climbs toward container cranes and a harbor close enough that the ferry horns carry into the concourse. It's a port city stacked over hills instead of spread across a river plain, and the skyline keeps changing shape as you move through it. Two days is enough to see why people who've only done Seoul come back from Busan wanting to go back again.</p>
+<p><strong>Yes, the ₩54,400 KTX fare is real, and it's ₩5,400 cheaper than the same seat cost in August.</strong> Korail folded its old rival SR into one combined operator on September 1, 2026, and cut the standard-class Seoul-Busan fare from ₩59,800 to ₩54,400 as part of an average 10% cut across the KTX network, <a href="https://www.hankyung.com/article/2026083145861">Hankyung reported</a> once the new fare notice went out. The Fair Trade Commission's merger approval keeps that price fixed for three years, so it isn't a launch discount that vanishes by winter.</p>
+<details class="term"><summary>Why did the KTX fare just change?</summary><p>Korail and its former rival SR, which ran the SRT trains, merged into one company in August 2026 after antitrust approval. The combined operator brought KTX prices down to SRT's cheaper level across the whole network, not just on this route.</p></details>
+
+<p>The fastest train covers Seoul Station to Busan Station in 2 hours 18 minutes, with the first departure at 05:13 and the last at 22:49. <em>A same-day round trip is technically possible, but it trades away Gamcheon's morning light and the temple's early quiet, which is most of what makes two days worth it.</em></p>
+<p>Spring and fall suit this route best. Both days involve steep steps and open coastline, and Busan's summer humidity and monsoon rain turn the Gamcheon hillside and the temple's stone bridge into a much harder walk than the map suggests.</p>
+<h2>🏘️ Day 1: Gamcheon, the old downtown and one paid view</h2>
+<p><strong>Start at Gamcheon Culture Village, then work down toward the harbor by early afternoon.</strong> Entrance to the hillside village is free, and the ₩2,000 stamp map sold at the Haneulmaru information center by the entrance routes you past all nine collection points, with two postcards waiting if you fill it in. The alleys are steep and narrow enough that a photo at every corner adds up fast, so budget more time than the map suggests.</p>
+<details class="term"><summary>What is Gamcheon Culture Village?</summary><p>A hillside neighborhood of small, brightly painted homes, built by refugees during the Korean War and later turned into an open-air art village through a 2009 government project. It's still a residential area, so the quiet lanes behind the murals are someone's front yard.</p></details>
+
+<p>From Gamcheon, a city bus or a short taxi ride puts you at Yongdusan Park, free to enter any time. Busan Tower's observation deck inside the park runs ₩8,000 for an adult ticket, open 10:00 to 22:00 with ticketing closing at 21:30. That leaves the whole evening open for Jagalchi Market or BIFF Square, both an easy walk downhill from the park gate.</p>
+<p><em>An ₩8,000 ticket for a 360-degree view over the harbor is the cheaper of this trip's two paid viewpoints, and it stays open late enough to fit in after a slow dinner</em>.</p>
+<h2>🏖️ Day 2: the temple, the beach and the ₩29,000 view</h2>
+<p><strong>Start at Haedong Yonggungsa before the tour buses arrive.</strong> The clifftop temple opens at 04:30 and charges no admission, with last entry at 18:50. Early morning or just before closing are the two windows when the stone bridge to the main halls isn't shoulder to shoulder.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Haedong_Yonggungsa_Temple_near_Busan.jpg/1280px-Haedong_Yonggungsa_Temple_near_Busan.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Haedong Yonggungsa&#x27;s halls built directly on the coastal rock, linked to the shore by a stone bridge" width="1200" height="675" loading="lazy"/><figcaption>Haedong Yonggungsa&#x27;s halls built directly on the coastal rock, linked to the shore by a stone bridge · Photo: <a href="https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg" rel="nofollow">Christian Bolz</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<details class="term"><summary>What is Haedong Yonggungsa?</summary><p>One of the few Korean temples built directly on coastal rock instead of in the mountains, founded in 1376 and rebuilt after the Korean War. A stone bridge carries visitors from the parking-lot side to the temple halls, with the sea running underneath both ways.</p></details>
+
+<p><strong>The ₩29,000 ticket at Busan X the Sky only pays off on a clear day.</strong> Adult admission to the observatory in the Haeundae LCT towers is ₩29,000, ₩26,000 for children and seniors, open 10:00 to 21:00 with last admission at 20:30. <em>On a hazy afternoon the view turns to gray haze instead of the postcard shot, so check the forecast before locking in a timed ticket.</em></p>
+<figure class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Busan_City_Haeundae_Beach.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Haeundae Beach with the Haeundae LCT towers, home to the Busan X the Sky observatory, rising behind the sand" width="1200" height="692" loading="lazy"/><figcaption>Haeundae Beach with the Haeundae LCT towers, home to the Busan X the Sky observatory, rising behind the sand · Photo: <a href="https://commons.wikimedia.org/wiki/File:Busan_City_Haeundae_Beach.jpg" rel="nofollow">부산광역시</a> / Wikimedia Commons (KOGL Type 1)</figcaption></figure>
+
+<p>Reaching either stop from downtown means at least one Section 2 fare on the subway, ₩1,800 by transit card or ₩1,900 for a single-use ticket, against ₩1,600/₩1,700 for a shorter Section 1 ride within downtown.</p>
+<details class="term"><summary>What does "Section 2" mean on the Busan subway?</summary><p>Fares step up once a single ride passes roughly 10 km. A short hop within one neighborhood is usually Section 1; crossing from downtown out to Haeundae or Gijang, where Yonggungsa sits, is Section 2, which costs ₩200 more per ride.</p></details>
+
+<h2>💸 What does the whole two days actually cost?</h2>
+<p><strong>Add up every ticket in this plan and the KTX round trip is most of the total, not the two observatories.</strong> The table below carries every price used above, plus one meal and one coffee, so the reader can total a personal version depending on which viewpoint gets cut.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Cost</th>
+<th style="text-align: right;">USD (at ~₩1,336/$1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KTX Seoul↔Busan, round trip</td>
+<td style="text-align: right;">₩108,800</td>
+<td style="text-align: right;">$81.45</td>
+</tr>
+<tr>
+<td>Busan subway, about 4 rides</td>
+<td style="text-align: right;">₩6,400-7,600</td>
+<td style="text-align: right;">$4.80-5.70</td>
+</tr>
+<tr>
+<td>Gamcheon stamp map</td>
+<td style="text-align: right;">₩2,000</td>
+<td style="text-align: right;">$1.50</td>
+</tr>
+<tr>
+<td>Busan Tower observation deck</td>
+<td style="text-align: right;">₩8,000</td>
+<td style="text-align: right;">$6.00</td>
+</tr>
+<tr>
+<td>Busan X the Sky</td>
+<td style="text-align: right;">₩29,000</td>
+<td style="text-align: right;">$21.70</td>
+</tr>
+<tr>
+<td>One meal (dwaeji gukbap)</td>
+<td style="text-align: right;">₩7,000-10,000</td>
+<td style="text-align: right;">$5.25-7.50</td>
+</tr>
+<tr>
+<td>One coffee (Starbucks Americano)</td>
+<td style="text-align: right;">₩4,700</td>
+<td style="text-align: right;">$3.50</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Skip Busan X the Sky and keep only Busan Tower, and the two-day total drops by ₩21,000. Fares and admission checked 2026-09-26; sources below.</p>
+
+<p>The KTX round trip is most of the bill no matter what else gets cut, so the real decision on this trip is which one paid view to keep, not whether to take the train at all. A bowl of dwaeji gukbap runs ₩7,000 to ₩10,000 depending on the shop, and a Starbucks Americano is a flat ₩4,700 nationwide since a January 2025 price rise.</p>
+<div class="me"><b>My take</b>
+I've been to Busan within the last two years, and if I went back for exactly two days, I'd spend more of day one wandering Gamcheon's back alleys than paying for the tower; the view from partway up the hill is free and nearly as good. Of the two paid tickets in this plan, I'd keep Busan X the Sky over Busan Tower, since the height over Haeundae is the one that actually changes what you see. I live in Gangnam and don't get to the coast often, so for me a Busan weekend is still a real break, not a routine.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more day</b> Push out to Gwangalli Beach in the evening for the bridge view; it sits past Haeundae on the same coastline, so it's a short add-on rather than a separate trip.</li>
+<li><b>What locals argue about</b> Whether ₩29,000 for Busan X the Sky is worth almost four Busan Tower tickets. It buys a newer, higher view over Haeundae; the tower buys the older downtown skyline and the harbor for a third of the price.</li>
+<li><b>Watch for</b> The last KTX out of Busan Station leaves at 22:10 on the fastest run. Miss it, and a hotel night you didn't plan for is the next line item.</li>
+</ul></div>
+
+<div class="check"><b>Check before you go</b><ul>
+<li><b>Book a specific KTX departure, not just a date</b>: the ₩54,400 fare applies to standard class, and the fastest trains fill first.</li>
+<li><b>Check the forecast before buying the Busan X the Sky ticket</b>: ₩29,000 buys a view that disappears completely on a hazy day.</li>
+<li><b>Time your last train back</b>: the last standard KTX from Busan Station leaves at 22:10, and missing it changes your whole budget.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Is two days really enough for Busan?</dt>
+<dd>Yes, for the two neighborhoods in this route: Gamcheon and the old downtown, then the temple and the coast. It's not enough for Busan plus a side trip to Gyeongju or Jeju in the same weekend.</dd>
+<dt>What's the cheapest way to do this exact trip?</dt>
+<dd>Skip Busan X the Sky and keep Busan Tower instead. That trades the ₩29,000 ticket for the ₩8,000 one, a ₩21,000 difference, and neither the subway nor the KTX fare changes either way.</dd>
+</dl></div>
+
+<p>Cut Busan X the Sky if the budget is tight, but keep the temple; free stops are rarely the ones worth skipping. Book the KTX first, since that single ticket decides more of the trip than either observatory does. Prices and hours were checked on 2026-09-26; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/incheon-airport-to-seoul-arex-bus-or.html">Incheon Airport to Seoul: AREX, Bus or Taxi, by the Won</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/what-t-money-card-actually-costs-in.html">What a T-money Card Actually Costs in Seoul</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.hankyung.com/article/2026083145861">Hankyung, KTX Seoul-Busan fare cut to ₩54,400 (2026-08-31)</a></li>
+<li>[press] <a href="https://www.seoul.co.kr/news/society/2026/08/03/20260803010001">Seoul Shinmun, Korail-SR merger and 3-year fare guarantee (2026-08-03)</a></li>
+<li>[other] <a href="https://www.krailtracker.com/station/seoul/to/busan">K-Rail Tracker, KTX Seoul→Busan schedule</a></li>
+<li>[other] <a href="https://www.krailtracker.com/station/busan/to/seoul">K-Rail Tracker, KTX Busan→Seoul schedule</a></li>
+<li>[official] <a href="https://www2.humetro.busan.kr/homepage/default/page/subLocation.do?menu_no=1001010501">Busan Transportation Corporation, subway fare table</a></li>
+<li>[other] <a href="https://olamelama.com/en/busan-gamcheon-culture-village-stamp-trail/">Olamelama, Gamcheon Culture Village map and stamp trail</a></li>
+<li>[official] <a href="https://www.busan.go.kr/news/storyreport/view?dataNo=64792&amp;gugun=Prev">Busan Metropolitan City, Yongdusan Park and Busan Tower feature</a></li>
+<li>[official] <a href="https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&amp;uc_seq=368&amp;lang_cd=ko">Visit Busan, Busan Tower/Yongdusan Park listing</a></li>
+<li>[official] <a href="https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&amp;uc_seq=261&amp;lang_cd=ko">Visit Busan, Haedong Yonggungsa Temple listing</a></li>
+<li>[official] <a href="https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=33642">Korea Tourism Organization (VisitKorea), Busan X the Sky listing</a></li>
+<li>[press] <a href="http://porksoup.busan.com/">Busan Ilbo, dwaeji gukbap price guide</a></li>
+<li>[press] <a href="https://www.seoul.co.kr/news/economy/2025/01/20/20250120500133">Seoul Shinmun, Starbucks Korea price increase (2025-01-20)</a></li>
+<li>[press] <a href="https://m.news.nate.com/view/20260909n26946">Nate News, USD/KRW exchange rate (2026-09-09)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-09-26-busan-two-day-itinerary-by-numbers--></div>
+</div></div></main></div></div></body></html>
