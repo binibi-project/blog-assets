@@ -1,0 +1,358 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>역대 최강 AI가 나왔는데, 저는 아직 못 써요</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">역대 최강 AI가 나왔는데, 저는 아직 못 써요</h3><div class="post-body"><img class="thumb" src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@99efdccc9c495bcfa697fa43093945efe8c19ceb/illus/2026-10-02-gemini-4-argon-release-2026-f94d101a.jpg" alt="" width="1200" height="675" loading="lazy"/><p class="deck">구글이 9월 30일 새 AI 모델 '제미나이4 아르곤'을 공개했어요. 그런데 사이버 보안 전문가와 미국 정부 평가자만 먼저 써요. 일반 공개 순서와 가격을 정리했어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>제일 센 AI가 나왔어요</b>: 구글이 9월 30일 새 프런티어 모델 '제미나이4 아르곤'을 공개했어요. 코딩·금융·법률·사이버 보안 방어 작업에서 역대 최고 성능을 보여줘요.</li>
+<li><b>그런데 아직 못 써요</b>: 신뢰할 수 있는 사이버 방어 전문가와 미국 정부 평가자에게만 먼저 열렸어요. 개발자·기업·일반 이용자에게는 "가능한 한 빨리" 순서가 온다는 설명뿐이에요.</li>
+<li><b>풀리면 요금도 두 배로 올라요</b>: 지금은 100만 토큰당 입력 2달러·출력 10달러예요. 프로모션이 끝나면 각각 4달러·20달러가 돼요. <u>구글 AI 울트라 구독 화면에 아르곤이 떴는지</u> 그때 확인해 보세요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@99efdccc9c495bcfa697fa43093945efe8c19ceb/illus/2026-10-02-gemini-4-argon-release-2026-f94d101a.jpg" alt="가장 센 AI는 나왔지만, 문은 아직 조금만 열렸어요" width="1200" height="675" loading="lazy"/><figcaption>가장 센 AI는 나왔지만, 문은 아직 조금만 열렸어요 · 일러스트(AI 생성)</figcaption></figure><div class="kv">
+<div><b>2026.9.30</b><span>구글, '제미나이4 아르곤' 공개</span><i>구글 딥마인드 발표</i></div>
+<div><b>100만 토큰</b><span>출력 한도</span><i>기존 64,000토큰에서 확대</i></div>
+<div><b>77.9%</b><span>DeepSWE v1.1(소프트웨어 엔지니어링)</span><i>역대 최고 점수</i></div>
+<div><b>$2·$10</b><span>100만 토큰당 입력·출력가(프로모션)</span><i>종료 후 $4·$20</i></div>
+</div>
+
+
+
+<p>구글이 역대 가장 똑똑한 AI를 냈다는 소식, 반가우셨나요? 저는 반가움 반, 허탈함 반이었어요. 가장 센 모델이 나왔다는데 저도 아마 이 글을 읽는 분도 당장은 써 볼 수 없거든요.</p>
+<p>이상한 일은 아니에요. 지금 AI 업계가 정해 둔 순서가 그래요.</p>
+<details class="term"><summary>프런티어 모델이란?</summary><p>그 시점에 나온 AI 모델 중 성능이 가장 앞서 있다고 평가받는 모델을 말해요. 구글·오픈AI·앤트로픽 같은 회사들이 몇 달 간격으로 서로 이 자리를 주고받아요.</p></details>
+
+<h2>🧠 코딩도 사이버 보안도 역대 최고예요</h2>
+<p><strong>제미나이4 아르곤은 <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">구글 딥마인드 공식 발표</a>에서 여러 평가 지표를 역대 최고 수준으로 끌어올린 모델이에요.</strong> 장시간 이어지는 복잡한 작업에서 추론을 깊게 하도록 만들어졌어요.</p>
+<table>
+<thead>
+<tr>
+<th>평가 지표</th>
+<th>측정 분야</th>
+<th style="text-align: right;">아르곤 점수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DeepSWE v1.1</td>
+<td>장기 소프트웨어 엔지니어링 작업</td>
+<td style="text-align: right;">77.9%(역대 최고)</td>
+</tr>
+<tr>
+<td>CWE-bench v1</td>
+<td>사이버 보안 취약점 복구</td>
+<td style="text-align: right;">68%(공동 1위)</td>
+</tr>
+<tr>
+<td>LVBench</td>
+<td>긴 영상 이해</td>
+<td style="text-align: right;">91.7%(역대 최고)</td>
+</tr>
+<tr>
+<td>AutomationBench</td>
+<td>업무 자동화 실행</td>
+<td style="text-align: right;">51.3%(1위)</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 구글 딥마인드 공식 발표(2026.9.30). 전부 구글이 자체 공개한 평가 지표 점수예요.</p>
+
+<p>표만 보면 숫자가 전부 좋아 보여요. 그런데 전부 구글이 고른 평가 지표라는 점은 함께 봐야 해요. 외부 기관이 독립적으로 다시 측정한 결과는 아직 안 나왔어요.</p>
+<p><strong>출력 한도가 커진 것도 큰 변화예요.</strong> 기존 64,000토큰에서 100만 토큰으로 늘었어요. 한 번에 답을 만드는 동안 끊기지 않고 훨씬 길게, 여러 단계를 거치는 문제를 끝까지 풀어낼 수 있다는 뜻이에요. 구글은 내부적으로 양자 알고리즘 최적화, 데이터센터 메모리 효율화 같은 작업에 이미 아르곤을 쓰고 있다고 밝혔어요.</p>
+<h2>🔒 그런데 아직 저도, 여러분도 못 써요</h2>
+<p><strong>지금은 신뢰할 수 있는 사이버 방어 전문가와 미국 정부의 사전 평가 참여자만 쓸 수 있어요.</strong> 구글은 이 그룹을 'Fairwind 프로그램'으로 부르고 있어요.</p>
+<details class="term"><summary>Fairwind 프로그램이란?</summary><p>구글이 제미나이4 아르곤을 신뢰할 수 있는 사이버 방어 조직에 먼저 내주는 사전 접근 프로그램이에요. 미국 정부의 자발적인 출시 전 모델 평가 절차와 함께 진행돼요.</p></details>
+
+<p>개발자·기업·일반 이용자 순서는 아직 날짜가 안 정해졌어요. 구글은 "가능한 한 빨리" 넓히겠다고만 밝혔어요. 유료 API 고객과 구글 AI 울트라 구독자부터 먼저 연다는 순서만 정해져 있어요. <em>순서는 있지만 날짜는 빈칸인 셈이에요.</em></p>
+<p>다 같이 안 여는 이유도 따로 설명했어요. <strong>성능보다 안전 점검을 먼저 끝내겠다는 거예요.</strong> 구글은 아르곤의 생각 흐름과 행동을 계속 지켜보다가 사용자 의도를 벗어나는 지점에서 멈추는 장치를 새로 넣었어요.</p>
+<p>악의적인 지시로 AI를 조종하는 간접 프롬프트 인젝션 공격에도 전보다 강하게 버티도록 만들었어요. 내부·외부 레드팀이 사람 손과 자동화 공격을 섞어 미리 두들겨 봤다고 해요. <em>성능이 셀수록 점검할 구멍도 늘어난다고 보는 쪽으로 읽혀요.</em></p>
+<h2>💳 나중에 쓰게 되면 얼마일까</h2>
+<p><strong>지금 가격은 '한정 기간 특가'예요.</strong> 정식 요금은 이보다 두 배 비싸요.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th style="text-align: right;">100만 토큰당 입력가</th>
+<th style="text-align: right;">100만 토큰당 출력가</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>프로모션(출시 시)</td>
+<td style="text-align: right;">$2</td>
+<td style="text-align: right;">$10</td>
+</tr>
+<tr>
+<td>프로모션 종료 후</td>
+<td style="text-align: right;">$4</td>
+<td style="text-align: right;">$20</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 구글 딥마인드 공식 발표(2026.9.30). 캐시된 입력 토큰은 입력가의 95% 할인이 따로 적용돼요.</p>
+
+<p>표만 보면 100만 토큰에 2달러라 저렴해 보여요. 그런데 저 가격은 프로모션이 끝나면 그대로 두 배로 뛰어요.</p>
+<p>평소 쓰는 AI 구독료와 비교해 감이 잘 안 오실 수 있어요. 이건 일반 구독 요금이 아니라 개발자가 API로 쓸 때 매기는 토큰당 가격이거든요. 일반 소비자용 요금표는 아직 따로 안 나왔어요.</p>
+<div class="me"><b>제 경우</b>
+유튜브, 인스타그램, 카카오톡, Claude, Gemini, ChatGPT (셋 다 실제로 매일 사용 → AI 비교 글에 1인칭 가능). 저도 매일 쓰는 AI 앱 중 하나가 제미나이예요. 그런데 이번 아르곤은 제 화면에 뜨지 않아요. 가장 센 모델이 나왔다는 뉴스와 제가 실제로 쓰는 버전 사이에는 몇 달의 격차가 있는 거예요. 저라면 지금 뭘 바꾸기보다는 제가 쓰는 앱에 업그레이드 알림이 뜨는 날을 기다려 보겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 표의 점수는 전부 구글이 고른 평가 지표고 구글이 직접 발표한 숫자예요. 접근이 제한돼 있어서 외부 기관이 독립적으로 재현해 검증하기도 당분간 어려워요.</li>
+<li><b>구조</b> 성능을 먼저 올리고 안전장치는 나중에 붙이는 게 아니에요. 반대예요. 생각 흐름을 감시하는 장치와 프롬프트 인젝션 방어를 먼저 다지고, 그다음 접근 범위를 사이버 전문가에서 유료 API·울트라 구독자로, 다시 개발자·기업·일반 이용자로 넓혀 가는 구조예요.</li>
+<li><b>다음에 볼 것</b> 구글 AI 울트라 앱이나 API 콘솔에 아르곤이 뜨는 날짜, 그리고 "가능한 한 빨리"라는 표현이 실제 날짜 공지로 바뀌는 시점이 다음 확인 포인트예요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>지금 쓰는 챗GPT나 클로드를 아르곤이 풀리면 바로 갈아타야 하나요?</dt>
+<dd>아니요, 아직 비교할 재료가 없어요. 아르곤은 일반 이용자용 요금표조차 안 나왔고, 공개된 건 개발자용 API 토큰 가격뿐이에요. 지금 쓰는 앱에 월 2~3만원 내고 있다면, 그 돈과 비교할 소비자용 숫자가 나온 뒤에 갈아탈지 정해도 늦지 않아요.</dd>
+<dt>아르곤처럼 접근이 제한된 모델은 전에도 있었나요?</dt>
+<dd>네, 구글은 이번이 처음이 아니라고 밝혔어요. 아르곤의 사이버 보안 방어 능력은 전작인 '3.8 플래시 사이버'의 성과를 바탕으로 더 끌어올린 거라고 설명했어요. 신모델을 좁은 범위부터 여는 방식이 이번 한 번만의 조치는 아니라는 뜻이에요.</dd>
+</dl></div>
+
+<p><strong>저라면 지금 요금제를 알아보기보다는, 제가 쓰는 제미나이 앱에 아르곤이 뜨는 날부터 지켜보겠어요.</strong> 다음 확인 시점은 구글의 다음 공지와 AI 울트라 구독 화면이에요.</p>
+<p>여기 적는 건 특정 서비스 추천이 아니에요. 출시 시점과 요금은 공식 발표에서 다시 확인해 보세요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/10/ai.html">창 닫아도 계속 일하는 AI 에이전트</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/09/gpt.html">챗GPT·클로드·제미나이 요금 다 비교</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[공식] <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/">구글 딥마인드, Gemini 4 Argon 공식 발표(2026.9.30)</a></li>
+<li>[언론] <a href="https://www.aitimes.com/news/articleView.html?idxno=215821">AI타임스, 구글 '제미나이 4 아르곤' 공개…성능 1위 탈환에도 "일반 사용 제한"(2026.10.1)</a></li>
+<li>[언론] <a href="https://www.boannews.com/news/articleView.html?idxno=146127">보안뉴스, 구글 제미나이 4 아르곤, 사이버 방어 전문가에게만 먼저 공개(2026.10.1)</a></li>
+<li>[언론] <a href="https://www.startupn.kr/news/articleView.html?idxno=60073">스타트업엔, 구글, '제미나이 4 아르곤' 공개…코딩·기업업무·사이버보안 강화(2026.10.1)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-02-gemini-4-argon-release-2026--></div>
+</div></div></main></div></div></body></html>
