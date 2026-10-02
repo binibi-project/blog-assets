@@ -1,0 +1,346 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Gangneung Day Trip: The KTX, the Coffee Street and the Cost</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Gangneung Day Trip: The KTX, the Coffee Street and the Cost</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Anmok_Beach_20220430_008.jpg/1280px-Anmok_Beach_20220430_008.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">The direct KTX from Cheongnyangni puts Gangneung's coffee street and Chodang's tofu village about 90 minutes from Seoul. Fares, this year's Coffee Festival dates, and the full cost.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The Cheongnyangni KTX is the fast way in</b>: ₩26,000 one way, about 86 minutes, no transfer needed.</li>
+<li><b>Coffee, a lake and a tofu village fill one day</b>: Anmok's coffee street, Gyeongpo Lake's flat shore path and Chodang's sundubu cluster all sit within a short bus ride of each other.</li>
+<li><b>Time it with the festival if you can</b>: <u>book the KTX early for Oct 21-25</u>, when this year's Gangneung Coffee Festival turns the street into its biggest weekend.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Anmok_Beach_20220430_008.jpg/1280px-Anmok_Beach_20220430_008.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The woven coffee-cup sculpture facing the sea at Anmok Beach, the landmark that gave Gangneung&#x27;s coffee street its name" width="1200" height="800" loading="lazy"/><figcaption>The woven coffee-cup sculpture facing the sea at Anmok Beach, the landmark that gave Gangneung&#x27;s coffee street its name · Photo: <a href="https://commons.wikimedia.org/wiki/File:Anmok_Beach_20220430_008.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩26,000</b><span>🚄 KTX Cheongnyangni→Gangneung, one way</span><i>about 86 minutes at the fastest</i></div>
+<div><b>Oct 21-25</b><span>☕ Gangneung Coffee Festival, 2026</span><i>the 18th edition, centered on the coffee street</i></div>
+<div><b>~20</b><span>🍲 sundubu restaurants in Chodang village</span><i>clustered at the village entrance</i></div>
+<div><b>4.3 km</b><span>🌊 Gyeongpo Lake's loop path</span><i>flat, free, walk or bike</i></div>
+</div>
+
+
+
+<p>One coffee street, forty-some years old, and a KTX ride short enough to put you back in Seoul in time for dinner. Gangneung didn't plan to become Korea's coffee city: it started with vending machines lined up along Anmok Beach in the 1980s, coins clinking into a slot before a date on the sand, according to <a href="https://segye.com/newsView/20260812514731">Segye Ilbo's account of the city's coffee culture</a>. A couple walks that stretch today holding actual pour-overs instead, the ocean unchanged behind them. That gap between the plain original and the version worth a day trip now is exactly what makes the stop worth it.</p>
+<details class="term"><summary>What is KTX-Eum (KTX-이음)?</summary><p>The newer KTX variant that runs non-dedicated lines like the one to Gangneung, including the Jungang Line out of Cheongnyangni. It isn't the bullet-shaped express you'd catch out of Seoul Station, and it's a bit slower on paper, but on this particular route it's also the station closer to where most Seoul mornings actually start.</p></details>
+
+<h2>🚄 How do you get to Gangneung, and what's the ride like?</h2>
+<p><strong>A standard-class seat from Cheongnyangni Station runs ₩26,000 one way, and the fastest train covers it in about 86 minutes</strong>. That's the route to take if you're starting anywhere near eastern Seoul. It skips the longer run through Seoul Station, where the same ride costs ₩27,600 and takes close to two hours instead. Trains leave roughly every hour, with the first departure around 05:00 and the last around 22:30, so an early train and a late one both fit comfortably inside a single day.</p>
+<p><strong>From Gangneung Station, the last stretch to the coast is a short bus ride, not a second train.</strong> City bus 202 reaches Anmok Beach in about 20 minutes on the standard city fare, and once you're there, the Sea Tea tourist bus picks up the rest of the coastline: 16 round trips a day along the 23 km stretch from Anmok Coffee Street past Gyeongpo Beach to Jumunjin Beach, at the same fare as any other city bus. <em>If a bus doesn't line up with your schedule, Kakao T calls a taxi for the same hop in less time.</em></p>
+<h2>☕ The coffee street, the lake and Chodang's tofu village</h2>
+<p><strong>Anmok's coffee street isn't a marketing label; it's four decades of the same beach slowly turning into a coffee town.</strong> Barista Park Yi-chu, one of Korea's first professional baristas, settled in Gangneung in 2000 and brought hand-drip coffee culture with him. Terarosa's roasting facility opened two years later in the city's Gujeong area and became a destination of its own. What started as a dating spot built on vending-machine coffee is now a working coffee industry with a street-length view of the East Sea in front of it.</p>
+<details class="term"><summary>What is Anmok (안목)?</summary><p>The name of the beach itself, in Gangneung's old port district, well before the coffee shops arrived. Locals still use it that way; "Anmok Coffee Street" is the newer, tourist-facing name for the same stretch of sand.</p></details>
+
+<p><strong>This year's Gangneung Coffee Festival runs October 21-25, its 18th edition, centered on Anmok Coffee Street and spreading to spots around the city like Jumunjin and Ojukheon</strong>. It's grown into one of the region's bigger draws, pulling in more than 300,000 visitors a year at its peak. Walking the street and watching the open-air programs costs nothing; it's only the hands-on cupping and brewing classes that come with a separate ticket, per the festival's own "partially paid" listing. <u>Book the KTX early if you're aiming for that week</u>, since a 300,000-visitor festival weekend fills the obvious trains first.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Gyeongpo_Lake_20220502_001.jpg/1280px-Gyeongpo_Lake_20220502_001.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Gyeongpo Lake&#x27;s flat shoreline path, with the lakefront hotel tower reflected in still water" width="1200" height="800" loading="lazy"/><figcaption>Gyeongpo Lake&#x27;s flat shoreline path, with the lakefront hotel tower reflected in still water · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyeongpo_Lake_20220502_001.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p><strong>Gyeongpo Lake's shoreline path is flat, free and a genuine break from the coffee crowds.</strong> The full loop runs about 4.3 km, with almost no incline, split between a walking path and a separate bike lane: fifteen to twenty minutes by bike if you're moving, closer to an hour and a half with stops for photos. It sits close enough to Anmok that the same Sea Tea bus passes both, so there's no separate trip to plan for.</p>
+<p><strong>A fifteen-minute ride past the lake, Chodang village has been making tofu with seawater instead of salt since the 16th century.</strong> The method traces back to Heo Yeop, a Joseon-era scholar and the father of Heo Gyun, the writer behind <em>The Tale of Hong Gildong</em>. He soaked beans in spring water from his home and set them with seawater drawn from in front of Gyeongpo, because salt itself was scarce at the time. About 20 sundubu restaurants now cluster around that same village entrance. At Donghwa Garden, one of the longer-running shops, a bowl of the plain spicy version runs ₩11,000, and the seafood-loaded jjamppong sundubu is ₩15,000.</p>
+<details class="term"><summary>What is sundubu (순두부)?</summary><p>Soft, uncurdled tofu, soft enough to eat by the spoonful instead of slicing. Chodang's version is famous specifically for how it's coagulated: seawater rather than the bittern or vinegar most tofu makers use elsewhere in Korea.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Chodang_Sundubu_03_%2832736455184%29.jpg/1280px-Chodang_Sundubu_03_%2832736455184%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A bubbling pot of sundubu jjigae, the soft tofu stew Chodang village has served for generations" width="1200" height="707" loading="lazy"/><figcaption>A bubbling pot of sundubu jjigae, the soft tofu stew Chodang village has served for generations · Photo: <a href="https://commons.wikimedia.org/wiki/File:Chodang_Sundubu_03_(32736455184).jpg" rel="nofollow">Republic of  Korea from Seoul, Republic of Korea</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure>
+
+<h2>💸 What does the whole day actually cost?</h2>
+<p><strong>The KTX round trip is most of the bill, and everything else barely moves the total.</strong> A coffee, a sundubu meal and a couple of local bus rides add up to a fraction of what the train costs on its own.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Cost</th>
+<th style="text-align: right;">USD (at ~₩1,336/$1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KTX Cheongnyangni↔Gangneung, round trip</td>
+<td style="text-align: right;">₩52,000</td>
+<td style="text-align: right;">$38.92</td>
+</tr>
+<tr>
+<td>Chodang sundubu meal (Donghwa Garden, spicy)</td>
+<td style="text-align: right;">₩11,000</td>
+<td style="text-align: right;">$8.23</td>
+</tr>
+<tr>
+<td>One coffee (Starbucks Americano, nationwide reference price)</td>
+<td style="text-align: right;">₩4,700</td>
+<td style="text-align: right;">$3.52</td>
+</tr>
+<tr>
+<td>Gyeongpo Lake walk or bike loop</td>
+<td style="text-align: right;">Free</td>
+<td style="text-align: right;">$0</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Anmok's cafes are independent shops, not a chain, so treat the coffee line as a nationwide reference point rather than a quote from any one shop there; city-bus and Sea Tea-bus rides between the station, Anmok and Chodang run the same as any other Gangneung city-bus fare, not a separate ticket. Prices checked 2026-10-02; sources below.</p>
+
+<p>The train alone comes to more than every other line in that table combined, so the real decision on this trip isn't which café to pick; it's which KTX to book. <em>Skip the sit-down sundubu and grab coffee only, and the whole day drops under ₩60,000 round trip.</em></p>
+<div class="me"><b>My take</b>
+Gangneung's on my own short list of Korean cities visited recently, and this itinerary is the kind that's easy to overpack: coffee street, lake, tofu village, maybe a beach walk too, all squeezed into a day with only so many KTX slots on either end. If I were planning it again, I'd pick two of the three: coffee and the lake, or coffee and lunch in Chodang, rather than rushing all of it to catch an evening train back. The coast isn't going anywhere, and neither is the coffee.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Ride the Sea Tea bus past Gyeongpo all the way to Jumunjin Beach: same fare, same route, a quieter stretch of coast at the far end.</li>
+<li><b>What locals argue about</b> Whether the festival week is worth the crowd. A 300,000-visitor annual draw means Anmok's usual calm trades away for five days in October, and not everyone thinks that trade is worth it.</li>
+<li><b>Watch for</b> KTX seats on festival weekends. Book Cheongnyangni-Gangneung early for Oct 21-25, since that's the one piece of this trip that can actually sell out.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>If I only have time for one stop, the coffee side or the water, which wins?</dt>
+<dd>Go with whichever matches the mood you're actually in that afternoon. A good pour-over and a slow walk by the water fill up roughly the same chunk of an afternoon, so skipping one isn't really saving time, it's just trading one kind of quiet for another.</dd>
+<dt>Does the Coffee Festival cost anything to attend?</dt>
+<dd>Only the hands-on parts do. A plain afternoon of browsing stalls and sampling what's already poured needs no ticket at all, so there's nothing to reserve ahead unless a specific brewing class or workshop is the actual reason for the trip.</dd>
+</dl></div>
+
+<p>Book the Cheongnyangni KTX first, especially for a festival-week date, since that single ticket decides more of this trip than any café or restaurant choice will. Go for the coffee street if that's the pull, but leave room for the lake. It's the one stop on this list that costs nothing and still slows the day down in a good way.</p>
+<p class="notice">Prices and hours were checked on 2026-10-02; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/nami-island-day-trip-from-seoul-what-it.html">Nami Island Day Trip from Seoul: What It Actually Costs</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/seoraksans-fall-peak-hits-oct-20-what.html">Seoraksan&#x27;s Fall Peak Hits Oct 20: What It Costs to Go</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://m.seoul.co.kr/news/2017/11/21/20171121500109">Seoul Shinmun, Cheongnyangni-Gangneung and Seoul Station-Gangneung KTX fares and travel times (2017-11-21)</a></li>
+<li>[other] <a href="https://kr.trip.com/blog/cheongnyangni-station/">Trip.com blog, Cheongnyangni-Gangneung KTX-Eum schedule and fares (checked 2026)</a></li>
+<li>[other] <a href="https://travelmapjourney.com/gangneung-anmok-coffee-street-guide-2025/">Gangneung city bus 202 / Anmok Beach access guides (checked 2026)</a></li>
+<li>[press] <a href="https://www.fnnews.com/news/202207280833317902">FN News, Sea Tea tourist bus launch, Anmok-Jumunjin route, 16 round trips/day (2022-07-28)</a></li>
+<li>[press] <a href="https://segye.com/newsView/20260812514731">Segye Ilbo, Anmok coffee street history and Gangneung Coffee Festival visitor numbers (2026-08-12)</a></li>
+<li>[press] <a href="https://news.mtn.co.kr/news-detail/2026070811343756007">MTN News, 18th Gangneung Coffee Festival dates and locations (2026-07-08)</a></li>
+<li>[other] <a href="https://www.ktriptips.com/kor/festival/825295">K Trip Tips, Gangneung Coffee Festival admission status ("partially paid")</a></li>
+<li>[press] <a href="https://sports.khan.co.kr/article/202403282152003">Kyunghyang Sports (Sports Khan), Gyeongpo Lake loop trail length and terrain (2024-03-28)</a></li>
+<li>[press] <a href="https://weekly.khan.co.kr/article/201308261648441">Kyunghyang Weekly, Chodang sundubu village history and Heo Yeop origin story (2013-08-26)</a></li>
+<li>[press] <a href="https://v.daum.net/v/KJRTiLTsUn">Daum News, Chodang sundubu restaurant prices incl. Donghwa Garden</a></li>
+<li>[press] <a href="https://www.seoul.co.kr/news/economy/2025/01/20/20250120500133">Seoul Shinmun, Starbucks Korea Americano flat ₩4,700 nationwide since Jan 2025 price rise</a></li>
+<li>[press] <a href="https://view.asiae.co.kr/article/2026090915324235252">Asia Economy, USD/KRW exchange rate ₩1,336.1 (2026-09-09)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-02-gangneung-day-trip-coffee-street--></div>
+</div></div></main></div></div></body></html>
