@@ -1,0 +1,344 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Jeonju Hanok Village: The KTX, the Cost and One Catch</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Jeonju Hanok Village: The KTX, the Cost and One Catch</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Jeonju_Hanok_Village_20220701_012.jpg/1280px-Jeonju_Hanok_Village_20220701_012.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">The KTX reaches Jeonju Hanok Village in under two hours. Gyeonggijeon's fee, the free Saturday parade, and the bibimbap price gap locals argue about.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The KTX is the easy way in</b>: ₩31,600 one way from Yongsan, as fast as 1 hour 37 minutes, with 24 trains running the route daily.</li>
+<li><b>The village itself costs nothing to walk</b>: Gyeonggijeon charges ₩3,000 and Jeondong Cathedral is free, but the streets between them are open to anyone.</li>
+<li><b>Skip the bibimbap right inside the gate</b>: <u>walk past the walls for the same bowl at roughly half the price</u>.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Jeonju_Hanok_Village_20220701_012.jpg/1280px-Jeonju_Hanok_Village_20220701_012.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A hanok-lined street in Jeonju Hanok Village, shops and cafes under tiled roofs, a flowering tree overhead" width="1200" height="800" loading="lazy"/><figcaption>A hanok-lined street in Jeonju Hanok Village, shops and cafes under tiled roofs, a flowering tree overhead · Photo: <a href="https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_012.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩31,600</b><span>🚄 KTX Yongsan→Jeonju, one way</span><i>as fast as 1h37m, 24 trains a day</i></div>
+<div><b>Free</b><span>🏘️ walking the hanok-lined streets</span><i>only specific sites inside charge anything</i></div>
+<div><b>₩3,000</b><span>🏯 Gyeonggijeon admission, adult</span><i>free on the last Wednesday of the month</i></div>
+<div><b>2x</b><span>🍚 bibimbap, inside the walls vs. outside</span><i>same dish, different rent</i></div>
+</div>
+
+
+
+<p>Seven hundred-some hanok roofs crowd together under one skyline, tile after dark tile, and the first thing you notice walking in from Pungnammun Gate isn't a sign or a ticket booth. It's the quiet.</p>
+<p>A grandmother sweeps her own front step at seven in the morning, same as she would in a village with no tourists at all. The smell of someone's breakfast rice drifts out over a low stone wall, and visitors in rented hanbok won't show up on these lanes for another hour yet. This is Jeonju before the crowd arrives, and it's worth timing your train for.</p>
+<details class="term"><summary>What is a hanok (한옥)?</summary><p>A traditional Korean house, built with a wooden frame, a tiled or thatched roof, and heated floors warmed from underneath. Jeonju's village has roughly 700 of them still standing in one neighborhood, which is what makes it rare rather than just old.</p></details>
+
+<h2>🚄 How do you actually get to Jeonju?</h2>
+<p><strong>A standard KTX seat from Yongsan Station runs ₩31,600 one way, and the fastest train covers it in about 1 hour 37 minutes</strong>. Not every train is that quick; the slower ones on the same Jeolla Line route take closer to 1 hour 49 minutes, so it's worth checking the specific departure before you book. Twenty-four trains run the route each day, the first leaving Jeonju at 06:25 and the last at 23:11, arriving in Yongsan just before 1 a.m.. That fare already reflects the KTX-SRT fare merger: Korail folded the two systems together on September 1, 2026, cutting KTX prices by an average of 10% to match SRT's; Yongsan-Gwangju Songjeong dropped from ₩46,800 to ₩42,000 as one example.</p>
+<p><strong>If the KTX seats you want are sold out, an express bus from Dong Seoul Terminal is the backup, not the upgrade.</strong> It runs about 3 hours 28 minutes, roughly double the fastest train, for ₩24,500 in premium class or ₩16,700 standard, with 17 trips a day between a 06:00 first bus and a 22:10 last one. <em>Unless the train is genuinely full, the extra two hours on a bus isn't worth the savings.</em> From either Jeonju Station or the bus terminal, city buses and taxis both run to the hanok village.</p>
+<h2>🏯 What's actually worth paying for inside the walls?</h2>
+<p><strong>Only two stops inside Jeonju Hanok Village charge admission, and the walk between them costs nothing.</strong> <a href="https://hanok.jeonju.go.kr/contents/en_place">Jeonju Hanok Village's official site</a> lists Gyeonggijeon (경기전), the shrine King Taejo's descendants built in 1410 to hold his portrait, as open 10 a.m. to 6 p.m. year-round, with adult admission running ₩1,000 to ₩3,000 depending on residency and free entry on Culture Day, the last Wednesday of every month. Pay the full rate as a visitor and you're still looking at the price of a convenience-store snack for a courtyard that founded a dynasty's memory.</p>
+<details class="term"><summary>What is Gyeonggijeon (경기전)?</summary><p>A Joseon-dynasty shrine built to house a portrait of Taejo, the first king of Joseon and a native of the Jeonju region. It's the reason Jeonju calls itself the "root" of the dynasty rather than just another old town.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Gyeonggijeon_20220701_006.jpg/1280px-Gyeonggijeon_20220701_006.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Gyeonggijeon&#x27;s red Hongsalmun gate, with a tiled hanok building visible down the stone path beyond it" width="1200" height="800" loading="lazy"/><figcaption>Gyeonggijeon&#x27;s red Hongsalmun gate, with a tiled hanok building visible down the stone path beyond it · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyeonggijeon_20220701_006.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p><strong>Jeondong Catholic Cathedral, a short walk from Gyeonggijeon's gate, charges nothing at all.</strong> Built between 1907 and 1914 in a Romanesque and Byzantine style that the city's own tourism office calls one of the finest examples of cathedral architecture in Asia, it's open 9 a.m. to 5 p.m. outside of mass times. Jeonju Hyanggyo, the old Confucian school a short walk further in, is also free, open the same 10-to-6 hours.</p>
+<p><strong>If you're there on a Saturday between April and October, time your visit for 3 p.m.</strong> Every Saturday from April 18 through October 31, 2026, a free street parade called Nosang Nori-ya runs down Taejo-ro from Namcheon Bridge to Gyeonggi Hall, with a dragon-flag performance and drumming, plus a comic street play, and visitors can join the procession itself. <u>Check the date before you go</u>, since the season ends at the end of this month.</p>
+<details class="term"><summary>What is hanbok (한복)?</summary><p>Traditional Korean dress, worn today mostly for photos and festivals rather than daily life. Renting a set to walk the village in is one of the most common things visitors do here, and rental shops cluster thickly in the blocks around Gyeonggijeon.</p></details>
+
+<h2>💸 What does the day actually cost, and where's the catch?</h2>
+<p><strong>The KTX round trip is most of the bill, and the one real trap is where you sit down to eat.</strong> A ticket, one shrine fee, one bowl of the city's namesake dish and a coffee add up to far less than the train alone, as long as you don't eat at the first table you see.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Cost</th>
+<th style="text-align: right;">USD (~₩1,337/$1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KTX Yongsan↔Jeonju, round trip</td>
+<td style="text-align: right;">₩63,200</td>
+<td style="text-align: right;">$47.27</td>
+</tr>
+<tr>
+<td>Gyeonggijeon admission (adult)</td>
+<td style="text-align: right;">₩3,000</td>
+<td style="text-align: right;">$2.24</td>
+</tr>
+<tr>
+<td>Bibimbap, inside the hanok village walls</td>
+<td style="text-align: right;">from ₩10,000</td>
+<td style="text-align: right;">from $7.48</td>
+</tr>
+<tr>
+<td>Coffee (Starbucks Americano, nationwide reference price)</td>
+<td style="text-align: right;">₩4,700</td>
+<td style="text-align: right;">$3.52</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">A 2023 survey by a regional paper found plain bibimbap inside the hanok village running ₩10,000-12,000 and the beef-topped yukhoe version ₩12,000-15,000, against ₩5,000-7,000 and ₩7,000-8,000 just outside the walls, blamed on the village's high foot-traffic rents. Prices checked 2026-10-06; sources below.</p>
+
+<p>The train is non-negotiable, but the meal isn't. Walk past the walls that ring the hanok cluster, and the same bowl of bibimbap drops by roughly half. <em>That gap is old enough that it's less a one-time markup than just how the village prices itself now.</em></p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Jeondong_Catholic_Cathedral_20230408_001.jpg/1280px-Jeondong_Catholic_Cathedral_20230408_001.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Jeondong Catholic Cathedral&#x27;s red-brick twin towers and Romanesque facade, seen head-on from the plaza" width="1200" height="807" loading="lazy"/><figcaption>Jeondong Catholic Cathedral&#x27;s red-brick twin towers and Romanesque facade, seen head-on from the plaza · Photo: <a href="https://commons.wikimedia.org/wiki/File:Jeondong_Catholic_Cathedral_20230408_001.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<div class="me"><b>My take</b>
+A day here is easy to overpack: the shrine, the cathedral, a hanbok rental, maybe the Saturday parade too, all squeezed around one KTX round trip. Jeonju's one of the cities I've actually been to in the last two years, and if I were doing it again, I'd protect the parade time if it lines up with a Saturday rather than try to fit in everything else first. I'd also walk past the walls for lunch instead of sitting down at the first table I saw. The bowl's the same either way; only the rent is different.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Omokdae, a 5-minute walk from the hanok village, is the hilltop pavilion Yi Seong-gye built in 1380 to celebrate a military victory, and it's the spot for a panoramic view over the hanok roofs below.</li>
+<li><b>What locals argue about</b> Whether the price gap between bibimbap inside and outside the walls is fair rent-driven pricing or just a tourist markup with the same ingredients on both sides of the gate.</li>
+<li><b>Watch for</b> October 31. That's the last Saturday of this year's free street parade before it stops until next spring.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Do I need to book anything before I show up?</dt>
+<dd>Not for an individual or a small group. Volunteer-led walking tours leave at set times through the day, and parties under 20 can simply join one without registering ahead; only larger groups need to arrange a slot one week to two months out. Bring a translation app regardless, since most of those tours run in Korean.</dd>
+<dt>How much should I budget for a hanbok rental?</dt>
+<dd>Enough flexibility to compare a couple of storefronts before handing over cash. Pricing isn't standardized shop to shop the way museum admission is, with separate hourly and full-day options and extras like hair styling charged on top, so a quick look at two or three doors near the entrance beats renting from whichever one you reach first.</dd>
+</dl></div>
+
+<p>Book the Yongsan KTX first, since a sold-out fast train is the one thing on this trip you can't fix by walking further. Spend the savings from lunch on a second coffee instead of a pricier bowl inside the gate.</p>
+<p class="notice">Prices and hours were checked on 2026-10-06; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/where-to-eat-in-jeonju-hanok-village-3.html">Where to Eat in Jeonju Hanok Village: 3 Real Picks</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/suwon-hwaseong-this-years-festival-and.html">Suwon Hwaseong: This Year&#x27;s Festival and What It Costs</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[other] <a href="https://train.asamaru.net/시간표/전주역-전라선-고속철도/출발/용산역-호남선-고속철도/도착/">Asamaru train schedule, Jeonju Station→Yongsan KTX fares and daily departure times (checked 2026-10-06)</a></li>
+<li>[press] <a href="https://news.mtn.co.kr/news-detail/2026090710343036832">MTN News, KTX-SRT fare integration and 10% average fare cut from Sept 1, 2026, with Yongsan-Gwangju Songjeong example</a></li>
+<li>[other] <a href="https://transportation.asamaru.net/고속버스/시간표/동서울종합터미널/출발/전주고속버스터미널/도착/">Asamaru bus schedule, Dong Seoul Terminal→Jeonju Express Bus Terminal fares and durations</a></li>
+<li>[official] <a href="https://hanok.jeonju.go.kr/contents/en_place">Jeonju Hanok Village official site (English), Gyeonggijeon, Jeondong Catholic Cathedral and Jeonju Hyanggyo hours and admission</a></li>
+<li>[official] <a href="https://hanok.jeonju.go.kr/contents/en_tour">Jeonju Hanok Village official site (English), guided tour schedule and group reservation rules</a></li>
+<li>[other] <a href="https://xn--ok0b236bp0a.com/place/2239">꿀잼코리아 (Kkuljaem Korea) event listing, Nosang Nori-ya street parade 2026 dates and route</a></li>
+<li>[other] <a href="https://xn--ok0b236bp0a.com/place/6192">꿀잼코리아 (Kkuljaem Korea) place listing, Omokdae history, view and distance from the hanok village</a></li>
+<li>[press] <a href="https://www.jjan.kr/articleAmp/20230420580037">Jeonbuk Ilbo (jjan.kr), bibimbap price comparison inside vs. outside Jeonju Hanok Village (2023-04-20)</a></li>
+<li>[press] <a href="https://www.seoul.co.kr/news/economy/2025/01/20/20250120500133">Seoul Shinmun, Starbucks Korea Americano flat ₩4,700 nationwide since Jan 2025 price rise</a></li>
+<li>[other] <a href="https://www.investing.com/currencies/usd-krw-historical-data">Investing.com, USD/KRW historical exchange rate (2026-10-06 close, ₩1,337.19/$1)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-06-jeonju-hanok-village-day-trip--></div>
+</div></div></main></div></div></body></html>
