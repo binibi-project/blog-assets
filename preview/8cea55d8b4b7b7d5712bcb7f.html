@@ -1,0 +1,373 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>나스닥 2거래일 연속 최고치, 오르는 종목은 25%뿐</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">나스닥 2거래일 연속 최고치, 오르는 종목은 25%뿐</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/New_York_Stock_Exchange_June_2024.jpg/1280px-New_York_Stock_Exchange_June_2024.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">나스닥종합은 10월 5·6일 이틀 연속, S&P500은 8월 이후 처음 사상 최고치를 썼어요. 그런데 S&P500 종목의 25%만 50일 이동평균선 위에 있어요. 엔비디아·AMD 같은 소수 종목이 지수를 끌어올린 흐름이에요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>이틀 연속 최고치</b>: 나스닥종합은 10월 5일과 6일 이틀 연속 사상 최고치를 새로 썼고, S&amp;P500도 6일 7,818.93으로 8월 이후 처음 최고치를 갈아치웠어요.</li>
+<li><b>오르는 종목은 소수예요</b>: 같은 날 S&amp;P500 종목의 25%만 50일 이동평균선 위에 있었어요. 엔비디아·AMD 같은 AI·반도체 몇 종목이 지수를 끌어올린 거예요.</li>
+<li><b>국채금리는 2002년 이후 최고권</b>: 10년물 금리가 5.31%까지 올랐어요. <u>본인이 가진 미국 지수 추종 상품이 어떤 지수를 따라가는지</u>부터 확인해 보세요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/New_York_Stock_Exchange_June_2024.jpg/1280px-New_York_Stock_Exchange_June_2024.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="뉴욕증권거래소(NYSE) 건물 외관. 2거래일 연속 최고치를 쓴 나스닥·S&amp;P500이 거래되는 곳이에요." width="1200" height="1200" loading="lazy"/><figcaption>뉴욕증권거래소(NYSE) 건물 외관. 2거래일 연속 최고치를 쓴 나스닥·S&amp;P500이 거래되는 곳이에요. · Photo: <a href="https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_June_2024.jpg" rel="nofollow">Kidfly182</a> / Wikimedia Commons (CC BY 4.0)</figcaption></figure><div class="kv">
+<div><b>27,599.89</b><span>나스닥종합 종가(10.6)</span><i>2거래일 연속 사상 최고</i></div>
+<div><b>7,818.93</b><span>S&amp;P500 종가(10.6)</span><i>8월 이후 처음 최고치</i></div>
+<div><b>25%</b><span>50일 이동평균선 위 S&amp;P500 종목 비율</span><i>지수는 최고치, 대부분 종목은 아님</i></div>
+<div><b>5.31%</b><span>10년물 국채금리(10.5)</span><i>2002년 이후 최고권</i></div>
+</div>
+
+
+
+<p>나스닥이 사상 최고치를 새로 썼다는 기사를 봤는데 정작 계좌는 그대로인 것 같다면, 착각이 아니에요. 지수와 '내 종목'이 따로 논 두 거래일이었거든요.</p>
+<p>10월 5일과 6일, 미국 3대 지수는 한 몸처럼 움직이지 않았어요. 지수만 보면 축제 분위기인데, 그 안을 들여다보면 얘기가 달라져요.</p>
+<h2>📊 나스닥·S&amp;P500, 이틀 연속 최고치를 썼어요</h2>
+<p><strong>나스닥종합은 10월 5일 27,477.31로 마감하며 사상 최고치를 새로 썼어요. 다음 날인 6일에도 27,599.89로 다시 최고치를 갈아치웠고요</strong>. S&amp;P500도 6일 7,818.93으로 마감했어요. <a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-6-dow-sp-500-nasdaq-080526166.html">야후 파이낸스</a> 보도대로 "8월 이후 처음" 최고치를 갈아치운 거예요.</p>
+<table>
+<thead>
+<tr>
+<th>날짜</th>
+<th style="text-align: right;">S&amp;P500</th>
+<th style="text-align: right;">나스닥종합</th>
+<th style="text-align: right;">다우존스</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.25(금)</td>
+<td style="text-align: right;">7,743.41</td>
+<td style="text-align: right;">27,068.72</td>
+<td style="text-align: right;">51,828.62</td>
+</tr>
+<tr>
+<td>9.28(월)</td>
+<td style="text-align: right;">7,683.69</td>
+<td style="text-align: right;">26,820.38</td>
+<td style="text-align: right;">51,481.51</td>
+</tr>
+<tr>
+<td>9.29(화)</td>
+<td style="text-align: right;">7,670.84</td>
+<td style="text-align: right;">26,797.54</td>
+<td style="text-align: right;">51,349.92</td>
+</tr>
+<tr>
+<td>9.30(수)</td>
+<td style="text-align: right;">7,651.54</td>
+<td style="text-align: right;">26,861.06</td>
+<td style="text-align: right;">50,906.05</td>
+</tr>
+<tr>
+<td>10.1(목)</td>
+<td style="text-align: right;">7,666.45</td>
+<td style="text-align: right;">26,871.60</td>
+<td style="text-align: right;">50,926.56</td>
+</tr>
+<tr>
+<td>10.2(금)</td>
+<td style="text-align: right;">7,722.72</td>
+<td style="text-align: right;">27,190.86</td>
+<td style="text-align: right;">51,176.96</td>
+</tr>
+<tr>
+<td>10.5(월)</td>
+<td style="text-align: right;">7,773.95</td>
+<td style="text-align: right;">27,477.31</td>
+<td style="text-align: right;">51,267.90</td>
+</tr>
+<tr>
+<td>10.6(화)</td>
+<td style="text-align: right;"><strong>7,818.93</strong></td>
+<td style="text-align: right;"><strong>27,599.89</strong></td>
+<td style="text-align: right;"><strong>51,521.28</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: FRED(세인트루이스 연방준비은행) S&amp;P500·나스닥종합·다우존스 종가(2026.9.25~10.6).</p>
+
+<p>표만 보면 세 지수가 다 같이 오른 것처럼 보이지만, <em>두 주 전인 9월 25일과 비교하면 다우존스는 여전히 그 자리를 못 따라잡았어요</em>. 51,521.28은 9월 25일 종가보다 0.59% 낮은 자리예요((51,828.62-51,521.28)÷51,828.62로 계산). 같은 기간 나스닥은 2.0% 올랐고요.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="최근 2주 3대 지수 등락 비교 (9.25 종가=100)" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">최근 2주 3대 지수 등락 비교 (9.25 종가=100)</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">97.28</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">98.69</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">100.09</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">101.49</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">102.89</text><text x="56.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">9.25(금)</text><text x="136.6" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">9.28(월)</text><text x="217.1" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">9.29(화)</text><text x="297.7" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">9.30(수)</text><text x="378.3" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.1(목)</text><text x="458.9" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.2(금)</text><text x="539.4" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.5(월)</text><text x="620.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.6(화)</text><polyline points="56.0,169.9 136.6,203.4 217.1,210.8 297.7,221.7 378.3,213.0 458.9,181.7 539.4,153.0 620.0,127.3" fill="none" stroke="var(--accent,#1F5AF6)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="169.9" r="4" fill="var(--accent,#1F5AF6)"/><text x="56.0" y="159.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100</text><circle cx="136.6" cy="203.4" r="4" fill="var(--accent,#1F5AF6)"/><text x="136.6" y="193.4" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.23</text><circle cx="217.1" cy="210.8" r="4" fill="var(--accent,#1F5AF6)"/><text x="217.1" y="200.8" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.06</text><circle cx="297.7" cy="221.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="297.7" y="211.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">98.81</text><circle cx="378.3" cy="213.0" r="4" fill="var(--accent,#1F5AF6)"/><text x="378.3" y="203.0" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.01</text><circle cx="458.9" cy="181.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="458.9" y="171.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.73</text><circle cx="539.4" cy="153.0" r="4" fill="var(--accent,#1F5AF6)"/><text x="539.4" y="143.0" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100.39</text><circle cx="620.0" cy="127.3" r="4" fill="var(--accent,#1F5AF6)"/><text x="620.0" y="117.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100.98</text><rect x="56" y="326" width="10" height="10" rx="2" fill="var(--accent,#1F5AF6)"/><text x="70" y="335" font-size="11" fill="var(--muted,#8A94A0)">S&amp;P500</text><polyline points="56.0,169.9 136.6,209.9 217.1,213.4 297.7,203.4 378.3,201.7 458.9,150.3 539.4,104.2 620.0,84.7" fill="none" stroke="#E0873A" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="169.9" r="4" fill="#E0873A"/><text x="56.0" y="159.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100</text><circle cx="136.6" cy="209.9" r="4" fill="#E0873A"/><text x="136.6" y="199.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.08</text><circle cx="217.1" cy="213.4" r="4" fill="#E0873A"/><text x="217.1" y="203.4" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99</text><circle cx="297.7" cy="203.4" r="4" fill="#E0873A"/><text x="297.7" y="193.4" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.23</text><circle cx="378.3" cy="201.7" r="4" fill="#E0873A"/><text x="378.3" y="191.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.27</text><circle cx="458.9" cy="150.3" r="4" fill="#E0873A"/><text x="458.9" y="140.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100.45</text><circle cx="539.4" cy="104.2" r="4" fill="#E0873A"/><text x="539.4" y="94.2" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">101.51</text><circle cx="620.0" cy="84.7" r="4" fill="#E0873A"/><text x="620.0" y="74.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">101.96</text><rect x="186" y="326" width="10" height="10" rx="2" fill="#E0873A"/><text x="200" y="335" font-size="11" fill="var(--muted,#8A94A0)">나스닥종합</text><polyline points="56.0,169.9 136.6,199.1 217.1,209.9 297.7,247.3 378.3,245.6 458.9,224.7 539.4,216.9 620.0,195.6" fill="none" stroke="#2F9E6B" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="169.9" r="4" fill="#2F9E6B"/><text x="56.0" y="159.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100</text><circle cx="136.6" cy="199.1" r="4" fill="#2F9E6B"/><text x="136.6" y="189.1" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.33</text><circle cx="217.1" cy="209.9" r="4" fill="#2F9E6B"/><text x="217.1" y="199.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.08</text><circle cx="297.7" cy="247.3" r="4" fill="#2F9E6B"/><text x="297.7" y="237.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">98.22</text><circle cx="378.3" cy="245.6" r="4" fill="#2F9E6B"/><text x="378.3" y="235.6" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">98.26</text><circle cx="458.9" cy="224.7" r="4" fill="#2F9E6B"/><text x="458.9" y="214.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">98.74</text><circle cx="539.4" cy="216.9" r="4" fill="#2F9E6B"/><text x="539.4" y="206.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">98.92</text><circle cx="620.0" cy="195.6" r="4" fill="#2F9E6B"/><text x="620.0" y="185.6" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">99.41</text><rect x="316" y="326" width="10" height="10" rx="2" fill="#2F9E6B"/><text x="330" y="335" font-size="11" fill="var(--muted,#8A94A0)">다우존스</text></svg><figcaption>자료: <a href="https://fred.stlouisfed.org/series/SP500" rel="nofollow">S&amp;P500·나스닥종합·다우존스 종가, FRED(세인트루이스 연은) 종합. 9.25 종가를 100으로 환산.</a></figcaption></figure>
+
+<h2>🤔 지수는 최고치인데 왜 '내 종목'은 그대로일까</h2>
+<p><strong>10월 6일 S&amp;P500 종목 중 50일 이동평균선 위에 있는 종목은 25%뿐이었어요</strong>. 지수는 사상 최고치인데 정작 그 지수를 이루는 종목 넷 중 셋은 최근 두 달 평균보다도 낮은 자리에 있다는 뜻이에요. <em>반 평균 점수가 오른 게, 사실은 전교 1등 한 명이 만점을 받아서였던 것과 비슷한 그림이에요.</em></p>
+<details class="term"><summary>50일 이동평균선·시장 폭이 뭐예요?</summary><p>50일 이동평균선은 최근 50거래일 종가를 평균 낸 선이에요. 그 선 위에 있는 종목이 많을수록 상승이 시장 전체로 넓게 퍼졌다는 뜻이에요. 적을수록 몇몇 종목에만 쏠렸다는 뜻이고요. 이렇게 상승이 얼마나 넓게 퍼졌는지를 '시장 폭(마켓 브레스)'이라고 불러요.</p></details>
+
+<p>이번 최고치를 끌어올린 건 엔비디아와 AMD 같은 반도체주였어요. <strong>두 종목 모두 10월 6일 새 최고치를 썼어요. 엔비디아 시가총액은 6조달러에 육박했고요</strong>. <a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-6-dow-sp-500-nasdaq-080526166.html">야후 파이낸스</a>는 AMD 최고경영자 리사 수가 컴퓨팅 수요가 공급을 계속 웃돌고 있다고 말했다고 전했어요.</p>
+<p>이 쏠림에는 배경이 있어요. <strong>엔비디아 이사회는 9월 28일 자사주 매입 한도를 1,500억달러 늘려 총 2,350억달러로 키웠어요. 단일 자사주 매입 승인으로는 역대 최대 규모예요</strong>. 종전 최대 기록은 애플이 2024년에 늘린 1,100억달러였고요.</p>
+<details class="term"><summary>자사주 매입(바이백)이 뭐예요?</summary><p>회사가 번 돈으로 자기 회사 주식을 시장에서 사들이는 거예요. 유통 주식 수가 줄어서 남은 주식 한 주의 가치가 올라가는 효과가 있고, 회사가 "현금이 이 정도로 넉넉하다"는 신호를 시장에 보내는 역할도 해요.</p></details>
+
+<p><em>지수가 사상 최고치를 쓰는 동안에도 대부분 종목은 제자리였던 이유가 여기 있어요.</em></p>
+<p>10월 5일 하루만 보면 쏠림이 더 뚜렷해요. <strong>엔비디아는 이날 약 237달러로 마감하며 5월 14일 세운 종전 최고가(235.74달러)를 넘어섰어요. 스페이스X는 모건스탠리가 목표주가 300달러를 제시한 뒤 장중 5% 넘게 올랐고요</strong>. AI·우주 관련 소수 종목이 그날 상승분의 많은 부분을 만든 셈이에요.</p>
+<h2>🏦 국채금리는 왜 2002년 이후 최고권까지 올랐을까</h2>
+<p><strong>10년물 국채금리는 10월 5일 5.31%로, 2002년 이후 최고 수준 근처에서 움직이고 있어요</strong>. 9월 25일 5.17%였던 금리는 두 주 사이 꾸준히 올랐어요.</p>
+<p>트레이딩이코노믹스는 중동 정세 불안으로 유가가 들썩이면서 물가 압박이 이어진 점, 그리고 미 재정적자 우려를 금리 상승의 배경으로 꼽았어요. <em>보통은 금리가 이렇게 오르면 미래 이익을 당겨 쓰는 성장주·기술주가 가장 먼저 흔들려요. 이번엔 AI 실적 기대가 그 부담을 눌렀던 거고요.</em></p>
+<div class="me"><b>제 경우</b>
+지수가 최고치라는 기사를 보면 저도 계좌를 한 번 더 열어보게 되는 쪽이에요. 미국 주식에도 투자하고 있거든요. 다만 이번처럼 S&amp;P500 종목의 25%만 오른 흐름을 보면, 지수가 최고치라고 제가 가진 것도 다 같이 올랐을 거라 섣불리 기대하진 않으려고요. <em>국내 장에서 손실을 본 기억이 아직 남아 있어서인지, 헤드라인과 계좌 잔고는 따로 본다는 버릇이 더 붙은 것 같아요.</em>
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 다우존스는 두 거래일 연속 상승에도 9월 25일 수준을 아직 못 따라잡았어요. 지수 하나가 최고치를 쓴다고 랠리가 시장 전체로 퍼진 건 아니라는 뜻이에요.</li>
+<li><b>구조</b> 나스닥·S&amp;P500은 시가총액이 큰 종목일수록 지수에 더 크게 반영되는 방식이에요. 엔비디아 하나가 6조달러 가까이 커지면, 그 종목의 움직임만으로 지수 전체가 출렁일 수 있어요. 미 의회예산처(CBO)는 연방정부 부채가 2025회계연도 기준 GDP의 99%에서 2056년 175%까지 늘어날 거라 내다봤어요. 이런 재정 부담도 국채금리를 떠받치는 구조적인 힘 중 하나고요.</li>
+<li><b>다음에 볼 것</b> <b>10월 27~28일 FOMC</b>가 이 금리 수준에서 연준이 어떤 결정을 내리는지 확인할 다음 지점이에요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>미국 지수 추종 ETF에 1,000만원이 있었다면 10월 2일 이후 실제로 얼마나 늘었어요?</dt>
+<dd>따라가는 지수에 따라 꽤 갈려요. 나스닥을 추종했다면 단순 계산으로 약 15만 400원 늘었고(1,000만원 × 1.504%, (27,599.89-27,190.86)÷27,190.86), 다우존스를 추종했다면 약 6만 7,300원 느는 데 그쳤어요(1,000만원 × 0.673%, (51,521.28-51,176.96)÷51,176.96). 실제 상품은 추종 방식과 비용에 따라 이 숫자와 정확히 맞진 않아요.</dd>
+<dt>스페이스X는 상장한 지 얼마 안 됐다던데, 언제 어떻게 상장했어요?</dt>
+<dd>올해 6월 12일, 나스닥에 'SPCX'로 상장했어요. 공모가는 주당 135달러였고, 첫날 160달러95센트로 마감하며 공모가보다 19.22% 올랐어요. 10월 5일 모건스탠리의 목표주가 300달러 제시는 상장 넉 달도 안 된 종목에 나온 평가라, 시장이 얼마나 공격적으로 보고 있는지 보여 주는 숫자예요.</dd>
+</dl></div>
+
+<p>저는 이번 최고치를 "증시가 전반적으로 좋아졌다"보다는 "몇몇 종목이 지수를 끌고 간다"로 읽으려고 해요. 이 쏠림이 다음 주에도 그대로인지가 제겐 더 궁금한 지점이에요.</p>
+<p class="notice">여기 적는 건 투자 권유가 아니에요. 숫자는 발표 원문에서 다시 확인해 보세요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/10/blog-post.html">나스닥은 올랐는데 다우는 빠진 한 주였어요</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/10/7003-108.html">코스피 7,003, 삼성전자 &#x27;108조&#x27; 실적이 분수령</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[공식] <a href="https://fred.stlouisfed.org/series/SP500">세인트루이스 연방준비은행(FRED), S&amp;P500 지수</a></li>
+<li>[공식] <a href="https://fred.stlouisfed.org/series/NASDAQCOM">세인트루이스 연방준비은행(FRED), 나스닥종합지수</a></li>
+<li>[공식] <a href="https://fred.stlouisfed.org/series/DJIA">세인트루이스 연방준비은행(FRED), 다우존스산업평균지수</a></li>
+<li>[공식] <a href="https://fred.stlouisfed.org/series/DGS10">세인트루이스 연방준비은행(FRED), 10년물 국채금리(DGS10)</a></li>
+<li>[공식] <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">연방준비제도, FOMC 회의 일정(2026년 10월 27~28일)</a></li>
+<li>[언론] <a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-october-6-dow-sp-500-nasdaq-080526166.html">Yahoo Finance, 10월 6일 증시(엔비디아·AMD·시장 폭)</a></li>
+<li>[언론] <a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-october-5-dow-sp-500-nasdaq-081220790.html">Yahoo Finance, 10월 5일 증시(엔비디아·스페이스X)</a></li>
+<li>[언론] <a href="https://www.bnnbloomberg.ca/business/2026/09/28/nvidia-boosts-share-buyback-by-record-us150b-as-ai-boom-fuels-growth/">BNN Bloomberg, 엔비디아 1,500억달러 자사주 매입 확대(2026.9.28)</a></li>
+<li>[언론] <a href="https://thenextweb.com/news/nvidia-150bn-share-buyback-235bn-record">TheNextWeb, 엔비디아 자사주 매입 역대 최대 규모</a></li>
+<li>[언론] <a href="https://tradingeconomics.com/united-states/government-bond-yield/news/588709">TradingEconomics, 10년물 국채금리 2002년 이후 최고</a></li>
+<li>[언론] <a href="https://www.basenor.com/blogs/news/spacex-ipo-goes-live-spcx-begins-trading-on-nasdaq">Basenor, 스페이스X 나스닥 상장(2026.6.12)</a></li>
+<li>[기타] <a href="https://www.crfb.org/blogs/debt-rises-175-gdp-under-cbos-long-term-outlook">CRFB(미 연방예산책임위원회), CBO 장기 재정전망 해설</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-07-us-stocks-record-narrow-breadth-oct-2026--></div>
+</div></div></main></div></div></body></html>
