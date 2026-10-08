@@ -1,0 +1,349 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Lotte World in a Day: The Ticket, the Exit, the Festival</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Lotte World in a Day: The Ticket, the Exit, the Festival</h3><div class="post-body"><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Lotte_magic_castle.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Lotte World's adult pass is ₩67,000 after April's price rise: the right Jamsil exit, subway fare, and this fall's Junji Ito horror festival dates.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>₩67,000 for an adult day pass</b>: it rose from ₩64,000 this April, with teen, child and baby rates priced lower.</li>
+<li><b>Jamsil Station, Exit 3</b>: about 271 meters from the gate on Lines 2 and 8, no transfer needed from most of Seoul.</li>
+<li><b>Buy the After-4 pass</b> if you're arriving in the afternoon: <u>it runs ₩55,000 for an adult</u>, usable from 4 p.m.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Lotte_magic_castle.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Visitors crossing the bridge into Magic Island, the blue-spired castle gate ahead against a clear sky" width="1200" height="1508" loading="lazy"/><figcaption>Visitors crossing the bridge into Magic Island, the blue-spired castle gate ahead against a clear sky · Photo: <a href="https://commons.wikimedia.org/wiki/File:Lotte_magic_castle.jpg" rel="nofollow">Yuliafichtl</a> / Wikimedia Commons (CC0)</figcaption></figure><div class="kv">
+<div><b>₩67,000</b><span>🎫 adult one-day pass</span><i>up ₩3,000 since April 1, 2026</i></div>
+<div><b>10:00-21:00</b><span>⏰ Mon-Thu &amp; Sun</span><i>Fri-Sat run until 22:00</i></div>
+<div><b>Exit 3</b><span>🚇 Jamsil Station, Lines 2/8</span><i>about 271m to the gate</i></div>
+<div><b>Sep 19-Nov 15</b><span>🎃 this fall's horror festival</span><i>Junji Ito collaboration</i></div>
+</div>
+
+
+
+<p>Most visitors treat the blue-spired castle gate as the finish line, snap one photo, and spend the rest of the morning standing in whichever line looks shortest. Cross the bridge into Magic Island on a clear afternoon and the crowd thickens fast: families pushing strollers past a candy-striped lamppost, a dozen people angling for the same shot of the spires everyone else just took. A ride operator waves the next group through before the gate behind you has even swung shut. None of that is the park's fault; it just means nobody told you which queue actually moves.</p>
+<p>Lotte World splits into two halves that behave completely differently, and knowing which one you're standing in front of saves more time than any shortcut.</p>
+<details class="term"><summary>What is Magic Island (매직아일랜드)?</summary><p>The outdoor half of the park, built on its own small island inside Seokchon Lake. The castle, most of the big outdoor coasters and the lake-view photo spots are here; it opened in March 1990, about eight months after the indoor Adventure hall opened in July 1989.</p></details>
+
+<h2>🎫 How much does a day at Lotte World actually cost?</h2>
+<p><strong>A full day costs ₩67,000 (about $49.90) for an adult pass</strong>, with teen passes at ₩58,000 (about $43.21), child at ₩50,000 (about $37.25), and a pass for a toddler under 36 months at ₩17,000 (about $12.67). Every one of those rose by roughly 2,000-3,000 won on April 1, 2026, the first increase since the previous one in December 2024.</p>
+<p>If you're arriving later in the day, <strong>the After-4 pass runs ₩55,000 (about $40.98) for an adult</strong>, usable from 4 p.m. and raised by the same ₩3,000 in this spring's round. It buys the same rides as the full pass, just fewer hours to use them in, so it only pays off if you're genuinely starting after lunch.</p>
+<p>Online and app bookings are commonly cheaper than paying at the gate window, though how much cheaper isn't confirmed by an official price list, so pull up the app's price before you queue for a paper ticket.</p>
+<details class="term"><summary>What is the After-4 Pass (애프터4 이용권)?</summary><p>A discounted ticket usable starting at 4 p.m., good for every ride the full-day pass covers. It's built for an evening visit, not a half-price shortcut to the whole day.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Trevi_fountain_replica_at_Lotte_World.jpg/1280px-Trevi_fountain_replica_at_Lotte_World.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A full-scale, lit-up replica of Rome&#x27;s Trevi Fountain inside the indoor Adventure hall" width="1200" height="900" loading="lazy"/><figcaption>A full-scale, lit-up replica of Rome&#x27;s Trevi Fountain inside the indoor Adventure hall · Photo: <a href="https://commons.wikimedia.org/wiki/File:Trevi_fountain_replica_at_Lotte_World.jpg" rel="nofollow">Christophe95</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<h2>🚇 How do you get to Jamsil, and which exit?</h2>
+<p><strong>Take Line 2 or Line 8 to Jamsil Station and leave by Exit 3, about 271 meters from the park gate</strong>. Both lines stop there, so a transfer from almost anywhere in Seoul lands you within a few stops of Jamsil without crossing the city on foot.</p>
+<p>A single ride on a T-money card costs ₩1,550 for an adult since June 28, 2025, or ₩1,650 if you're paying cash for a single-use ticket. The park itself runs <strong>10:00-21:00 Monday through Thursday and Sunday, and 10:00-22:00 on Friday and Saturday</strong>, with ticketing and entry closing an hour before the gate does, per <a href="https://english.visitseoul.net/entertainment/Lotte-World-Adventure/ENP002192">Visit Seoul's official listing</a>.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Jamsil_Station_20241102_001.jpg/1280px-Jamsil_Station_20241102_001.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The platform sign for Jamsil Station, Line 2, the subway stop for Lotte World" width="1200" height="1586" loading="lazy"/><figcaption>The platform sign for Jamsil Station, Line 2, the subway stop for Lotte World · Photo: <a href="https://commons.wikimedia.org/wiki/File:Jamsil_Station_20241102_001.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost</th>
+<th style="text-align: right;">USD (at ~₩1,342.23/$1)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subway from most of Seoul (T-money)</td>
+<td>₩1,550</td>
+<td style="text-align: right;">about $1.15</td>
+</tr>
+<tr>
+<td>Adult one-day pass</td>
+<td>₩67,000</td>
+<td style="text-align: right;">about $49.90</td>
+</tr>
+<tr>
+<td>Adult After-4 pass (from 4 p.m.)</td>
+<td>₩55,000</td>
+<td style="text-align: right;">about $40.98</td>
+</tr>
+<tr>
+<td>Coffee (Korea's average Americano)</td>
+<td>₩3,001</td>
+<td style="text-align: right;">about $2.24</td>
+</tr>
+<tr>
+<td>One park snack or meal</td>
+<td>not confirmed</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">USD at ₩1,342.23/$1, the Oct 8, 2026 close. The coffee line is a 2024 Korea Consumer Agency survey average across 25 Korean chains, not a Lotte World-specific price. Checked 2026-10-08.</p>
+
+<p>On paper the admission alone looks like the whole bill, but a bottled drink or snack inside the gate adds up faster than most people plan for, and no current source confirms what a hot dog or ice cream actually costs there today. Budget loosely for food and you won't feel it.</p>
+<h2>🎭 Is this fall's horror festival worth building your trip around?</h2>
+<p><strong>Yes, if an immersive horror set sounds fun: "Invitation to Bizarre World," Lotte World's collaboration with manga artist Junji Ito, runs September 19 through November 15, 2026 across both Adventure and Magic Island</strong>. A preview section called the Mystery Party Zone opened in the indoor Adventure hall on September 12, and characters from Ito's manga, including Tomie and Souichi, appear across several attractions, immersive walkthroughs, photo zones and themed food and merchandise.</p>
+<details class="term"><summary>Who is Junji Ito (伊藤潤二)?</summary><p>A Japanese horror manga artist known for body-horror and spiral-obsession stories like <i>Tomie</i> and <i>Uzumaki</i>. His art style, all fine linework and dread, is what Lotte World's designers are translating into physical sets this season.</p></details>
+
+<p>Outside the festival, the park runs its usual daily parades at 2 p.m. and 7 p.m. except Mondays.</p>
+<div class="me"><b>My take</b>
+Lotte World isn't where I'd send someone chasing the scariest ride in the country. I've ridden coasters at Lotte World and at Gyeongju World, and Gyeongju World's newer rides left my stomach in a worse place than anything in Seoul does. What Lotte World does better is convenience: one gate, one lake, an indoor hall for a rainy afternoon and an outdoor island for golden-hour photos, all without a second ticket or a second commute. If the castle photo is really all you're after, the After-4 pass covers it for less, and you can put the savings toward the festival's themed snacks instead.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Walk the public path around Seokchon Lake. It's free, it rings the whole island, and it's the easiest place to see the castle lit up without paying for a single ride.</li>
+<li><b>What locals argue about</b> Whether the ticket is still worth it. Adult admission has risen twice in sixteen months, from ₩62,000 to ₩64,000 in December 2024 and then to ₩67,000 this April, a cumulative 8%.</li>
+<li><b>Watch for</b> The festival's own end date. "Invitation to Bizarre World" closes November 15, 2026, so a visit after that date won't include it.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>What happens to my ticket if it rains?</dt>
+<dd>Your pass still works either way. Magic Island's outdoor rides pause once rainfall passes roughly 0.2mm, along with strong wind or extreme heat or cold, while the indoor Adventure hall keeps running regardless. A drizzle that stays under that mark won't shut anything down, so check an hourly forecast rather than the daily icon before you write off an outdoor afternoon.</dd>
+<dt>Do I need a separate ticket for the horror festival's attractions?</dt>
+<dd>Not confirmed yet. Lotte World hadn't finalized which festival rides and sets come bundled with a regular day pass versus sold as their own ticket, per the Korea Times' early-September report. Keep a little extra in your budget in case one of the new sets turns out to need its own add-on, and check the official site the week of your visit rather than assuming your pass covers everything new.</dd>
+</dl></div>
+
+<p>A full-price adult pass buys a long day if you walk in knowing which exit, which gate and which pass actually fits your afternoon. <strong>Book the After-4 pass if you're not arriving before lunch, and skip the gate-window line by checking the app's price first.</strong></p>
+<p class="notice">Prices and hours were checked on 2026-10-08; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/gyeongju-day-trip-from-seoul-order-that.html">Gyeongju Day Trip From Seoul: The Order That Works</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/nami-island-day-trip-from-seoul-what-it.html">Nami Island Day Trip from Seoul: What It Actually Costs</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://english.visitseoul.net/entertainment/Lotte-World-Adventure/ENP002192">Visit Seoul, Lotte World Adventure listing (hours, address, nearest subway exit and distance)</a></li>
+<li>[press] <a href="https://biz.sbs.co.kr/amp/article/20000297877">SBS Biz, Lotte World ticket price increase effective April 1, 2026 (adult, teen, child, After-4 prices)</a></li>
+<li>[press] <a href="https://www.insight.co.kr/news/546796">Insight, Lotte World 2026 price increase details including the baby/toddler pass</a></li>
+<li>[press] <a href="https://news.mtn.co.kr/news-detail/2024111813573952651">Money Today (mtn.co.kr), the previous price increase, December 2024</a></li>
+<li>[press] <a href="https://www.koreatimes.co.kr/southkorea/society/20250429/seoul-area-subway-fares-to-increase-by-w150-on-june-28">The Korea Times, Seoul-area subway fare increase to ₩1,550, effective June 28, 2025</a></li>
+<li>[press] <a href="https://koreatimes.co.kr/business/companies/20260904/horror-master-junji-ito-turns-seouls-lotte-world-into-surreal-nightmare">The Korea Times, Junji Ito x Lotte World "Invitation to Bizarre World" autumn festival</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Lotte_World">Wikipedia, Lotte World (park sections, operating hours, Magic Island rain policy, parade schedule)</a></li>
+<li>[press] <a href="https://m.seoul.co.kr/news/2024/11/05/20241105500166">The Seoul Shinmun (m.seoul.co.kr), Korea Consumer Agency average Americano price survey</a></li>
+<li>[other] <a href="https://www.investing.com/currencies/usd-krw-historical-data">Investing.com, USD/KRW historical exchange rate data</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-08-lotte-world-one-day-guide--></div>
+</div></div></main></div></div></body></html>
