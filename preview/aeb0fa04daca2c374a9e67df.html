@@ -1,0 +1,371 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Inside Korea&#x27;s K-Pop Photocard Market: What It Costs</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Inside Korea&#x27;s K-Pop Photocard Market: What It Costs</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Street_hongdae_Seoul.jpg/1280px-Street_hongdae_Seoul.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">A ₩15,000 album's bonus card can resell for ₩160,500. How Korea's photocard trading market actually works, and how fans avoid fakes.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The gap is the whole business</b>: a standard album with one or two random photocards costs ₩13,000-20,000 retail, and a single card from inside it can resell for many times that once it's scarce.</li>
+<li><b>Buy from a platform that checks the card first</b>, not a stranger's DM: photocards carry no hologram or serial number, which is exactly why authenticated apps and stores exist.</li>
+<li><b>Ship smart if you're buying from abroad</b>: <u>use a cross-border service built for this</u>, since customs has already seized more than a million fake cards headed overseas.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Street_hongdae_Seoul.jpg/1280px-Street_hongdae_Seoul.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A busy pedestrian street in Hongdae, Mapo District, the Seoul neighborhood with one of the city&#x27;s two dedicated photocard stores" width="1200" height="1281" loading="lazy"/><figcaption>A busy pedestrian street in Hongdae, Mapo District, the Seoul neighborhood with one of the city&#x27;s two dedicated photocard stores · Photo: <a href="https://commons.wikimedia.org/wiki/File:Street_hongdae_Seoul.jpg" rel="nofollow">U0894629</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩13,000-20,000</b><span>💿 one standard album, official</span><i>CD, photobook, 1-2 random photocards</i></div>
+<div><b>₩42,000 ($31)</b><span>📈 average resale price, per card</span><i>overseas buyers, first half of 2026</i></div>
+<div><b>+56%</b><span>🌍 overseas card trading growth</span><i>year over year, same period</i></div>
+<div><b>1.2M+</b><span>🚨 fake photocards seized</span><i>Korea customs, 2023 through Aug. 2025</i></div>
+</div>
+
+
+
+<p>You tear the plastic wrap off, slide out the CD sleeve, and there it is: a small glossy card, face-down, no way to know who's on it until you flip it over. For half a second it could be anyone in the group. Then it's someone, and depending on who, that two-by-three-inch piece of card stock is either exactly what you hoped for or the start of a new search.</p>
+<p>That small moment of chance, repeated across millions of albums a year, is the whole engine behind a market most visitors never hear about until they're standing in a Seoul shop full of tablets, each one showing a grid of faces for sale.</p>
+<details class="term"><summary>What is a photocard (포토카드, poca)?</summary><p>A credit-card-sized print of one group member, bundled randomly inside a physical album. Fans shorten it to "poca." Since no two fans want the same member's face, a stack of identical albums can produce a stack of completely different outcomes.</p></details>
+
+<h2>💸 Why does a ₩15,000 album's card resell for ₩160,500?</h2>
+<p><strong>Because the card is scarce in a way the album itself isn't, and buying more albums is the only official way to try again.</strong> A standard physical album in Korea runs about ₩13,000-20,000, and that price usually buys a CD, a photobook of 80-120 pages, a poster, and one or two random photocards. Two cheaper formats exist too: Weverse Albums skip the CD for a QR-linked digital photo book and NFC streaming card, at roughly ₩6,000-9,000, and kit albums swap the disc for a small Bluetooth card, at roughly ₩9,000-15,000. All three still hide the same thing inside: one or two random cards, member unknown until you open it.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th style="text-align: right;">Price (KRW)</th>
+<th>What's inside</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard (CD)</td>
+<td style="text-align: right;">₩13,000-20,000</td>
+<td>CD, photobook, poster, 1-2 random cards</td>
+</tr>
+<tr>
+<td>Weverse Album</td>
+<td style="text-align: right;">₩6,000-9,000</td>
+<td>QR digital photo book, NFC streaming card, 1-2 random cards</td>
+</tr>
+<tr>
+<td>Kit Album</td>
+<td style="text-align: right;">₩9,000-15,000</td>
+<td>Bluetooth card (no CD), 1 random card</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Prices from a Seoul-shipping retailer's own format comparison, not an official price list, since no single agency publishes a combined rate card. Checked 2026-10-08.</p>
+
+<p><em>On paper, that's a cheap way to gamble on a face card.</em> In practice, if the member you want isn't the one you pull, the only paths left are buying another album or paying someone who already has that card.</p>
+<h2>🛍️ Where fans actually buy and sell cards</h2>
+<p><strong>Through apps and stores that check a card before it's listed, not through a stranger's message.</strong> <a href="https://www.koreajoongangdaily.com/business/the-k-pop-photo-card-frenzy-comes-with-a-catch-heres-how-not-to-get-scammed/11174241">Pocamarket</a>, a mobile app with Korean and global versions, buys cards from fans, runs its own authenticity check, and only then lists them for other fans to buy. The company also runs physical shops: POCA SPOT, near Hongik University Station in Mapo District and in Myeongdong, where the Hongdae branch alone lets visitors browse more than two million photocards on in-store kiosks and pick up same-day. A smaller, unmanned shop called Pocaboo sits near the same Hongdae station.</p>
+<details class="term"><summary>What does "random pull" actually mean here?</summary><p>Each album's photocards come from a set pool, and you can't choose which one lands in your copy. Buy ten albums and you might get ten different members, or the same one twice. That's the randomness fans are either chasing or trying to trade their way around.</p></details>
+
+<p>Prices at these shops show how wide the gap actually gets. A Karina (aespa) card has been priced at ₩160,500, and a staff member told reporters an An Yu-jin card sold for ₩1,000,000. For a cheaper way in, Pocamarket's blind-box machine, Poca Gacha, sells for ₩49,990 and hands you ten random boy-group cards or six random girl-group cards, and Pocaboo's own lucky-draw machine charges just ₩3,300 per random card. Girl-group cards run pricier than boy-group ones across the board, staff told the paper.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Myeongdong-7gil-2023.jpg/1280px-Myeongdong-7gil-2023.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Street stalls and evening crowds on Myeongdong 7-gil in central Seoul, near the second of the city&#x27;s two dedicated photocard stores" width="1200" height="1600" loading="lazy"/><figcaption>Street stalls and evening crowds on Myeongdong 7-gil in central Seoul, near the second of the city&#x27;s two dedicated photocard stores · Photo: <a href="https://commons.wikimedia.org/wiki/File:Myeongdong-7gil-2023.jpg" rel="nofollow">SKTakek</a> / Wikimedia Commons (CC0)</figcaption></figure>
+
+<p><strong>Buying from outside Korea is worth it if you use a service built for cross-border trading, since Korea's biggest secondhand platform just made that easier.</strong> Bungaejangter's overseas arm, Bungae Global, saw overseas transactions rise 56% year over year in the first half of 2026. Photocards alone made up 35% of those overseas purchases, and once you count other star goods too, the share rises to 60%, or six in every ten overseas transactions. The average price paid per card was ₩42,000 (about $31 at ₩1,336/$1). BTS, Ateez, Stray Kids and PLAVE cards alone accounted for 34% of all overseas trades, with 11 other groups, including QWER, Illit and CORTIS, making up another 15%.</p>
+<details class="term"><summary>What is Bungae Global?</summary><p>The international arm of Bungaejangter, Korea's largest secondhand marketplace. It lets fans outside Korea buy directly from Korean sellers, with the platform handling cross-border shipping and payment instead of leaving that to a private deal.</p></details>
+
+<table>
+<thead>
+<tr>
+<th>Metric (Bungae Global, H1 2026)</th>
+<th style="text-align: right;">Figure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overseas transaction growth, YoY</td>
+<td style="text-align: right;">+56%</td>
+</tr>
+<tr>
+<td>Share that was photocards</td>
+<td style="text-align: right;">35%</td>
+</tr>
+<tr>
+<td>Share including other star goods</td>
+<td style="text-align: right;">60%</td>
+</tr>
+<tr>
+<td>Average price per photocard</td>
+<td style="text-align: right;">₩42,000 (~$31)</td>
+</tr>
+<tr>
+<td>Shipping partners</td>
+<td style="text-align: right;">3 (up from 1)</td>
+</tr>
+<tr>
+<td>Payment methods</td>
+<td style="text-align: right;">6 (up from 4)</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Source: fnnews, citing Bungaejangter's own first-half 2026 data, 2026.8.27.</p>
+
+<p><em>The growth isn't just more buyers, it's better plumbing.</em> The platform added two new shipping partners, Able Union and FD, alongside its original Delivered Korea, plus real-time tracking from the seller's dispatch to your door, and it added Apple Pay and Google Pay to a payment list that used to stop at credit cards, PayPal, Alipay and WeChat Pay.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/202403_Concourse_of_Hongik_University_Station.jpg/1280px-202403_Concourse_of_Hongik_University_Station.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The concourse of Hongik University Station in Mapo District, the subway stop nearest Hongdae&#x27;s photocard stores" width="1200" height="900" loading="lazy"/><figcaption>The concourse of Hongik University Station in Mapo District, the subway stop nearest Hongdae&#x27;s photocard stores · Photo: <a href="https://commons.wikimedia.org/wiki/File:202403_Concourse_of_Hongik_University_Station.jpg" rel="nofollow">MNXANL</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<h2>🚨 How do I avoid buying a fake?</h2>
+<p><strong>Stick to a platform that authenticates the card before you pay, because photocards have no hologram, no serial number, nothing printed on them to prove they're real.</strong> That gap is exactly why counterfeits move in such volume: Korea's customs service seized over 1.2 million fake photocards between 2023 and August 2025, based on data a lawmaker released on Sept. 30, 2025. IVE cards made up the largest single share at 713,593 seized, followed by NewJeans at 99,888, IU at 77,344, and Stray Kids at 75,404.</p>
+<p><u>Check that a seller or platform actually inspects cards before listing them</u>, rather than taking a seller's word for it. Pocamarket's whole pitch is that it mails-in, checks, then lists, and Bungae Global's growth is built on the same kind of structure, not an open DM thread.</p>
+<div class="me"><b>My take</b>
+Chasing one specific member's face through a run of random pulls is a gamble dressed up as a purchase, and it's worth knowing the odds before starting. If an album is genuinely the only way to get the card you want, buying two or three is a reasonable bet; buying a dozen to force one member out of a random pool is the point where the math stops making sense, since resale usually beats it by then anyway. In your shoes, I'd rather pay a known price on a platform that already checked the card than chase a lower number from a stranger.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour in Hongdae</b> both POCA SPOT and the smaller Pocaboo sit near Hongik University Station, so you can compare a staffed shop's prices against an unmanned machine's ₩3,300 random pulls in the same afternoon.</li>
+<li><b>What locals argue about</b> whether buying a ₩49,990 blind box of ten cards is actually cheaper than buying albums for the same odds, since a blind box skips the CD and photobook entirely but still can't guarantee the member you want.</li>
+<li><b>Watch for</b> a comeback announcement. That's when a group's older cards suddenly get harder to find and resale prices move first, well before the new album's own cards hit the market.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Is it safer to buy from someone I found through a fan Instagram or Facebook group instead of these apps?</dt>
+<dd>No guarantee exists either way, but a private deal removes the one thing that actually protects you: a third party willing to step in if something goes wrong. Ask whoever you're dealing with how long they've been trading and whether anyone else can vouch for them, since a brand-new account with nothing behind it is the single biggest warning sign collectors bring up. A live video call beats any still image, because reused pictures from someone else's old post are the most common trick going.</dd>
+<dt>Could my photocard package get flagged at customs even if the card is real?</dt>
+<dd>Genuine mail rarely gets stopped; screening targets bulk shipments of obvious fakes, not a single item mailed between two fans. The bigger practical worry is a parcel going missing in transit, which is exactly the gap new tracking features were built to close. Buying somewhere that already vetted the item before it shipped removes both worries at once.</dd>
+</dl></div>
+
+<p>A budget album and a six-figure card are the same hobby wearing two different price tags, and which one you pay depends entirely on how badly you want the face inside to be the one you were hoping for. The next check-in on this is whenever a major comeback lands, to see whether Bungae Global's growth curve holds or whether a bigger platform undercuts it on shipping.</p>
+<p class="notice">Prices and hours were checked on 2026-10-08; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/what-k-pop-lightstick-really-costs-and.html">What a K-Pop Lightstick Really Costs, and Where to Buy One</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/how-k-pop-concert-tickets-actually-work.html">How K-Pop Concert Tickets Actually Work in Korea</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.koreajoongangdaily.com/business/the-k-pop-photo-card-frenzy-comes-with-a-catch-heres-how-not-to-get-scammed/11174241">Korea JoongAng Daily, "The K-pop photo card frenzy comes with a catch. Here's how not to get scammed" (counterfeit seizure data, Pocamarket/POCA SPOT/Pocaboo details and prices), Oct. 15, 2025</a></li>
+<li>[press] <a href="https://en.fnnews.com/news/202608270918556805">fnnews, Bungaejangter/Bungae Global first-half 2026 overseas trading data, Aug. 27, 2026</a></li>
+<li>[other] <a href="https://blog.paysable.com/?p=1678">Paysable blog, K-pop album format and price comparison (Standard/Weverse/Kit)</a></li>
+<li>[other] <a href="https://www.retail4growth.com/news/lite/a-hub-for-k-pop-fans-in-seoul-6824">Retail4Growth, "A hub for K-POP fans in Seoul" (POCA SPOT Hongdae opening, kiosks, 2M+ photocards), July 17, 2024</a></li>
+<li>[press] <a href="https://view.asiae.co.kr/article/2026090915324235252">Asia Economy, USD/KRW exchange rate, Sept. 9, 2026</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-08-kpop-photocard-market-prices--></div>
+</div></div></main></div></div></body></html>
