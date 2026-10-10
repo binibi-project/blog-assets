@@ -1,0 +1,370 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Why Google Maps Still Can&#x27;t Navigate You in Korea</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Why Google Maps Still Can&#x27;t Navigate You in Korea</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Gangnam_Station_Exit_8.jpg/1280px-Gangnam_Station_Exit_8.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">A 2026 law change let Google export Korea's map data, but Google Maps still can't give walking or driving directions. What locals use instead.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>Still no walking or driving directions.</b> Seoul approved Google's request to export precision map data on Feb 27, 2026, but Google itself says it has no launch date for turn-by-turn navigation in Korea.</li>
+<li><b>Naver Map and Kakao Map already do the job:</b> walking and driving directions, plus transit, and Naver's interface and reviews now run in English.</li>
+<li><b>Switch before you land:</b> <u>install Naver Map or Kakao Map and set the language to English</u>, not after you're standing at an intersection with no route line.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Gangnam_Station_Exit_8.jpg/1280px-Gangnam_Station_Exit_8.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Exit 8 of Gangnam Station, marked in black on yellow in both Korean and English — the kind of street-level detail a bare address doesn&#x27;t give you" width="1200" height="676" loading="lazy"/><figcaption>Exit 8 of Gangnam Station, marked in black on yellow in both Korean and English — the kind of street-level detail a bare address doesn&#x27;t give you · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gangnam_Station_Exit_8.jpg" rel="nofollow">Christian Bolz</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>19 years</b><span>🗺️ Google's map-data dispute with Seoul</span><i>first request 2007, approved Feb 27, 2026</i></div>
+<div><b>0</b><span>🧭 turn-by-turn routes Google Maps gives in Korea</span><i>still true as of Aug 27, 2026</i></div>
+<div><b>5</b><span>📋 conditions on the Feb 2026 approval</span><i>coordinates, imagery, local servers, a "red button," a Korea-based officer</i></div>
+<div><b>20M+</b><span>🚗 drivers already on T map</span><i>Korea's own real-time navigation app</i></div>
+</div>
+
+
+
+<p>Landing at Incheon Airport, the instinct is automatic: pull out your phone, open Google Maps, and type in your hotel. The blue dot appears. The pin drops.</p>
+<p>Then nothing. No route line curving through the city, no walk time, no voice telling you where to turn next. For a visitor who has used Google Maps everywhere else on earth, Seoul is the one place it quietly stops working.</p>
+<p>It isn't a bug. It's a law, and even after that law changed, the app still hasn't caught up.</p>
+<h2>🔒 Why Google Maps Still Can't Get You There</h2>
+<p><strong>A security law, not a technical limit, is why Google Maps has no walking or driving directions in Korea.</strong> Open the app in Seoul and search a subway station: the pin shows up, but tap "Directions" and it can only route you by public transit, never on foot or by car.</p>
+<details class="term"><summary>What is Korea's map-export law?</summary><p>Article 16 of the Geospatial Information Management Act bars state-surveyed map data at a scale of 1:5,000 or finer from leaving the country without permission from the Ministry of Land, Infrastructure and Transport. The government's stated reason is national security: unblurred satellite imagery of military sites, it argues, would be a gift to North Korea.</p></details>
+
+<p><a href="https://www.koreaherald.com/article/10684189">The Korea Herald</a> traces the fight back to 2007, when Google first asked for the data and was turned down. A second request in 2016 was rejected too, citing national-security concerns. Google tried a third time in February 2025; that request was deferred three separate times before a decision finally came.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>What happened</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2007</td>
+<td>Google's first export request, rejected</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>Second request, rejected, citing national-security concerns</td>
+</tr>
+<tr>
+<td>Feb 2025</td>
+<td>Google's third request filed</td>
+</tr>
+<tr>
+<td>Feb 27, 2026</td>
+<td>Approved, with conditions attached</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Nineteen years passed between the first request and the approval. An interagency review body voted it through at the National Geographic Information Institute, not a single minister's signature.</p>
+
+<p>On paper, February 27, 2026 reads like a clean win for Google. In practice, Korea's review body attached five conditions: coordinates for Korean territory have to be stripped from Google's global map and Earth products; satellite and Street View imagery must obscure military and other sensitive sites; and contour data is excluded from export entirely. Raw data also has to be processed on domestic servers by a local partner, with only government-reviewed base-map and road data allowed to leave, and Google has to build a "red button" shutoff for emergencies while keeping a dedicated map officer stationed in Korea.</p>
+<p>One mapping-industry figure summed up the local skepticism: "Korea invests 150 billion won every year through the National Geographic Information Institute in producing precision maps. The idea of handing that over to a foreign company for free — with no compensation — makes no sense," Wi Gwang-jae, an official at a mapping and surveying firm, told KBS. Google's own VP for government affairs, Cris Turner, said the company "sincerely welcomes" the decision.</p>
+<p><strong>None of that has turned into a working map yet.</strong> Google confirmed on August 27, 2026 that its plan is to bring "full-functioning Google Maps capabilities to Korea, which includes turn-by-turn directions," and that it had hired a Strategic Partnerships Development Manager to help deliver it, but gave no date. Local apps Naver Map and Kakao Map already have up to three times as many users in Korea as Google's own app.</p>
+<h2>🗺️ Naver Map vs. Kakao Map: Which One Actually Gets You There</h2>
+<p><strong>Both already do what Google Maps can't: full turn-by-turn directions for walking and driving, plus transit.</strong> Naver Map runs an English-language interface, real-time traffic and Street View; Kakao Map handles driving and walking directions, plus biking and public transit, and is generally seen as stronger for real-time bus arrivals.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Naver Map</th>
+<th>Kakao Map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English interface</td>
+<td>Full, including reviews</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>Walking / driving directions</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Street View</td>
+<td>Yes</td>
+<td>Not its focus</td>
+</tr>
+<tr>
+<td>Known strength</td>
+<td>Subway exit-level precision</td>
+<td>Live bus arrival times</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Neither app is a straight upgrade over the other. Pick Naver for a walking-heavy trip through subway exits, Kakao if you're chasing buses more than trains.</p>
+
+<p>At a station with ten exits, "take the subway to Gangnam" is only half the trick. You still have to guess which stairwell puts you on the right side of the street. Think of a Korean map app's exit numbers as a pin inside the pin: it doesn't just say "Gangnam Station," it tells you which exit to climb and which direction to walk once you're up top. That's the difference between circling a six-lane intersection twice and walking straight to your door.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Seoul_Subway_Jamsil_Station_Line_2_Platform_Direction_Info.jpg/1280px-Seoul_Subway_Jamsil_Station_Line_2_Platform_Direction_Info.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A platform sign at Jamsil Station, arrow pointing toward Jamsillaru with its station code, the kind of exact wayfinding Korean transit apps are built around" width="1200" height="900" loading="lazy"/><figcaption>A platform sign at Jamsil Station, arrow pointing toward Jamsillaru with its station code, the kind of exact wayfinding Korean transit apps are built around · Photo: <a href="https://commons.wikimedia.org/wiki/File:Seoul_Subway_Jamsil_Station_Line_2_Platform_Direction_Info.jpg" rel="nofollow">阿貴</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure>
+
+<p><strong>Naver Map's interface, search filters and customer reviews now run in English too, with no separate download required.</strong> The company added AI-translated reviews in English, plus Chinese and Japanese, along with translated search filters for cuisine type and dining atmosphere; the language switches automatically to match your phone's own settings, or you can set it by hand inside the app.</p>
+<details class="term"><summary>What is Papago?</summary><p>Naver's own machine-translation tool. Inside Naver Map, it's what turns a Korean customer review into English, Chinese or Japanese on the spot, so you can read what a local actually said about a restaurant before you sit down.</p></details>
+
+<p>It's working. The average monthly number of daily active users on Naver's foreign-language map service rose 26.4% in September 2024 from the same month a year earlier. "We now offer most of the information foreign users need to explore new locations," said Choi Seung-rak, who heads Naver Map's services. Small cafés and newer spots can still show up under Korean-only names, so if a search comes up empty, pasting the Korean name usually finds it.</p>
+<h2>🚗 If You're Driving: Waze and T map Still Work</h2>
+<p><strong>Google Maps' block is on turn-by-turn navigation, not on finding a place, and if you're behind the wheel, two other apps already route you there.</strong> Waze functions normally for driving navigation in Korea, sidestepping the restriction that limits Google Maps.</p>
+<details class="term"><summary>What is T map?</summary><p>SK Telecom's own navigation app, and the one Korean drivers already default to. It pulls real-time traffic conditions from a pool of more than 20 million users, which is why taxi and delivery drivers tend to trust it over an international app.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Teheran-ro_Yeongdong-daero_crossing_6.jpg/1280px-Teheran-ro_Yeongdong-daero_crossing_6.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Traffic backed up along Teheran-ro at dusk, Gangnam&#x27;s business towers lit up behind it" width="1200" height="750" loading="lazy"/><figcaption>Traffic backed up along Teheran-ro at dusk, Gangnam&#x27;s business towers lit up behind it · Photo: <a href="https://commons.wikimedia.org/wiki/File:Teheran-ro_Yeongdong-daero_crossing_6.jpg" rel="nofollow">kallerna</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<div class="me"><b>My take</b>
+If you've never had a map app fail you before, trusting Google Maps the moment you land is a completely reasonable instinct. It has worked everywhere else you've traveled. I'd swap habits before the trip, not during it: download Naver Map or Kakao Map at home, set the language to English, and keep Google Maps around only for searching place names and reading star ratings. <em>That habit is worth keeping even after Google's own app catches up, since the fix could land quietly and without warning.</em> <u>Ten minutes setting up Naver Map before you fly</u> is cheaper than twenty spent standing at an intersection guessing which exit is yours.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more day</b> Download both Naver Map and Kakao Map and run the same errand through each: a subway transfer, then a short bus ride, to see which app's strength actually matches how you get around.</li>
+<li><b>What locals argue about</b> Whether the national-security case for blocking precision map exports still holds up, or whether it's really protectionism for Naver and Kakao's home turf. A Korean mapping official called handing the data over "for free" senseless, while Google and foreign business groups have pushed the opposite case for years.</li>
+<li><b>Watch for</b> Whether Google actually ships turn-by-turn navigation. It confirmed the plan in August 2026 with no launch date, so check the app yourself before relying on it rather than trusting an old guide.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>How will I know if the Google app has actually caught up by the time I'm there?</dt>
+<dd>Pull up two real addresses on opposite sides of town and ask the app for the way across, say Itaewon to Konkuk University. A lone bus-and-train glyph on the results screen tells you nothing has moved since this was written. A small steering-wheel symbol paired with a pedestrian figure is the sign that the ban has finally lifted. Until that second symbol shows up on your own screen, lean on Naver Map or Kakao Map to actually get you there instead, the way a commuter with no memory of the old restriction already does every morning.</dd>
+<dt>I'm renting a car. Should I pick Waze or the local option?</dt>
+<dd>Stick with Waze inside Seoul or Busan proper; its point-to-point routing already functions across the country. Heading toward a coastal road or a smaller county instead, switch over to T map: SK Telecom draws its live congestion picture from more than twenty million drivers already on the service, so a lane closure near a toll gate tends to reroute you faster than an outside app can manage.</dd>
+</dl></div>
+
+<p>For getting around on this trip, <strong>put Naver Map or Kakao Map on your phone before you land, and leave Google Maps for searching place names and reviews only.</strong> Check Google's own app again once you're here. If the turn-by-turn feature has finally shipped, it'll show up as an option on a route you already know.</p>
+<p class="notice">Prices and hours were checked on 2026-10-09; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/seoul-taxis-for-visitors-what-apps.html">Seoul Taxis for Visitors: What the Apps Actually Cost</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/food-delivery-in-korea-without-korean.html">Food Delivery in Korea Without a Korean Phone Number</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.koreaherald.com/article/10684189">The Korea Herald, Approval mandates removal of coordinates and domestic processing, easing US tariff tension (2026-02-27)</a></li>
+<li>[press] <a href="https://9to5google.com/2026/08/27/google-maps-turn-by-turn-navigation-south-korea/">9to5Google, Google Maps turn-by-turn navigation in South Korea (2026-08-27)</a></li>
+<li>[press] <a href="https://www.bgr.com/2207179/why-google-maps-doesnt-work-south-korea/">BGR, Why Doesn't Google Maps Work In South Korea?</a></li>
+<li>[press] <a href="https://www.koreajoongangdaily.com/business/naver-map-adds-translations-for-reviews-and-search-filters-in-english-chinese-and-japanese/12382580">Korea JoongAng Daily, Naver Map adds translations for reviews and search filters in English, Chinese and Japanese (2024-10-02)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-09-google-maps-korea-why-no-directions--></div>
+</div></div></main></div></div></body></html>
