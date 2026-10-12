@@ -1,0 +1,404 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>How to Make Doenjang Jjigae (Soybean Paste Stew)</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">How to Make Doenjang Jjigae (Soybean Paste Stew)</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Doenjang-jjigae.jpg/1280px-Doenjang-jjigae.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">The Korean Food Promotion Institute's doenjang jjigae for four, in grams and milliliters, with the water mix-up on the page and a miso fallback.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>A Korean institute's recipe for four</b>: the Korean Food Promotion Institute's version uses 4 Tbsp of doenjang plus beef and tofu.</li>
+<li><b>Low heat does the work</b>: the paste simmers gently for 10 minutes before anything else goes in, then the potatoes get 15.</li>
+<li><b>Get the right paste</b>: <u>buy Korean doenjang, not miso</u>, from a Korean or Asian grocer before you start.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Doenjang-jjigae.jpg/1280px-Doenjang-jjigae.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Doenjang jjigae in a black earthenware bowl with tofu, oysters, sliced red chili, scallion and leafy greens in a golden-brown broth" width="1200" height="801" loading="lazy"/><figcaption>Doenjang jjigae in a black earthenware bowl with tofu, oysters, sliced red chili, scallion and leafy greens in a golden-brown broth · Photo: <a href="https://commons.wikimedia.org/wiki/File:Doenjang-jjigae.jpg" rel="nofollow">jyleen21</a> / Wikimedia Commons (CC0)</figcaption></figure><div class="kv">
+<div><b>4</b><span>🍲 servings</span><i>Korean Food Promotion Institute recipe</i></div>
+<div><b>4 Tbsp</b><span>🫘 doenjang</span><i>dissolved in 500 ml (2 cups) of water</i></div>
+<div><b>25 min+</b><span>⏰ simmering</span><i>10 for the broth, 15 for the potatoes, then a short final boil</i></div>
+<div><b>1 cm</b><span>🔪 cube size</span><i>tofu, potato, mushrooms</i></div>
+</div>
+
+
+
+<p>Four tablespoons of brown paste, two cups of water and ten minutes on a low flame: that's the whole base of the stew. The smell when the paste first loosens into hot water is deep and salty, a little funky too. Then the potatoes soften and the tofu goes in last, and the pot turns into something you want to eat with a bowl of plain rice and nothing else. For a dish with this much depth, the ingredient list is short.</p>
+<p>The recipe here comes from the <a href="https://www.hansik.or.kr/board/re/view/323?bbsSeq=56871&amp;bbsId=323&amp;bbsType=re&amp;menuSn=193">Korean Food Promotion Institute (한식진흥원)</a>, the Seoul institute that promotes Korean food, and it's adapted below with grams and milliliters kept as the page gives them.</p>
+<details class="term"><summary>What is jjigae (찌개)?</summary><p>A Korean stew with less broth than guk or tang, the brothier soups. The Encyclopedia of Korean Culture defines it as meat or vegetables simmered with gochujang or doenjang until only a little broth is left, and doenjang jjigae is also called tojang jjigae.</p></details>
+
+<h2>🫘 What is doenjang, and can miso stand in?</h2>
+<p><strong>Doenjang is Korea's fermented soybean paste, and miso works only as a milder fallback.</strong> The Encyclopedia of Korean Culture describes doenjang as the solids left behind when the liquid is ladled off soybean blocks fermented in brine; that liquid becomes soy sauce. It's old, too. The same entry notes doenjang appears in the <em>Samguk Sagi</em> among the wedding gift items of King Sinmun of Silla.</p>
+<details class="term"><summary>What is meju (메주)?</summary><p>Cooked soybeans shaped into blocks, then fermented and dried; both soy sauce and doenjang start from it. The Korean Food Promotion Institute's own doenjang recipe starts with meju that has aged in salt water for 40 days or more, and says the finished paste is ready to eat after about a month in the crock.</p></details>
+
+<p>Picture miso and doenjang as cousins who grew up in different kitchens. Miso adds koji and grains, while doenjang leans on soybeans and salt, and Food Republic notes some miso is ready within a week, against six weeks or more for doenjang. The result is a paste that's sharper and grainier, and the same piece says you'd need only half as much doenjang to stand in for miso.</p>
+<p>So what does that mean for your pot? <em>Swap in miso and the stew comes out gentler, so taste before you decide it needs more salt.</em> <u>Pick up a tub of Korean doenjang before you start</u>. Weee!, an Asian grocery delivery service, carries CJ Foods' Korean doenjang in a 2.2 lb tub.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Doenjang.jpg/1280px-Doenjang.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A mound of doenjang on a small plate, with a spoonful resting on a wooden spoon" width="1200" height="1800" loading="lazy"/><figcaption>A mound of doenjang on a small plate, with a spoonful resting on a wooden spoon · Photo: <a href="https://commons.wikimedia.org/wiki/File:Doenjang.jpg" rel="nofollow">국립국어원</a> / Wikimedia Commons (CC BY-SA 2.0 kr)</figcaption></figure>
+
+<h2>🛒 Ingredients for four, in grams</h2>
+<p><strong>Everything except the doenjang is in a regular supermarket.</strong> The quantities below are the institute's, for four servings.</p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th style="text-align: right;">Amount</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥩 Beef sirloin (등심)</td>
+<td style="text-align: right;">100 g</td>
+<td>sliced thin</td>
+</tr>
+<tr>
+<td>Tofu</td>
+<td style="text-align: right;">1 block (300 g)</td>
+<td>1 cm cubes</td>
+</tr>
+<tr>
+<td>🥔 Potato</td>
+<td style="text-align: right;">200 g</td>
+<td>1 cm cubes</td>
+</tr>
+<tr>
+<td>🍄 Shiitake or button mushrooms</td>
+<td style="text-align: right;">3 (90 g)</td>
+<td>1 cm cubes</td>
+</tr>
+<tr>
+<td>🧅 Onion</td>
+<td style="text-align: right;">1 (200 g)</td>
+<td>1 × 1 cm squares</td>
+</tr>
+<tr>
+<td>🌶️ Korean green chilies (풋고추)</td>
+<td style="text-align: right;">4 (60 g)</td>
+<td>1 × 1 cm squares</td>
+</tr>
+<tr>
+<td>Scallion, chopped</td>
+<td style="text-align: right;">1 Tbsp</td>
+<td></td>
+</tr>
+<tr>
+<td>Garlic, minced</td>
+<td style="text-align: right;">1 tsp</td>
+<td></td>
+</tr>
+<tr>
+<td>Gochugaru (Korean chili powder)</td>
+<td style="text-align: right;">1 tsp</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Broth:</strong> water</td>
+<td style="text-align: right;">2 cups (500 ml)</td>
+<td>see the note below</td>
+</tr>
+<tr>
+<td><strong>Broth:</strong> doenjang</td>
+<td style="text-align: right;">4 Tbsp</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Source: Korean Food Promotion Institute (한식진흥원), 된장찌개 recipe, checked 2026-10-12. Prep time isn't listed on the page.</p>
+
+<p>Read the water line twice. The ingredient list says 2 cups (500 ml), but the first cooking step says 2½ cups, which works out to about 625 ml at the page's own 250 ml cup. Start with 500 ml and keep the extra half cup by the stove; jjigae is meant to be on the thick side, and it's easier to loosen a stew than to rescue a watery one.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="What goes into one 4-serving pot, by weight" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">What goes into one 4-serving pot, by weight</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">0g</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">90g</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">180g</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">270g</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">360g</text><text x="103.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Tofu</text><text x="197.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Potato</text><text x="291.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Onion</text><text x="385.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Beef sirloin</text><text x="479.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Mushrooms</text><text x="573.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Green chilies</text><rect x="73.6" y="84.7" width="58.8" height="203.3" rx="3" fill="var(--accent,#1F5AF6)"/><text x="103.0" y="78.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">300g</text><rect x="167.6" y="152.4" width="58.8" height="135.6" rx="3" fill="var(--accent,#1F5AF6)"/><text x="197.0" y="146.4" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">200g</text><rect x="261.6" y="152.4" width="58.8" height="135.6" rx="3" fill="var(--accent,#1F5AF6)"/><text x="291.0" y="146.4" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">200g</text><rect x="355.6" y="220.2" width="58.8" height="67.8" rx="3" fill="var(--accent,#1F5AF6)"/><text x="385.0" y="214.2" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">100g</text><rect x="449.6" y="227.0" width="58.8" height="61.0" rx="3" fill="var(--accent,#1F5AF6)"/><text x="479.0" y="221.0" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">90g</text><rect x="543.6" y="247.3" width="58.8" height="40.7" rx="3" fill="var(--accent,#1F5AF6)"/><text x="573.0" y="241.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">60g</text></svg><figcaption>자료: <a href="https://www.hansik.or.kr/board/re/view/323?bbsSeq=56871&amp;bbsId=323&amp;bbsType=re&amp;menuSn=193" rel="nofollow">Korean Food Promotion Institute (한식진흥원), 된장찌개 recipe</a></figcaption></figure>
+
+<p>Tofu and vegetables make up most of the weight, and the beef is only 100 g across four bowls. <em>Here the meat seasons the broth more than it fills the bowl.</em> If you can't find Korean green chilies, a mild green chili keeps the same fresh bite without taking over.</p>
+<h2>🍲 How do you make doenjang jjigae step by step?</h2>
+<p><strong>Make a gentle doenjang broth first, then add things in order of how long they take to cook.</strong> Here are the institute's steps, one action each:</p>
+<ol>
+<li>
+<p>Slice the beef thin.</p>
+</li>
+<li>
+<p>Cut the tofu, potato and mushrooms into 1 cm cubes.</p>
+</li>
+<li>
+<p>Cut the onion and green chilies into 1 × 1 cm squares.</p>
+</li>
+<li>
+<p>Put the water in a pot and stir in the doenjang until no lumps are left.</p>
+</li>
+<li>
+<p>Simmer it on low heat for 10 minutes to make the doenjang broth.</p>
+</li>
+<li>
+<p>Add the beef and skim off the foam as it rises.</p>
+</li>
+<li>
+<p>Add the potato and onion and cook on low heat for 15 minutes.</p>
+</li>
+<li>
+<p>Add the tofu, mushrooms, green chilies, chopped scallion, minced garlic and gochugaru, then boil a little longer.</p>
+</li>
+</ol>
+<p><strong>Where it usually goes wrong is step 4.</strong> The page asks you to stir the paste into the water until no lumps are left, and a small sieve plus the back of a spoon makes that quicker. Then keep the flame low, since the page asks for low heat both for the broth and for the potatoes.</p>
+<p>The other easy slip is adding the tofu with the potatoes. In the institute's order it goes in at the very end, followed by only a short boil.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Doenjang-jjigae_4.jpg/1280px-Doenjang-jjigae_4.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A finished pot of doenjang jjigae with zucchini, onion and bits of soybean, with sliced scallion, chilies and a block of tofu on the cutting board beside it" width="1200" height="800" loading="lazy"/><figcaption>A finished pot of doenjang jjigae with zucchini, onion and bits of soybean, with sliced scallion, chilies and a block of tofu on the cutting board beside it · Photo: <a href="https://commons.wikimedia.org/wiki/File:Doenjang-jjigae_4.jpg" rel="nofollow">이동원</a> / Wikimedia Commons (CC0)</figcaption></figure>
+
+<p>Serve it straight from the pot with rice. The Encyclopedia of Korean Culture gives one reason why Koreans love jjigae so much: a spoonful of a well-seasoned stew makes plain, unsalted rice easy to eat. That's the pairing to aim for, so don't salt the rice.</p>
+<div class="me"><b>My take</b>
+A tub of brown paste that smells this strong can feel like a big commitment for one recipe, especially if nobody at home has tasted it before. Honestly? I'd make this exact version first, with 500 ml of water and every one of the 4 Tbsp, before changing anything. If it tastes too strong, that's useful information about your brand of paste, and the fix next time is half a spoon less, not a different recipe.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Swap the plain water for stock. The institute's own tips suggest anchovy or clam broth, and list radish, bell pepper and kimchi among the vegetables that go well in the pot.</li>
+<li><b>What locals argue about</b> Whether it should be red at all. The Encyclopedia of Korean Culture lists three ways to make it: doenjang alone, doenjang with coarse chili powder, or doenjang mixed with a gochujang made for stews.</li>
+<li><b>Watch for</b> Summer. The same entry says gang-doenjang jjigae, a doenjang-heavy version cooked in an earthenware pot with only green chilies, is the one to make in hot weather.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>My doenjang tastes too salty. Can I fix the paste itself?</dt>
+<dd>Yes, two pantry items fix it. Stir in kongaru (콩가루, soybean flour), then adjust the texture with guk-ganjang (국간장), as the institute's doenjang recipe advises. Shop-bought tubs belong chilled, it adds.</dd>
+<dt>Did Korea's royal court eat this too?</dt>
+<dd>A version of it, under another name. Joseon palace kitchens called jjigae "jochi" and split it into a clear kind and a doenjang-based kind, and the king's table always carried both.</dd>
+</dl></div>
+
+<p>For a first pot, follow the institute's order exactly and only tweak the water. <strong>Once it works, try the anchovy stock</strong>, the first stock the institute's own tips name.</p>
+<p class="notice">Prices and hours were checked on 2026-10-12; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/how-to-make-sundubu-jjigae-soft-tofu.html">How to Make Sundubu Jjigae (Soft Tofu Stew) at Home</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/how-to-make-kimchi-jjigae-real-recipe.html">How to Make Kimchi Jjigae: A Real Recipe in Grams</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://www.hansik.or.kr/board/re/view/323?bbsSeq=56871&amp;bbsId=323&amp;bbsType=re&amp;menuSn=193">Korean Food Promotion Institute (한식진흥원), "된장찌개" recipe, reference recipe adapted for this post (servings, weights, steps, cooking times, tips)</a></li>
+<li>[official] <a href="https://www.hansik.or.kr/board/re/view/323?bbsSeq=56953&amp;bbsId=323&amp;bbsType=re&amp;menuSn=193">Korean Food Promotion Institute (한식진흥원), "된장" recipe (meju aging, ripening time, fixes)</a></li>
+<li>[official] <a href="https://encykorea.aks.ac.kr/Article/E0055109">Encyclopedia of Korean Culture (한국민족문화대백과사전), "찌개" (definition, tojang jjigae, three methods, gang-doenjang jjigae, royal jochi)</a></li>
+<li>[official] <a href="https://encykorea.aks.ac.kr/Article/E0016941">Encyclopedia of Korean Culture (한국민족문화대백과사전), "된장" (definition, Samguk Sagi record)</a></li>
+<li>[press] <a href="https://www.foodrepublic.com/1423725/doenjang-flavorful-miso-alternative/">Food Republic, doenjang vs. miso (ingredients, fermentation time, texture, substitution ratio)</a></li>
+<li>[other] <a href="https://www.sayweee.com/en/product/CJ-Foods-Korean-Doenjang-Bean-Paste/27708">Weee!, CJ Foods Korean Doenjang Bean Paste 2.2 lb product page</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-11-doenjang-jjigae-recipe--></div>
+</div></div></main></div></div></body></html>
