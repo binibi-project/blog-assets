@@ -1,0 +1,348 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>스마트밴드 11 배터리 21일, 내 손목에선 며칠?</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">스마트밴드 11 배터리 21일, 내 손목에선 며칠?</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Xiaomi_Mi_Band_8.jpg/1280px-Xiaomi_Mi_Band_8.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">샤오미 스마트밴드 11이 10월 12일 7만6,800원에 국내 출시됐어요. '최대 21일' 배터리가 어떤 조건의 숫자인지 공식 시험 조건으로 풀었어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>10월 12일 국내 출시</b>: 샤오미코리아가 스마트밴드 11을 7만6,800원에 내놨어요. 전작보다 약 9% 얇은 9.99mm예요.</li>
+<li><b>21일은 가벼운 사용 기준</b>: 고정밀 수면·스트레스·혈중 산소 상시 측정을 끈 조건이에요. 다 켜면 최대 10일, AOD까지 켜면 6일이에요.</li>
+<li><b>내 사용량으로 다시 재기</b>: 시험 조건의 운동 기록은 일주일에 60분이에요. <u>내가 일주일에 운동을 기록하는 시간</u>부터 세어 보세요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Xiaomi_Mi_Band_8.jpg/1280px-Xiaomi_Mi_Band_8.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="손에 든 이전 세대 샤오미 밴드 8. 알약 모양 화면에 시각과 날짜, 배터리 표시 66%가 떠 있어요" width="1200" height="1194" loading="lazy"/><figcaption>손에 든 이전 세대 샤오미 밴드 8. 알약 모양 화면에 시각과 날짜, 배터리 표시 66%가 떠 있어요 · Photo: <a href="https://commons.wikimedia.org/wiki/File:Xiaomi_Mi_Band_8.jpg" rel="nofollow">DeadJacb</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>7만6,800원</b><span>스마트밴드 11 국내 권장소비자가</span><i>세라믹 모델 10만4,800원</i></div>
+<div><b>9.99mm</b><span>본체 두께 (심박 센서 돌출부 제외)</span><i>스마트밴드 10보다 약 9%↓</i></div>
+<div><b>21일 → 10일</b><span>가벼운 사용 → 일반 사용 배터리</span><i>AOD까지 켜면 6일</i></div>
+<div><b>주 60분</b><span>배터리 시험의 운동 기록 조건</span><i>GNSS 켠 상태</i></div>
+</div>
+
+
+
+<p>충전기 챙기기가 번거로워서 밴드를 서랍에 넣어 둔 적 있으시죠? ⌚ 그래서 스마트밴드를 고를 때 가장 먼저 보는 숫자가 배터리예요. 이번에 나온 스마트밴드 11도 상세페이지 맨 위에 '최대 21일'을 크게 걸었는데, 그 숫자 아래 각주를 읽어 보면 이야기가 조금 달라져요.</p>
+<h2>📦 7만6,800원, 무엇이 바뀌었나</h2>
+<p><strong>스마트밴드 11은 10월 12일 국내에 출시됐고 일반 모델 권장소비자가는 7만6,800원이에요.</strong> 샤오미코리아는 이날 사전 예약 판매를 시작했어요. 일반 모델은 샤오미 공식 온·오프라인 스토어와 쿠팡, 네이버 브랜드 스토어에서 팔고 펄 화이트 세라믹 모델(10만4,800원)은 샤오미 공식 스토어에서만 팔아요.</p>
+<p>겉모습에서 바뀐 건 두께예요. <a href="https://www.mi.com/kr/product/xiaomi-smart-band-11/">샤오미 공식 제품 페이지</a>에 따르면 본체는 9.99mm로 스마트밴드 10보다 약 9% 얇아졌어요. 이 두께에는 뒷면 심박 센서의 볼록한 부분이 빠져 있어요. 무게는 스트랩을 뺀 일반 모델이 15.58g이고 세라믹 모델은 21.45g이에요.</p>
+<p>화면은 43.6mm AMOLED이고 최대 밝기는 2,000니트예요. 다만 사양표의 고휘도 모드 밝기는 1,500니트로 적혀 있어요. <em>2,000니트는 특정 상황에서만 나오는 피크 밝기라서 한낮 야외에서 늘 보이는 밝기는 1,500니트 쪽에 가깝다고 보는 편이 안전해요.</em></p>
+<p>안쪽에서 바뀐 건 심박 센서예요. 광혈류측정(PPG) 모듈이 빛 두 개와 수광부 하나에서 빛 두 개와 수광부 두 개로 바뀌었어요. 수면 쪽에는 심박변이도(HRV) 측정과 개인 맞춤 수면 계획이 새로 들어갔어요.</p>
+<details class="term"><summary>PPG(광혈류측정) 센서가 뭐예요?</summary><p>밴드 뒷면에서 피부에 빛을 비추고, 혈관을 지나 되돌아오는 빛의 양이 맥박에 따라 달라지는 걸 읽어 심박수를 재는 방식이에요. PD(포토다이오드)는 그 빛을 받아들이는 부품이라서 수광부가 하나에서 둘로 늘면 같은 순간에 빛을 두 군데서 받아 볼 수 있어요.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mi_Band_1s_working_HR_sensor.jpg/1280px-Mi_Band_1s_working_HR_sensor.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="초기 모델 미밴드 1S 뒷면에서 초록색 심박 센서 불빛이 켜진 모습" width="1200" height="674" loading="lazy"/><figcaption>초기 모델 미밴드 1S 뒷면에서 초록색 심박 센서 불빛이 켜진 모습 · Photo: <a href="https://commons.wikimedia.org/wiki/File:Mi_Band_1s_working_HR_sensor.jpg" rel="nofollow">Mateusz Kaniewski</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<details class="term"><summary>HRV(심박변이도)가 뭐예요?</summary><p>심장이 뛰는 간격이 박동마다 조금씩 달라지는 정도예요. 같은 분당 60회라도 박동 사이 간격이 일정하지 않고 미세하게 흔들리는데, 웨어러블은 이 흔들림을 몸의 회복 상태나 수면의 질을 짐작하는 참고 지표로 써요.</p></details>
+
+<h2>🔋 배터리 21일, 내 손목에서도 21일일까?</h2>
+<p><strong>스마트밴드 11의 '21일'은 측정 기능 여러 개를 끈 가벼운 사용 모드의 숫자예요.</strong> 같은 페이지에 일반 사용 모드는 최대 10일, AOD 사용 모드는 최대 6일로 따로 적혀 있어요. 배터리 용량은 233mAh이고 마그네틱 충전으로 다 채우는 데 약 90분이 걸려요.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="샤오미 스마트밴드 11 최대 배터리 사용 시간 (일)" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">샤오미 스마트밴드 11 최대 배터리 사용 시간 (일)</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">2.25일</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">7.88일</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">13.5일</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">19.12일</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">24.75일</text><text x="150.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">가벼운 사용 모드</text><text x="338.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">일반 사용 모드</text><text x="526.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">AOD 사용 모드</text><rect x="91.2" y="84.7" width="117.5" height="203.3" rx="3" fill="var(--accent,#1F5AF6)"/><text x="150.0" y="78.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">21일</text><rect x="279.2" y="204.0" width="117.5" height="84.0" rx="3" fill="var(--accent,#1F5AF6)"/><text x="338.0" y="198.0" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">10일</text><rect x="467.2" y="247.3" width="117.5" height="40.7" rx="3" fill="var(--accent,#1F5AF6)"/><text x="526.0" y="241.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">6일</text></svg><figcaption>자료: <a href="https://www.mi.com/kr/product/xiaomi-smart-band-11/" rel="nofollow">샤오미 대한민국 공식 제품 페이지, Xiaomi 내부 연구소 시험 기준</a></figcaption></figure>
+
+<p>배터리 숫자는 자동차의 공인 연비 같은 거예요. 정해진 코스를 정해진 속도로 달렸을 때의 값이라서 내 운전 습관이 다르면 결과도 달라져요. 샤오미가 각주에 밝힌 가벼운 사용 모드의 조건은 이래요. 심박수는 30분마다 재고 고정밀 수면 측정과 24시간 스트레스·혈중 산소 측정은 꺼 둔 상태예요.</p>
+<p>일반 사용 모드는 그 측정을 전부 켠 조건이에요. 나머지 사용량은 세 모드가 같아요. 메시지 알림 하루 100건, 전화 알림 10건, 손목 들어 화면 켜기 200회, 그리고 일주일에 60분 운동 기록(GNSS 활성화)이에요.</p>
+<details class="term"><summary>AOD 모드가 뭐예요?</summary><p>Always On Display의 줄임말이에요. 손목을 들지 않아도 시계 화면을 계속 켜 두는 기능이라 편하지만 그만큼 화면이 전기를 계속 써요. 스마트밴드 11은 AOD에 각종 측정까지 켜면 최대 6일로 줄어요.</p></details>
+
+<p><strong>한 달(30일)로 바꿔 보면 충전 횟수가 두 배 넘게 벌어져요.</strong> 가벼운 사용 모드는 한 달에 1.4번(30÷21)이지만 일반 사용 모드는 3번(30÷10), AOD 모드는 5번(30÷6)이에요. 수면을 자세히 보려고 밴드를 산다면 고정밀 수면 측정을 켜게 되니 현실적인 기준은 21일보다 10일 쪽이에요. 운동을 일주일에 60분보다 많이 기록하는 사람이라면 그보다 더 짧아질 수 있어요. <u>내가 일주일에 운동을 기록하는 시간</u>을 먼저 세어 보면 내 손목의 숫자가 대략 보여요.</p>
+<h2>10 프로·11 액티브와 비교하면 어떤 걸 고를까?</h2>
+<p><strong>7월 이후 국내에 나온 샤오미 밴드 세 종은 가격이 3만9,800원부터 10만4,800원(11 세라믹)까지 벌어져 있지만 내건 배터리는 모두 '최대 21일'이에요.</strong> 그래서 배터리 숫자만으로는 셋을 가를 수 없어요.</p>
+<table>
+<thead>
+<tr>
+<th>모델</th>
+<th>국내 출시</th>
+<th style="text-align: right;">권장소비자가</th>
+<th style="text-align: right;">최대 배터리(발표 기준)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>스마트밴드 11 액티브</td>
+<td>2026.8.31</td>
+<td style="text-align: right;">3만9,800원</td>
+<td style="text-align: right;">21일</td>
+</tr>
+<tr>
+<td>스마트밴드 11</td>
+<td>2026.10.12</td>
+<td style="text-align: right;">7만6,800원</td>
+<td style="text-align: right;">21일</td>
+</tr>
+<tr>
+<td>스마트밴드 11 세라믹</td>
+<td>2026.10.12</td>
+<td style="text-align: right;">10만4,800원</td>
+<td style="text-align: right;">21일</td>
+</tr>
+<tr>
+<td>스마트밴드 10 프로</td>
+<td>2026.7.24</td>
+<td style="text-align: right;">9만9,800원</td>
+<td style="text-align: right;">21일</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 샤오미 공식 제품 페이지(스마트밴드 11), 리뷰타임스(2026.10.12), SBS Biz(2026.8.31), 파이낸셜뉴스(2026.7.24). 권장소비자가 기준.</p>
+
+<p>'약 9% 얇아졌다'는 말만 들으면 11이 가장 얇을 것 같지만 7월에 나온 스마트밴드 10 프로의 두께는 9.7mm로 발표됐어요. 11의 '약 9% 얇아짐'은 프로가 아닌 일반 스마트밴드 10과 비교한 숫자예요. <em>두 두께를 같은 방식으로 쟀는지는 발표에 나오지 않아서 0.29mm 차이를 그대로 비교하긴 어려워요.</em></p>
+<p><em>아마 가격을 가르는 건 운동 분석 기능일 거예요.</em> 3만9,800원인 11 액티브는 무게 약 18g에 심박수·혈중 산소·수면·스트레스 측정을 갖췄어요. 11은 150가지 이상의 운동 모드와 VO2 max·회복 시간·훈련 부하 분석, 수중 심박 측정을 내세웠어요. 액티브 출시 보도에는 이런 분석 항목이 따로 나오지 않았어요. 러닝 기록을 깊게 볼 생각이 없다면 3만7,000원 차이(7만6,800원−3만9,800원)를 아껴도 되는 구간이에요.</p>
+<div class="me"><b>제 경우</b>
+러닝을 자주 하고 하루 30분쯤 뛰는 편이에요. 매일 뛴다고 치면 일주일에 210분(30분×7일)이라 샤오미가 배터리를 잰 조건인 주 60분의 3.5배예요. 그래서 제 손목이라면 일반 모드 10일도 넉넉하게 잡은 숫자로 보여요. 저라면 21일은 접어 두고 "일주일에 한 번 충전해도 괜찮은가"로 고르겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 다 채우는 데 약 90분이라 주말에 한 번 꽂아 두는 습관이면 일반 모드로도 충분할 수 있어요. 충전이 귀찮지 않은 사람에게 21일과 10일의 차이는 생각보다 작아요.</li>
+<li><b>구조</b> 가벼운 사용 모드는 심박을 30분마다 재는 조건이에요. 스마트 심박 모드는 쉬는 동안 10분마다, 움직이는 동안 1분마다 재요. <em>아마 이 측정 빈도가 배터리를 가르는 큰 이유일 거예요.</em></li>
+<li><b>다음에 볼 것</b> 사전 예약 1만 원 할인은 10월 14일까지, 첫 구매 5,000원 할인은 10월 14일부터 25일까지예요. 할인이 끝난 뒤 판매처 가격이 권장소비자가 아래로 내려오는지 볼 만해요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>갤럭시폰이나 아이폰에서도 쓸 수 있나요?</dt>
+<dd>둘 다 돼요. 안드로이드 8.0 또는 iOS 14.0 이상이면 Mi Fitness 앱으로 연결해요. 다만 아이폰과 샤오미폰 알림을 한 밴드에서 함께 받는 기능은 샤오미폰에 HyperOS 3 이상, 양쪽에 Xiaomi Interconnectivity 앱과 같은 샤오미 계정 로그인이 필요해요.</dd>
+<dt>혈중 산소 알림이 자주 울리면 수면무호흡을 의심해야 하나요?</dt>
+<dd>밴드 알림만으로 판단할 일은 아니에요. 샤오미는 제품 각주에서 이 기능이 질병의 진단·예방·예측이나 치료를 위한 의료 기능이 아니고 결과는 개인 건강 관리용 참고값이라고 밝혀 두었어요. 몸에 이상을 느끼면 전문 의료기기나 의료 전문가와 상담하라는 안내도 같이 있어요. 몸이 불편하면 병원이 먼저예요.</dd>
+</dl></div>
+
+<p>21일이라는 큰 숫자보다 일반 모드 10일이 제 손목에서 며칠로 줄어드는지가 더 궁금해지더라고요. 첫 구매 할인이 끝나는 10월 25일쯤 실제 사용 후기가 쌓이면 그때 다시 보는 게 좋겠어요.</p>
+<p>여기 적는 건 특정 제품 구매를 권하는 게 아니에요. 가격과 할인 조건은 판매처에서 다시 확인해 보세요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/09/blog-post_26.html">새 폰 없이 갤럭시가 달라져요</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/09/18.html">아이폰18 프로, 작년보다 뭐가 바뀌었나</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[공식] <a href="https://www.mi.com/kr/product/xiaomi-smart-band-11/">샤오미 대한민국, Xiaomi 스마트밴드 11 제품 페이지</a></li>
+<li>[공식] <a href="https://www.mi.com/kr/product/xiaomi-smart-band-11/specs/">샤오미 대한민국, Xiaomi 스마트밴드 11 사양</a></li>
+<li>[언론] <a href="https://www.reviewtimes.co.kr/news/articleView.html?idxno=12999">리뷰타임스, 샤오미코리아 '샤오미 스마트밴드 11' 출시(2026.10.12)</a></li>
+<li>[언론] <a href="https://www.mt.co.kr/tech/2026/10/12/2026101209584476951">머니투데이, 두께 9.99㎜ '샤오미 스마트밴드 11' 출시(2026.10.12)</a></li>
+<li>[언론] <a href="https://biz.sbs.co.kr/amp/article/20000331757">SBS Biz, 5만원대 스마트워치 상륙(2026.8.31)</a></li>
+<li>[언론] <a href="https://www.fnnews.com/news/202607241004234223">파이낸셜뉴스, 샤오미 AIoT 신제품 5종 공개(2026.7.24)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-10-xiaomi-smart-band-11-korea-battery--></div>
+</div></div></main></div></div></body></html>
