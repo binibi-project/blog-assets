@@ -1,0 +1,346 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Korea&#x27;s Café Culture: Too Many Cafes, Too Few Seats</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Korea&#x27;s Café Culture: Too Many Cafes, Too Few Seats</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg/1280px-Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Why Korea has 95,000+ cafes, what 카공족 means, why Starbucks banned desktops in August 2025, and what a café or study-cafe seat actually costs.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>Korea has more cafes than it can fill</b>: 95,337 shops in early 2025, and the count just shrank for the first time in seven years.</li>
+<li><b>Camping out with a laptop has a name</b>: 카공족 (ka-gong-jok), and Starbucks started policing it in August 2025.</li>
+<li><b>A café seat and a study-cafe seat are priced differently</b>: <u>check which one you actually need before you sit down for the afternoon</u>.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg/1280px-Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A café&#x27;s hanok windows thrown open onto Gyedong-gil, a quiet street in Seoul" width="1200" height="715" loading="lazy"/><figcaption>A café&#x27;s hanok windows thrown open onto Gyedong-gil, a quiet street in Seoul · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg" rel="nofollow">Basile Morin</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>95,337</b><span>☕ cafes nationwide, Q1 2025</span><i>down 743 from a year earlier, first quarterly drop since 2018</i></div>
+<div><b>416 cups</b><span>🫘 coffee per person, 2024</span><i>the highest rate anywhere in Asia</i></div>
+<div><b>Aug 7, 2025</b><span>🚫 Starbucks' no-desktop rule</span><i>nationwide, after complaints about long-stay customers</i></div>
+<div><b>₩4,000</b><span>⏱️ a study cafe's 2-hour block</span><i>about $2.98 at ~₩1,340.88/$1</i></div>
+</div>
+
+
+
+<p>Rain on the window, a laptop glow, and a paper cup gone lukewarm two hours ago: that's the default photo of a Korean café on any given weekday afternoon. A visitor sees a cozy place to warm up. A Korean sitting two tables over sees an unpaid office, one chair in a silent, unofficial co-working space that nobody built on purpose.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg/1280px-Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A café&#x27;s hanok windows thrown open onto Gyedong-gil, a quiet street in Seoul" width="1200" height="715" loading="lazy"/><figcaption>A café&#x27;s hanok windows thrown open onto Gyedong-gil, a quiet street in Seoul · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg" rel="nofollow">Basile Morin</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<h2>☕ Why does Korea have so many cafes?</h2>
+<p><strong>Korea had 95,337 registered coffee and beverage shops in the first quarter of 2025, and that number had never shrunk before.</strong> National Tax Service data put the drop at 743 shops from the same quarter a year earlier, the first quarterly decline since the agency started tracking the figure in 2018. That's not a shortage; it's the opposite. A strip of three or four storefronts in Seoul regularly holds two or three cafes competing for the same foot traffic, which is also why one in a given stretch is often empty while another has a line out the door.</p>
+<p>The demand side explains the glut. <a href="https://www.fas.usda.gov/data/south-korea-korea-coffee-and-tea-market-brief">South Korea's per capita coffee consumption reached 416 cups in 2024</a>, the highest of any country in Asia, according to a U.S. Department of Agriculture brief on the Korean market. <em>That's roughly a cup a day for every adult, child, and grandparent in the country, which is why a block without a café feels like a block that's missing something.</em></p>
+<p>The 2025 dip in shop numbers doesn't mean Koreans are drinking less. It means rent and thin margins finally caught up with the oversupply.</p>
+<details class="term"><summary>What does 카공족 (ka-gong-jok) mean?</summary><p>Literally "café-study tribe": people who buy one drink and use a café table as a workspace or study desk for hours. It's not a slur, just a label for a very visible habit in a country where 416 cups of coffee a year is normal.</p></details>
+
+<h2>💻 What is 카공족, and why did Starbucks finally say no?</h2>
+<p><strong>Starbucks Korea banned personal desktop computers, printers, power strips, and table partitions at every one of its stores nationwide starting August 7, 2025.</strong> The company said customer complaints about "진상 카공족," nuisance-level long-stay café-studiers, had been piling up, and staff now give a verbal warning to anyone who sets up full office gear, leaves belongings on a table for a long stretch, or occupies a multi-person table alone. One community post the article cites described someone holding a seat for three hours with a desktop monitor and a power strip running to it.</p>
+<p>Not every chain agrees that 카공족 are the problem. <strong>Twosome Place installed single-person seats in the stores cafe-studiers use most, and Mega Coffee is building a dedicated studying zone into its larger locations</strong>. Incheon National University consumer-studies professor Lee Young-ae pointed to why the two chains picked the opposite move from Starbucks: the café market is so crowded and saturated that standing out, even by welcoming the customers a rival just restricted, can build loyalty.</p>
+<details class="term"><summary>What's a "진상" customer?</summary><p>진상 (jinsang) describes a customer whose demands or behavior cross from inconvenient into genuinely disruptive for staff and other guests. It's the word Korean coverage used for the complaints that pushed Starbucks to act, not for café-studiers as a whole.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/%EC%97%94%EC%A0%9C%EB%A6%AC%EB%84%88%EC%8A%A4_%EC%95%84%EC%9D%B4%EC%8A%A4_%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8_%2B_%EC%97%90%EA%B7%B8_%EB%A7%88%EC%9A%94_%EB%B0%98%EB%AF%B8_%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98%EB%9E%91%2C_%ED%95%9C%EB%9D%BC%EB%B4%89_%EC%97%90%EC%9D%B4%EB%93%9C.jpg/1280px-%EC%97%94%EC%A0%9C%EB%A6%AC%EB%84%88%EC%8A%A4_%EC%95%84%EC%9D%B4%EC%8A%A4_%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8_%2B_%EC%97%90%EA%B7%B8_%EB%A7%88%EC%9A%94_%EB%B0%98%EB%AF%B8_%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98%EB%9E%91%2C_%ED%95%9C%EB%9D%BC%EB%B4%89_%EC%97%90%EC%9D%B4%EB%93%9C.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="An iced Americano, a yuzu ade, and an egg sandwich on a tray at Angel-in-us, a Korean coffee chain" width="1200" height="900" loading="lazy"/><figcaption>An iced Americano, a yuzu ade, and an egg sandwich on a tray at Angel-in-us, a Korean coffee chain · Photo: <a href="https://commons.wikimedia.org/wiki/File:%EC%97%94%EC%A0%9C%EB%A6%AC%EB%84%88%EC%8A%A4_%EC%95%84%EC%9D%B4%EC%8A%A4_%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8_%2B_%EC%97%90%EA%B7%B8_%EB%A7%88%EC%9A%94_%EB%B0%98%EB%AF%B8_%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98%EB%9E%91,_%ED%95%9C%EB%9D%BC%EB%B4%89_%EC%97%90%EC%9D%B4%EB%93%9C.jpg" rel="nofollow">김바삭 (Kim Ba-sak)</a> / Wikimedia Commons (CC BY 4.0)</figcaption></figure>
+
+<h2>💸 What does a seat actually cost — café vs. study cafe?</h2>
+<p><strong>A ₩4,500 Americano at Starbucks buys you a drink, not a reserved desk, and the gap between what people pay and what they think is fair is wider than you'd guess.</strong> The Korea Consumer Agency's most recent survey found Coffee Bean the priciest of the major chains at ₩5,000, with Starbucks, Twosome Place, Hollys, Pascucci, Angel-in-us, Droptop, and Caffe Bene all clustered at ₩4,500, while the low-cost chains sat near ₩1,500.</p>
+<table>
+<thead>
+<tr>
+<th>Chain</th>
+<th style="text-align: right;">Americano price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coffee Bean</td>
+<td style="text-align: right;">₩5,000</td>
+</tr>
+<tr>
+<td>Paul Bassett</td>
+<td style="text-align: right;">₩4,700</td>
+</tr>
+<tr>
+<td>Starbucks / Twosome Place / Hollys / Pascucci / Angel-in-us / Droptop / Caffe Bene</td>
+<td style="text-align: right;">₩4,500</td>
+</tr>
+<tr>
+<td>Compose Coffee (since Feb 13, 2025)</td>
+<td style="text-align: right;">₩1,800</td>
+</tr>
+<tr>
+<td>Mega MGC Coffee / Paik's Coffee</td>
+<td style="text-align: right;">₩1,500</td>
+</tr>
+<tr>
+<td>Cafe Bombom</td>
+<td style="text-align: right;">₩1,300</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Korea Consumer Agency survey announced Nov 5, 2024; Compose Coffee raised its iced Americano afterward, in February 2025.</p>
+
+<p>On paper the gap looks like brand snobbery, but the agency's own number tells a different story: shoppers surveyed called ₩2,635 a fair price for an Americano, yet the average they actually paid came to ₩3,001, 13.9% above what they considered reasonable. <em>Compose Coffee's jump to ₩1,800 in February 2025, its first increase since launching in 2014, was framed around 48-year-high bean costs, not rent for your seat</em>. Either way, you're paying more than you think the coffee is worth, and a chunk of that gap is the chair.</p>
+<p>A study cafe (스터디카페) prices the seat honestly instead of hiding it in the cup. <strong>Most are unmanned, kiosk-run operations where a two-hour block costs around ₩4,000 (about $2.98) and a full day runs about ₩10,000 (about $7.46), with strong Wi-Fi, outlets at every desk, and no music to argue with your focus</strong>. One Korea University student told the paper she spends more than five hours a day there during exam season, precisely because nobody around her is chatting or scrolling. <u>If you need more than an hour of table time, a study cafe is the honest trade: you pay for the seat up front instead of hoping nobody minds.</u></p>
+<details class="term"><summary>What is a 스터디카페 (study cafe)?</summary><p>A pay-by-the-hour workspace, usually unmanned with kiosk check-in, built for quiet solo study: cubicles, strong Wi-Fi, and sometimes printers or blankets. Unlike a regular café, the clock, not the coffee, is what you're buying.</p></details>
+
+<figure class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Oreo-bingsu_and_ttalgi-bingsu.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Two bowls of patbingsu (shaved-ice dessert), Oreo and strawberry, shared at a café table" width="1200" height="1200" loading="lazy"/><figcaption>Two bowls of patbingsu (shaved-ice dessert), Oreo and strawberry, shared at a café table · Photo: <a href="https://commons.wikimedia.org/wiki/File:Oreo-bingsu_and_ttalgi-bingsu.jpg" rel="nofollow">Debbie Tingzon</a> / Wikimedia Commons (CC BY 2.0)</figcaption></figure>
+
+<div class="me"><b>My take</b>
+If you've ever hesitated before opening a laptop in a café, worried you're the person everyone's quietly annoyed with, that worry is reasonable now in a way it wasn't two years ago. I'd read the room the chain gives you rather than guess: a Starbucks after August 2025 wants your laptop closed within reason, while a Twosome Place with single-seats or a Mega Coffee studying zone is telling you the opposite. If I needed more than an hour, I'd skip the guilt entirely and pay the ₩4,000 for two hours at a study cafe. It's less charming, but nobody there is deciding whether you've overstayed your welcome.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Look for a Twosome Place with posted single-person seating or a larger Mega Coffee location; both are chains actively building for cafe-studiers instead of tolerating them.</li>
+<li><b>What locals argue about</b> Whether 카공족 are unfairly blamed for subsidizing one seat while cafes operate on margins thin enough that Korea's shop count just shrank for the first time in seven years.</li>
+<li><b>Watch for</b> More chains following Starbucks' lead. The rule is eight weeks old as chains go, and nothing says Twosome Place or Mega Coffee won't reverse course if complaints about their studiers pile up the same way.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Will every Korean café ban laptops and power strips?</dt>
+<dd>No, and the newest moves actually point opposite ways at once, so treat it more like local weather than a courtroom ruling. A printer plugged into a wall outlet got one company in trouble in August; walk into a different storefront a week later and an employee might hand you a power adapter without blinking. Watch the floor plan on your way in: cubicles and solo desks are an invitation, a packed row of four-person tables usually isn't.</dd>
+<dt>Is it actually rude to buy one coffee and stay for three hours?</dt>
+<dd>Manners here turn out to track the clock on the wall more than any rulebook. A slow Tuesday morning forgives almost anyone lingering; order the same drink at 12:30 on a Friday and you're competing with office workers on a real lunch break who need that exact chair back. Timing your visit, not just picking the right chain, is the variable nobody mentions.</dd>
+</dl></div>
+
+<p>A chain Americano was never really about the coffee, and once you see the seat as the thing you're renting, the rest of this sorts itself out. Pick a study cafe for a real work session, and save the chain cafes for a drink you'll actually finish before you leave. Prices and hours were checked on 2026-10-13; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/jjimjilbang-etiquette-what-first-timers.html">Jjimjilbang Etiquette: What First-Timers Get Wrong</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/korean-bbq-etiquette-who-grills-who-pays.html">Korean BBQ Etiquette: Who Grills, Who Pays</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[언론] <a href="https://www.newsis.com/view/NISX20250526_0003189542">Newsis, Q1 2025 National Tax Service coffee-shop count (95,337, down 743 YoY)</a></li>
+<li>[공식] <a href="https://www.fas.usda.gov/data/south-korea-korea-coffee-and-tea-market-brief">USDA FAS, South Korea Coffee and Tea Market Brief (416 cups per capita, 2024)</a></li>
+<li>[언론] <a href="https://www.newsis.com/view/NISX20250807_0003282049">Newsis, Starbucks Korea's August 7, 2025 restriction on desktops/printers/power strips/partitions</a></li>
+<li>[언론] <a href="https://biz.sbs.co.kr/amp/article/20000252027">SBS Biz, Twosome Place and Mega Coffee's cafe-studier seating plans</a></li>
+<li>[공식] <a href="https://view.asiae.co.kr/en/article/2024110609121871146">Korea Consumer Agency Americano price survey (via Asia Economy)</a></li>
+<li>[언론] <a href="https://www.segye.com/newsView/20250203511599">Segye Ilbo, Compose Coffee's February 2025 price increase</a></li>
+<li>[언론] <a href="https://www.koreajoongangdaily.com/korea/forget-the-library-the-cool-kids-hit-the-books-at-their-local-study-cafe/10514227">Korea JoongAng Daily, how study cafes work and price</a></li>
+<li>[기타] <a href="https://www.investing.com/currencies/usd-krw-historical-data">USD/KRW exchange rate, Oct 9, 2026 close</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-13-korean-cafe-culture-explained--></div>
+</div></div></main></div></div></body></html>
