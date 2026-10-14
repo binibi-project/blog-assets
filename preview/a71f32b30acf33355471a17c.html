@@ -1,0 +1,368 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Bukchon Hanok Village: Free to Walk, Timed by the Hour</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Bukchon Hanok Village: Free to Walk, Timed by the Hour</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg/1280px-Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Bukchon's most-photographed street now runs on a 10am-to-5pm tourist window with a ₩100,000 fine. How to get there, what a hanbok rental costs, and where the curfew actually applies.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The village itself is free</b>: no ticket or gate anywhere in Bukchon, any day, any hour.</li>
+<li><b>One street has a hard curfew</b>: Bukchon-ro 11-gil's "red zone" only admits tourists 10 am to 5 pm, with a ₩100,000 fine for ignoring it.</li>
+<li><b>Build your day around that window</b>: <u>do the red-zone photo street before 5 pm</u>, then save the slower wandering for the streets that don't watch the clock.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg/1280px-Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Bukchon-ro 11-gil&#x27;s row of hanok roofs at blue hour, the street now limited to a 10am-to-5pm tourist window" width="1200" height="800" loading="lazy"/><figcaption>Bukchon-ro 11-gil&#x27;s row of hanok roofs at blue hour, the street now limited to a 10am-to-5pm tourist window · Photo: <a href="https://commons.wikimedia.org/wiki/File:Bukchon-ro_11-gil_street_with_hanok_houses_at_blue_hour_in_Bukchon_Hanok_Village_Seoul.jpg" rel="nofollow">Basile Morin</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩0</b><span>🏘️ to walk any street in Bukchon</span><i>no ticket, no gate</i></div>
+<div><b>10:00-17:00</b><span>🚫 red-zone tourist window</span><i>Bukchon-ro 11-gil only, since March 2025</i></div>
+<div><b>₩100,000</b><span>💸 fine outside that window</span><i>about $74.58 at ~₩1,340.88/$1</i></div>
+<div><b>6,100</b><span>🧑‍🤝‍🧑 residents vs. 6.4M visitors a year</span><i>a 1,049-to-1 ratio</i></div>
+</div>
+
+
+
+<p>By nine on a weekday morning, the sun hasn't fully cleared the ridge behind Bukchon, and the tiled roofs still hold the blue of the night before the first tour group arrives. A single set of footsteps echoes down the slope of Bukchon-ro 11-gil, someone walking to work past eight hundred years of other people's homes. Stand at the top of that street and the view runs clean down a corridor of curved eaves toward the skyline beyond, the exact frame that explains why so many phones come out here. It's a real neighborhood first, and that's worth understanding before you climb the hill.</p>
+<p>The catch isn't the walk. It's knowing which hour you're allowed to be on that one street.</p>
+<details class="term"><summary>What is a hanok (한옥)?</summary><p>A traditional Korean house, built with a wooden frame, a tiled or thatched roof, and a courtyard layout. Bukchon's hanoks date mostly from the late Joseon era through the Japanese colonial period, when the hillside between two palaces filled with homes for aristocrats and officials.</p></details>
+
+<h2>🚇 How to get there, and what the walk itself costs</h2>
+<p><strong>Bukchon has no entrance fee anywhere: ride Line 3 to Anguk Station, leave by Exit 2, and the climb into the hanok streets starts within a few minutes on foot.</strong> A single Line 3 ride on T-money costs ₩1,550 (about $1.16), the same base fare as the rest of the Seoul subway since June 28, 2025. Several travel guides put the walk from Exit 2 at roughly 6 to 10 minutes, with signs for the village posted along the way.</p>
+<p>For the city's own suggested route, leave by Exit 3 instead and walk past Jaedong Elementary School to the Bukchon Tourism Information Center, where the free walking map for the "Eight Scenic Spots of Bukchon" (북촌8경) starts. A few minutes further down Gyedong-gil, the separate Bukchon Traditional Culture Center is also free and runs the village's drop-in classes in tea ceremony, folk painting, and knot-making.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Bukchon_Traditional_Culture_Center_20260409_02.jpg/1280px-Bukchon_Traditional_Culture_Center_20260409_02.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A tatami-floored room inside the Bukchon Traditional Culture Center, with a folding calligraphy screen and traditional furniture on display" width="1200" height="800" loading="lazy"/><figcaption>A tatami-floored room inside the Bukchon Traditional Culture Center, with a folding calligraphy screen and traditional furniture on display · Photo: <a href="https://commons.wikimedia.org/wiki/File:Bukchon_Traditional_Culture_Center_20260409_02.jpg" rel="nofollow">Motoko C. K.</a> / Wikimedia Commons (CC BY 4.0)</figcaption></figure>
+
+<details class="term"><summary>What are the "Eight Scenic Spots of Bukchon" (북촌8경)?</summary><p>A numbered walking route on the city's official Bukchon map, running from a view of Changdeokgung's rooftops near the Tourism Information Center down to a stone stairway into Samcheong-dong. It exists so visitors have an obvious path to follow instead of wandering into alleys that are really just someone's front door.</p></details>
+
+<h2>⏰ Is Bukchon actually free, and what's the real catch?</h2>
+<p><strong>Walking anywhere in Bukchon costs nothing, but Bukchon-ro 11-gil, the single most photographed street, only admits tourists from 10 am to 5 pm, with a ₩100,000 (about $74.58) fine for anyone who ignores that window.</strong> Think of the street less like open ground and more like a shop with posted hours: the hanok are there all day, but the "open" sign for tourists only hangs from 10 to 5. <a href="https://www.koreatimes.co.kr/www/nation/2024/11/113_385304.html">The Korea Times</a> reported that Jongno-gu named the street a "red zone" in a trial that began in November 2024, and the rule has been fully enforced, fines included, since March 1, 2025. Residents, business owners, and guests staying overnight in a hanok are exempt.</p>
+<p>Two other streets get a softer version of the same idea. Bukchon-ro 5-ga-gil and Gyedong-gil are "orange zones," with no curfew but staff on hand to guide crowds, and Bukchon-ro 12-gil is a "yellow zone," monitored but otherwise open. The commercial stretch between Anguk Station and the Constitutional Court of Korea sits outside the whole system, so its cafés and shops, hanbok rentals included, keep normal hours.</p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Streets</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 Red</td>
+<td>Bukchon-ro 11-gil</td>
+<td>Tourists only 10:00-17:00; ₩100,000 fine outside that window</td>
+</tr>
+<tr>
+<td>🟠 Orange</td>
+<td>Bukchon-ro 5-ga-gil, Gyedong-gil</td>
+<td>No curfew; staff monitor and guide</td>
+</tr>
+<tr>
+<td>🟡 Yellow</td>
+<td>Bukchon-ro 12-gil</td>
+<td>Monitoring only</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Zone rules per Jongno-gu's policy as reported by The Korea Times (2024-11) and News TF (2025-03); checked 2026-10-14.</p>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg/1280px-Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Gyedong-gil, an orange-zone street with a café and climbing plants on its hanok facades, at golden hour" width="1200" height="715" loading="lazy"/><figcaption>Gyedong-gil, an orange-zone street with a café and climbing plants on its hanok facades, at golden hour · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyedong-gil_street_with_climbing_plants_at_golden_hour_in_Seoul_South_Korea.jpg" rel="nofollow">Basile Morin</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p>"Bukchon Sheriffs," officials assigned to the red and yellow zones, patrol overnight and warn visitors before anything else happens. As of March 10, 2025, roughly a week into full enforcement, no fine had actually been issued, since most tourists who were asked simply left.</p>
+<p><em>That's an encouraging early number, not a promise about how lenient things stay a year and a half later.</em></p>
+<p>The rule exists because the numbers were lopsided for years. Bukchon's roughly 6,100 residents absorbed about 6.4 million visitors last year, a ratio of more than 1,000 tourists for every person who actually lives there, and the local population fell 27.6% over five years as residents moved out.</p>
+<p><strong>For photos, follow the Eight Scenic Spots route rather than cutting through side alleys, since the city designed it to keep foot traffic off residents' actual doorsteps.</strong> The route starts near the Tourism Information Center with a view of Changdeokgung's tiled roofs over a stone wall, runs through Gahoe-dong past a roughly 300-year-old hoe-tree and wave-like rows of hanok roof tiles, and ends down in Samcheong-dong at a stone stairway, with the photographed row on Bukchon-ro 11-gil sitting in the middle.</p>
+<p>If you want the empty-street look without breaking any rule, the orange-zone streets, Gyedong-gil and Bukchon-ro 5-ga-gil, stay open after 5 pm with no curfew at all. An evening walk just means picking a different street than the postcard one.</p>
+<h2>👘 What a hanbok rental and the rest of the day cost</h2>
+<p><strong>Nothing inside Bukchon charges admission, so the one real cost of the day is a hanbok rental, which runs roughly ₩20,000 to ₩80,000 (about $14.92 to $59.66) for a few hours depending on the shop.</strong> Shops near Gyeongbokgung and Anguk price basic sets around ₩20,000-40,000, while a premium line at a shop like Maison Danha, inside Bukchon itself, runs ₩40,000-80,000.</p>
+<table>
+<thead>
+<tr>
+<th>Shop</th>
+<th>Area</th>
+<th style="text-align: right;">Typical price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hanboknam (한복남)</td>
+<td>Near Gyeongbokgung / Changdeokgung</td>
+<td style="text-align: right;">₩20,000-40,000</td>
+</tr>
+<tr>
+<td>Dorothy Hanbok (도로시한복여행)</td>
+<td>Anguk</td>
+<td style="text-align: right;">₩20,000-40,000</td>
+</tr>
+<tr>
+<td>Maison Danha (단하한복)</td>
+<td>Bukchon</td>
+<td style="text-align: right;">₩40,000-80,000</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Ranges from The Soul of Seoul's shop-by-shop guide, not an official price list; confirm the current rate with each shop. Most shops also hold a refundable ID deposit around ₩10,000.</p>
+
+<p>Unlike at the actual palaces, wearing hanbok in Bukchon doesn't waive any fee, since there was never one to waive. It just makes the photos at the Eight Scenic Spots look like the ones you've seen online. <em>Keep the math in mind, though: the red-zone fine alone costs more than even the priciest rental on this list.</em></p>
+<div class="me"><b>My take</b>
+The ₩100,000 number is the one that grabs attention, but the thing actually worth worrying about is smaller: being the reason a resident posts another "quiet please" sign on their own front gate. If I were planning the day, I'd treat the fine as a hard stop rather than a risk worth testing: do Bukchon-ro 11-gil and the Eight Scenic Spots route early, then push the hanbok rental and the slower wandering to Gyedong-gil, where nobody's timing you. A neighborhood that's lost over a quarter of its residents in five years doesn't need one more visitor treating someone's doorway like a backdrop.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> The Gahoe-dong Catholic Church and the nearby Seokjeong Full Moon Well sit just off the main route, a quiet stop most of the photo crowd walks past. The Culture Center's own drop-in classes, tea ceremony, folk painting, and knot-making, run on weekday afternoons.</li>
+<li><b>What locals argue about</b> Whether exempting hanok-stay guests from the same curfew that bars everyone else is a fair carve-out or just a loophole, since those stays are increasingly run as businesses rather than private homes.</li>
+<li><b>Watch for</b> The charter-bus ban on the 1.5 km stretch of Bukchon-ro between Anguk Station and the Samcheong Park entrance, which went from a trial in July 2025 to a permanent ban in January 2026.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Is there anything in Bukchon actually worth paying to see?</dt>
+<dd>Not much, but one spot rewards the detour: the 1913 Baek In-je House, which doubled as a filming location for the 2015 movie "Assassination" and the 2022 drama "Reborn Rich." Walking around the outside is free during opening hours, and seeing the rooms inside needs a guided tour booked ahead on the Seoul Public Service Reservation website.</dd>
+<dt>Why does this specific neighborhood keep showing up in Korean pop culture?</dt>
+<dd>Part of it is the look, and part of it is a real event: the chapel at Gahoe-dong Catholic Church, a short walk from the historic houses, hosted singer Rain and actor Kim Tae-hee's private wedding in 2017, which is the kind of detail that keeps fan accounts posting the same corner of Bukchon for years.</dd>
+</dl></div>
+
+<p>The fine is easy to avoid and the quiet it's protecting isn't optional, so the one-street curfew is the single fact worth carrying out of this guide. <strong>Walk the red zone and the Eight Scenic Spots in the morning, and let the rest of Bukchon run on your own schedule.</strong></p>
+<p class="notice">Prices and hours were checked on 2026-10-14; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/wear-hanbok-skip-palace-fee-how-rule.html">Wear Hanbok, Skip the Palace Fee: How the Rule Works</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/n-seoul-tower-cable-car-bus-and-real.html">N Seoul Tower: The Cable Car, the Bus, and the Real Cost</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.koreatimes.co.kr/www/nation/2024/11/113_385304.html">The Korea Times, "Seoul's Bukchon Hanok Village to restrict visits to resolve overtourism," red/orange/yellow zone system, visitor and resident numbers, population decline, charter-bus ban timeline (2024-10-30, updated 2024-10-31)</a></li>
+<li>[press] <a href="https://www.koreatimes.co.kr/amp/lifestyle/travel-food/20260215/right-way-to-visit-bukchon-quiet-hours-hidden-paths-cultural-etiquette">The Korea Times, 2026 update on the red-zone 5 pm curfew, commercial-area exemption, Baek In-je House and surrounding sights (2026-02-15, updated 2026-02-19)</a></li>
+<li>[press] <a href="https://news.tf.co.kr/read/life/2186924.htm">News TF (뉴스TF), on-the-ground report on enforcement, Bukchon Sheriffs, zero fines issued as of 2025-03-10 (2025-03)</a></li>
+<li>[press] <a href="https://biz.sbs.co.kr/amp/article/20000241493">SBS News, Seoul-area subway base fare rising from ₩1,400 to ₩1,550 (cash ₩1,500 to ₩1,650) effective June 28, 2025 (2025-06-19)</a></li>
+<li>[other] <a href="https://www.seouldanurim.net/en/events/D/TOURINFOTYPE1/42926">Seoul Danurim (Seoul Tourism Organization), Bukchon Traditional Culture Center, Eight Scenic Spots map, cultural class schedule</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/185264">Seoul Metropolitan Government Media Hub, Eight Scenic Spots of Bukchon (북촌8경) route description</a></li>
+<li>[other] <a href="https://mileasia.com/korea/gangnam-to-bukchon-hanok-village/">Mile Asia, Anguk Station Exit 2 walking directions and times to Bukchon Hanok Village</a></li>
+<li>[other] <a href="https://thesoulofseoul.net/where-to-rent-a-hanbok-in-seoul/">The Soul of Seoul, hanbok rental shop guide (names, areas, prices, deposit)</a></li>
+<li>[other] <a href="https://www.investing.com/currencies/usd-krw-historical-data">Investing.com, USD/KRW historical data, close 2026-10-09 (₩1,340.88/$1)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-14-bukchon-hanok-village-seoul-guide--></div>
+</div></div></main></div></div></body></html>
