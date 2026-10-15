@@ -1,0 +1,413 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>How to Make Gimbap (Korean Seaweed Rice Rolls) at Home</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">How to Make Gimbap (Korean Seaweed Rice Rolls) at Home</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Gimbap.jpg/1280px-Gimbap.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Korean Bapsang's gimbap recipe for four rolls: ingredients, steps, where it goes wrong, and why a frozen version sold out across the US</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>One recipe, four rolls</b>: Korean Bapsang's version seasons the rice with sesame oil and salt, not vinegar, which is the real difference from sushi.</li>
+<li><b>The filling fails before the rolling does</b>: a wet filling, not a loose roll, is the usual reason a piece falls apart or turns soggy.</li>
+<li><b>Fix it at the prep stage</b>: <u>squeeze every cooked vegetable bone-dry and season each filling separately before it touches the rice</u>.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Gimbap.jpg/1280px-Gimbap.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A tray of sliced gimbap on a plate next to a small dish of kimchi, cut pieces standing on their sides showing the rice, seaweed and layered filling" width="1200" height="675" loading="lazy"/><figcaption>A tray of sliced gimbap on a plate next to a small dish of kimchi, cut pieces standing on their sides showing the rice, seaweed and layered filling · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gimbap.jpg" rel="nofollow">ProjectManhattan</a> / Wikimedia Commons (CC0)</figcaption></figure><div class="kv">
+<div><b>4</b><span>🍙 rolls</span><i>Korean Bapsang's recipe, 1.5 cups raw rice</i></div>
+<div><b>50 min</b><span>⏰ total time</span><i>25 min prep, 20 min cook, plus rolling</i></div>
+<div><b>$20.99</b><span>🌿 100 seaweed sheets</span><i>Kwangcheon Kim nori, 280g, checked 2026-10-15</i></div>
+<div><b>1935</b><span>📰 first in print</span><i>the word "gimbap" appeared in a Korean newspaper</i></div>
+</div>
+
+
+
+<p>Ever watched someone's grandmother roll gimbap without a single wasted motion, then tried it yourself and ended up with rice stuck to your fingers and a roll that splits the moment the knife touches it? The gap between the two isn't skill so much as one habit: everything inside the roll gets cooked and seasoned on its own, then dried out completely, before the rice ever sees it.</p>
+<p>A good gimbap holds its shape all the way through the cut, with a thin line of bare rice at both ends sealing everything in. It's the grab-and-go food Koreans pack for school field trips and picnics, or for a long road trip, meant to be eaten cold without losing its appeal.</p>
+<p>The recipe below is adapted from <a href="https://www.koreanbapsang.com/gimbapkimbap-korean-dried-seaweed-rolls/">Korean Bapsang</a>, the site run by the Korean-American home cook Hyosun, with her ingredient amounts and method kept as she gives them.</p>
+<details class="term"><summary>What is gim (김), and why isn't gimbap just Korean sushi?</summary><p>Gim is the dried seaweed sheet the roll is named for; bap means cooked rice. Wikipedia notes that gimbap's rice is seasoned with sesame oil and salt, while Japanese norimaki rice uses rice vinegar, sugar and salt, and that the dish became its own thing with Korean fillings and flavors even though the rolling technique is generally agreed to have come from Japan.</p></details>
+
+<h2>🍚 What actually goes into gimbap?</h2>
+<p><strong>Seven components, each one cooked and seasoned on its own, then rolled together.</strong> Hyosun's recipe builds a 4-roll batch from seasoned rice, marinated beef, blanched spinach, stir-fried carrot, a thick egg omelette, pickled radish, prepared burdock root and fish cake.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">Amount</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌿 Gim (seaweed sheets)</td>
+<td style="text-align: right;">4 sheets</td>
+<td>made for kimbap or sushi</td>
+</tr>
+<tr>
+<td>🍚 Short-grain rice</td>
+<td style="text-align: right;">1.5 cups, uncooked</td>
+<td>cooked with slightly less water than usual</td>
+</tr>
+<tr>
+<td>Rice seasoning</td>
+<td style="text-align: right;">1 Tbsp sesame oil, ½ tsp salt</td>
+<td>start with less salt, adjust to taste</td>
+</tr>
+<tr>
+<td>🥩 Beef</td>
+<td style="text-align: right;">8 oz, thinly sliced</td>
+<td>or bulgogi meat or ground beef</td>
+</tr>
+<tr>
+<td>Beef marinade</td>
+<td style="text-align: right;">2 tsp soy sauce, 1 tsp rice wine, 1 tsp sugar, 1 tsp sesame oil, ½ tsp garlic</td>
+<td>mixed in before cooking</td>
+</tr>
+<tr>
+<td>Spinach</td>
+<td style="text-align: right;">1 bunch (about 8 oz)</td>
+<td>blanched, squeezed dry, seasoned with 1 tsp sesame oil + ¼ tsp salt</td>
+</tr>
+<tr>
+<td>🥕 Carrots</td>
+<td style="text-align: right;">2 medium, julienned</td>
+<td>stir-fried, lightly salted</td>
+</tr>
+<tr>
+<td>Pickled radish (danmuji)</td>
+<td style="text-align: right;">4 strips</td>
+<td>pre-cut</td>
+</tr>
+<tr>
+<td>Burdock root (ueong)</td>
+<td style="text-align: right;">4 strips, prepared</td>
+<td>store-bought prepared, or homemade braised</td>
+</tr>
+<tr>
+<td>Egg</td>
+<td style="text-align: right;">2 large</td>
+<td>beaten with a pinch of salt, cooked as a thick omelette, cut into strips</td>
+</tr>
+<tr>
+<td>Fish cake (eomuk)</td>
+<td style="text-align: right;">1-2 sheets</td>
+<td>stir-fried with 1 tsp soy sauce, ½ tsp sugar, ½ tsp sesame oil</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Source: Korean Bapsang, Gimbap recipe card by Hyosun, checked 2026-10-15. Makes 4 rolls; 2 cups of rice stretches the same filling to 5-6 rolls.</p>
+
+<p>Picture a sushi counter, where the rice is seasoned sharp with rice vinegar and carries most of the flavor. Gimbap runs milder: <em>sesame oil and salt season the rice just enough to round out seven separately seasoned fillings, rather than carrying the dish on their own</em>. That's part of why it works as a packed lunch, not just a sit-down meal.</p>
+<details class="term"><summary>What is danmuji (단무지)?</summary><p>A crunchy, bright yellow pickled radish, sold pre-cut into strips for gimbap at Korean and Asian grocery stores. Hyosun's recipe lists it simply as "pre-cut pickled radish," one of the few fillings in the roll that needs no cooking at all.</p></details>
+
+<p>No Korean market nearby for the gim itself? A 100-sheet pack of Kwangcheon Kim roasted seaweed (280g, full cut) runs $20.99 on the Korean grocery delivery service Weee!, which works out to about 21 cents a sheet, enough for dozens of rolls before you'd need to reorder. Hyosun notes that prepared burdock root is usually shelved right next to the pickled radish, so one trip covers both.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Gimbap_8.jpg/1280px-Gimbap_8.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A close-up plate of sliced gimbap showing egg, carrot, pickled radish and other fillings packed tightly in the rice" width="1200" height="797" loading="lazy"/><figcaption>A close-up plate of sliced gimbap showing egg, carrot, pickled radish and other fillings packed tightly in the rice · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gimbap_8.jpg" rel="nofollow">Jordi Sanchez</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure>
+
+<h2>🌀 How do you roll gimbap step by step?</h2>
+<p><strong>Cook and season every filling first, then build the roll in one pass.</strong> Here's Hyosun's method, one action per step:</p>
+<ol>
+<li>
+<p>Cook the rice with slightly less water than usual, and keep it warm.</p>
+</li>
+<li>
+<p>Slice the beef thin and marinate it in the soy sauce, rice wine, sugar, sesame oil and garlic.</p>
+</li>
+<li>
+<p>Blanch the spinach, shock it in cold water, squeeze out every bit of water, then season with sesame oil and salt.</p>
+</li>
+<li>
+<p>Beat the eggs with a pinch of salt and cook them in a nonstick pan as a thick omelette; cool and cut into strips.</p>
+</li>
+<li>
+<p>Stir-fry the julienned carrot until soft, then season lightly with salt.</p>
+</li>
+<li>
+<p>Cut the fish cake into strips and stir-fry with the soy sauce, sugar and sesame oil for about two minutes.</p>
+</li>
+<li>
+<p>Cook the marinated beef over medium-high heat for 2-3 minutes, until done.</p>
+</li>
+<li>
+<p>While the rice is still warm, fold in the sesame oil and salt gently until evenly seasoned.</p>
+</li>
+<li>
+<p>Lay a seaweed sheet shiny side down on a mat or cutting board, long edge toward you, and spread ¾ to 1 cup of rice over it, leaving about 1.5 inches bare at the top.</p>
+</li>
+<li>
+<p>Line up the fillings across the rice, leaving that same bare strip clear so the roll can seal.</p>
+</li>
+<li>
+<p>Lift the bottom edge and roll away from you, tucking the filling in and squeezing firmly with the mat as you go.</p>
+</li>
+<li>
+<p>Brush the finished roll with sesame oil, then slice it into ½-inch pieces with an oiled knife, wiping the blade clean between cuts.</p>
+</li>
+</ol>
+<p><strong>The fix for a soggy or split roll is further back than the rolling step.</strong> Hyosun's own tip is to dry every filling well so it doesn't make the roll soggy. <em>Pickled radish and burdock already carry their own seasoning, so go light on salt there and save the room for the fillings that need it.</em></p>
+<details class="term"><summary>What is Chungmu-gimbap (충무김밥)?</summary><p>A regional version from the old port town of Chungmu, now Tongyeong. Wikipedia describes it as a thinner roll with an unseasoned surface, filled with rice alone and served on the side with spicy squid salad and radish kimchi, rather than the beef-and-vegetable version most people picture.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Beef_kimbap_from_a_DC_lunch_counter.jpg/1280px-Beef_kimbap_from_a_DC_lunch_counter.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A takeout container of sliced beef gimbap pieces packed in rows, from a lunch counter" width="1200" height="1600" loading="lazy"/><figcaption>A takeout container of sliced beef gimbap pieces packed in rows, from a lunch counter · Photo: <a href="https://commons.wikimedia.org/wiki/File:Beef_kimbap_from_a_DC_lunch_counter.jpg" rel="nofollow">Ser Amantio di Nicolao</a> / Wikimedia Commons (CC0)</figcaption></figure>
+
+<h2>🧊 Why did a frozen version of this sell out across the US?</h2>
+<p><strong>Because freezing gimbap is supposed to ruin it, and it didn't.</strong> Trader Joe's launched a $3.99 vegetarian, tofu-filled frozen kimbap in early August 2023, and it sold out nationwide within about two weeks, with the shortage running at least through the end of October that year. Kimbap is normally made with room-temperature ingredients and eaten the same day, so a version that microwaves back to something people wanted to finish was news in itself.</p>
+<p>Food blogger Sarah Ahn's video of microwaving the roll with her mother drew almost 11 million views, and her mother said on camera that it tasted better than the version from their usual Korean grocery store. <em>That reaction says less about the recipe and more about how far a familiar lunchbox food had traveled</em>, from a packed field-trip snack to a sold-out freezer aisle on the other side of the world.</p>
+<p>South Korea's own convenience-store version shows the opposite end of the scale: triangle-shaped samgak-gimbap, closer to a Japanese rice ball than a sliced roll, runs about 140 to 200 kcal and carries a one-day shelf life once opened.</p>
+<div class="me"><b>My take</b>
+A seven-ingredient recipe looks like a bigger project than it is, and that's usually what stops people before they start. If I were making this for the first time, I'd cook every filling the night before and leave only the rice and the rolling for the next day, so the actual assembly takes fifteen minutes instead of competing with dinner. The first roll is always the ugly one. Slice it anyway, and the second roll will look like the picture.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Braise your own burdock root instead of buying it prepared: Hyosun's homemade ueong jorim is a simple braise in sesame oil, soy sauce and rice syrup or corn syrup.</li>
+<li><b>What locals argue about</b> Whether a roll even needs beef at all. Chungmu-gimbap strips the filling down to plain rice and serves the flavor on the side instead, a leaner, older style next to the beef-and-vegetable version most people picture.</li>
+<li><b>Watch for</b> How warm the rice is when you season it. Hyosun folds in the sesame oil and salt while the rice is still warm, mixing gently until it's evenly coated.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Does this recipe have to include meat?</dt>
+<dd>No. Hyosun's site offers two meatless directions: a fully vegan version that skips beef, fish cake and eggs in favor of extra vegetables or tofu, and a ham-and-crab-stick combination nicknamed after <i>Extraordinary Attorney Woo</i>, the 2022 Netflix series that made that particular mix popular. Neither swap changes how you cook the rice or shape the roll.</dd>
+<dt>Can I make a batch ahead of time, or freeze it the way Trader Joe's does?</dt>
+<dd>Plan to eat it same-day and skip the icebox entirely. The site's own storage note calls for sealing leftover pieces in an airtight container, then warming them later in a skillet or microwave; dipping cold slices in beaten egg before a quick pan-fry gets you closest to that just-rolled bite again. Nothing on the page explains how a shop-bought, frozen batch survives that process intact — treat that as a separate trick entirely.</dd>
+</dl></div>
+
+<p>Buy the seaweed sheets in bulk since they keep, and don't let the seven-ingredient list talk you out of trying. <strong>Dry every filling before it touches the rice, season it while the rice is still warm, and the roll mostly holds itself together.</strong></p>
+<p class="notice">Prices and hours were checked on 2026-10-15; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/where-locals-actually-eat-gimbap-in.html">Where Locals Actually Eat Gimbap in Seoul: 3 Real Picks</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/how-to-make-haemul-pajeon-korean.html">How to Make Haemul Pajeon (Korean Seafood Pancake)</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[other] <a href="https://www.koreanbapsang.com/gimbapkimbap-korean-dried-seaweed-rolls/">Korean Bapsang, "Kimbap (Gimbap, Korean Seaweed Rice Rolls)" recipe by Hyosun, reference recipe adapted for this post (ingredients, amounts, steps, times, servings, substitutions, buying tips)</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Gimbap">Wikipedia, "Gimbap" (etymology, rice seasoning vs. sushi, Chungmu-gimbap, samgak-gimbap calories)</a></li>
+<li>[press] <a href="https://www.nbcnews.com/news/asian-america/trader-joes-kimbap-tiktok-rcna103403">NBC News, "Trader Joe's sold out of kimbap, its latest viral offering, thanks to TikTok" (launch date, price, sellout timeline, Sarah Ahn quote and views)</a></li>
+<li>[other] <a href="https://www.weee.com/en/product/Kwangcheon-Kim-Yaki-Sushi-Nori-Seaweed-Sheets-280g-9-88oz-Full-Cut-100-Sheets/2153777">Weee!, Kwangcheon Kim Yaki Sushi Nori Seaweed Sheets product page (280g, 100 sheets, $20.99, checked 2026-10-15)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-15-gimbap-recipe--></div>
+</div></div></main></div></div></body></html>
