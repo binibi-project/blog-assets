@@ -1,0 +1,341 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Korea&#x27;s Soju Culture: Why Someone Else Fills Your Glass</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Korea&#x27;s Soju Culture: Why Someone Else Fills Your Glass</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Soju_in_korean_restaurant.JPG/1280px-Soju_in_korean_restaurant.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">The two-handed pour, the 70% fill line, the head-turn for elders, and why 2025's soju shipments fell to a 27-year low. The rules and what a bottle costs now.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>Someone else fills your glass first</b>: the senior or host pours, with two hands, and you receive with two hands too.</li>
+<li><b>Korea is drinking less than it has in 27 years</b>: 2025 soju shipments fell 2.8% to 793,000 kiloliters, the first time under the 800,000-kiloliter mark.</li>
+<li><b>A restaurant bottle now runs ₩5,000-6,000</b>, more in Gangnam: <u>ask the price before you order a second bottle, since menus rarely print it next to the meat</u>.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Soju_in_korean_restaurant.JPG/1280px-Soju_in_korean_restaurant.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A Chamisul bottle and two filled glasses already poured on a restaurant table" width="1200" height="1600" loading="lazy"/><figcaption>A Chamisul bottle and two filled glasses already poured on a restaurant table · Photo: <a href="https://commons.wikimedia.org/wiki/File:Soju_in_korean_restaurant.JPG" rel="nofollow">Clément Bucco-Lechat</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure><div class="kv">
+<div><b>793,000 kL</b><span>🍶 soju shipped nationwide, 2025</span><i>below 800,000 kL for the first time on record</i></div>
+<div><b>70%</b><span>🥃 how full a poured glass should be</span><i>by the book, not to the rim</i></div>
+<div><b>₩5,000-6,000</b><span>💸 one restaurant bottle, Seoul, 2025</span><i>about $3.75-$4.50 at ~₩1,332.10/$1</i></div>
+<div><b>6.4 times</b><span>📉 a month, 20s-30s drank in 2025</span><i>down from 7.04 times in 2024</i></div>
+</div>
+
+
+
+<p>The green bottle lands on the table before the side dishes do, and before you've even picked up your chopsticks, someone across from you has already reached for it, tipped it toward your glass, and started pouring. You didn't ask. You didn't need to. A visitor sees a friendly gesture; a Korean at that table is running through a small, automatic checklist about age, hands, and who goes first, the kind of thing nobody explains because everybody already knows it.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Soju_in_korean_restaurant.JPG/1280px-Soju_in_korean_restaurant.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A Chamisul bottle and two filled glasses already poured on a restaurant table" width="1200" height="1600" loading="lazy"/><figcaption>A Chamisul bottle and two filled glasses already poured on a restaurant table · Photo: <a href="https://commons.wikimedia.org/wiki/File:Soju_in_korean_restaurant.JPG" rel="nofollow">Clément Bucco-Lechat</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure>
+
+<h2>🍶 Why does someone else pour first, and why do they look away?</h2>
+<p><strong>The oldest or most senior person at the table gets poured for first, and whoever does the pouring uses both hands.</strong> Younger drinkers hold the bottle with both hands, or steady it with the right hand while the left rests on the chest, and fill the glass only to about 70%, not to the rim. A senior pouring for someone younger can get away with one hand; nobody younger tries that.</p>
+<p><em>Think of the two hands as the handshake of a Korean table: the specific grip matters less than the fact that you clearly made the effort.</em> Pouring your own drink isn't banned outright, but one guide describes it as the move people quietly avoid, since somebody else is supposed to be watching your glass before it runs dry.</p>
+<details class="term"><summary>What is 첨잔 (cheomjan)?</summary><p>Topping off a glass that still has liquid in it. Guides describe it as an old taboo, tied to the custom of pouring a single, full cup for the dead rather than refilling it. The practical version today: wait for a glass to go empty before you refill it, and watch the table so you're the one who notices first.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Soju_assortiment_in_fridge_door.jpg/1280px-Soju_assortiment_in_fridge_door.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Several soju brands lined up in a home fridge door, next to ginger beer and soy sauce" width="1200" height="800" loading="lazy"/><figcaption>Several soju brands lined up in a home fridge door, next to ginger beer and soy sauce · Photo: <a href="https://commons.wikimedia.org/wiki/File:Soju_assortiment_in_fridge_door.jpg" rel="nofollow">Aaaatu</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p><strong>Turning your face away from an elder and covering your mouth with your hand while you drink is the traditional move, especially one-on-one.</strong> Guides describe looking away from the senior person, and if there are elders on both sides, turning toward whichever one outranks the other. Nobody drinks before the toast either: you wait until everyone's glass is filled and the toast begins, then you hold your own glass lower than a senior's when you clink.</p>
+<p>Who sits where follows the same logic. The seat farthest from the entrance, facing the door, is the 상석 (sangseok), reserved for the senior or most important person; the seat directly across is the second-highest. <em>None of this is enforced like a rulebook, and one Seoul-based guide notes both the two-handed pour and the head-turn drop away once it's just close friends at the table — but if you're unsure of your place, using both hands and glancing away is the version that can't go wrong.</em></p>
+<details class="term"><summary>What is 상석 (sangseok)?</summary><p>The "seat of honor" at a Korean table, traditionally the one farthest from the door with its back to the wall, facing the entrance. It usually goes to whoever is oldest or whoever organized the gathering, and everyone else arranges themselves around that point.</p></details>
+
+<h2>📉 Why is Korea drinking less soju than ever?</h2>
+<p><strong>National Tax Service data shows 2025 soju shipments fell 2.8% to 793,000 kiloliters, dropping below 800,000 kiloliters for the first time, while total alcohol output hit its lowest level in 27 years at just under 2.99 million kiloliters</strong>. Beer fell even harder, down 7.2% to 1.52 million kiloliters. Asked why, 28.6% of people cited health and 27.9% cited cost, with another 18.8% saying they'd found other ways to spend their free time and 16% pointing to a changing drinking culture.</p>
+<details class="term"><summary>What is 회식 (hoesik)?</summary><p>A company dinner, usually with drinks, that used to function as mandatory after-hours team bonding. Showing up was rarely optional and leaving before the second round could get noticed. That expectation is the piece of the culture most visibly cracking.</p></details>
+
+<p>The hoesik is the clearest casualty. <em>Mandatory company dinners that once ran two or three rounds deep into the night are no longer the default</em>, and corporate culture increasingly lets younger employees spend their evenings on their own interests instead. A 2025 Opensurvey poll of 2,000 adults in their 20s and 30s found they drank 6.4 times a month on average, down from 7.04 times in 2024, and the share who'd had a drink in the past month fell 4.9 points to 67.2%.</p>
+<p>NH NongHyup Bank's card-spending data agrees: bar visits by people in their 20s fell to an index of 48 against a 100 baseline in early 2023, while pool spending rose 59%. <strong>So what does this mean for your night out?</strong> Don't expect every table to insist you keep pace anymore; the generation doing most of the pouring is also the one cutting back hardest.</p>
+<h2>💸 What does a bottle of soju actually cost now?</h2>
+<p><strong>A restaurant bottle in Seoul typically runs ₩5,000-6,000 (about $3.75-$4.50), climbing to ₩7,000-8,000 (about $5.25-$6.01) in pricier areas like Gangnam, while convenience stores sell the same 360ml bottle for well under half that.</strong> <a href="https://www.koreatimes.co.kr/amp/economy/20250406/restaurants-slash-soju-beer-prices-despite-high-inflation">One bank employee told the Korea Times</a> that ₩5,000-6,000 is typical, with Gangnam running ₩7,000-8,000 a bottle. That's a jump from the roughly ₩4,000 a bottle that was common in 2021.</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th style="text-align: right;">2021</th>
+<th style="text-align: right;">2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restaurant, typical Seoul</td>
+<td style="text-align: right;">~₩4,000</td>
+<td style="text-align: right;">₩5,000-6,000</td>
+</tr>
+<tr>
+<td>Restaurant, Gangnam</td>
+<td style="text-align: right;">not confirmed</td>
+<td style="text-align: right;">₩7,000-8,000</td>
+</tr>
+<tr>
+<td>Convenience store, 360ml Chamisul</td>
+<td style="text-align: right;">₩2,100 (2024 cut to ₩1,900)</td>
+<td style="text-align: right;">₩1,900</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Restaurant and convenience-store prices checked against Korea Times and Korea JoongAng Daily reporting, 2023-2025; USD at ~₩1,332.10/$1, Oct. 16, 2026.</p>
+
+<p>On paper that markup looks steep, but <em>it's not pure profit-taking</em>: CU, GS25, 7-Eleven and Emart24 all cut their shelf price for a 360ml Chamisul from ₩2,100 to ₩1,900 in January 2024, even as restaurant tabs kept climbing, because the two channels compete for different customers. Restaurant soju prices actually slipped 1.3% year-on-year by March 2025, their seventh straight monthly decline, as owners tried to win back diners. <u>If your bottle costs more than ₩6,000, you're likely in a pricier neighborhood, not being overcharged.</u></p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/%EC%B0%B8%EC%9D%B4%EC%8A%AC_%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%EA%B3%BC_%EC%B0%B8%EC%9D%B4%EC%8A%AC_%ED%94%84%EB%A0%88%EC%8B%9C.jpg/1280px-%EC%B0%B8%EC%9D%B4%EC%8A%AC_%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%EA%B3%BC_%EC%B0%B8%EC%9D%B4%EC%8A%AC_%ED%94%84%EB%A0%88%EC%8B%9C.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Chamisul Original and Chamisul Fresh on a store shelf, Korea&#x27;s two best-known soju labels" width="1200" height="2157" loading="lazy"/><figcaption>Chamisul Original and Chamisul Fresh on a store shelf, Korea&#x27;s two best-known soju labels · Photo: <a href="https://commons.wikimedia.org/wiki/File:%EC%B0%B8%EC%9D%B4%EC%8A%AC_%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%EA%B3%BC_%EC%B0%B8%EC%9D%B4%EC%8A%AC_%ED%94%84%EB%A0%88%EC%8B%9C.jpg" rel="nofollow">Dltjrrb1122</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<div class="me"><b>My take</b>
+Annual health check flagged high LDL cholesterol and early fatty liver, and that's the kind of number that makes the 28.6% in that health-reasons stat feel less abstract. Nobody needs to lecture you about a second bottle once a doctor has already circled something on a printout. If you're at a table where the pouring hasn't stopped and you'd rather slow down, the easiest out is the oldest one: let your glass stay a little full. Nobody tops off a glass that isn't empty, so a half-full glass is the quiet way to say you're done.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more round</b> Ask for the bill by round instead of waiting for one big tab at the end; splitting as 1차 (first round) and 2차 (second round) is normal and makes it easy to leave after the first.</li>
+<li><b>What locals argue about</b> Whether the two-handed, turn-your-head rituals still matter. Psychology professor Lim Myung-ho links the whole shift to younger Koreans moving away from collectivist norms, arguing the pandemic already proved people don't need a shared bottle to build a relationship.</li>
+<li><b>Watch for</b> Restaurant soju prices, which move independently of convenience-store prices and have been drifting down since late 2024 even as the bottle in your hand still feels expensive.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>What if I don't want to drink at all?</dt>
+<dd>You're on firmer ground than you'd think. The older custom was to accept a full glass and touch it to your lips for the first toast rather than refuse outright, but forcing someone to drink now carries real risk for whoever's pushing. One office worker told the Segye Ilbo that pressuring a colleague to drink now counts as grounds for discipline at his company. A polite "저는 괜찮아요" (jeo-neun gwaen-chan-a-yo, "I'm okay") while keeping your glass topped up for others works fine at most tables now.</dd>
+<dt>Is there an etiquette for when the night winds down, too?</dt>
+<dd>Yes, and it's less ritual than plain courtesy. The same etiquette guides say to thank whoever ends up paying rather than letting it pass unacknowledged, and to make sure anyone who's had too much gets into a taxi or a ride home before the group splits up. Nobody expects you to organize it, just to notice if nobody else has.</dd>
+</dl></div>
+
+<p>The rules sound like a lot until you watch them happen once: somebody reaches for the bottle, somebody else turns a shoulder before they sip, and the whole table keeps moving without anyone announcing a single step of it. Use both hands until someone tells you not to bother, and don't be surprised if the person doing the pouring is quietly drinking less than they used to. Prices and hours were checked on 2026-10-16; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/korean-bbq-etiquette-who-grills-who-pays.html">Korean BBQ Etiquette: Who Grills, Who Pays</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/jjimjilbang-etiquette-what-first-timers.html">Jjimjilbang Etiquette: What First-Timers Get Wrong</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.koreajoongangdaily.com/business/koreas-alcoholic-beverage-output-falls-to-27year-low-in-2025/12838243">Korea JoongAng Daily, "Korea's alcoholic beverage output falls to 27-year low in 2025" (Aug 23, 2026)</a></li>
+<li>[press] <a href="https://www.koreajoongangdaily.com/kjd-special/why-has-drinking-fallen-below-the-pandemic-level-in-korea/12887357">Korea JoongAng Daily, "Why has drinking fallen below the pandemic level in Korea?" (Oct 3, 2026)</a></li>
+<li>[press] <a href="https://www.gqkorea.co.kr/2023/11/29/%EC%95%8C%EC%95%84%EB%91%90%EB%A9%B4-%EC%A2%8B%EC%9D%80-%ED%95%9C%EA%B5%AD%EC%9D%98-%EC%86%8C%EC%A3%BC-%EC%98%88%EC%A0%88-%EC%B4%9D%EC%A0%95%EB%A6%AC/">GQ Korea, "알아두면 좋은 한국의 소주 예절 총정리" (soju etiquette, Nov 29, 2023)</a></li>
+<li>[press] <a href="https://v.daum.net/v/20231220090102186">Korea Herald (via Daum), "[Korea Quiz] Hoesik etiquette" (Dec 20, 2023)</a></li>
+<li>[other] <a href="https://thesmartlocal.kr/korean-drinking-culture">The Smart Local Korea, Korean drinking culture guide (etiquette loosening among close friends)</a></li>
+<li>[press] <a href="https://www.koreatimes.co.kr/amp/economy/20250406/restaurants-slash-soju-beer-prices-despite-high-inflation">Korea Times, "Restaurants slash soju, beer prices despite high inflation" (Apr 6, 2025)</a></li>
+<li>[press] <a href="https://www.koreajoongangdaily.com/business/working-class-liquors-lose-their-edge-as-koreas-alcohol-prices-rise/10999542">Korea JoongAng Daily, "Working-class liquors lose their edge as Korea's alcohol prices rise" (Feb 20, 2023)</a></li>
+<li>[press] <a href="https://v.daum.net/v/Hsb1Pqvadx">Korea JoongAng Daily (via Daum), convenience-store soju price cut report (Jan 4, 2024)</a></li>
+<li>[press] <a href="https://www.segye.com/newsView/20260602514336">Segye Ilbo, Q1 2026 household alcohol spending and worker account of hoesik culture change (Jun 2, 2026)</a></li>
+<li>[other] <a href="https://api.frankfurter.app/2026-10-16?from=USD&amp;to=KRW">Frankfurter/ECB reference rate, USD/KRW close 2026-10-16 (₩1,332.10/$1)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-16-korean-soju-drinking-etiquette--></div>
+</div></div></main></div></div></body></html>
