@@ -1,0 +1,341 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>메모리값 왜 안 내리나, 반도체대전서 봤어요</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">메모리값 왜 안 내리나, 반도체대전서 봤어요</h3><div class="post-body"><img class="thumb" src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@760b412f2e364e4938a7f04c4e6ff5a187150923/illus/2026-10-18-sedex-2026-ai-memory-samsung-skhynix-4e9ded78.jpg" alt="" width="1200" height="675" loading="lazy"/><p class="deck">10월 14~16일 코엑스 반도체대전(SEDEX)에 삼성전자·SK하이닉스가 모였어요. 역대 최대 규모 전시에서, 스마트폰·노트북 값을 올린 AI 메모리 경쟁이 쉽게 끝나지 않을 거란 신호를 봤어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>역대 최대 반도체대전</b>: SEDEX 2026은 300개 기업·888개 부스로 열려 2024·2025년(280여개사·700부스)보다 커졌어요.</li>
+<li><b>다음 메모리 전쟁은 이미 시작됐어요</b>: 삼성전자와 SK하이닉스 모두 차세대 적층형 메모리 시제품을 나란히 공개했어요. 메모리값이 쉽게 안 내려올 거란 신호예요.</li>
+<li><b>기기 교체 계획이 있다면</b>: <u>HBM 경쟁이 범용 D램 공급에 영향을 주는 흐름</u>을 염두에 두고 신제품 가격표를 다시 보세요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@760b412f2e364e4938a7f04c4e6ff5a187150923/illus/2026-10-18-sedex-2026-ai-memory-samsung-skhynix-4e9ded78.jpg" alt="코엑스에 모인 건 부스가 아니라 다음 메모리 전쟁이었어요" width="1200" height="675" loading="lazy"/><figcaption>코엑스에 모인 건 부스가 아니라 다음 메모리 전쟁이었어요 · 일러스트(AI 생성)</figcaption></figure><div class="kv">
+<div><b>888개</b><span>SEDEX 2026 부스 수</span><i>역대 최대, 2년 연속 700개에서 처음 늘어남</i></div>
+<div><b>3.6TB/s</b><span>삼성 HBM4E 12단 대역폭</span><i>5월 세계 최초 샘플 출하</i></div>
+<div><b>최대 8배</b><span>차세대 zHBM 이론 성능(HBM5 대비, GPU당)</span><i>삼성전자 목업 공개</i></div>
+<div><b>360조원</b><span>용인 반도체 국가산단 투자 계획</span><i>2029년 10월 첫 생산 목표</i></div>
+</div>
+
+
+
+<p>스마트폰이나 노트북 값이 왜 이렇게 안 내려가나 싶으셨죠? 그 답의 절반은 이번 달 코엑스에 모인 두 회사의 부스 안에 있었어요. 메모리 업황이 정점을 지났다는 '고점론'이 다시 나오는 와중에도, 정작 전시장은 역대 가장 붐볐어요.</p>
+<h2>🏢 반도체대전이 왜 역대 최대로 커졌을까</h2>
+<p><strong>SEDEX 2026은 300개 기업이 888개 부스를 채워 역대 최대 규모로 열렸어요</strong>. 10월 14일부터 16일까지 서울 코엑스에서 한국반도체산업협회 주최로 열렸고, 올해 주제는 '실리콘 지능의 시대로'였어요.</p>
+<p>2024년(제26회)과 2025년(제27회)은 둘 다 280여개 기업·700부스에 그쳤는데, 2026년(제28회) 들어 처음으로 몸집이 커진 거예요.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="반도체대전(SEDEX) 참가 부스 수 추이" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">반도체대전(SEDEX) 참가 부스 수 추이</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">653개</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">723.5개</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">794개</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">864.5개</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">935개</text><text x="150.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2024(26회)</text><text x="338.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2025(27회)</text><text x="526.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2026(28회)</text><rect x="91.2" y="247.3" width="117.5" height="40.7" rx="3" fill="var(--accent,#1F5AF6)"/><text x="150.0" y="241.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">700개</text><rect x="279.2" y="247.3" width="117.5" height="40.7" rx="3" fill="var(--accent,#1F5AF6)"/><text x="338.0" y="241.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">700개</text><rect x="467.2" y="84.7" width="117.5" height="203.3" rx="3" fill="var(--accent,#1F5AF6)"/><text x="526.0" y="78.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">888개</text></svg><figcaption>자료: <a href="https://www.dailian.co.kr/news/view/1701523/" rel="nofollow">한국반도체산업협회 주최 반도체대전, 아시아경제(2024.10.22)·헤럴드경제(2025.10.15)·데일리안(2026.10.14) 보도 종합</a></figcaption></figure>
+
+<p>표만 보면 그냥 큰 행사가 하나 더 열린 것 같지만, 몸집이 커진 이유는 메모리 업계 사정과 맞물려 있어요. <em>업황이 꺾였다는 전망이 나오는 와중에도 회사들은 오히려 부스를 키워 잡았어요.</em></p>
+<details class="term"><summary>HBM이 뭐예요?</summary><p>고대역폭메모리(High Bandwidth Memory)의 줄임말이에요. 여러 층의 D램을 수직으로 쌓아 AI 연산 칩 옆에 바짝 붙여, 데이터를 한꺼번에 많이 빠르게 주고받게 만든 메모리예요. AI 서버가 똑똑해지려면 이 메모리가 꼭 필요해요.</p></details>
+
+<p>하정우 국가인공지능전략위원회 상근부위원장도 행사장을 찾아 삼성전자와 SK하이닉스 부스를 둘러봤어요. 파운드리와 피지컬 AI 관련 질문을 주로 던졌고 "원래 삼성이 파운드리 쪽에 어려움이 있었는데 최근에는 실적이 좋아진다는 뉴스가 많이 들어왔다"고 말했어요.</p>
+<h2>📐 삼성전자, "옆이 아니라 위로" 쌓기 시작했어요</h2>
+<p><strong>삼성전자는 AI 연산 칩 옆에 나란히 놓던 HBM을 아예 위로 쌓는 'zHBM' 목업을 처음 선보였어요</strong>. 지금 메모리는 고속도로 옆 급행차로 같은 구조예요. AI 연산 칩 옆에 HBM을 나란히 붙여 데이터를 실어 나르는 식이에요.</p>
+<p>zHBM은 이 급행차로를 아예 연산 칩 위로 올려 쌓는 구조고요. 거리가 짧아질수록 데이터가 오가는 속도도 빨라져요.</p>
+<p>삼성전자는 이 구조로 이론상 <strong>HBM5 대비 GPU당 최대 8배 성능</strong>을 낼 수 있다고 밝혔어요. 전력 대비 성능은 최대 3배, 열 저항은 절반 이하로 줄어든다고 설명했어요. <em>다만 아직 목업 단계라 실제 제품으로 나올 때도 이 수치가 그대로 유지될지는 더 지켜봐야 해요.</em></p>
+<p>함께 전시한 'zNAND-O'도 발상은 비슷해요. 기존 낸드플래시에 HBM에서 쓰는 실리콘관통전극(TSV) 기술을 결합한 차세대 고성능 낸드로, 역시 개발 중인 목업이에요.</p>
+<details class="term"><summary>TSV(실리콘관통전극)가 뭐예요?</summary><p>칩과 칩 사이를 옆으로 잇는 전선 대신, 칩에 작은 구멍을 뚫어 위아래로 바로 연결하는 기술이에요. 아파트에서 옆집을 거치지 않고 엘리베이터로 바로 위층에 가는 것과 비슷해요. 층을 많이 쌓아도 신호가 덜 늦어져요.</p></details>
+
+<p>이번에 전시한 메모리 중 실제로 양산을 앞둔 건 HBM4E예요. <a href="https://news.samsungsemiconductor.com/kr/?p=36451">삼성전자 뉴스룸</a>에 따르면 <strong>삼성전자는 지난 5월 29일 HBM4E 12단 샘플을 세계 최초로 고객사에 출하했다고 밝혔어요</strong>. 초당 3.6테라바이트(TB)를 전송할 수 있는 48GB 용량 제품으로, 1c(10나노급 6세대) D램에 자체 4나노 공정으로 만든 로직 다이를 적용했어요. 전작 HBM4보다 에너지 효율은 16%, 열 저항 특성은 14% 이상 개선됐다고 해요.</p>
+<table>
+<thead>
+<tr>
+<th>제품</th>
+<th>지금 단계</th>
+<th style="text-align: right;">핵심 수치</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HBM4E 12단</td>
+<td>샘플 출하 완료(5월)</td>
+<td style="text-align: right;">48GB, 3.6TB/s</td>
+</tr>
+<tr>
+<td>zHBM(차세대)</td>
+<td>목업</td>
+<td style="text-align: right;">이론상 최대 8배(HBM5 대비)</td>
+</tr>
+<tr>
+<td>zNAND-O(차세대)</td>
+<td>목업</td>
+<td style="text-align: right;">TSV 적용 고성능 낸드</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 삼성전자 뉴스룸(2026.5.29), 전자신문(2026.10.14).</p>
+
+<p>표에서 보듯 지금 바로 쓸 수 있는 건 HBM4E뿐이고 zHBM·zNAND-O는 아직 목업이에요. <em>그런데도 다음 세대 구조까지 미리 꺼내 보여준 건, 메모리 경쟁이 한 세대로 끝나지 않는다는 뜻이에요.</em></p>
+<p>삼성전자는 이번 SEDEX에 '반도체 클러스터존'도 새로 마련해 용인 반도체 국가산업단지 계획을 함께 소개했어요. <strong>투자 규모는 약 360조원이고, 2029년 10월 첫 생산라인 가동을 목표로 소부장·팹리스 기업 약 70개사가 입주할 예정이에요</strong>. 다음 세대 메모리 구조를 보여주는 자리에서, 그걸 만들 공장 부지까지 같이 꺼내 보인 거예요.</p>
+<h2>💾 SK하이닉스가 보여준 '손가락보다 얇은 128TB'</h2>
+<p><strong>SK하이닉스는 전시장에서 가장 큰 부스를 꾸려 HBM4E와 차세대 기술을 나란히 보여줬어요</strong>. 기업용 SSD 신제품 'PS1101'도 처음 공개했는데, 최대 용량 128테라바이트(TB)에 두께는 7.5밀리미터(mm)예요.</p>
+<p>보통 스마트폰 저장공간이 500기가바이트(GB) 안팎인 걸 생각하면, 그 256배에 가까운 용량이(128,000GB÷500GB≈256배) 손가락 두께도 안 되는 칩 한 장에 들어간 셈이에요.</p>
+<details class="term"><summary>HBF(고대역폭플래시)가 뭐예요?</summary><p>HBM이 D램을 쌓는 기술이라면, HBF는 같은 적층·고속입출력 기술을 낸드플래시에 적용한 메모리예요. AI가 학습·추론 과정에서 다뤄야 할 데이터 양이 늘면서, 저장 용량을 키우는 쪽에서도 '쌓는' 접근이 번지고 있어요.</p></details>
+
+<p>SK하이닉스도 이 HBF 구조 모형을 함께 전시했어요. 삼성전자의 zHBM·zNAND-O와 마찬가지로 지금 당장 살 수 있는 제품은 아니에요. 그래도 두 회사가 같은 전시장에서 '쌓는' 방향을 동시에 꺼내 보였다는 점은 눈여겨볼 만해요.</p>
+<div class="me"><b>제 생각</b>
+며칠 전 신제품 가격표를 보고 "왜 또 올랐지" 싶으셨던 분이라면 이번 전시가 남 얘기로 안 들리실 거예요. 메모리값이 오른 건 AI 서버가 범용 메모리 생산 라인까지 끌어다 쓰기 때문인데, 이번 전시에서 본 건 그 흐름이 당분간 꺾이지 않을 거란 신호였어요. 저라면 지금 쓰는 기기를 서둘러 바꾸기보다, 다음 교체 시점의 가격표부터 다시 확인해 보겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 메모리값이 오를수록 투자와 설비 경쟁은 더 치열해져요. zHBM·zNAND-O 같은 차세대 구조가 실제 양산까지 가면, 지금의 공급 부족이 예상보다 빨리 풀릴 수도 있어요.</li>
+<li><b>구조</b> 메모리 회사는 하나의 생산라인에서 범용 D램을 더 만들지, 수익이 큰 HBM류를 더 만들지 저울질해요. 이번 전시에서 두 회사가 나란히 '쌓는' 차세대 구조를 꺼내 보인 건, 그 저울이 당분간 HBM 쪽으로 계속 기울 거란 뜻으로 읽혀요.</li>
+<li><b>다음에 볼 것</b> 삼성전자는 이달 말 3분기 확정 실적에서 반도체(DS) 부문의 실제 수익성을 공개해요. zHBM·zNAND-O가 목업에서 실제 샘플 단계로 넘어가는 시점은 다음 FMS(국제 메모리·스토리지 전시회)나 반도체대전에서 다시 확인할 수 있어요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>zHBM이나 HBF, 언제쯤 내 컴퓨터나 서버에 들어가나요?</dt>
+<dd>아직은 아니에요. 둘 다 목업(시제품 모형) 단계라 구체적인 출시 일정은 공개되지 않았어요. 지금 실제로 쓸 수 있는 건 HBM4E뿐이고, 그마저도 서버·AI 데이터센터용이라 일반 소비자 기기에 바로 들어오지 않아요. 다음 단계 발표는 보통 FMS나 SEDEX 같은 전시회에서 먼저 나오니, 그때 다시 확인하면 돼요.</dd>
+<dt>HBM 경쟁이랑 내 스마트폰·노트북 가격이 무슨 상관이에요?</dt>
+<dd>메모리 회사가 생산라인을 HBM 쪽으로 돌릴수록 스마트폰·PC에 들어가는 범용 D램 공급이 줄어드는 구조예요. 실제로 2026년 3분기 세계 스마트폰 출하량은 1년 전보다 20% 줄어 2012년 이후 최저를 기록했는데, 메모리값 상승이 주요 원인으로 꼽혔어요.</dd>
+</dl></div>
+
+<p>저라면 다음 신제품 가격표가 또 한 번 뛰더라도 크게 놀라지 않을 것 같아요. 다음 확인 시점은 삼성전자 3분기 확정 실적이 나오는 이달 말이에요.</p>
+<p>여기 적는 건 특정 기업·제품을 추천하는 게 아니에요. 수치는 공식 발표에서 다시 확인해 보세요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/10/14.html">스마트폰 출하량 14년 만에 최저, 범인은 메모리값</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/10/55.html">클로드 소넷 5.5, 요금은 그대로인데 더 빨라졌어요</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[공식] <a href="https://news.samsungsemiconductor.com/kr/?p=36451">삼성전자 뉴스룸, HBM4E 12단 샘플 세계 최초 출하(2026.5.29)</a></li>
+<li>[언론] <a href="https://www.dailian.co.kr/news/view/1701523/">데일리안, SEDEX 2026 르포(2026.10.14)</a></li>
+<li>[언론] <a href="https://www.etnews.com/20261014000426">전자신문, 삼성전자 zHBM·zNAND-O 공개(2026.10.14)</a></li>
+<li>[언론] <a href="https://www.inews24.com/view/2014785">아이뉴스24, 삼성전자 용인 반도체 청사진(2026.10.14)</a></li>
+<li>[언론] <a href="https://www.segye.com/newsView/20261014520357">세계일보, SEDEX 2026 개요(2026.10.14)</a></li>
+<li>[언론] <a href="https://view.asiae.co.kr/article/2024102215101596788">아시아경제, SEDEX 2024 참가 규모(2024.10.22)</a></li>
+<li>[언론] <a href="https://www.heraldk.com/article/2025101516521827289">헤럴드경제, SEDEX 2025 참가 규모(2025.10.15)</a></li>
+<li>[언론] <a href="https://www.hankyung.com/article/202610140514g">한국경제, 스마트폰 출하량 20%↓(2026.10.14)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-18-sedex-2026-ai-memory-samsung-skhynix--></div>
+</div></div></main></div></div></body></html>
