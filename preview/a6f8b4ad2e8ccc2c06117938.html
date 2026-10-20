@@ -1,0 +1,342 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Suwon Galbi: Where Locals Actually Eat It</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Suwon Galbi: Where Locals Actually Eat It</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Korea-Gyeongju-Galbi-01.jpg/1280px-Korea-Gyeongju-Galbi-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">A three-building galbi institution and a 40-year charcoal grill, the two Suwon wanggalbi houses that clear a 4.0 Google rating, with prices, hours and how to order.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>Two picks clear the bar</b>: Gabojeong and Samboja Galbi, both named in a Suwon local's own shortlist and both rated 4.0 or better on Google Maps from well over 250 reviews.</li>
+<li><b>A set runs ₩43,000-79,000</b> at Gabojeong; Samboja's current menu prices aren't posted anywhere a visitor can check ahead.</li>
+<li><b>Book ahead for Gabojeong on weekends</b>: <u>call 1600-3883 or reserve through Naver</u>, since 1,000 seats across three buildings still isn't always enough.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Korea-Gyeongju-Galbi-01.jpg/1280px-Korea-Gyeongju-Galbi-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Long-cut beef ribs grilling over a tabletop flame, a diner&#x27;s hand tending the meat as it browns" width="1200" height="800" loading="lazy"/><figcaption>Long-cut beef ribs grilling over a tabletop flame, a diner&#x27;s hand tending the meat as it browns · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korea-Gyeongju-Galbi-01.jpg" rel="nofollow">by Junho Jung at Flickr from South Korea</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure><div class="kv">
+<div><b>1985</b><span>🏛️ year Suwon designated galbi its official local specialty</span><i>still the city's defining dish</i></div>
+<div><b>₩43,000-79,000</b><span>💰 per-person price range, Gabojeong's galbi menu</span><i>lunch sets run lower than evening à la carte</i></div>
+<div><b>4.0-4.1★</b><span>⭐ Google Maps rating, Gabojeong's two buildings</span><i>from 1,000+ and 6,000+ reviews, checked 2026-10-20</i></div>
+<div><b>1,000</b><span>🪑 seats across Gabojeong's three buildings</span><i>and it still fills up on weekends</i></div>
+</div>
+
+
+
+<p>The ribs come out cut long, longer than anywhere else in Korea, and seasoned with nothing but salt, so the char smell hits before the sauce ever would. A server does the cutting at the table, snipping the meat into bite-sized pieces with a pair of scissors while you wait, and the whole room sounds the same way yours does: metal tongs, low conversation, somebody's kid asking for more rice. It's not a quiet meal. It's not supposed to be.</p>
+<p>Suwon has claimed this dish since before most of today's diners were born. The city made it official in 1985, naming Suwon galbi a traditional local specialty, and the story behind that claim runs back to Hwachunok, a Yeongdong Market restaurant that started serving galbi ribs inside a hangover soup sometime in the 1940s before a customer suggested grilling them instead. A rumor that President Park Chung-hee ate there on a visit to the city in the 1960s did the rest, and "Suwon galbi" spread nationwide from a single storefront that closed for good in 1979.</p>
+<details class="term"><summary>What makes it "Suwon" galbi (수원왕갈비)?</summary><p>Two things: the cut and the seasoning. Suwon-style ribs are sliced noticeably longer than standard galbi, which is how the dish earned its nickname 왕갈비 (wanggalbi, "king-sized ribs"). Most other regions marinate beef ribs in soy sauce; Suwon's version is salted and grilled instead, which keeps the meat's own flavor out front instead of masking it.</p></details>
+
+<p>King Jeongjo is the other name that keeps coming up. His construction of Hwaseong Fortress in the 1790s drew workers and state-run farmland to the area, and that concentration of people, capital and cattle is the explanation local historians give for why a beef culture took root in Suwon specifically, and not in some other Gyeonggi town. </p>
+<h2>🍖 Gabojeong: the three-building institution that feeds a thousand at once</h2>
+<p><strong>가보정 (Gabojeong), at 경기도 수원시 팔달구 장다리로 282, spreads its dining room across three separate buildings with roughly 1,000 seats total, and it still books up on weekend evenings</strong>. It opened in 1992 and has grown into one of the names Suwon locals bring up first when a visitor asks where to eat galbi.</p>
+<p>It's open daily, 11:30 to 22:00, with no weekly closing day. The signature order is 한우 양념갈비 (hanwoo yangnyeom galbi, marinated Korean beef short rib) at ₩79,000 for a full dinner portion, or ₩45,000 for the weekday lunch set version. A galbi-tang (beef rib soup) runs ₩28,000 if you'd rather skip the grill entirely, and a side bowl of doenjang jjigae is ₩5,000. Staff bring the meat to the table already portioned and finish the cutting with scissors once it's grilled, which is standard here even if you've never had someone do that for you before.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Marinated_galbi.jpg/1280px-Marinated_galbi.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Raw marinated beef, glossy with sauce, laid out on a plate before grilling" width="1200" height="800" loading="lazy"/><figcaption>Raw marinated beef, glossy with sauce, laid out on a plate before grilling · Photo: <a href="https://commons.wikimedia.org/wiki/File:Marinated_galbi.jpg" rel="nofollow">김태경</a> / Wikimedia Commons (CC0)</figcaption></figure>
+
+<p>Order with "한우 양념갈비 주세요" (han-u yang-nyeom-gal-bi ju-se-yo, "marinated Korean beef galbi, please"), or ask for 한우 생갈비 if you want it unmarinated. The restaurant appeared on the variety show <em>Ask Us Anything</em> (어서와 한국은 처음이지), and a <a href="https://www.esquirekorea.co.kr/article/77380">2023 Esquire Korea profile</a> of Suwon's best galbi shops noted the flavor worked well for foreign palates too. Whether an English menu exists wasn't confirmed; screenshot the Korean name before you go. Parking is available on-site.</p>
+<p>Google Maps rates Gabojeong's main building 4.0 from 6,155 reviews, and its second building 4.1 from 1,047.</p>
+<details class="term"><summary>Why does a server cut your meat for you?</summary><p>At a lot of Korean barbecue spots, especially ones serving thick-cut ribs like Suwon's, staff do the trimming and cutting themselves once the meat is cooked through. It's partly service and partly practical: a long rib is awkward to eat whole, and scissors do the job faster than a knife at a low table.</p></details>
+
+<h2>🔥 Is Samboja Galbi worth the drive out to Yeongtong?</h2>
+<p><strong>Yes, if charcoal smoke without the smoke is what you're after: 삼부자갈비 (Samboja Galbi), at 경기도 수원시 영통구 중부대로 335, grills over real charcoal but is built to keep smoke out of your clothes, and a 2023 profile by a Suwon-based writer named it among the city's top galbi addresses while marking its 40th year in business</strong>, which puts its founding around 1983. </p>
+<p>The same profile credits the kitchen's quality control, picking cuts carefully enough that the meat comes out noticeably juicy and tender, and singles out the doenjang jjigae as worth ordering alongside the galbi. Hours, an exact menu, and current prices aren't posted anywhere a visitor can verify ahead of a visit, so calling before you make the trip is the safer move. Order simply with "갈비 주세요" (gal-bi ju-se-yo, "ribs, please") and let the staff walk you through what's available that day.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Korean_barbecue-Grill_and_banchan.jpg/1280px-Korean_barbecue-Grill_and_banchan.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A full spread of banchan side dishes surrounding an unlit Korean barbecue grill" width="1200" height="803" loading="lazy"/><figcaption>A full spread of banchan side dishes surrounding an unlit Korean barbecue grill · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korean_barbecue-Grill_and_banchan.jpg" rel="nofollow">suksim</a> / Wikimedia Commons (CC BY 2.0)</figcaption></figure>
+
+<p>Google Maps lists it at 4.0 from 261 reviews, checked today. That's a thinner review base than Gabojeong's, which tracks with a shop that's known more by regulars and word of mouth than by tour buses.</p>
+<table>
+<thead>
+<tr>
+<th>Restaurant</th>
+<th>Neighborhood</th>
+<th>Hours</th>
+<th style="text-align: right;">Signature dish</th>
+<th style="text-align: right;">Price</th>
+<th style="text-align: right;">Google rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🍖 가보정 (Gabojeong)</td>
+<td>Jangdari-ro, Paldal-gu</td>
+<td>Daily 11:30-22:00</td>
+<td style="text-align: right;">한우 양념갈비 (dinner)</td>
+<td style="text-align: right;">₩79,000</td>
+<td style="text-align: right;">4.0 (6,155)</td>
+</tr>
+<tr>
+<td>🔥 삼부자갈비 (Samboja Galbi)</td>
+<td>Jungbu-daero, Yeongtong-gu</td>
+<td>Not confirmed</td>
+<td style="text-align: right;">Charcoal-grilled galbi</td>
+<td style="text-align: right;">Not confirmed</td>
+<td style="text-align: right;">4.0 (261)</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Prices, hours and ratings checked 2026-10-20; Gabojeong's lunch-set price runs well under its dinner à la carte, so call ahead if a tighter budget matters more than the full portion. USD conversions in the text use ₩1,329.49/$1, the ECB reference rate for 2026-10-19 via the Frankfurter API.</p>
+
+<p><strong>The ₩79,000 ($59.42) dinner price at Gabojeong</strong> <strong>isn't really comparable to Samboja's unlisted menu</strong>, and that gap is the point: one restaurant has scaled into a thousand-seat operation with a posted price list, and the other has stayed small enough that even a food writer didn't print its prices. Neither is automatically the better meal. The first gives you certainty before you leave home; the second gives you the kind of place regulars don't feel the need to explain.</p>
+<div class="me"><b>My take</b>
+A galbi dinner this expensive is worth deciding on before you leave for Suwon, not after you've already sat down. If it's your first time trying the dish and you want zero guesswork, I'd start at Gabojeong: posted prices, a system built for groups, and a name that keeps showing up on every local's own shortlist. If you already know you like thick-cut, salt-grilled ribs and don't mind calling ahead for a place with no English page at all, Samboja is worth the extra effort out to Yeongtong.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Order the galbi-tang instead of (or alongside) grilled ribs at Gabojeong. It's the same beef, same broth tradition, and a much easier way to taste Suwon's version of galbi if a full grilled portion feels like too much food or too much money.</li>
+<li><b>What locals argue about</b> Whether salt-grilled is actually better than soy-marinated galbi, or just different. Suwon's salt style lets the meat's own flavor lead, but plenty of Koreans still prefer a heavier soy-and-garlic marinade from other regions, and neither side is wrong so much as used to something else.</li>
+<li><b>Watch for</b> Gabojeong's weekend dinner rush. A thousand seats sounds like plenty until a Saturday night fills all three buildings at once; call ahead rather than assume walk-in seating.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Can I just order Suwon galbi somewhere in Seoul instead of making the trip?</dt>
+<dd>A random grill-house might put the word on its board, yet skip the two traits that made officials name this one a hometown food back in 1985: an oversized rib brined only with salt instead of a sweet glaze. Elsewhere in Korea, kitchens nearly always default to the glaze, so the salted cut rarely travels far.</dd>
+<dt>What happens if I show up without calling ahead?</dt>
+<dd>Turning up unannounced carries less risk at the larger place, where extra floor space lets servers fit in a latecomer on a crowded Saturday. The smaller shop is a different gamble: no printed schedule or online form exists to confirm anything beforehand, so an unplanned stop could find the cooks sold out for the day with nobody there to ask.</dd>
+</dl></div>
+
+<p>Start with Gabojeong if this is your first Suwon galbi meal, and save Samboja for a return trip once you already know you love the style.</p>
+<p class="notice">Prices and hours were checked on 2026-10-20; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/ganjang-gejang-in-seoul-where-locals.html">Ganjang Gejang in Seoul: Where Locals Actually Eat It</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/korean-bbq-etiquette-who-grills-who-pays.html">Korean BBQ Etiquette: Who Grills, Who Pays</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.mt.co.kr/policy/2025/08/11/2025081113437884317">Money Today (mt.co.kr), on Suwon galbi's history, Hwachunok's origin, King Jeongjo and Hwaseong Fortress, and the salt-vs-soy distinction</a></li>
+<li>[press] <a href="https://www.koreajoongangdaily.com/korea/ribs-with-a-rich-history/10510874">Korea JoongAng Daily, on Hwachunok's 1946 start, the Park Chung-hee visits, and wanggalbi's naming</a></li>
+<li>[press] <a href="https://kgnews.co.kr/mobile/article.html?no=902889">Kyeonggi Newspaper (kgnews.co.kr), confirming Suwon's 1985 designation of galbi as a local specialty</a></li>
+<li>[press] <a href="https://www.esquirekorea.co.kr/article/77380">Esquire Korea, "수원러가 직접 추천한 수원 왕갈비 맛집 4" (2023-05-07), on Gabojeong's three buildings, its TV appearance, and Samboja Galbi's 40th anniversary and charcoal method</a></li>
+<li>[other] <a href="https://polle.com/place/36FJ1E/%EA%B0%80%EB%B3%B4%EC%A0%95">Polle restaurant listing, Gabojeong Building 1 menu and prices</a></li>
+<li>[other] <a href="https://polle.com/marious/posts/2830">Polle restaurant notes, Gabojeong's 1992 opening and local reputation</a></li>
+<li>[other] <a href="https://www.trazy.com/ko/spot/2449/kabojung-galbi-%EA%B0%80%EB%B3%B4%EC%A0%95%EA%B0%88%EB%B9%84-restaurant-cafe">Trazy travel listing, Gabojeong's hours and reservation channel</a></li>
+<li>[other] <a href="https://www.ktriptips.com/kor/food/602895">K-TRIP TIPS listing, Gabojeong's address and parking</a></li>
+<li>[other] Google Maps ratings, checked via Google Places API, 2026-10-20: https://maps.google.com/?cid=13810281595983708653 , https://maps.google.com/?cid=14166641618625614649 , https://maps.google.com/?cid=4821077797416461459</li>
+<li>[other] <a href="https://api.frankfurter.dev/v1/2026-10-19?from=USD&amp;to=KRW">Frankfurter API, ECB reference rate for 2026-10-19 (₩1,329.49/$1)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-20-suwon-galbi-where-locals-eat--></div>
+</div></div></main></div></div></body></html>
