@@ -1,0 +1,339 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>코스피 3.73% 급락, 반등분 다 반납</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">코스피 3.73% 급락, 반등분 다 반납</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Korea_exchange.JPG/1280px-Korea_exchange.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">코스피가 10월 20일 3.73% 내린 5,552.74로 마감하며 이틀간의 반등분을 하루 만에 반납했어요. 서킷브레이커가 뜬 15일 종가 수준으로 돌아왔어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>반등분 하루 만에 증발</b>: 10월 16일과 19일 이틀간 오른 213.79포인트를 10월 20일 하루 만에 다 반납했어요.</li>
+<li><b>서킷브레이커 수준으로 복귀</b>: 어제 종가 5,552.74는 서킷브레이커가 떴던 10월 15일 종가(5,554.22)와 거의 같아요.</li>
+<li><b>확인할 점</b>: <u>다음 거래일에도 외국인·기관 순매도가 이어지는지</u>부터 보면 돼요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Korea_exchange.JPG/1280px-Korea_exchange.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="부산 한국거래소(KRX) 본사. 코스피 종가는 매 거래일 이곳 집계로 확정돼요." width="1200" height="900" loading="lazy"/><figcaption>부산 한국거래소(KRX) 본사. 코스피 종가는 매 거래일 이곳 집계로 확정돼요. · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korea_exchange.JPG" rel="nofollow">hyolee2</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure><div class="kv">
+<div><b>5,552.74</b><span>코스피 종가(10.20)</span><i>전일比 -3.73%</i></div>
+<div><b>1조48억원</b><span>기관 순매도(코스피)</span><i>외국인도 5,300억원 순매도</i></div>
+<div><b>781.97</b><span>코스닥 종가(10.20)</span><i>전일比 -3.33%</i></div>
+<div><b>-1.48포인트</b><span>10.15 서킷브레이커 종가 대비(계산)</span><i>나흘 만에 거의 원점</i></div>
+</div>
+
+
+
+<p>이틀 연속 오르는 지수를 보고 한숨 돌리셨다면 어제는 그 안도감이 길게 가지 못했을 거예요. 반등을 이끌었던 반도체 대형주부터 다시 꺾였거든요.</p>
+<h2>📉 코스피, 반등분 하루 만에 증발</h2>
+<p><strong>코스피는 10월 20일 전일보다 215.27포인트(3.73%) 내린 5,552.74로 마감했어요</strong>. <a href="https://www.mt.co.kr/stock/2026/10/20/2026102015384373141">머니투데이</a>에 따르면 장중엔 5,493.24까지 밀려 5,500선도 깨졌어요. 코스닥도 26.92포인트(3.33%) 내린 781.97로 마감했어요.</p>
+<p>전날까지는 분위기가 꽤 좋았어요. 10월 16일과 19일 이틀간 코스피는 213.79포인트 올랐어요. 어제 하루 만에 그 반등분을 전부 반납한 셈이에요.</p>
+<p>지난주부터 흐름을 표로 보면 이래요.</p>
+<table>
+<thead>
+<tr>
+<th>날짜</th>
+<th style="text-align: right;">코스피</th>
+<th style="text-align: right;">등락률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.15(목)</td>
+<td style="text-align: right;">5,554.22</td>
+<td style="text-align: right;">-7.57%</td>
+</tr>
+<tr>
+<td>10.16(금)</td>
+<td style="text-align: right;">5,668.05</td>
+<td style="text-align: right;">+2.05%</td>
+</tr>
+<tr>
+<td>10.19(월)</td>
+<td style="text-align: right;">5,768.01</td>
+<td style="text-align: right;">+1.76%</td>
+</tr>
+<tr>
+<td>10.20(화)</td>
+<td style="text-align: right;"><strong>5,552.74</strong></td>
+<td style="text-align: right;">-3.73%</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: 머니투데이·서울신문 마감시황(2026.10.20). 10.19 수치는 뉴스핌 마감시황(2026.10.19). 10.15~10.16 수치는 10/15·10/17 글과 동일.</p>
+
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="코스피, 반등 이틀 만에 다시 반납 (10월 15일~20일)" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">코스피, 반등 이틀 만에 다시 반납 (10월 15일~20일)</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,498.92pt</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,579.65pt</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,660.38pt</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,741.1pt</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,821.83pt</text><text x="56.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.15(목)</text><text x="244.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.16(금)</text><text x="432.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.19(월)</text><text x="620.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.20(화)</text><polyline points="56.0,246.2 244.0,160.2 432.0,84.7 620.0,247.3" fill="none" stroke="var(--accent,#1F5AF6)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="246.2" r="4" fill="var(--accent,#1F5AF6)"/><text x="56.0" y="236.2" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,554.22pt</text><circle cx="244.0" cy="160.2" r="4" fill="var(--accent,#1F5AF6)"/><text x="244.0" y="150.2" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,668.05pt</text><circle cx="432.0" cy="84.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="432.0" y="74.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,768.01pt</text><circle cx="620.0" cy="247.3" r="4" fill="var(--accent,#1F5AF6)"/><text x="620.0" y="237.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,552.74pt</text></svg><figcaption>자료: <a href="https://www.mt.co.kr/stock/2026/10/20/2026102015384373141" rel="nofollow">머니투데이·서울신문 마감시황(2026.10.20), 10.19 수치는 뉴스핌(2026.10.19)</a></figcaption></figure>
+
+<p><em>표만 보면 어제 하루 급락한 걸로 보이지만, 실제로는 이틀간의 반등분을 정확히 반납한 수준이에요.</em> 10월 20일 종가(5,552.74)는 서킷브레이커가 떴던 10월 15일 종가(5,554.22)와 1.48포인트밖에 차이 나지 않아요(계산: 5,554.22-5,552.74=1.48). 나흘 만에 급락 당일 수준으로 되돌아온 거예요.</p>
+<p>투자자별로는 개인이 8,981억원을 순매수했고 외국인은 5,300억원, 기관은 1조48억원을 순매도했어요. 프로그램 매매는 여러 종목을 장바구니처럼 한 번에 묶어 사고파는 주문이에요. 어제는 이 장바구니가 순매도 쪽으로 쏠리면서 낙폭을 더 키웠어요. 전체 2,297억원이 순매도로 빠져나갔어요(차익거래 478억원 순매수, 비차익거래 2,775억원 순매도).</p>
+<details class="term"><summary>프로그램 매매(차익거래·비차익거래)란?</summary><p>컴퓨터가 미리 짜 둔 조건에 따라 여러 종목을 한꺼번에 사고파는 거래예요. 선물·현물 가격 차이를 노리는 쪽이 '차익거래', 지수 추종 등 다른 목적이 '비차익거래'예요. 개인 투자자 한 명의 주문보다 훨씬 큰 금액이 한 번에 움직여서 지수 방향을 더 크게 흔들 수 있어요.</p></details>
+
+<h2>❓ 왜 미국 반도체는 올랐는데 한국은 빠졌나</h2>
+<p><strong>미국 반도체주는 올랐는데 국내 대형주는 떨어졌어요.</strong> 10월 19일(현지시간) 필라델피아 반도체지수(SOX)는 1.61% 올랐어요. 그런데 10월 20일 삼성전자는 2.98% 내린 21만1,500원, SK하이닉스는 4.23% 내린 122만3,000원에 마감했어요. 현대차도 4.91% 내렸어요.</p>
+<p>신한투자증권은 이 엇박자를 외국인 매도의 성격으로 설명했어요. 한국 시장 전체를 덜어내는 게 아니라 삼성전자·SK하이닉스 두 종목의 반도체 노출만 줄이는 매도에 가깝다는 분석이에요. MSCI Korea 지수에서 두 종목의 비중을 더하면 62.89%(삼성전자 35.31%, SK하이닉스 27.58%, 9월 30일 기준)나 돼서, 이 두 종목만 줄여도 코스피 전체가 크게 흔들려요.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/SK_Hynix_DDR5_Tall_MRDIMM.jpg/1280px-SK_Hynix_DDR5_Tall_MRDIMM.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="SK하이닉스의 서버용 D램 모듈. 이번 급락에서 4.23% 내린 반도체 대표주예요." width="1200" height="900" loading="lazy"/><figcaption>SK하이닉스의 서버용 D램 모듈. 이번 급락에서 4.23% 내린 반도체 대표주예요. · Photo: <a href="https://commons.wikimedia.org/wiki/File:SK_Hynix_DDR5_Tall_MRDIMM.jpg" rel="nofollow">4300streetcar</a> / Wikimedia Commons (CC BY 4.0)</figcaption></figure>
+
+<details class="term"><summary>필라델피아 반도체지수(SOX)란?</summary><p>미국 필라델피아 증권거래소가 만든 반도체 기업 30개의 주가지수예요. 엔비디아·마이크론·TSMC 같은 기업이 들어 있어서, 전날 미국 반도체 업황 분위기를 가늠하는 지표로 자주 인용돼요.</p></details>
+
+<h2>🔍 프랑스 국채 불안과 AI 수익성 경계</h2>
+<p><strong>어제 하락 배경에는 국내 요인보다 해외 변수가 더 크게 깔려 있었어요.</strong> 프랑스의 재정 건전성과 정치적 불확실성에 대한 우려가 커지면서 유럽 국채시장에 매도 압력이 나타났고, 프랑스 10년물 국채수익률은 4.9%대로 올랐어요. 여기에 AI 인프라 기업들의 설비투자가 커질수록 시장의 관심이 투자 규모 자체에서 투자 수익성과 재무건전성 쪽으로 옮겨 가고 있다는 분석도 더해졌어요.</p>
+<p>다만 이게 반도체 수요가 줄었다는 뜻은 아니에요. <em>삼성전자·SK하이닉스의 실제 주문이 나빠졌다는 증거는 아직 확인되지 않았어요</em>. 외부 자금조달에 기대는 AI 인프라 기업일수록 이런 경계감에 민감하게 반응했을 가능성이 커 보여요.</p>
+<div class="me"><b>제 경우</b>
+이틀 동안 쌓인 반등폭이 하루 만에 사라지는 걸 보면 괜히 마음이 더 복잡해지는 날이 있어요. 저도 9월에 국내 주식에서 손실을 본 적이 있어서, 지수가 서킷브레이커 수준으로 되돌아왔다는 소식에 계좌 생각이 먼저 났어요. 그래도 어제 하루의 등락만으로 추세를 단정하긴 일러서, 저라면 다음 거래일 외국인·기관 수급이 사흘째도 매도 쪽인지부터 보겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 개인은 오히려 8,981억원을 순매수했어요. 급락 다음 날마다 저가 매수가 들어왔던 지난주 패턴을 생각하면, 이번에도 하루이틀 안에 되돌림이 나올 가능성을 배제하긴 일러요.</li>
+<li><b>구조</b> 삼성전자와 SK하이닉스 비중이 MSCI Korea 지수의 62.89%를 차지해서, 외국인이 이 두 종목만 줄여도 코스피 전체가 크게 흔들려요. 반대로 두 종목이 반등하면 지수도 같이 빠르게 돌아설 수 있는 구조예요.</li>
+<li><b>다음에 볼 것</b> <u>10월 21일(수) 개장 때 외국인·기관이 사흘째 순매도를 이어 가는지</u>부터 보면 돼요. 프랑스 국채금리가 더 오르는지도 같이 짚을 포인트예요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>어제 코스피보다 더 크게 빠진 종목은 뭐였나요?</dt>
+<dd>코스닥 2차전지주가 더 크게 빠졌어요. 에코프로비엠이 9.15%, 에코프로가 7.74% 내렸어요. 코스닥 지수 전체(-3.33%)보다 낙폭이 훨씬 컸어요.</dd>
+<dt>코스피가 빠진 날 다른 자산도 같이 흔들렸나요?</dt>
+<dd>네, 비트코인도 같이 내렸어요. 오후 5시35분 기준 전일보다 1.62% 내린 8만1,476.43달러에 거래됐어요. 다만 미국 비트코인 현물 ETF에는 같은 날 약 6,995억원이 순유입됐어요. 가격은 내렸는데 자금은 들어온, 엇갈린 모습이었어요.</dd>
+</dl></div>
+
+<p>이번 한 주 흐름을 보면 저는 반등 자체보다 그 반등이 며칠을 버티는지가 더 중요하다고 봐요. 다음 거래일 외국인·기관 수급이 사흘째도 매도 쪽인지부터 확인해 보려고 해요.</p>
+<p class="notice">여기 적는 건 투자 권유가 아니에요. 숫자는 발표 원문에서 다시 확인해 보세요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/10/205-8.html">코스피 2.05% 반등, 외국인 8일 만에 사자</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/10/757.html">코스피 7.57% 폭락, 서킷브레이커 발동</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[언론] <a href="https://www.mt.co.kr/stock/2026/10/20/2026102015384373141">머니투데이, 코스피, 외국인·기관 매도에 3.73% 하락…5552.74 마감(2026.10.20)</a></li>
+<li>[언론] <a href="https://www.seoul.co.kr/news/economy/securities/2026/10/20/20261020500235">서울신문, [마감시황]코스피 3.73% 급락 마감…기관·외국인 동반 매도에 5552.74(2026.10.20)</a></li>
+<li>[언론] <a href="https://www.blockmedia.co.kr/archives/1153864">블록미디어, [퇴근길시황] 코스피, 이틀치 반등 하루 만에 반납⋯비트코인 8만1000달러 후퇴(2026.10.20)</a></li>
+<li>[언론] <a href="https://www.topstarnews.net/news/articleView.html?idxno=16252798">탑스타뉴스, 코스피 3.73% 급락, AI 부채 우려에 반도체 흔들(2026.10.20)</a></li>
+<li>[언론] <a href="https://www.topstarnews.net/news/articleView.html?idxno=16253138">탑스타뉴스, 삼전닉스 왜 집중 매도하나…외국인 수급에 코스피 변동성 확대(2026.10.20)</a></li>
+<li>[언론] <a href="https://www.newspim.com/news/view/20261019001237">뉴스핌, [마감시황] 외국인 매도세 완화…코스피, 장 초반 3% 급락 딛고 1.8% 상승 마감(2026.10.19)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-21-kospi-giveback-oct20-2026--></div>
+</div></div></main></div></div></body></html>
