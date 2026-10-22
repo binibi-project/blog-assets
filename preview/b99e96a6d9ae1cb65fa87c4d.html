@@ -1,0 +1,331 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>주말 몰아자기, 효과 논문엔 없었어요</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">주말 몰아자기, 효과 논문엔 없었어요</h3><div class="post-body"><img class="thumb" src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@8968a791cc4331af49b97e1299827bb654c69b16/illus/2026-10-22-catchup-sleep-cardiovascular-disease-gap-3e7a0903.jpg" alt="" width="1200" height="675" loading="lazy"/><p class="deck">ESC 학회에서 '심장병 위험 20%↓'로 보도된 주말 몰아자기 수면이, 가속도계로 다시 측정한 동료심사 논문(Sleep, 2024)에서는 사망률·심혈관질환과 무관했어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>'20% 감소'로 퍼진 숫자</b>: 2024년 8월 유럽심장학회(ESC) 학술대회 발표가 "주말에 몰아 자면 심장병 위험이 최대 20% 낮아진다"로 세계 각지에 보도됐어요.</li>
+<li><b>동료심사 논문은 결과가 달랐어요</b>: 같은 UK 바이오뱅크 데이터를 손목 가속도계로 다시 측정한 논문(Sleep, 2024)에서는 몰아자기와 사망률·심혈관질환 사이에 통계적으로 의미 있는 연관이 없었어요.</li>
+<li><b>확인할 것</b>: <u>본인의 평일·주말 기상 시간 차이를 먼저 재 보세요</u>. 몰아자기 자체보다 그 차이가 왜 생기는지가 더 중요한 숫자예요.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@8968a791cc4331af49b97e1299827bb654c69b16/illus/2026-10-22-catchup-sleep-cardiovascular-disease-gap-3e7a0903.jpg" alt="평일에 못 잔 잠, 주말에 몰아 잔다고 메워질까" width="1200" height="675" loading="lazy"/><figcaption>평일에 못 잔 잠, 주말에 몰아 잔다고 메워질까 · 일러스트(AI 생성)</figcaption></figure><div class="kv">
+<div><b>19%↓</b><span>주말 보상수면 최다군의 심장병 위험</span><i>ESC 학회 발표, 자가보고 수면</i></div>
+<div><b>HR 1.05</b><span>같은 질문, 동료심사 논문의 CVD 위험비</span><i>95% CI 0.94~1.18, 유의하지 않음</i></div>
+<div><b>73,513명</b><span>Sleep지 논문 참가자 수</span><i>UK 바이오뱅크, 가속도계 측정</i></div>
+<div><b>HR 1.17</b><span>2시간 이상 몰아 잔 그룹의 사망률</span><i>95% CI 0.97~1.41, 유의하지 않음</i></div>
+</div>
+
+
+
+<p>주말에 늦게까지 자고 나면 "이걸로 평일에 못 잔 잠을 좀 메웠다" 싶으실 때가 있죠. 그 느낌이 심장 건강에도 실제로 도움이 되는지를 들여다본 연구 두 편이 거의 같은 데이터를 쓰고도 정반대의 결론을 내놨어요.</p>
+<h2>📰 '심장병 위험 20%↓', 이 숫자는 어디서 왔을까</h2>
+<p><strong>2024년 8월 유럽심장학회(ESC) 학술대회에서 나온 분석 하나가, "주말 몰아자기가 심장병 위험을 최대 20% 낮춘다"로 전 세계에 보도됐어요</strong>. 중국 베이징 푸와이병원 연준 송(Yanjun Song) 박사팀이 UK 바이오뱅크 참가자 9만903명의 자가보고 수면 기록을 약 14년 추적해, 주말 보상수면이 가장 많은 그룹과 가장 적은 그룹을 비교한 결과였어요. 보상수면 최다군은 최소군보다 허혈성 심장질환·심부전·심방세동·뇌졸중을 합친 심혈관질환 발생이 19% 낮았고, 매일 7시간 미만으로 잔 1만9,816명만 따로 보면 그 격차가 20%로 더 벌어졌어요.</p>
+<details class="term"><summary>학회 발표와 동료심사 논문, 뭐가 다른가요?</summary><p>학회 발표(컨퍼런스 abstract)는 연구자가 학술대회에서 결과를 요약 발표한 것으로, 다른 전문가들의 검증(동료심사)을 거치지 않은 상태예요. 반면 동료심사 논문은 같은 분야 전문가들이 연구 설계와 통계를 따로 심사한 뒤 학술지에 실린 글이에요. 두 단계 사이에서 숫자나 결론이 바뀌는 일이 드물지 않아요.</p></details>
+
+<p>이 발표는 학술지에 실린 논문이 아니라 학회에서 공개된 자료였어요. 영국심장재단(BHF)의 제임스 레이퍼 교수도 "주말 늦잠이 평소의 충분한 수면을 대신할 수는 없다"고 선을 그었어요.</p>
+<h2>🔬 가속도계로 다시 재보니, 숫자가 사라졌어요</h2>
+<p><strong>같은 UK 바이오뱅크 참가자를 손목 가속도계로 다시 측정한 동료심사 논문에서는, 몰아자기와 사망률·심혈관질환 사이에 통계적으로 의미 있는 연관이 없었어요</strong>. <a href="https://doi.org/10.1093/sleep/zsae135">Chaput 등이 학술지 Sleep에 발표한 이 논문</a>은 참가자 7만3,513명(사망률 분석)과 7만518명(심혈관질환 분석)을 평균 8.0년 추적했고, 평일보다 주말에 더 잔 시간을 '없음·0~1시간·1~2시간·2시간 이상' 네 구간으로 나눠 비교했어요.</p>
+<details class="term"><summary>가속도계(액티그래피) 측정이 자가보고와 다른 점은?</summary><p>자가보고는 참가자가 "보통 몇 시간 잔다"고 기억해서 적는 방식이고, 가속도계는 손목에 찬 기기가 움직임을 기록해 실제 취침·기상 시각을 계산하는 방식이에요. 두 방식은 같은 사람을 재도 숫자가 다르게 나올 수 있어요.</p></details>
+
+<p><strong>위험비(HR)</strong>는 저울 같은 거예요. 두 그룹 사이에서 어떤 일(사망이나 심혈관질환)이 일어날 가능성의 비율이고 1이면 두 그룹이 같다는 뜻이에요. 1보다 크면 그 그룹의 위험이 더 크다는 뜻이지만 <em>함께 나오는 신뢰구간(95% CI)이 1을 포함하면 "차이가 없다"로 읽어요</em>.</p>
+<p>예를 들어 2시간 이상 몰아 잔 그룹의 사망률 위험비는 1.17이고 신뢰구간은 0.97~1.41이었어요. 숫자만 보면 위험이 17% 늘어난 것 같아도 신뢰구간에 1이 들어 있어서 결론은 "차이가 없다"예요.</p>
+<table>
+<thead>
+<tr>
+<th>몰아잔 시간(주말-평일)</th>
+<th style="text-align: right;">사망률 위험비(95% CI)</th>
+<th style="text-align: right;">심혈관질환 위험비(95% CI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>없음(기준)</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.00</td>
+</tr>
+<tr>
+<td>0~1시간</td>
+<td style="text-align: right;">1.06 (0.95~1.17)</td>
+<td style="text-align: right;">0.97 (0.92~1.03)</td>
+</tr>
+<tr>
+<td>1~2시간</td>
+<td style="text-align: right;">0.94 (0.82~1.07)</td>
+<td style="text-align: right;">1.00 (0.93~1.08)</td>
+</tr>
+<tr>
+<td>2시간 이상</td>
+<td style="text-align: right;">1.17 (0.97~1.41)</td>
+<td style="text-align: right;">1.05 (0.94~1.18)</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: Chaput JP 등, Sleep 2024;47(11), DOI 10.1093/sleep/zsae135.</p>
+
+<p>표만 보면 구간마다 숫자가 들쭉날쭉해서 뭔가 있어 보이지만, 네 구간 모두 신뢰구간이 1을 가로질러요. 나이·성별 같은 기본 요인뿐 아니라 신체활동·식습관·음주·흡연·교대근무 이력·크로노타입까지 보정한 뒤에도 같은 결과였어요.</p>
+<h2>⚠️ 2시간 넘게 몰아 자면, 오히려 늘어났어요</h2>
+<p><strong>평일에 수면부채가 거의 없던 사람만 따로 본 민감도 분석에서는, 주말에 2시간 넘게 더 자는 쪽이 오히려 전체 사망률이 높아지는 방향으로 나왔어요</strong>. 같은 호에 실린 편집진의 논평은 이 '무효 결과'가 몰아자기에 이득이 없다는 뜻일 수 있다면서도, <em>몰아자기의 이득이 평일-주말 수면 시각이 들쭉날쭉해지는 비용으로 상쇄됐을 가능성</em>을 하나의 설명으로 제시했어요.</p>
+<div class="me"><b>제 경우</b>
+저는 자정에 자려고 노력하지만 늦으면 새벽 2~3시까지 밀리고, 기상은 대략 7:40~8:00 사이라 꽤 들쭉날쭉한 편이에요. 이 논문을 보고 나니, 주말에 몰아 잔다고 그 들쭉날쭉함 자체가 사라지는 건 아니겠다 싶더라고요. 저라면 몰아자기보다 평일 취침시간을 당기는 쪽을 먼저 보겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> 이 동료심사 논문도 완벽한 결론은 아니에요. 평균 추적기간이 8년으로 ESC 발표의 14년보다 짧고, 2시간 이상 몰아 잔 그룹은 신뢰구간이 넓어서(0.97~1.41) "위험이 늘어난다"고 확정하기도 어려워요.</li>
+<li><b>구조</b> 두 연구가 다른 결론을 낸 가장 큰 차이는 수면을 재는 방식이에요. ESC 발표는 참가자가 스스로 적은 수면시간을, 동료심사 논문은 손목 가속도계로 측정한 값을 썼어요. 같은 사람의 "느낀 수면시간"과 "기기가 잰 수면시간"이 늘 같지는 않아요.</li>
+<li><b>다음에 볼 것</b> Sleep 편집진은 이 결과를 독립적으로 재검증할 필요가 있다고 밝혔어요. 다음 미국수면학회·수면연구학회 공동학술대회(SLEEP 2027, 2027년 6월 6~9일 덴버)에서 이 주제의 후속 연구가 나오는지 지켜보려고 해요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>그럼 평일에 덜 자고 주말에 10시간씩 몰아 자도 괜찮은가요?</dt>
+<dd>권하기는 어려워요. 전체 사망률 신호가 나온 '2시간 이상' 구간은 사망률 분석 참가자 중 4,051명으로 네 구간 중 가장 적었고, 평소 패턴에서 가장 멀리 벗어난 소수였어요. 몰아 자는 시간을 늘릴수록 좋아진다는 기대와는 반대 방향이라는 뜻이에요.</dd>
+<dt>이미 평일에 7시간을 못 자고 있다면 주말 늦잠은 그냥 포기해야 하나요?</dt>
+<dd>포기할 필요는 없지만 기댈 근거로 삼기는 아직 일러요. 두 연구 모두 공통으로 짚은 건 몰아자기 자체가 아니라 평일 수면시간이에요. 체중·혈압 관리처럼 꾸준히 지표를 재며 바꿔야 하는 습관과 비슷해서, 하루 취침시간을 10~15분씩 당기는 식으로 평일 쪽을 먼저 손보는 게 더 다뤄 볼 만한 변화예요.</dd>
+</dl></div>
+
+<p>학회에서 퍼진 숫자가 기억하기 쉬웠을 뿐, 손목 기기로 다시 잰 논문에서는 같은 효과가 보이지 않았어요. 저라면 이번 주말 늦잠에 큰 기대를 걸기보다 평일 취침시간부터 당겨 보고 다음 결과를 기다려 보겠어요.</p>
+<p class="notice">건강 정보는 꼭 한 번 더 확인해 보세요. 몸이 불편하면 병원이 먼저예요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/09/20-826.html">20대 수면 8시간26분인데, 불면은 늘었어요</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/10/blog-post_04.html">심한 코골이, 뇌에 흔적을 남겨요</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[공식] <a href="https://doi.org/10.1093/sleep/zsae135">Chaput JP 등, "Device-measured weekend catch-up sleep, mortality, and cardiovascular disease incidence in adults", Sleep 2024;47(11), DOI</a></li>
+<li>[공식] <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11543617/">Gao C 등, "Decoding the weekend sleep dilemma: the health impacts of catching up on sleep" (편집 논평), Sleep 2024;47(11), PMC 전문</a></li>
+<li>[기타] <a href="https://www.bhf.org.uk/what-we-do/news-from-the-bhf/news-archive/2024/august/catching-up-on-sleep-at-the-weekend-could-cut-heart-disease-risk">British Heart Foundation, "Catching up on sleep at the weekend could cut heart disease risk"(2024.8.29, ESC 학술대회 발표 소개)</a></li>
+<li>[언론] <a href="https://kormedi.com/1737247/">코메디닷컴, "주말 몰아자기, 심장병 위험 20% 낮춰"(2024.11.17)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-22-catchup-sleep-cardiovascular-disease-gap--></div>
+</div></div></main></div></div></body></html>
