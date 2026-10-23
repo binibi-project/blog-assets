@@ -1,0 +1,350 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>What an Official K-Pop Fan Club Membership Actually Costs</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">What an Official K-Pop Fan Club Membership Actually Costs</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/%EC%98%AC%EB%A6%BC%ED%94%BD%EC%B2%B4%EC%A1%B0.jpg/1280px-%EC%98%AC%EB%A6%BC%ED%94%BD%EC%B2%B4%EC%A1%B0.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">JYP cut Stray Kids' kit price from ₩22,000 to ₩10,000 after January backlash. What official fan club membership actually buys, and what it never has.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>It's cheap but uneven</b>: official membership typically runs ₩10,000-35,000 ($7.55-$26.42) a year, and JYP still cut Stray Kids' kit price in half mid-sale this January after fans objected.</li>
+<li><b>It buys priority, not guarantees</b>: earlier entry to weekly music-show tapings and a 1-2 day head start on fan-meeting tickets, but never a fansign and not always a concert seat.</li>
+<li><b>Paying doesn't lock in access</b>: <u>read the current notice before you buy</u>, since a membership bought in good faith can still land you outside a cap, the way it did for BLACKPINK's own 10th-anniversary event.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/%EC%98%AC%EB%A6%BC%ED%94%BD%EC%B2%B4%EC%A1%B0.jpg/1280px-%EC%98%AC%EB%A6%BC%ED%94%BD%EC%B2%B4%EC%A1%B0.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Packed for a SHINee World VI show, blue stage light washing over a full floor and stands at KSPO Dome" width="1200" height="676" loading="lazy"/><figcaption>Packed for a SHINee World VI show, blue stage light washing over a full floor and stands at KSPO Dome · Photo: <a href="https://commons.wikimedia.org/wiki/File:%EC%98%AC%EB%A6%BC%ED%94%BD%EC%B2%B4%EC%A1%B0.jpg" rel="nofollow">Moonhayun</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩22,000 → ₩10,000</b><span>📉 kit price, cut mid-sale</span><i>Stray Kids' STAY 6th gen, after fan backlash, Jan. 2026</i></div>
+<div><b>₩10,000-35,000</b><span>💳 typical annual fee</span><i>range reported across groups, 2016-2023</i></div>
+<div><b>40 fans</b><span>🎟️ BLACKPINK's 10th-anniversary event</span><i>open only to members who'd paid by July 31, 2026</i></div>
+<div><b>Never</b><span>❌ fansign entry</span><i>membership alone has never bought this</i></div>
+</div>
+
+
+
+<p>Stray Kids fans didn't stay quiet when they saw the price on the sixth-generation STAY membership kit. By January 24, 2026, member Hyunjin was on Instagram Live telling fans he'd pushed back on the company, though the call wasn't his to make. The next day, JYP's fan platform apologized and cut the price.</p>
+<p>It's a small story about a cardboard box of photocards and a keyring, but it says more about what an official fan club membership actually is than any price list does: a yearly bet on a company's goodwill, sold mostly on trust.</p>
+<details class="term"><summary>What is an official fan club, and how is it different from a fancafe?</summary><p>A fancafe is a free online community, historically hosted on Daum, where anyone can read news; leveling up (sometimes paid, sometimes just active posting) unlocks chat and sub-boards. An official fan club is a separate, always-paid membership an agency sells directly, usually through Weverse or an app like JYP's FANS, that comes with real-world perks like presale access. Many companies now run both, or have folded the fancafe's functions into their app.</p></details>
+
+<h2>💳 What membership actually costs</h2>
+<p><strong>A year of official membership has typically run ₩10,000-35,000 ($7.55-$26.42), and the physical kit that ships with it is usually priced separately</strong>. The exact number depends on the group and the year, which is exactly what makes a sudden mid-sale change like Stray Kids' feel so out of line with what fans expected to pay.</p>
+<table>
+<thead>
+<tr>
+<th>Club</th>
+<th style="text-align: right;">What it charged</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Typical established group (general range)</td>
+<td style="text-align: right;">₩10,000-30,000/yr</td>
+<td>2016</td>
+</tr>
+<tr>
+<td>IU's Uaena (5th fan club)</td>
+<td style="text-align: right;">₩35,000 ($26.42)</td>
+<td>Jan-Feb 2022 sign-up</td>
+</tr>
+<tr>
+<td>BLACKPINK's BLINK</td>
+<td style="text-align: right;">₩23,000 ($17.36) early bird + ₩31,500 ($23.78) gift shipping</td>
+<td>Dec 2021</td>
+</tr>
+<tr>
+<td>BTS's ARMY</td>
+<td style="text-align: right;">₩25,000 ($18.87) base + ₩15,000 ($11.32) kit or ₩175,000 ($132.11) merch pack</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>Stray Kids' STAY 6th gen kit</td>
+<td style="text-align: right;">₩22,000 ($16.61) → cut to ₩10,000 ($7.55)</td>
+<td>Jan. 2026</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Sources: Soompi (2016 general range), Korea JoongAng Daily (IU, BTS, 2023), Bandwagon Asia (BLACKPINK, 2021), Soompi (Stray Kids, Jan. 2026). Figures span a decade and aren't directly comparable group-to-group.</p>
+
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="Stray Kids&#x27; STAY 6th-gen membership kit: before and after the backlash" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">Stray Kids&#x27; STAY 6th-gen membership kit: before and after the backlash</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">7,000KRW</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">11,500KRW</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">16,000KRW</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">20,500KRW</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">25,000KRW</text><text x="197.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Announced, Jan. 22-23, 2026</text><text x="479.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Revised, Jan. 25, 2026</text><rect x="108.9" y="84.7" width="176.2" height="203.3" rx="3" fill="var(--accent,#1F5AF6)"/><text x="197.0" y="78.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">22,000KRW</text><rect x="390.9" y="247.3" width="176.2" height="40.7" rx="3" fill="var(--accent,#1F5AF6)"/><text x="479.0" y="241.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">10,000KRW</text></svg><figcaption>자료: <a href="https://www.soompi.com/article/1814645wpp/jyp-lowers-stray-kids-fan-club-membership-kit-price-after-backlash" rel="nofollow">Soompi, reporting JYP&#x27;s FANS apology notice</a></figcaption></figure>
+
+<p>Stray Kids' own STAY 6th generation, covered in <a href="https://www.soompi.com/article/1814645wpp/jyp-lowers-stray-kids-fan-club-membership-kit-price-after-backlash">Soompi's report on the price cut</a>, shows how unsettled that pricing still is. The kit was always separate from the membership fee itself, which is why JYP could cut just the kit's price the next day, from ₩22,000 to ₩10,000.</p>
+<p>JYP also dropped a planned album plush keyring from the kit and pushed sign-up back a day, to "stabilize the system and operational schedules". FANS, the platform that ran the sign-up, said it would "take full responsibility" and apologized for giving fans too little notice. </p>
+<details class="term"><summary>What's actually "the kit"?</summary><p>A physical box of membership goods: usually a membership card, a set of photocards, and one or two extras that change each generation, like a keyring or a poster. It ships once per sign-up and is separate from any ongoing digital perks the membership unlocks.</p></details>
+
+<h2>✅ What it guarantees, and what it doesn't</h2>
+<p><strong>Membership reliably buys two things: priority entry to weekly music-show tapings and a 1-2 day head start on fan-meeting tickets before the general public.</strong> Fansign entry has never come bundled with simple membership, and early access to a group's own domestic concerts is inconsistent from group to group. Where a membership-gated concert presale does exist, it's now typically the first of three windows before a seat goes to the general public: domestic members first, then international members, then everyone else. That order, and the specific price tiers it unlocks, gets a full breakdown in <a href="/posts/2026-09-23-kpop-concert-ticketing-korea">How K-Pop Concert Tickets Actually Work in Korea</a>.</p>
+<p>Even a paid membership can still leave you outside the room. For BLACKPINK's 10th debut anniversary this August, YG capped the celebration at 40 fans, open only to applicants who'd held a Weverse membership since July 31. The notice landed two days before the date itself, and fans pointed out that Weverse had seen almost no live content since 2024, so the membership they'd kept paying for had bought them little until that single 40-person lottery. </p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Street_hongdae_Seoul.jpg/1280px-Street_hongdae_Seoul.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A busy pedestrian street in Hongdae, Mapo District, one of Seoul&#x27;s two neighborhoods with a dedicated photocard store" width="1200" height="1281" loading="lazy"/><figcaption>A busy pedestrian street in Hongdae, Mapo District, one of Seoul&#x27;s two neighborhoods with a dedicated photocard store · Photo: <a href="https://commons.wikimedia.org/wiki/File:Street_hongdae_Seoul.jpg" rel="nofollow">U0894629</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p>If a sign-up window has already closed, or the lottery odds just aren't worth it to you, Hongdae and Myeongdong are where a lot of fans shop instead: Seoul's two dedicated photocard stores sit in those neighborhoods, a backup economy covered in full in <a href="/posts/2026-10-08-kpop-photocard-market-prices">Inside Korea's K-Pop Photocard Market</a>.</p>
+<details class="term"><summary>What does a "fan club presale" actually sit on top of?</summary><p>A block of tickets an agency reserves for verified members before anyone else can buy. For a big act, that block is most of the good seats, so general sale is largely what members didn't take. Membership gets you into the draw; it doesn't guarantee you win it.</p></details>
+
+<p><strong>Joining from outside Korea is mostly fine now, too, since membership has moved onto apps like Weverse and FANS, though a Korean phone number can still matter for some of what it unlocks.</strong> As recently as 2016, YG ran fan clubs that excluded international fans outright, and JYP split membership into a domestic Gold tier with full perks and an international Silver tier without music-show or fan-meeting priority. That older, closed structure doesn't match how YG itself now runs things: the BLACKPINK anniversary event above sold through Weverse to any paying member, no mention of a nationality or domestic-only rule. What hasn't gone away is the domestic-first order on concert tickets themselves, which still runs through separate local and global presale pages.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Myeongdong-7gil-2023.jpg/1280px-Myeongdong-7gil-2023.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Myeongdong 7-gil at dusk, street stalls and shoppers filling central Seoul&#x27;s best-known shopping strip" width="1200" height="1600" loading="lazy"/><figcaption>Myeongdong 7-gil at dusk, street stalls and shoppers filling central Seoul&#x27;s best-known shopping strip · Photo: <a href="https://commons.wikimedia.org/wiki/File:Myeongdong-7gil-2023.jpg" rel="nofollow">SKTakek</a> / Wikimedia Commons (CC0)</figcaption></figure>
+
+<h2>🤔 Is it actually worth paying for?</h2>
+<p><strong>Only if you'll use what it unlocks within the year you're paying for.</strong> A 2023 report found real complaints behind that math: Rocket Punch fans got exactly one meet-and-greet across three paid membership periods, and GFriend's members held active memberships through the group's 2021 inactivity, with refunds only offered after backlash, first as Weverse Shop points and then, after more pushback, as cash. The same report found HYBE already shifting its groups toward lighter digital memberships, with physical kits sold as an optional add-on rather than bundled in by default.</p>
+<div class="me"><b>My take</b>
+Treat the fee the way you'd treat a subscription that's easy to forget about: fine if there's a specific thing this year's membership buys, like a tour already on the calendar, risky if you're hoping it pays off eventually. If I were deciding, I'd buy the smallest tier that still gets into the presale window rather than the full kit, and let that one event decide whether a bigger membership is worth it next year. The Stray Kids and BLACKPINK stories land on the same lesson either way: the price on the sign-up page is the easy part to check. What the membership actually delivers that year is the part you're trusting the company to get right.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more day</b> before a sign-up window closes, read the current notice in full rather than last year's guide; Stray Kids' own kit price moved by more than half in a single day this January.</li>
+<li><b>What locals argue about</b> whether fan clubs still mean anything once a group barely uses the platform tied to it; Korea JoongAng Daily quotes one critic who wants agency-run clubs to go back to being "pure," run by fans rather than companies.</li>
+<li><b>Watch for</b> the renewal window itself: most groups still open sign-ups only once a year for a set stretch, so missing it can mean waiting a full year for another shot.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Why did fans get so upset over a box that cost about seven dollars either way?</dt>
+<dd>The dollar figure was never really the point. What stung was finding a bigger charge waiting with zero warning, after money had already changed hands under different terms. A company that can quietly raise a price mid-sale can do it again, which is the trust problem underneath the small math.</dd>
+<dt>Can someone overseas even pay for this without a Korean bank card?</dt>
+<dd>Usually, yes — a foreign card typically clears fine through apps like Weverse or FANS, since both are built for buyers outside the country. What a traveler can still run into is a currency surcharge or a failed charge from a card issuer flagging an unfamiliar overseas vendor, so confirming the card works before a short trip beats discovering it at checkout.</dd>
+</dl></div>
+
+<p>The honest math is simple: a membership is a cheap mistake if the group goes quiet on you, and genuinely good value if even one presale or fan meeting lands while you hold it. <strong>Check what's actually scheduled before you pay, not just what the membership page promises.</strong></p>
+<p class="notice">Prices and hours were checked on 2026-10-22; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/how-k-pop-concert-tickets-actually-work.html">How K-Pop Concert Tickets Actually Work in Korea</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/inside-koreas-k-pop-photocard-market.html">Inside Korea&#x27;s K-Pop Photocard Market: What It Costs</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.soompi.com/article/807807wpp/k-pop-101-how-to-navigate-fanclubs-vs-fancafes">Soompi, "K-Pop 101: How to Navigate Fanclubs vs. Fancafes" (fee ranges, guaranteed/not-guaranteed benefits, Gold/Silver tiers, YG's historical international restriction), 2016</a></li>
+<li>[press] <a href="https://www.koreajoongangdaily.com/entertainment/overloaded-by-content-value-of-club-memberships-put-into-question/10077457">Korea JoongAng Daily, "Overloaded by content, value of club memberships put into question" (per-group prices, fan complaints, HYBE's shift to digital membership, critic quotes), 2023-03-14</a></li>
+<li>[press] <a href="https://www.soompi.com/article/1814645wpp/jyp-lowers-stray-kids-fan-club-membership-kit-price-after-backlash">Soompi, "JYP Lowers Stray Kids' Fan Club Membership Kit Price After Backlash" (kit price cut, recruitment dates, FANS apology), 2026-01-25</a></li>
+<li>[other] <a href="https://otakukart.com/listening-to-stay-jyp-entertainment-adjusts-stray-kids-fan-club-pricing-following-backlash/">OtakuKart, "Listening To STAY: JYP Entertainment Adjusts Stray Kids Fan Club Pricing Following Backlash" (Hyunjin's Instagram Live, full apology context), 2026</a></li>
+<li>[press] <a href="https://www.bandwagon.asia/articles/blackpink-launch-official-blink-global-fanclub-membership-weverse-price-how-to-join">Bandwagon Asia, "BLACKPINK launch official BLINK global fanclub membership on Weverse" (launch price, gift, shipping fee), 2021</a></li>
+<li>[press] <a href="https://koreatimes.co.kr/entertainment/k-pop/20260807/blackpinks-10th-anniversary-event-sparks-backlash-as-only-40-fans-invited">The Korea Times, "BLACKPINK's 10th anniversary event sparks backlash as only 40 fans invited," 2026-08-07</a></li>
+<li>[press] <a href="https://en.nocutnews.co.kr/news/6537508">Nocut News, domestic/global/general concert presale order and schedule examples, 2026-06-24</a></li>
+<li>[official] <a href="https://api.frankfurter.dev/v1/2026-10-22?from=USD&amp;to=KRW">European Central Bank reference rate via Frankfurter API, 2026-10-22 (₩1,324.63/$1)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-23-kpop-fan-club-membership-cost--></div>
+</div></div></main></div></div></body></html>
