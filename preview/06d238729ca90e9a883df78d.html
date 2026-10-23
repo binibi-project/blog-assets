@@ -1,0 +1,438 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>The Discover Seoul Pass: Is the ₩90,000 Card Worth It?</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">The Discover Seoul Pass: Is the ₩90,000 Card Worth It?</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Namsan_Seoul_Tower_%2849174492933%29.jpg/1280px-Namsan_Seoul_Tower_%2849174492933%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Seoul's official tourist pass bundles 70+ attractions and a 5-day eSIM into four tiers, ₩49,000-130,000, on sale through Oct. 31, 2026.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>Four tiers run ₩49,000 to ₩130,000</b>: pick a 72- or 120-hour all-access version, or a Pick 3 version for exactly three attractions, and every tier bundles a 5-day eSIM on top.</li>
+<li><b>The 72-hour tier is the one Seoul's tourism office itself calls the best value</b>: its own sample itinerary adds up to ₩294,400 in attractions and transit for a ₩90,000 card.</li>
+<li><b><u>Enter the October promo code before Oct. 31</u></b>: and don't activate the pass until you're actually ready to start sightseeing, since the clock starts at first use, not at purchase.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Namsan_Seoul_Tower_%2849174492933%29.jpg/1280px-Namsan_Seoul_Tower_%2849174492933%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="N Seoul Tower seen from directly below against a blue evening sky, its antenna mast and observation deck visible at the top" width="1200" height="1800" loading="lazy"/><figcaption>N Seoul Tower seen from directly below against a blue evening sky, its antenna mast and observation deck visible at the top · Photo: <a href="https://commons.wikimedia.org/wiki/File:Namsan_Seoul_Tower_(49174492933).jpg" rel="nofollow">Matt Kieffer from London, United Kingdom</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure><div class="kv">
+<div><b>₩90,000</b><span>🎫 the 72-hour pass, the one tier officially tagged "Best Value"</span><i>about $67.95 at ~₩1,324.45/$1</i></div>
+<div><b>₩294,400</b><span>💰 in attractions Seoul's own 72-hour example adds up to</span><i>against that same ₩90,000 card</i></div>
+<div><b>10-15% off</b><span>🏷️ every tier with an October promo code</span><i>only through Oct. 31, 2026</i></div>
+<div><b>₩0</b><span>🙅 what this pass is worth to a Korean resident</span><i>foreign tourists and overseas residents only</i></div>
+</div>
+
+
+
+<p>Gate 13 at Incheon's Terminal 1 never closes. Long after most counters nearby have gone dark, that booth keeps handing new arrivals a plastic card bundled with a data SIM, a transit card and free entry to places they haven't picked yet.</p>
+<p>A Seoul local notices something a first-time visitor might not: a round-the-clock pickup counter isn't an accident, it's a bet that most tourists land exhausted and under-planned, not refreshed and ready to book attractions one by one. The Discover Seoul Pass is built around exactly that moment, and it mostly earns the trust. The real question is which of its four versions is worth the money once you're actually standing in the city.</p>
+<p>The pass is easy to buy and easy to misjudge, and the two mistakes run in opposite directions: paying for more pass than you'll ever use, or skipping it right before it would have paid for itself twice over.</p>
+<h2>💳 Which pass is actually the best deal?</h2>
+<p><strong>The 72-hour All-Inclusive pass is the only tier Seoul's own tourism office tags "Best Value," and its own numbers back that up</strong>. Four tiers exist, split between two all-access passes sold by the hour and two Pick 3 passes sold by the attraction.</p>
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th style="text-align: right;">Price</th>
+<th style="text-align: right;">Sale price (through Oct. 31)</th>
+<th>Validity</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>72-Hour (All-Inclusive)</td>
+<td style="text-align: right;">₩90,000 (~$67.95)</td>
+<td style="text-align: right;">₩81,000 (~$61.16)</td>
+<td>72 hours from first use</td>
+<td>A short trip hitting several big sights</td>
+</tr>
+<tr>
+<td>120-Hour (All-Inclusive)</td>
+<td style="text-align: right;">₩130,000 (~$98.15)</td>
+<td style="text-align: right;">₩117,000 (~$88.34)</td>
+<td>120 hours from first use</td>
+<td>A longer stay, same open list</td>
+</tr>
+<tr>
+<td>Pick 3 Basic</td>
+<td style="text-align: right;">₩49,000 (~$37.00)</td>
+<td style="text-align: right;">₩41,650 (~$31.45)</td>
+<td>5 days from first use</td>
+<td>Visitors who want exactly 3 stops</td>
+</tr>
+<tr>
+<td>Pick 3 Theme Park</td>
+<td style="text-align: right;">₩70,000 (~$52.85)</td>
+<td style="text-align: right;">₩59,500 (~$44.92)</td>
+<td>5 days from first use</td>
+<td>1 theme park plus 2 more stops</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note"><a href="https://www.discoverseoulpass.com">Seoul Tourism Organization's own pricing page</a>, checked 2026-10-23. USD at ~₩1,324.45/$1, the Frankfurter/ECB reference rate for the same date.</p>
+
+<details class="term"><summary>What's the difference between the All-Inclusive and Pick 3 passes?</summary><p>The All-Inclusive pass lets you visit every partner attraction once each, for as long as its 72- or 120-hour clock runs. The Pick 3 pass instead asks you to choose just three partner attractions or services up front, and the Theme Park version swaps one of those three for a full-size theme park (Lotte World, Everland or Seoul Land).</p></details>
+
+<p>The clock itself has a quirk worth knowing before you land. Think of it less like a parking meter that starts the second you grab a ticket, and more like one that waits until you actually pull into the spot. The pass doesn't start counting down the moment you pay for it: it starts the moment you redeem your first free benefit, whether that's scanning a QR code at an attraction, receiving your AREX airport-train code, or boarding the K-Limousine airport bus.</p>
+<p>Downloading the eSIM or topping up the card pass doesn't start anything. Grab your AREX code the moment you land just because the counter's open, and by the time you've slept and had breakfast, a chunk of your 72 hours is already gone before you've seen a single palace.</p>
+<p>That timing matters because the value case for this pass rests on using most of it fast. Seoul's tourism office built its own sample three-day itinerary and tallied ₩294,400 in regular admission against the ₩90,000 card price.</p>
+<table>
+<thead>
+<tr>
+<th>Included in the official example</th>
+<th style="text-align: right;">Regular price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K-Limousine airport bus, Seoul → Incheon</td>
+<td style="text-align: right;">₩18,000 (~$13.59)</td>
+</tr>
+<tr>
+<td>SKT eSIM, 5 days unlimited data</td>
+<td style="text-align: right;">₩27,500 (~$20.76)</td>
+</tr>
+<tr>
+<td>Lotte World, 1-day pass</td>
+<td style="text-align: right;">₩64,000 (~$48.32)</td>
+</tr>
+<tr>
+<td>SEA LIFE COEX Aquarium</td>
+<td style="text-align: right;">₩35,000 (~$26.43)</td>
+</tr>
+<tr>
+<td>Gyeongbokgung admission + hanbok rental</td>
+<td style="text-align: right;">₩35,000 (~$26.43)</td>
+</tr>
+<tr>
+<td>N Seoul Tower observatory</td>
+<td style="text-align: right;">₩26,000 (~$19.63)</td>
+</tr>
+<tr>
+<td>Han River cruise (E-Cruise)</td>
+<td style="text-align: right;">₩29,900 (~$22.58)</td>
+</tr>
+<tr>
+<td>A major Seoul exhibition</td>
+<td style="text-align: right;">₩30,000 (~$22.65)</td>
+</tr>
+<tr>
+<td><strong>Total value vs. the ₩90,000 card</strong></td>
+<td style="text-align: right;"><strong>₩294,400 (~$222.28)</strong></td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Seoul Tourism Organization's own 72-hour example, checked 2026-10-23.</p>
+
+<p><em>That math only holds if you'd genuinely visit most of this list anyway.</em> Skip the aquarium, the cruise and the exhibition, and you're left with just the hanbok rental, the tower and the airport bus: ₩79,000 (~$59.65) of real value against a ₩90,000 card. At that narrower pace, the pass has already cost more than it saved.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Gyeongbokgung_Hanbok_01_%2832928645842%29.jpg/1280px-Gyeongbokgung_Hanbok_01_%2832928645842%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Visitors in rented hanbok posing in front of Geunjeongjeon, Gyeongbokgung Palace&#x27;s main throne hall, the admission-plus-hanbok bundle in the pass&#x27;s own value example" width="1200" height="694" loading="lazy"/><figcaption>Visitors in rented hanbok posing in front of Geunjeongjeon, Gyeongbokgung Palace&#x27;s main throne hall, the admission-plus-hanbok bundle in the pass&#x27;s own value example · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyeongbokgung_Hanbok_01_(32928645842).jpg" rel="nofollow">Republic of  Korea from Seoul, Republic of Korea</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure>
+
+<h2>✈️ What "free transportation" actually means</h2>
+<p><strong>The All-Inclusive passes cover one-way rides on the airport train and airport bus, plus one city-tour-bus route each, not everyday subway and bus fare</strong>. The pass's own FAQ spells out the fine print: <a href="https://www.discoverseoulpass.com/app/cs/index/faq">Airport Railroad Express (AREX)</a> and the K-Limousine airport bus, each good for one one-way trip, plus a single day's course on the Tiger Bus and the Yellow Balloon City Bus, choosing either the daytime or nighttime route on each, never both.</p>
+<details class="term"><summary>What is AREX?</summary><p>The Airport Railroad Express, the train line connecting Incheon International Airport to central Seoul. It runs both an all-stop local train and a faster, fewer-stop express train, and the pass covers one one-way ride on it.</p></details>
+
+<details class="term"><summary>What are the Tiger Bus and Yellow Balloon City Bus?</summary><p>Seoul's open-top sightseeing bus routes, each running a daytime and a separate nighttime course past the city's main landmarks. The pass covers one course on each bus, so riding both the day and night version of the same bus isn't included.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/202403_AREX_Local_Train_Concourse_at_Incheon_International_Airport_Terminal_1_Station.jpg/1280px-202403_AREX_Local_Train_Concourse_at_Incheon_International_Airport_Terminal_1_Station.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The AREX concourse at Incheon International Airport Terminal 1, with signage pointing travelers to the express train on the opposite side" width="1200" height="900" loading="lazy"/><figcaption>The AREX concourse at Incheon International Airport Terminal 1, with signage pointing travelers to the express train on the opposite side · Photo: <a href="https://commons.wikimedia.org/wiki/File:202403_AREX_Local_Train_Concourse_at_Incheon_International_Airport_Terminal_1_Station.jpg" rel="nofollow">MNXANL</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p><strong>The physical Card Pass also doubles as an ordinary transit card</strong>, which is a different benefit than the free rides above. Regular subway and city-bus fares still draw down a balance you top up yourself, the same as any other transit card in Seoul. The "Transportation" line on the pass's own feature list is really two separate things: a short list of specific free rides, and a reloadable card for everything else.</p>
+<h2>🎟️ Who can actually buy one, and the sale that ends this month</h2>
+<p><strong>Korean residents can't use this pass at all, even as a gift, and anyone who can should grab October's discount codes before they expire</strong>. The pass is built for foreign tourists and overseas residents holding foreign citizenship or permanent residency abroad; a Korean national living in Korea is denied entry at the attraction gate even standing next to a foreign friend who paid for the card, and the only way a Korean resident can be involved at all is buying one as a gift for someone else.</p>
+<p>For anyone who does qualify, Seoul's tourism office is running an Autumn Sale from Oct. 12 through Oct. 31, 2026, with a separate promo code for each tier.</p>
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th>Code</th>
+<th style="text-align: right;">Discount</th>
+<th style="text-align: right;">Price with code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>72-Hour</td>
+<td>26AUTUMN_72H</td>
+<td style="text-align: right;">10% off</td>
+<td style="text-align: right;">₩81,000 (~$61.16)</td>
+</tr>
+<tr>
+<td>120-Hour</td>
+<td>26AUTUMN_120H</td>
+<td style="text-align: right;">10% off</td>
+<td style="text-align: right;">₩117,000 (~$88.34)</td>
+</tr>
+<tr>
+<td>Pick 3 Basic</td>
+<td>26AUTUMN_P3B</td>
+<td style="text-align: right;">15% off</td>
+<td style="text-align: right;">₩41,650 (~$31.45)</td>
+</tr>
+<tr>
+<td>Pick 3 Theme Park</td>
+<td>26AUTUMN_P3T</td>
+<td style="text-align: right;">15% off</td>
+<td style="text-align: right;">₩59,500 (~$44.92)</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Online purchases only, through the official site or app. Checked 2026-10-23.</p>
+
+<p>Five counters hand out the physical Card Pass: two in central Seoul, the Myeongdong and Seoul Tourism Plaza tourist information centers, both open 9 a.m. to 6 p.m. daily, and three at Incheon Airport, including the Terminal 1 Gate 13 counter that runs around the clock.</p>
+<div class="me"><b>My take</b>
+The worry I'd guess most visitors carry isn't whether this pass is a scam, it's whether they're disciplined enough to actually use ₩90,000 worth of it in three days. I live in Gangnam-gu, Seoul, which puts me on the wrong side of this pass's own rules: a ticket booth would turn me away even standing right next to a foreign friend who bought one. That's not a loophole in the design, it's the point, since Seoul built this card for people who'd otherwise juggle a dozen separate tickets, not for someone who already carries a local transit card. If I were visiting instead of living here, I'd pick a tier only after writing down the four or five things I'd actually do, and I'd skip Pick 3 Basic entirely unless I already knew the exact three stops before I paid.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more day</b> The 120-hour tier only costs ₩40,000 more than the 72-hour one, so a trip that's already close to four days is usually better served by paying up than by buying two separate 72-hour passes back to back.</li>
+<li><b>What locals argue about</b> Whether the pass's headline "Transportation" benefit oversells itself: only four specific rides are actually free, and everyday subway and bus fare still draws down a balance like any other transit card.</li>
+<li><b>Watch for</b> The Oct. 31, 2026 cutoff on the promo codes, and the fact that grabbing your AREX code the moment you land starts your pass's clock whether or not you ever board that train.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Can I get a refund if I buy the wrong tier?</dt>
+<dd>Yes, but only before you redeem any part of it, and the process depends on where you bought it. An unused Mobile Pass purchased directly from the operator can be canceled within 30 days through the app's own order menu, with the money landing back in roughly 5-7 days; buy through a third-party reseller instead, and that platform's own cancellation policy governs, not the operator's. An unused physical card needs its receipt handed over in person at a walk-in counter within that same 30-day window.</dd>
+<dt>Is this pass actually popular, or a niche product for a handful of visitors?</dt>
+<dd>Independent press coverage put 2025 sales at 710,000 units, a figure the operator doesn't publish on its own website. That volume is also a clue to why the round-the-clock counter exists at all: enough travelers grab one straight off an overnight flight to justify staffing it every night of the year.</dd>
+</dl></div>
+
+<p>This pass earns its price on a packed, see-everything trip, and loses money on a slow one. <strong>Write down what you actually want to see before you choose a tier, not after</strong>, since the cheapest version of this mistake is buying Pick 3 Basic for three things you were always going to visit for free anyway.</p>
+<p class="notice">Prices and hours were checked on 2026-10-23; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/09/incheon-airport-to-seoul-arex-bus-or.html">Incheon Airport to Seoul: AREX, Bus or Taxi, by the Won</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/seoul-city-tour-bus-15-stops-one-ticket.html">Seoul City Tour Bus: 15 Stops, One Ticket, a Zombie Season</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://www.discoverseoulpass.com">Seoul Tourism Organization, Discover Seoul Pass official site: pass tiers, prices, bonus benefits, 72-hour value example</a></li>
+<li>[official] <a href="https://www.discoverseoulpass.com/app/cs/index/faq">Discover Seoul Pass FAQ: transportation benefits, activation rules, eligibility, refunds, pickup locations</a></li>
+<li>[press] <a href="https://www.koreaherald.com/article/10674833">The Korea Herald, Discover Seoul Pass overview and 2025 sales figures (2026-02-11)</a></li>
+<li>[other] <a href="https://api.frankfurter.dev/v1/latest?base=USD&amp;symbols=KRW">Frankfurter/ECB reference rate, USD/KRW, 2026-10-23</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-23-discover-seoul-pass-worth-it--></div>
+</div></div></main></div></div></body></html>
