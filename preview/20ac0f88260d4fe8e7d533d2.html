@@ -1,0 +1,388 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Galbijjim at Home: Korea&#x27;s Braised Short Ribs, By the Cup</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Galbijjim at Home: Korea&#x27;s Braised Short Ribs, By the Cup</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Korean_cuisine-Galbijjim-01.jpg/1280px-Korean_cuisine-Galbijjim-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Korean Bapsang's 3-pound galbijjim ratio, the parboil step that keeps the sauce clean, and why bone-in short ribs cost more than other cuts.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>A 3-pound ratio, not a guess</b>: Korean Bapsang's braising liquid runs 1/2 cup soy sauce, 2 tablespoons each of sugar and honey, and a grated Asian pear and onion, scaled for 3 pounds of bone-in short ribs.</li>
+<li><b>The parboil is what keeps the sauce clean</b>, not the final braise: skimming the foam and chilling the stock before lifting the fat off is what keeps the finished sauce from turning greasy.</li>
+<li><b>Act first</b>: <u>soak the ribs in cold water for 30 minutes before anything else touches a pot</u>, so the blood draws out while you trim the vegetables.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Korean_cuisine-Galbijjim-01.jpg/1280px-Korean_cuisine-Galbijjim-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A bowl of galbijjim: braised beef short ribs with carrot, chestnut and mung bean garnish in a thick, dark sauce" width="1200" height="803" loading="lazy"/><figcaption>A bowl of galbijjim: braised beef short ribs with carrot, chestnut and mung bean garnish in a thick, dark sauce · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korean_cuisine-Galbijjim-01.jpg" rel="nofollow">John</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure><div class="kv">
+<div><b>3 lb</b><span>🍖 bone-in short ribs</span><i>Korean Bapsang's ratio for 4 servings</i></div>
+<div><b>1 hr 20 min</b><span>⏱️ braising time</span><i>after a 30-min blood soak and a 10-min parboil</i></div>
+<div><b>$23.99</b><span>🛒 1.5 lb short ribs</span><i>Weee!'s price, checked 2026-10-27</i></div>
+<div><b>2 tsp</b><span>🧂 sesame oil, not 2 Tbsp</span><i>one reader's fix for an overpowering finish</i></div>
+</div>
+
+
+
+<p>One pot does nearly all the work here, but it earns the hour and a half it takes to get there. The ribs go in pale, swimming in a thin, ginger-scented water that smells more like a stockpot than a holiday, and for the first stretch nothing about the kitchen suggests a special occasion is coming. Then the braising liquid goes in, the lid comes off near the end, and the sauce tightens around the bone until it's dark and glossy, thick enough to coat the back of a spoon. By the time the carrots have gone soft and the smell has turned sweet and a little like roasted garlic, the dish has gone from something you'd hesitate to serve to the one people ask for by name.</p>
+<p>Galbijjim isn't the same dish as the grilled short ribs most people picture first when they hear "galbi." Tabletop galbi is quick and smoky; galbijjim is slow and wet, built on the thicker center-cut ribs that, because of where they sit on the animal, have long cost more than other beef cuts in Korea. That price tag is part of why the dish shows up at Chuseok and other holiday tables rather than a Tuesday dinner, traditionally served from one shared, lidded bowl rather than plated out.</p>
+<details class="term"><summary>What is galbijjim (갈비찜)?</summary><p>Beef or pork short ribs braised slowly in a soy-and-pear sauce until the meat pulls easily from the bone. It's the "holiday table" version of short ribs, distinct from grilled galbi, and the center-cut ribs it calls for have long been pricier than other beef cuts in Korea.</p></details>
+
+<p>The ratio below follows <a href="https://www.koreanbapsang.com/galbijjim-korean-braised-beef-short/">Korean Bapsang</a>'s galbijjim, kept close to how Hyosun Ro gives it, built for 4 servings from 3 pounds of bone-in short ribs.</p>
+<h2>🍖 The 3-pound ratio, by the cup</h2>
+<p><strong>Korean Bapsang's galbijjim scales from one braising liquid: 1/2 cup soy sauce, 2 tablespoons each of sugar and honey, 1/4 cup rice wine, a grated Asian pear and a grated small onion, over 3 pounds of bone-in short ribs</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Ribs and aromatics</th>
+<th style="text-align: right;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beef short ribs, bone-in</td>
+<td style="text-align: right;">3 lb</td>
+</tr>
+<tr>
+<td>Onion</td>
+<td style="text-align: right;">1/2</td>
+</tr>
+<tr>
+<td>Ginger, thin slices</td>
+<td style="text-align: right;">3 to 4</td>
+</tr>
+<tr>
+<td>Garlic cloves</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Scallion, white parts</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Braising liquid</th>
+<th style="text-align: right;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soy sauce</td>
+<td style="text-align: right;">1/2 cup</td>
+</tr>
+<tr>
+<td>Sugar</td>
+<td style="text-align: right;">2 Tbsp</td>
+</tr>
+<tr>
+<td>Honey</td>
+<td style="text-align: right;">2 Tbsp</td>
+</tr>
+<tr>
+<td>Rice wine</td>
+<td style="text-align: right;">1/4 cup</td>
+</tr>
+<tr>
+<td>Asian pear, grated</td>
+<td style="text-align: right;">1/2 medium (about 1/2 cup)</td>
+</tr>
+<tr>
+<td>Onion, grated</td>
+<td style="text-align: right;">1/2 small</td>
+</tr>
+<tr>
+<td>Garlic, minced</td>
+<td style="text-align: right;">1 Tbsp</td>
+</tr>
+<tr>
+<td>Ginger, grated</td>
+<td style="text-align: right;">1 tsp</td>
+</tr>
+<tr>
+<td>Black pepper</td>
+<td style="text-align: right;">1/2 tsp</td>
+</tr>
+<tr>
+<td>Sesame oil</td>
+<td style="text-align: right;">2 Tbsp, added at the very end</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Source: Korean Bapsang, Galbijjim recipe card by Hyosun Ro, servings 4, checked 2026-10-27.</p>
+
+<p><strong>Searing isn't traditional here, and skipping it is the easier choice, not the lesser one.</strong> Korean home cooking parboils the ribs rather than browning them in a pan first; searing is a newer habit borrowed from Western-style braises, and the recipe treats it as optional rather than correct. <em>If you do sear, skip the parboil below instead of doing both.</em></p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Galbi-jjim_2.jpg/1280px-Galbi-jjim_2.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Short ribs braised in dark, glossy galbijjim sauce, garnished with pine nuts and sliced radish" width="1200" height="900" loading="lazy"/><figcaption>Short ribs braised in dark, glossy galbijjim sauce, garnished with pine nuts and sliced radish · Photo: <a href="https://commons.wikimedia.org/wiki/File:Galbi-jjim_2.jpg" rel="nofollow">Chun Yip So</a> / Wikimedia Commons (CC BY 2.0)</figcaption></figure>
+
+<h2>🥘 The parboil, the stock, and the 40-minute finish</h2>
+<p><strong>The parboil isn't really about cooking the meat; it's about cleaning the liquid that becomes the sauce</strong>, the same instinct behind skimming a pot of stock before you'd call it broth. Start by rinsing the ribs and soaking them in cold water for about 30 minutes to draw out the blood, then drain before anything touches heat. Boil 5 cups of water with the onion, the ginger, the garlic, and the scallion whites, add the ribs, and skim the foam as it rises for about 10 minutes, then pull the ribs out and keep the stock. Refrigerating that stock before skimming the fat off the top lets the fat set into one solid layer that lifts away cleanly, instead of chasing grease around a hot pot.</p>
+<p>Pour the mixed braising liquid, minus the sesame oil, over the ribs, add 2.5 cups of the reserved stock, and simmer 20 to 30 minutes depending on how thick the ribs are cut. The radish, the shiitake and the carrot go in next for about 20 minutes covered, then any optional chestnuts, jujube or ginkgo nuts for a final 10 minutes uncovered, which is also what thickens the sauce and gives the ribs their shine.</p>
+<details class="term"><summary>What's a hap (합)?</summary><p>A lidded serving bowl traditionally used for galbijjim instead of a plate, meant for everyone at the table to reach into. The name describes the stew, but the way it reaches the table is part of the tradition too.</p></details>
+
+<p><strong>The sesame oil at the end is where a first attempt usually goes wrong, not the braise itself.</strong> The recipe calls for 2 tablespoons stirred in right before the heat goes off, but more than one reader found that amount overpowering and cut it back to 2 teaspoons instead. <u>Add half the amount, taste it, then finish with the rest only if the sauce needs it.</u></p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Korean_cuisine-Galbijjim-04.jpg/1280px-Korean_cuisine-Galbijjim-04.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A bowl of galbijjim with a spoon resting on top, beef, carrot and mung beans in dark sauce" width="1200" height="803" loading="lazy"/><figcaption>A bowl of galbijjim with a spoon resting on top, beef, carrot and mung beans in dark sauce · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korean_cuisine-Galbijjim-04.jpg" rel="nofollow">John</a> / Wikimedia Commons (CC BY-SA 2.0)</figcaption></figure>
+
+<h2>🛒 Buying the ribs, and the pear, outside Korea</h2>
+<p><strong>A regular supermarket's "short ribs" are usually the English cut this recipe wants, not the thin-cut strips sold for grilling.</strong> English cut comes as thick, single-bone pieces built for a long braise, while the flanken or LA-galbi cut is sliced thin across several bones for a quick grill; Weee!'s own listing for a 1.5 lb package of bone-in short ribs, priced at <strong>$23.99</strong>, labels its cut "Flanken Style," which is the one worth skipping for this dish and saving for a barbecue instead.</p>
+<details class="term"><summary>English cut vs. flanken cut: what's the difference?</summary><p>English cut is sliced parallel to the bone into thick, single-bone pieces, the shape a long braise like this one wants. Flanken, also sold as LA galbi, is cut thin across several bones at once, which is why it's the one you grill instead of braise for an hour or more.</p></details>
+
+<p>The Asian pear is the one ingredient without a close substitute nearby in most Korean grocery aisles abroad, but Korean Bapsang's own notes say a Bosc pear or an apple works in its place, and regular mirin stands in for the Korean rice wine without changing the method. Neither swap is in the ingredient table above because it changes the sauce slightly sweeter or slightly sharper, but both get a finished dish close enough to serve without apology.</p>
+<p>If a <a href="https://www.weee.com/en/product/Beef-Short-Rib-Flanken-Style-for-Soup-Stew-Frozen/110029">Weee!</a> order or a Korean grocery run isn't an option, ask a regular butcher counter for "English-cut beef short ribs" by name; it's a standard cut, just not always labeled in a way that matches a Korean recipe card.</p>
+<div class="me"><b>My take</b>
+Three pounds of a cut that costs more than most other beef at the counter is a real commitment before the stove's even on, and it's fair to want some certainty it'll turn out. If I were making this for the first time, I'd buy the English cut specifically, follow the parboil instead of searing, and hold the sesame oil back until the last minute to taste before committing to the full two tablespoons. The ribs forgive almost everything else; the sauce, once it's over-seasoned, doesn't.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more day</b> Parboil the ribs, make the stock and pour the braising liquid over them the night before; Korean Bapsang's own recipe says the dish can be prepped that far ahead and finished the next day.</li>
+<li><b>What locals argue about</b> Sear or parboil. Traditional Korean cooking parboils the ribs first; searing is the newer, Western-leaning habit, and the recipe treats both as valid as long as you don't do both at once.</li>
+<li><b>Watch for</b> The sesame oil at the very end. Two tablespoons is the written amount, but it's also the one ingredient most likely to make a first batch taste "off" if you don't taste before adding all of it.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>What should I actually serve alongside it?</dt>
+<dd>Plain steamed rice, no substitutes: the whole point of a thick, glossy sauce is a bowl underneath to catch it. Add one or two simple banchan on the side, cucumber kimchi or seasoned spinach work well, to cut the richness rather than compete with it. A heavy, special-occasion stew like this doesn't need a crowded table around it.</dd>
+<dt>Can I prep this a day ahead for guests?</dt>
+<dd>Yes — stop as soon as the marinade is poured over the parboiled meat, then slide the whole pot into the fridge overnight instead of finishing it that evening. Pull it out the next day, bring it back to a simmer, and drop in the vegetables only once it's bubbling again; nothing about the flavor suffers for the wait.</dd>
+</dl></div>
+
+<p>Buy the cut by name instead of guessing, and let the parboil do the cleanup work the braise can't undo later. <strong>Taste the sesame oil before committing to all of it, and the rest of the recipe takes care of itself.</strong></p>
+<p class="notice">Prices and hours were checked on 2026-10-27; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/how-to-make-andong-jjimdak-korean.html">How to Make Andong Jjimdak (Korean Braised Chicken)</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/how-to-make-bulgogi-at-home-recipe-in.html">How to Make Bulgogi at Home: A Recipe in Exact Grams</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[other] <a href="https://www.koreanbapsang.com/galbijjim-korean-braised-beef-short/">Korean Bapsang, "Galbijjim (Braised Beef Short Ribs)" by Hyosun Ro, reference recipe adapted for this post (ingredients, quantities, steps, times, servings, searing/parboil tip, sesame oil reader-comment note, make-ahead note, pear/rice wine substitutions)</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Galbi-jjim">Wikipedia, "Galbi-jjim" (Chuseok association, cost of center-cut ribs, hap serving bowl)</a></li>
+<li>[official] <a href="https://www.weee.com/en/product/Beef-Short-Rib-Flanken-Style-for-Soup-Stew-Frozen/110029">Weee!, Beef Short Rib Flanken Style for Soup/Stew, Frozen, 1.5 lb, $23.99</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-27-galbijjim-recipe--></div>
+</div></div></main></div></div></body></html>
