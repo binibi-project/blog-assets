@@ -1,0 +1,342 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>코스피 6.63% 급등, SK하이닉스가 쏘아올렸어요</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+비니비의 이것저것노트 theme v3
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-ko2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">미리보기(비공개 초안)예요. PR을 머지하면 블로그에 게시돼요.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>비니비의 이것저것노트</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">코스피 6.63% 급등, SK하이닉스가 쏘아올렸어요</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Korea_exchange.JPG/1280px-Korea_exchange.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">코스피가 10월26일 7개월 최저(5,469)에서 28일 6.63% 급등(6,012)했어요. SK하이닉스 3분기 영업이익 83조3,338억원, 전년比 632% 늘었어요.</p><div class="tldr"><b>요약</b><ul>
+<li><b>7개월 최저에서 사흘 만에 6.63% 급등</b>: 코스피가 10월 26일 5,469.47(7개월 만 최저)로 떨어졌다가 28일 6.63% 올라 6,012.44로 마감했어요.</li>
+<li><b>방아쇠는 SK하이닉스였어요</b>: 3분기 영업이익이 83조3,338억원으로 전년보다 632.1% 늘어 역대 최대를 찍었고, 대규모 주주환원 계획도 같은 날 나왔어요.</li>
+<li><b>확인할 점</b>: <u>오늘(10.29)처럼 급등 다음 날은 차익실현 매물이 나올 수 있으니, 반도체 비중이 큰 ETF가 있다면 마감 뒤 수익률을 다시 확인해 보세요.</u></li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Korea_exchange.JPG/1280px-Korea_exchange.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="부산 한국거래소(KRX) 본사. 코스피 종가는 매 거래일 이곳 집계로 확정돼요." width="1200" height="900" loading="lazy"/><figcaption>부산 한국거래소(KRX) 본사. 코스피 종가는 매 거래일 이곳 집계로 확정돼요. · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korea_exchange.JPG" rel="nofollow">hyolee2</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure><div class="kv">
+<div><b>6,012.44</b><span>코스피 종가(10.28)</span><i>▲6.63%, 10거래일 만에 6,000선 회복</i></div>
+<div><b>5,937.66</b><span>코스피 종가(10.29)</span><i>▼1.24%, 전날 상승분 일부 반납</i></div>
+<div><b>83조3,338억원</b><span>SK하이닉스 3분기 영업이익</span><i>전년比 632.1%↑, 역대 최대</i></div>
+<div><b>3.75~4.00%</b><span>美 기준금리(10.28 FOMC)</span><i>동결, 10대2 표결</i></div>
+</div>
+
+
+
+<p>이번 주 계좌를 열어 보신 분이라면 숫자가 유난히 어지러우셨을 거예요 📉. 월요일엔 최근 몇 달 사이 가장 낮았던 지수가 수요일엔 하루 새 크게 뛰었거든요.</p>
+<details class="term"><summary>영업이익률이란?</summary><p>매출에서 원가와 판매·관리비를 뺀 영업이익이 매출의 몇 %인지를 나타내는 수치예요. 100원을 팔아 얼마가 실제 이익으로 남는지를 보여줘서, 같은 매출이라도 이 비율이 높을수록 장사를 잘한다고 봐요.</p></details>
+
+<h2>📉 코스피, 7개월 최저 찍고 사흘 만에 6.63% 급등</h2>
+<p><strong>코스피는 10월 26일 전 거래일보다 1.46%(80.83p) 내린 5,469.47로 마감했어요.</strong> 종가 기준 4월 6일(5,450.33) 이후 약 7개월 만의 최저치였어요. FOMC 금리 결정을 앞둔 경계감 속에 외국인이 오후 들어 매도를 늘려 약 6,955억원을 팔았어요. 삼성전자는 1.16% 내린 21만3,000원, SK하이닉스는 0.16% 내린 127만5,000원에 마감했어요.</p>
+<p>SK하이닉스는 장중 주주환원 기대감에 130만원을 넘었지만 지수 하락을 막지는 못했어요. 코스닥도 3.26% 내린 727.21로 10월 22일부터 사흘 연속 하락했어요.</p>
+<p>분위기는 다음 날 바로 바뀌었어요. <a href="https://www.newspim.com/news/view/20261027001204">뉴스핌</a>에 따르면 10월 27일 코스피는 전 거래일보다 3.09%(168.87p) 오른 5,638.35로, 코스닥은 2.29%(16.62p) 오른 743.83으로 마감했어요. 원/달러 환율은 1,323.7원으로 하루 전보다 0.6원 올랐어요.</p>
+<p>진짜 큰 폭은 그다음 날 나왔어요. <strong>코스피는 10월 28일 전 거래일보다 6.63%(374.10p) 오른 6,012.44로 마감하며 10거래일 만에 6,000선을 되찾았어요</strong>. SK하이닉스가 10.89% 오른 148만7,000원, 삼성전자가 9.01% 오른 24만2,000원으로 함께 뛰었어요.</p>
+<table>
+<thead>
+<tr>
+<th>날짜</th>
+<th style="text-align: right;">코스피</th>
+<th style="text-align: right;">등락률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.26(월)</td>
+<td style="text-align: right;">5,469.47</td>
+<td style="text-align: right;">-1.46%</td>
+</tr>
+<tr>
+<td>10.27(화)</td>
+<td style="text-align: right;">5,638.35</td>
+<td style="text-align: right;">+3.09%</td>
+</tr>
+<tr>
+<td>10.28(수)</td>
+<td style="text-align: right;">6,012.44</td>
+<td style="text-align: right;">+6.63%</td>
+</tr>
+<tr>
+<td>10.29(목)</td>
+<td style="text-align: right;"><strong>5,937.66</strong></td>
+<td style="text-align: right;">-1.24%</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">출처: SBS Biz·뉴스핌·서울신문·EBN 마감시황(2026.10.26~10.29).</p>
+
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="코스피, 나흘 새 7개월 최저에서 6.63% 급등까지 (10월 26일~29일)" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">코스피, 나흘 새 7개월 최저에서 6.63% 급등까지 (10월 26일~29일)</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,333.73pt</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,537.34pt</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,740.95pt</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,944.57pt</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">6,148.18pt</text><text x="56.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.26(월)</text><text x="244.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.27(화)</text><text x="432.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.28(수)</text><text x="620.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">10.29(목)</text><polyline points="56.0,247.3 244.0,196.7 432.0,84.7 620.0,107.1" fill="none" stroke="var(--accent,#1F5AF6)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="247.3" r="4" fill="var(--accent,#1F5AF6)"/><text x="56.0" y="237.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,469.47pt</text><circle cx="244.0" cy="196.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="244.0" y="186.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,638.35pt</text><circle cx="432.0" cy="84.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="432.0" y="74.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">6,012.44pt</text><circle cx="620.0" cy="107.1" r="4" fill="var(--accent,#1F5AF6)"/><text x="620.0" y="97.1" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">5,937.66pt</text></svg><figcaption>자료: <a href="https://www.ebn.co.kr/news/articleView.html?idxno=1729739" rel="nofollow">SBS Biz·뉴스핌·서울신문·EBN 마감시황(2026.10.26~10.29)</a></figcaption></figure>
+
+<p><em>표만 보면 나흘 내내 출렁인 것처럼 보이지만 실제로는 급락 한 번과 급등 한 번이 겹친 모양이에요.</em> 26일 하락은 FOMC를 앞둔 경계감 때문이었어요. 28일 급등은 그 경계감을 뚫고 나온 한 기업의 실적 발표 때문이었어요.</p>
+<h2>🔥 SK하이닉스 영업이익 83조, 어떻게 가능했나</h2>
+<p><strong>SK하이닉스는 10월 28일 3분기 매출 104조6,155억원, 영업이익 83조3,338억원을 공시했어요.</strong> 실적 발표 자료 한 줄에 적힌 숫자가 시장 전체를 흔든 셈이에요. 매출은 전년 동기보다 327.9%, 영업이익은 632.1% 늘어 둘 다 역대 최대였어요. 영업이익률은 79.7%로 집계됐어요. 분기 매출이 100조원을 넘은 것도 이번이 처음이에요.</p>
+<p>숫자가 이례적으로 큰 데는 이유가 있어요. AI 서버에 들어가는 HBM과 고용량 D램 수요가 늘면서 가격과 물량이 함께 뛴 결과예요.</p>
+<p>같은 날 발표한 주주환원 규모도 작지 않았어요. 올해 추진 중인 주주환원은 총 100조원 수준인데, 이미 끝낸 자사주 매입 40조원에 이어 3분기에 자사주 20조원을 더 매입하고 현금배당 14조원을 결의했어요. 주당 배당금은 2만원(실적배당 1만원+키옥시아 투자수익 특별배당 1만원)으로, 11월 26일까지 주식을 산 주주가 대상이에요.</p>
+<details class="term"><summary>주주환원(자사주 매입·배당)이란?</summary><p>회사가 번 돈을 주주에게 돌려주는 두 가지 방법이에요. 현금배당은 통장으로 바로 들어오고, 자사주 매입은 회사가 시장에서 자기 주식을 사들여 없애서 남은 주식 한 장의 가치를 높이는 방식이에요.</p></details>
+
+<p>반도체값이 비싸지는 건 소비자에겐 반가운 소식이 아니에요. <em>다만 이번 실적을 보면 그 흐름이 당분간 꺾이지 않을 거란 신호로 읽혀요.</em></p>
+<h2>코스피는 왜 급등 다음 날 다시 빠졌나</h2>
+<p><strong>오늘(10월 29일) 코스피는 전 거래일보다 1.24%(74.78p) 내린 5,937.66으로 마감했어요.</strong> 장중엔 6,100.11까지 오르기도 했지만 오후에 하락 전환했어요. 전날 6% 넘게 급등한 데 따른 차익실현 매물과 기관의 매도세가 주원인으로 꼽혔어요. 기관이 4,447억원을 순매도한 반면 외국인은 721억원, 개인은 343억원을 순매수했어요. 코스닥도 2.34%(18.05p) 내린 753.23으로 마감했어요.</p>
+<p>종목별로는 엇갈렸어요. 삼성전자는 4.13% 내린 23만2,000원이었지만 SK하이닉스는 2.62% 오른 152만6,000원으로 실적 발표 다음 날에도 상승세를 이어갔어요.</p>
+<p>같은 날 새벽 나온 미국 쪽 소식도 짚을 만해요. 연준은 10월 28일(현지시간) 기준금리를 3.75~4.00%로 동결했어요. 표결은 10대 2였어요. Lisa Cook과 Beth Hammack 두 위원은 오히려 0.25%p 인상을 선호해 반대표를 던졌어요.</p>
+<p>예상된 결정이라 뉴욕증시는 안도했어요. 다우존스 0.19%, S&amp;P500 0.28%, 나스닥 0.27% 오르며 3거래일 연속 상승했어요. SK하이닉스 ADR은 13.3% 급등했고 필라델피아반도체지수도 1.8% 올라 4거래일 연속 상승했어요. 다만 CME 페드워치의 12월 추가 인상 확률은 85.0%로 전날(78.3%)보다 더 높아졌어요.</p>
+<div class="me"><b>제 경우</b>
+월요일엔 7개월 만에 가장 낮았던 지수가 수요일엔 6%p 넘게 뛰면, 어느 숫자를 기준으로 삼아야 할지 헷갈려요. 저도 미국 주식과 한국 주식, 채권형 상품에 적극적으로 투자하고 있는 입장이라 이런 주는 평소보다 계좌를 더 자주 들여다보게 되더라고요. 그래도 하루 등락보다는 이 실적이 다른 반도체 기업들 실적에도 비슷하게 이어지는지가 더 궁금해지더라고요. 저라면 다음 발표부터 먼저 지켜보겠어요.
+</div>
+
+<div class="deeper"><b>더 깊이</b><ul>
+<li><b>반대로 보면</b> SK하이닉스는 10월 29일에도 2.62% 더 올랐지만 삼성전자는 같은 날 4.13% 내렸어요. 반도체 전체가 아니라 SK하이닉스 한 종목에 쏠린 랠리였다는 뜻으로 읽혀요.</li>
+<li><b>구조</b> AI 데이터센터를 짓는 기업들이 HBM과 고용량 D램을 미리 대량으로 확보하면서 공급이 수요를 못 따라가는 구조가 이어지고 있어요. 매출이 세 배 넘게 늘어난 것도 이 구조가 가격과 물량 양쪽에서 동시에 작동했기 때문이에요.</li>
+<li><b>다음에 볼 것</b> 주당 2만원 배당의 기준일은 <b>11월 26일</b>이에요. 금리는 다음 FOMC에서 다시 확인할 수 있고, 12월 인상 확률은 이미 85%로 반영돼 있어요.</li>
+</ul></div>
+
+<div class="faq"><b>자주 묻는 질문</b><dl>
+<dt>SK하이닉스 관련 ETF를 갖고 있었다면 이번 주 등락이 실제로 얼마였나요?</dt>
+<dd>하루 등락률만으로도 꽤 커요. 10월 28일처럼 10.89% 오른 날이라면 1,000만원을 담고 있었을 경우 하루 만에 약 108만9,000원(1,000만원×10.89%)이 늘었다는 계산이 나와요. 다음 날 2.62%만 더 올랐으니 두 거래일을 합치면 등락폭은 더 커요.</dd>
+<dt>주당 2만원 배당, 아무 때나 사도 받을 수 있나요?</dt>
+<dd>아니에요. 11월 26일까지 주식을 사서 그날 종가 기준으로 주주 명부에 이름이 올라야 해요. 그 이후에 사면 이번 배당 대상에서 빠져요. 실제 지급일과 세부 절차는 회사 공시로 다시 확인하는 게 정확해요.</dd>
+</dl></div>
+
+<p>저라면 이번 급등락을 보고 SK하이닉스 한 종목의 힘만으로 지수가 움직였다는 점에 더 눈이 가요. 다음 주 다른 반도체 기업들의 실적이 비슷한 색깔인지부터 지켜보려고 해요.</p>
+<p class="notice">여기 적는 건 투자 권유가 아니에요. 숫자는 발표 원문에서 다시 확인해 보세요.</p>
+<div class="next"><b>다음에 읽을 글</b><ul><li><a href="https://binini-numbersnote.blogspot.com/2026/10/blog-post_27.html">다우만 오른 한 주, 월요일엔 다 같이 올랐어요</a></li><li><a href="https://binini-numbersnote.blogspot.com/2026/10/352.html">코스피 3.52% 급락, 반도체 랠리 하루 만에 꺾여요</a></li></ul></div>
+
+<h2>참고</h2>
+<ul>
+<li>[공식] <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm">연준, 2026년 10월 FOMC 보도자료(2026.10.28)</a></li>
+<li>[언론] <a href="https://biz.sbs.co.kr/amp/article/20000342204">SBS Biz, 코스피 5,500선도 내줬다…7개월 만에 최저(2026.10.26)</a></li>
+<li>[언론] <a href="https://www.newspim.com/news/view/20261027001204">뉴스핌, 코스피-코스닥 상승 마감(2026.10.27)</a></li>
+<li>[언론] <a href="https://www.seoul.co.kr/news/economy/industry/2026/10/28/20261028500417">서울신문, SK하이닉스 3분기 영업익 83조원 사상 최대(2026.10.28)</a></li>
+<li>[언론] <a href="https://imnews.imbc.com/replay/2026/nwdesk/article/6861419_37004.html">MBC뉴스, SK하이닉스 3분기 영업이익 83조원 '역대 최대'(2026.10.28)</a></li>
+<li>[언론] <a href="https://www.ebn.co.kr/news/articleView.html?idxno=1729739">EBN, 코스피 장중 6,100선 돌파 후 하락 전환…5,930선 마감(2026.10.29)</a></li>
+<li>[언론] <a href="https://ajunews.com/view/20261029070601018">아주경제, [뉴욕증시 마감] 금리 동결·반도체주 강세에 일제히 상승(2026.10.29)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="비니비 일러스트(AI로 그림)" width="96" height="128"/><div><b>비니비</b><p>강남에 사는 회계사이자 개발자예요. 뉴스 속 숫자를 원문에서 다시 찾아 내 지갑과 일상의 말로 풀어 둡니다.</p><p class="how">이 글은 AI의 도움으로 초안과 자료 조사를 하고, 출처 확인을 거친 뒤 제가 직접 읽고 판단해 올려요.</p></div></div><!--post:2026-10-29-kospi-skhynix-earnings-surge-oct-2026--></div>
+</div></div></main></div></div></body></html>
