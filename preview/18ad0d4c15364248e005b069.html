@@ -1,0 +1,353 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>National Museum of Korea: Free Entry, Hours, What to See</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">National Museum of Korea: Free Entry, Hours, What to See</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Front_view_of_national_museum_of_korea.jpg/1280px-Front_view_of_national_museum_of_korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Free admission may end in 2027: the walk from Ichon Station, Wed/Sat night hours, the pagoda, and the Room of Quiet Contemplation.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>Free right now, not guaranteed forever</b>: the permanent halls and Children's Museum cost nothing today, but the government is weighing admission fees starting in 2027.</li>
+<li><b>Go Wednesday or Saturday evening if you can</b>: those two days stay open until 21:00, four hours later than the rest of the week.</li>
+<li><b>Take Exit 2 at Ichon Station</b>: <u>follow the underground Museum Nadeulgil passage</u> on a wet day, no need to surface until you're inside.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Front_view_of_national_museum_of_korea.jpg/1280px-Front_view_of_national_museum_of_korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The museum&#x27;s long white Great Hall and the celadon-roofed Cheongjajeong pavilion both mirrored in Mirror Pond on a clear day" width="1200" height="757" loading="lazy"/><figcaption>The museum&#x27;s long white Great Hall and the celadon-roofed Cheongjajeong pavilion both mirrored in Mirror Pond on a clear day · Photo: <a href="https://commons.wikimedia.org/wiki/File:Front_view_of_national_museum_of_korea.jpg" rel="nofollow">Jinah78</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure><div class="kv">
+<div><b>₩0</b><span>🏛️ permanent halls + Children's Museum</span><i>free today, a 2027 fee is under review</i></div>
+<div><b>09:30-21:00</b><span>🕰️ Wed & Sat hours</span><i>every other open day closes at 17:30</i></div>
+<div><b>150m</b><span>🚶 walk from Ichon Station Exit 2</span><i>or the underground Museum Nadeulgil passage</i></div>
+<div><b>13.5m</b><span>🗿 height of the Gyeongcheonsa pagoda</span><i>the first thing you see through the door</i></div>
+</div>
+
+
+
+<p>Wednesday evening, a little past seven, and the crowd that filled the Open Plaza at noon has mostly gone home. Walk in from the underground passage and the first thing in view is the Ten-Story Pagoda from Gyeongcheonsa Temple, carved stone nearly six centuries old, standing three floors tall under a skylight gone dark outside. Somewhere upstairs, behind a door with no sign, a room built to smell faintly of cinnamon is waiting, and it holds exactly two things.</p>
+<p>That's the pitch for coming here at all: a museum big enough to lose an afternoon in, free enough that losing it costs nothing, at least for now.</p>
+<h2>🚇 How much does a visit actually cost, and is it really free?</h2>
+<p><strong>Free, for the moment: permanent exhibition halls, the Children's Museum, and any free special exhibition cost nothing, while paid special exhibitions are ticketed on their own</strong>. <a href="https://www.museum.go.kr/ENG/contents/E0101010000.do">The museum's own hours page</a> lists Monday, Tuesday, Thursday, Friday, Sunday at 09:30-17:30 with last admission at 17:00, then stretches Wednesday and Saturday to 09:30-21:00, last admission 20:30. It closes January 1, Seollal, Chuseok, plus the first Monday of four months, March, June, September or December; the next one lands December 7, 2026.</p>
+<p>Getting there is simple. <strong>Take subway Line 4 or the Gyeongui-Jungang Line to Ichon Station, come out Exit 2, and the museum's own directions put the walk at about 150 meters toward Yongsan Family Park</strong>. An elevator sits near Exits 1 and 2, and on a rainy day the underground Museum Nadeulgil passage runs straight from the station to the museum grounds, open 07:00 to 23:00. Blue Bus 400 and 502 both stop at "National Museum of Korea, Yongsan Family Park," useful if the subway doesn't reach your starting point.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Cost (KRW)</th>
+<th style="text-align: right;">Cost (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subway, round trip with T-money</td>
+<td style="text-align: right;">₩3,100</td>
+<td style="text-align: right;">about $2.32</td>
+</tr>
+<tr>
+<td>Permanent halls + Children's Museum admission</td>
+<td style="text-align: right;">₩0</td>
+<td style="text-align: right;">$0</td>
+</tr>
+<tr>
+<td>Special exhibition ticket</td>
+<td style="text-align: right;">not confirmed, priced per show</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Americano, Seoul-area average</td>
+<td style="text-align: right;">₩3,001</td>
+<td style="text-align: right;">about $2.25</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note"><a href="https://english.seoul.go.kr/policy/transportation/modes-of-transport/subway/">Seoul's own transit fare page</a> lists the adult fare at ₩1,550 with a transit card; the coffee figure is a wider Seoul-area average, not a museum-cafe price, at ~₩1,335.27/$1, checked 2026-10-30.</p>
+
+<p>That table adds up to a ₩6,101 (about $4.57) day, and nearly half of it is coffee, not entry. <em>The free part of that math has a shelf life, though.</em></p>
+<p>The museum dropped its ₩2,000 adult ticket in May 2008 to pull in more visitors, and it worked: 2025 brought more than 6.5 million people through the doors, the highest total since the museum opened in 1945. The first half of 2026 alone was already up 39.7% year over year.</p>
+<p>On March 30, 2026, the Ministry of Planning and Budget said it was "seriously considering" charging admission again from 2027, part of a wider push to raise long-flat fees at palaces and museums. A foreigners-only fee was floated and dropped, since foreign visitors made up just 3.7% of the total in 2024.</p>
+<h2>🗿 What's worth seeing if you only have one visit?</h2>
+<p><strong>Start with the two objects every local recommends first: the Ten-Story Pagoda just past the entrance, and the Room of Quiet Contemplation one floor up</strong>. Walk through the Open Plaza doors and the pagoda is the first thing in your eyeline, a ten-story tower of carved marble reaching up through the Great Hall. Think of it as a 14th-century stone diary: an inscription on its first story dates it to 1348, carved in the fourth year of Goryeo's King Chungmok, with scenes from Buddhist legend worked into panel after panel.</p>
+<p>It's National Treasure No. 86, and the detail that turns it from pretty to personal is this: Japan's minister of the Imperial Household had it dismantled and shipped out of Korea in 1907, and it only came home in 1918, after journalists in Korea and abroad kept the theft in print. On Wednesday and Saturday nights, a 12-minute light show called "Lighting the Sky Pagoda" projects those same carved stories back onto the stone, at 19:00 from October through February and 20:00 the rest of the year.</p>
+<details class="term"><summary>What changed about National Treasure numbers in 2021?</summary><p>Korea's heritage agency dropped the old numbering, including No. 86, on November 19, 2021, because people kept reading the numbers as a ranking of importance rather than a filing system. English guides, including the museum's own site, still use the old numbers since there's nothing simpler to replace them with.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Gyeongcheonsa_Pagoda_in_the_National_Museum_of_Korea.jpg/1280px-Gyeongcheonsa_Pagoda_in_the_National_Museum_of_Korea.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The ten-story marble pagoda from Gyeongcheonsa Temple rising through three open floors of the museum&#x27;s Great Hall, visitors circling its base" width="1200" height="1800" loading="lazy"/><figcaption>The ten-story marble pagoda from Gyeongcheonsa Temple rising through three open floors of the museum&#x27;s Great Hall, visitors circling its base · Photo: <a href="https://commons.wikimedia.org/wiki/File:Gyeongcheonsa_Pagoda_in_the_National_Museum_of_Korea.jpg" rel="nofollow">Ethan Doyle White</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p>One floor up, the Room of Quiet Contemplation holds exactly two objects: both are gilt-bronze Pensive Bodhisattva statues, each sitting with one ankle crossed over the opposite knee and a fingertip just touching the cheek. National Treasure No. 78 dates to the late sixth century and No. 83 to the early seventh, both from the Three Kingdoms period, and the right-hand statue stands 93.5 centimeters tall.</p>
+<p><a href="https://www.korea.net/NewsFocus/Culture/view?articleId=245366">Korea.net's feature on the room</a> describes a star-patterned ceiling and red clay walls that give off a faint scent of cinnamon and cypress, with no labels or display cases at all, just a curator's claim that it's a room where "visual, olfactory and auditory senses are integrated". A QR code at the entrance answers anything you're curious about, so skipping the guided tour costs you nothing here.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pensive_Bodhisattva_01.jpg/1280px-Pensive_Bodhisattva_01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="The gilt-bronze Pensive Bodhisattva, one finger raised to its cheek and one leg crossed over the other in the half-seated meditation pose" width="1200" height="2000" loading="lazy"/><figcaption>The gilt-bronze Pensive Bodhisattva, one finger raised to its cheek and one leg crossed over the other in the half-seated meditation pose · Photo: <a href="https://commons.wikimedia.org/wiki/File:Pensive_Bodhisattva_01.jpg" rel="nofollow">국립중앙박물관(National Museum of Korea)</a> / Wikimedia Commons (KOGL Type 1)</figcaption></figure>
+
+<h2>🌇 Mirror Pond, the Children's Museum, and the rest of your day</h2>
+<p><strong>Step outside after the galleries and Mirror Pond is the payoff: an oval pond up to 120 meters across, with a celadon-roofed pavilion in the middle and the Great Hall reflected whole on a still day</strong>. Climb the stairs at the Open Plaza entrance after dark and there's a well-known photo angle that lines up N Seoul Tower behind the building, the kind of shot that makes a free afternoon feel like a proper outing.</p>
+<details class="term"><summary>What is Cheongjajeong (청자정)?</summary><p>The pavilion in the middle of Mirror Pond, built in 2009 with a roof tiled in celadon green to echo Goryeo-era pottery. It's a modern addition rather than a historic structure, there purely to give the view back toward the museum something to frame.</p></details>
+
+<p>If kids are along, reserve a free ticket for the Children's Museum before you go. It runs five 80-minute sessions a day, each capped at 320 people, with exhibits built mainly for ages 5 to 9 and a separate play area for children 36 months and under. Free guided tours in English run weekdays at 10:30 and 13:00, and weekends add a Japanese tour at the same times plus a Chinese tour at 13:00, all meeting at the Korean Empire exhibit on the first floor.</p>
+<p>Hungry partway through, there's a small cafe near the Room of Quiet Contemplation that leans into the theme: its menu has included a persimmon glutinous rice cake and a baked snack shaped around the pensive pose itself. A food court on the first floor runs a wider Korean lineup, with tteokbokki alongside soups and rice bowls.</p>
+<div class="me"><b>My take</b>
+A free museum is easy to treat as optional, the plan you cut first once the day runs short because nothing was paid for in advance. <u>Go on a Wednesday or Saturday evening instead of a weekend afternoon</u>, and give the Room of Quiet Contemplation the fifteen minutes it's built for before deciding the rest of the museum is skippable. If a 2027 ticket price really does land, the smart version of "free" is the one you use this year, not the one you keep meaning to get to.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Catch "Lighting the Sky Pagoda," the 12-minute light show projected onto the Gyeongcheonsa pagoda Wednesday and Saturday nights, 19:00 in winter and 20:00 the rest of the year.</li>
+<li><b>What locals argue about</b> Whether a free national museum is a point of pride or an underpriced perk now that attendance has passed 6.5 million a year; President Lee Jae Myung backed charging admission, saying free access "may feel less prestigious and cheap".</li>
+<li><b>Watch for</b> December 7, 2026, the next first-Monday closure, and any formal 2027 announcement on admission fees.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Is it stroller- or wheelchair-friendly?</dt>
+<dd>Yes. Visit Seoul's own listing notes accessible parking and elevators on site, plus wheelchair and stroller rentals available at the information desk for the day.</dd>
+<dt>Is there anything to do outside once galleries wear thin?</dt>
+<dd>Yes, and it rewards even a quick lap. The grounds hold wooded paths and a small waterfall, with gardens along the way, a change of pace before heading back in.</dd>
+</dl></div>
+
+<p>Go on a weekday evening if your schedule bends at all, and treat the Room of Quiet Contemplation as the one stop not worth trading away for a faster lap. Prices and hours were checked on 2026-10-30; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/war-memorial-of-korea-free-huge-easy-to.html">War Memorial of Korea: Free, Huge, Easy to Underplan</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/gyeongbokgung-3000-ticket-thats-about.html">Gyeongbokgung: The ₩3,000 Ticket That&#x27;s About to Rise</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://www.museum.go.kr/ENG/contents/E0101010000.do">National Museum of Korea, hours, admission, closure dates</a></li>
+<li>[official] <a href="https://www.museum.go.kr/site/eng/content/transportation_subway">National Museum of Korea, subway directions (Exit 2, distance, elevator, Museum Nadeulgil passage hours)</a></li>
+<li>[official] <a href="https://www.museum.go.kr/site/eng/content/transportation_bus">National Museum of Korea, bus directions (routes 400/502)</a></li>
+<li>[official] <a href="https://www.museum.go.kr/ENG/contents/E0203060000.do">National Museum of Korea, Ten-Story Pagoda from Gyeongcheonsa Temple (National Treasure No. 86, location, light show and AR schedule)</a></li>
+<li>[official] <a href="https://www.museum.go.kr/CHILD/contents/C0102000000.do">National Museum of Korea, Children's Museum (sessions, reservation, age range, closures)</a></li>
+<li>[official] <a href="https://english.visitseoul.net/attractions/NationalMuseumofKorea_/456">Seoul Metropolitan Government / Visit Seoul, museum visitor page (admission, guided tour schedule, collection size)</a></li>
+<li>[official] <a href="https://english.seoul.go.kr/policy/transportation/modes-of-transport/subway/">Seoul Metropolitan Government, subway fare page</a></li>
+<li>[official] <a href="https://www.korea.net/NewsFocus/Culture/view?articleId=245366">Korea.net (Korean Culture and Information Service), Room of Quiet Contemplation feature</a></li>
+<li>[press] <a href="https://www.koreaherald.com/article/3111802">The Korea Herald, Pensive Bodhisattva National Treasure numbers and dates</a></li>
+<li>[press] <a href="https://www.khan.co.kr/en/article/202603301631007">Kyunghyang Shinmun (English), proposed 2027 admission fee, 2025 visitor count, foreign-visitor share</a></li>
+<li>[press] <a href="https://mobile.newsis.com/view/NISX20260721_0003717020">Newsis, 2025/2026 visitor numbers and food court overview</a></li>
+<li>[press] <a href="https://cjnews.cj.net/%ea%b0%80%ec%9d%84-%eb%82%98%eb%93%a4%ec%9d%b4-%eb%aa%85%ec%86%8c-%ed%91%b8%eb%93%9c-%ec%84%9c%eb%b9%84%ec%8a%a4-%ea%b0%95%ed%99%94-%ea%b5%ad%eb%a6%bd%ec%a4%91%ec%95%99%eb%b0%95%eb%ac%bc/">CJ News, Sayu Traditional Tea House's Pensive-Bodhisattva-themed menu</a></li>
+<li>[press] <a href="https://www.koreatimes.co.kr/www/culture/2021/09/141_315196.html">Korea Times, Mirror Pond, Cheongjajeong pavilion, and the N Seoul Tower photo zone</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Gyeongcheonsa_Pagoda">Wikipedia, Gyeongcheonsa Pagoda (height, construction date, 1907 removal, 1918 return)</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Gilt-bronze_Maitreya_in_Meditation_(National_Treasure_No._83)">Wikipedia, Gilt-bronze Maitreya in Meditation (National Treasure No. 83)</a></li>
+<li>[other] <a href="https://m.seoul.co.kr/news/2024/11/05/20241105500166">The Seoul Shinmun, Korea Consumer Agency coffee-price survey (Americano average)</a></li>
+<li>[other] <a href="https://api.frankfurter.dev/v1/latest?from=USD&amp;to=KRW">Frankfurter/ECB reference rate, USD/KRW 2026-10-30</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-10-30-national-museum-of-korea-guide--></div>
+</div></div></main></div></div></body></html>
