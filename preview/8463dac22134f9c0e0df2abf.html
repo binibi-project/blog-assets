@@ -1,0 +1,375 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Oppa, Noona, Hyung, Unnie: Korea&#x27;s Sibling Words for Strangers</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Oppa, Noona, Hyung, Unnie: Korea&#x27;s Sibling Words for Strangers</h3><div class="post-body"><img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/78/EXO_Lightstick_ocean.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Why Korean sibling words like oppa and unnie depend on your own gender, not just the other person's age, and why some Korean offices banned them outright.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The word depends on you, not just them</b>: a woman says oppa for an older man and unnie for an older woman, while a man says hyung for an older man and noona for an older woman, and the four are not interchangeable.</li>
+<li><b>It wasn't always about romance</b>: oppa and hyung meant a literal older brother for generations before 2000s pop songs turned "oppa" into something a girlfriend calls her boyfriend.</li>
+<li><b>Default to a name plus 씨 (ssi) with someone new</b>, and <u>wait until a Korean friend actually invites you to use oppa, hyung, noona or unnie before you try it yourself</u>.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/EXO_Lightstick_ocean.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="A sea of lightsticks lit up at an EXO concert, the kind of crowd where fans call almost every member oppa or hyung without a second thought" width="1200" height="900" loading="lazy"/><figcaption>A sea of lightsticks lit up at an EXO concert, the kind of crowd where fans call almost every member oppa or hyung without a second thought · Photo: <a href="https://commons.wikimedia.org/wiki/File:EXO_Lightstick_ocean.jpg" rel="nofollow">Foxy&#x27;Stay</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>4 words</b><span>👫 split by your own gender, not just age</span><i>oppa, hyung, noona, unnie</i></div>
+<div><b>1929</b><span>📖 earliest literary use found for "oppa" as a brother</span><i>a colonial-era poem by Im Hwa</i></div>
+<div><b>2000</b><span>🎤 the year a hit song turned "oppa" into a boyfriend's name</span><i>Wax's "오빠" (Oppa)</i></div>
+<div><b>2016</b><span>🏢 Samsung Electronics dropped job-title honorifics for "-nim"</span><i>CJ Group did it first, back in 2000</i></div>
+</div>
+
+
+
+<p>A friend of a friend sits down at the table, two years older, and for a second nobody says anything. Not because it's awkward exactly, just that a decision has to get made before the next sentence can land: what do you call this person now? In English the answer is easy, you just use their name. In Korean, the room is quietly doing math on gender and age before a single word comes out, and that half-second hesitation is something almost every visitor to Korea eventually has to sit through.</p>
+<h2>👫 Why does the word depend on your gender, not just theirs?</h2>
+<p><strong>In Korean, the word for "older sibling" changes with your own gender as much as the other person's age, which is the part English speakers almost never expect.</strong> <a href="https://stdict.korean.go.kr/">South Korea's National Institute of Korean Language</a> defines 오빠 (oppa) in its standard dictionary as the word a younger sister uses for an older brother or an older male relative of the same generation. 형 (hyung) gets a near-identical entry, except it's used between males. On the sister's side, 언니 (unnie) is defined as what a same-gender younger sibling calls an older one, used mainly between women, while 누나 (noona) is specifically a male speaker's word for an older female relative or peer.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Speaker</th>
+<th>Older person</th>
+<th>Literal meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>오빠 (oppa)</td>
+<td>Woman</td>
+<td>Man</td>
+<td>Older brother</td>
+</tr>
+<tr>
+<td>형 (hyung)</td>
+<td>Man</td>
+<td>Man</td>
+<td>Older brother</td>
+</tr>
+<tr>
+<td>언니 (unnie)</td>
+<td>Woman</td>
+<td>Woman</td>
+<td>Older sister</td>
+</tr>
+<tr>
+<td>누나 (noona)</td>
+<td>Man</td>
+<td>Woman</td>
+<td>Older sister</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Dictionary senses, National Institute of Korean Language standard dictionary, checked 2026-11-04.</p>
+
+<p><em>On paper that looks tidy, but same-gender pairs cause far less hesitation than mixed-gender ones.</em> A Kyunghyang Shinmun language column by Han Seong-woo, a Korean linguistics professor at Inha University, explains that 형 and 언니 pass between people of the same sex, so they draw little objection, while 오빠 and 누나 cross a gender line that some people still weigh carefully before using.</p>
+<details class="term"><summary>What does 손위 (sonwi) mean?</summary><p>Literally "upper in standing," sonwi is the word Korean dictionaries use for "older" inside a kinship pair. It's a relative label, not an absolute one: the same person can be sonwi to a younger cousin and not sonwi to an older one, which is exactly why these four words shift depending on who's in the conversation.</p></details>
+
+<figure class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Btsthewingstour.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="A lightstick ocean during BTS&#x27;s Wings Tour stop in Osaka, the same crowd that defaults to oppa and hyung for the members on stage" width="1200" height="900" loading="lazy"/><figcaption>A lightstick ocean during BTS&#x27;s Wings Tour stop in Osaka, the same crowd that defaults to oppa and hyung for the members on stage · Photo: <a href="https://commons.wikimedia.org/wiki/File:Btsthewingstour.jpg" rel="nofollow">Manudesu</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<h2>🎤 When did "oppa" stop meaning "brother"?</h2>
+<p><strong>"Oppa" carried a strictly family meaning for generations before Korean pop culture turned it into something closer to "babe."</strong> <a href="https://www.khan.co.kr/article/202410232016005">Han's column</a> traces the word back to 오라비, an older term for a sister's older brother that also produced the honorific 오라버니; 오빠 itself grew out of a related form, 오랍아, and became the more affectionate version used outside the family too. He cites a 1929 Im Hwa poem, "우리 옵바와 화로," and a 1938 Park Hyang-rim song, "오빠는 풍각쟁이," both using 오빠 strictly for a literal sibling.</p>
+<p>That changed within living memory. The same column points to Wax's 2000 song "오빠" and Park Hyun-bin's 2007 "오빠만 믿어," where the word addresses a lover instead of a brother. A 2025 Gyeonggi Ilbo column by Kang Seong-gon, an adjunct professor at Gachon University, notes the same shift still trips people up at family gatherings: calling out "oppa" there can make both an actual brother and a husband look up.</p>
+<details class="term"><summary>Is "oppa" still used for real brothers?</summary><p>Yes, that's still its core meaning. A Korean woman calling her brother oppa and a Korean woman calling a boyfriend oppa are using the identical word; context, not grammar, tells a listener which one is meant.</p></details>
+
+<p><strong>K-pop fandom didn't invent this, it just leaned into a meaning the word already had.</strong> Kang's column specifically defends fans chanting "오빠, 오빠" at a concert as a natural, unremarkable use of the word, even while he criticizes how entertainment shows apply sibling titles to force instant closeness between strangers over a three-to-six-year age gap. He cites the 16th-century scholar Yi I, who taught that only a 10-year-or-more gap should earn brotherly treatment, with a smaller five-year gap meriting polite respect instead. <em>A one- or two-year gap, by that older standard, wouldn't have called for a sibling title at all.</em></p>
+<h2>🏢 Why did some Korean offices ban these words entirely?</h2>
+<p><strong>Some of Korea's biggest companies have spent more than two decades trying to erase age-and-rank titles from the office, the opposite instinct from a concert crowd chanting "oppa."</strong> CJ Group became the first major conglomerate to drop job-rank titles in January 2000, switching every employee, chairman included, to a full name plus "-nim". Daum Communications followed in 2002, and Samsung Electronics overhauled its own system on June 27, 2016, telling staff across Samsung Electronics and Samsung Display to use "-nim" instead of rank titles, while trimming its seven-level rank ladder down to four competency grades.</p>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>Year</th>
+<th>What changed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CJ Group</td>
+<td>2000</td>
+<td>First conglomerate to drop rank titles for name + "-nim"</td>
+</tr>
+<tr>
+<td>Daum Communications</td>
+<td>2002</td>
+<td>All staff, including the CEO, used "-nim"; English nicknames followed after the Kakao merger</td>
+</tr>
+<tr>
+<td>Samsung Electronics</td>
+<td>2016</td>
+<td>Rank titles dropped for "-nim"; 7 rank levels cut to 4</td>
+</tr>
+<tr>
+<td>KT, Hanwha</td>
+<td>after 2012</td>
+<td>Reinstated rank titles after trying a flatter system</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Corporate HR changes reported by Bizhankook, checked 2026-11-04.</p>
+
+<p><em>Not every company stuck with it.</em> The same report notes that KT and Hanwha both brought rank titles back after testing a flatter manager-style system starting in 2012, which tells you the family-style hierarchy these sibling words carry doesn't disappear just because a company memo says so.</p>
+<details class="term"><summary>What does "-nim" (님) mean?</summary><p>A respectful suffix Koreans attach to a name, title or role (sonsaeng-nim for "teacher," sajang-nim for "boss"). Companies that dropped job titles for "-nim" alone were betting that a universal honorific could flatten hierarchy without erasing respect entirely.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Samsung_Electronics_Suwon.JPG/1280px-Samsung_Electronics_Suwon.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="Samsung Electronics&#x27; campus in Suwon, where the company told staff in 2016 to drop job titles and call each other &#x27;-nim&#x27; instead" width="1200" height="1600" loading="lazy"/><figcaption>Samsung Electronics&#x27; campus in Suwon, where the company told staff in 2016 to drop job titles and call each other &#x27;-nim&#x27; instead · Photo: <a href="https://commons.wikimedia.org/wiki/File:Samsung_Electronics_Suwon.JPG" rel="nofollow">hyolee2</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<div class="me"><b>My take</b>
+If you're new to Korea, the real risk isn't getting the gender rule backwards once; nobody expects a foreigner to land it on the first try, and a small mistake here isn't the kind of thing anyone holds against you. The one that actually lands wrong is reaching for oppa or unnie with someone you've just met, before either of you has decided you're close enough for it. I'd treat a name plus 씨 as the safe default at the start of any relationship, and let the other person offer the sibling title first. It costs you nothing to wait, and it saves you from a moment that reads as presumptuous instead of friendly.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Watch any K-drama scene where a side character shifts from using someone's name to oppa or hyung. The switch usually marks the exact moment the relationship gets closer, and it's rarely explained out loud.</li>
+<li><b>What locals argue about</b> Whether sibling titles on TV variety shows build real warmth or just perform it. Kang Seong-gon's column argues a 3-to-6-year age gap shouldn't earn a sibling title by Yi I's old 10-year standard, while K-pop fandom's use of "oppa" escapes that same criticism entirely.</li>
+<li><b>Watch for</b> Korean age, not international age, decides who's "older" in the first place; a birthday a few weeks apart can land two people a full year apart under the Korean count.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>What do people say to someone exactly their own age?</dt>
+<dd>친구 (chingu) or a first name, settled by one quick question: 몇 년생이세요? (what birth year?). A matching answer means 동갑, equals, so neither picks a sibling word for the other.</dd>
+<dt>Will a Korean peer judge you for using their first name only?</dt>
+<dd>Rarely. A classmate or coworker near your own age usually lets it slide without comment. Save the sibling word for anyone clearly senior, like a manager or a partner's parents, where skipping it can come across as disrespect rather than friendliness.</dd>
+</dl></div>
+
+<p>None of this is written down anywhere a visitor would stumble across it, which is exactly why it catches people off guard. <strong>The short version: hold off on oppa, unnie, hyung and noona until someone else opens that door, and once they do, it's one of the fastest signs you've actually made a friend here rather than just met one.</strong></p>
+<p class="notice">Prices and hours were checked on 2026-11-04; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/koreas-age-law-what-changed-in-2023.html">Korea&#x27;s Age Law: What Changed in 2023, What Didn&#x27;t</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/koreas-soju-culture-why-someone-else.html">Korea&#x27;s Soju Culture: Why Someone Else Fills Your Glass</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://stdict.korean.go.kr/">National Institute of Korean Language, Standard Korean Dictionary (표준국어대사전)</a></li>
+<li>[press] <a href="https://www.khan.co.kr/article/202410232016005">Kyunghyang Shinmun (경향신문), Han Seong-woo, language column on 오빠/언니/누나/형, Oct 23, 2024</a></li>
+<li>[press] <a href="https://kyeonggi.com/article/20250624580393">Gyeonggi Ilbo (경기일보), Kang Seong-gon, "[강성곤의 말글풍경] TV 오락프로그램의 '호칭 인플레'," Jun 24, 2025</a></li>
+<li>[press] <a href="https://bizhankook.com/articles/10815.html">Bizhankook (비즈한국), report on Korean corporate "-nim" title reforms</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-11-04-korean-age-titles-oppa-noona-hyung-unnie--></div>
+</div></div></main></div></div></body></html>
