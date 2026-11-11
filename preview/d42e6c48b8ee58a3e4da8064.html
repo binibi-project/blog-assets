@@ -1,0 +1,356 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>What a Korean Street Address Is Actually Telling You</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">What a Korean Street Address Is Actually Telling You</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Jong-ro_Sign.jpg/1280px-Jong-ro_Sign.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Korea's building numbers count distance, not order, and the old lot-number address disappeared in 2014. Here's how to actually read one.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>The number is a distance, not a rank</b>: it rises by two for every 20 meters along the road, so a bigger number just means farther from the start.</li>
+<li><b>One address can cover a small village</b>: Korea's biggest apartment complexes often share a single road-name address across dozens of buildings.</li>
+<li><b>Save the whole address, not just the number</b>: <u>screenshot the full road name and building number together</u>, since the number alone can be hundreds of meters off.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Jong-ro_Sign.jpg/1280px-Jong-ro_Sign.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A road-name sign for Jongno, one of Seoul&#x27;s oldest and best-known streets" width="1200" height="785" loading="lazy"/><figcaption>A road-name sign for Jongno, one of Seoul&#x27;s oldest and best-known streets · Photo: <a href="https://commons.wikimedia.org/wiki/File:Jong-ro_Sign.jpg" rel="nofollow">MonasteryInwang</a> / Wikimedia Commons (CC0)</figcaption></figure><div class="kv">
+<div><b>2014</b><span>📅 Year road-name addresses became Korea's only legal address</span><i>street name + building number replaced the old lot number</i></div>
+<div><b>20 m</b><span>📏 Distance each building-number step covers along a road</span><i>so #92 sits roughly 920 m from where the road starts</i></div>
+<div><b>5 digits</b><span>✉️ Length of Korea's postal code since August 2015</span><i>down from the 6-digit code used since 2000</i></div>
+<div><b>88%</b><span>🏢 Apartment complexes nationwide sharing just one road address</span><i>19,542 of them, per a 2014 count</i></div>
+</div>
+
+
+
+<p>The first time you stand in a Seoul alley staring at a blue sign, it looks like it should make sense and somehow doesn't. A number climbs on one side of the street and a different number climbs on the other, and the building you want is apparently thirty higher than the one you just passed. A Korean friend glances at the same sign and reads it the way you'd read a mile marker, not a name on a mailbox. That's the whole trick: once you know what the number is counting, the alley stops being a puzzle.</p>
+<h2>📍 Why doesn't the building number match the one next door?</h2>
+<p><strong>The number counts distance, not sequence.</strong> Along any Korean road, a "basic number" rises by two for every 20 meters, with odd numbers assigned to one side of the street and even numbers to the other. A building's number comes from the basic number closest to its main entrance.</p>
+<p>Think of it as a tape measure laid along the sidewalk rather than a queue number at a bakery. Multiply the number by ten and you get roughly the distance in meters from where the road begins. That's not an approximation someone made up for tourists: a research institute's own housing guide uses Gangnam-daero as the example, since the avenue runs 6.99 km and its building numbers top out around 699, exactly ten meters per step.</p>
+<p>So two numbers that look close on a page, say #8 and #92, can sit 800-some meters apart on the same street, while #92 and the entrance directly across from it can be only a crosswalk away. <em>That math assumes a straight, named stretch of road; a curve, a dead end, or an alley too small to name throws it off.</em> A hyphenated number, like 12-1, marks exactly that kind of small or short stub, borrowing the main road's number with a suffix instead.</p>
+<details class="term"><summary>What is a basic number (기초번호)?</summary><p>The reference number assigned every 20 meters along a road, rising by two each step and split odd/even between the two sides. It's the raw unit behind every building number in the road-name system, whether or not a building actually sits at that exact point.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C_%EB%B6%80%ED%8F%89%EA%B5%AC_%EB%A7%88%EC%9E%A5%EB%A1%9C%EC%99%80_%EC%8B%A0%EC%B4%8C%EB%A1%9C_%EB%8F%84%EB%A1%9C%EB%AA%85%ED%91%9C%EC%A7%80%ED%8C%90.jpg/1280px-%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C_%EB%B6%80%ED%8F%89%EA%B5%AC_%EB%A7%88%EC%9E%A5%EB%A1%9C%EC%99%80_%EC%8B%A0%EC%B4%8C%EB%A1%9C_%EB%8F%84%EB%A1%9C%EB%AA%85%ED%91%9C%EC%A7%80%ED%8C%90.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A road junction in Bupyeong-gu, Incheon, where the blue sign shows Majang-ro&#x27;s building numbers 63 and 67 on either side of the pole" width="1200" height="1600" loading="lazy"/><figcaption>A road junction in Bupyeong-gu, Incheon, where the blue sign shows Majang-ro&#x27;s building numbers 63 and 67 on either side of the pole · Photo: <a href="https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C_%EB%B6%80%ED%8F%89%EA%B5%AC_%EB%A7%88%EC%9E%A5%EB%A1%9C%EC%99%80_%EC%8B%A0%EC%B4%8C%EB%A1%9C_%EB%8F%84%EB%A1%9C%EB%AA%85%ED%91%9C%EC%A7%80%ED%8C%90.jpg" rel="nofollow">Narubaru7</a> / Wikimedia Commons (CC BY 4.0)</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Old lot-number address (지번)</th>
+<th>Road-name address (now)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legal status</td>
+<td>Retired as of Dec 31, 2013</td>
+<td>Korea's only legal address since Jan 1, 2014</td>
+</tr>
+<tr>
+<td>What the number means</td>
+<td>A land-survey lot number inside a neighborhood, assigned in whatever order the land was surveyed</td>
+<td>Distance along a named road, in steps of 20 meters</td>
+</tr>
+<tr>
+<td>Postal code</td>
+<td>6 digits, used since 2000</td>
+<td>5 digits, since Aug 1, 2015</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Source: English Wikipedia's "Addresses in South Korea" and Money Today, checked 2026-11-12.</p>
+
+<p>On paper that looks like a clean swap, but the two systems weren't retired on the same day everywhere. <a href="https://en.wikipedia.org/wiki/Addresses_in_South_Korea">English Wikipedia's entry on Korean addressing</a> notes that road-name signs started going up nationwide from July 29, 2011, years before the old lot numbers actually stopped being valid at the end of 2013, so plenty of buildings, utility bills and even some street furniture quietly carried both for a while.</p>
+<h2>🏢 Why do giant apartment blocks share one road address?</h2>
+<p><strong>One name can cover a small village.</strong> Korea's largest apartment complexes are often boxed under a single road-name address, so the number on the main gate won't tell a stranger which of a dozen towers, let alone which entrance, they actually need.</p>
+<p>Songpa-gu's Jamsil Elle's complex is the case a 2014 report used to make the point: 5,678 households spread across the site, yet the whole complex answers to just two road names, Olympic-ro 95 and Olympic-ro 99. Buildings 130 through 136 actually face Seokchon Lake-ro and Hangang-ram-ro, but their official address still starts with Olympic-ro, about 500 meters from where those buildings stand.</p>
+<p>That wasn't a one-off mix-up. The same count found 19,542 apartment complexes nationwide, 88% of the total, carrying only a single road-name address. The ministry grouped them that way for administrative convenience, and current rules let any resident request an individual road name for their own building, though few bother.</p>
+<details class="term"><summary>What is jibun (지번)?</summary><p>The old lot-number address, built from a neighborhood name plus a survey-order lot number. It told you roughly which block a building sat on, but said nothing about which road faced it or how far along that road it was, which is the confusion the 2014 switch was meant to fix.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Ttukseom_apartment_buildings_seoul.jpg/1280px-Ttukseom_apartment_buildings_seoul.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="High-rise apartment towers in Seongsu-dong, Seoul; the building on the right is marked &#x27;101&#x27;, one of several numbered towers sharing the complex" width="1200" height="900" loading="lazy"/><figcaption>High-rise apartment towers in Seongsu-dong, Seoul; the building on the right is marked &#x27;101&#x27;, one of several numbered towers sharing the complex · Photo: <a href="https://commons.wikimedia.org/wiki/File:Ttukseom_apartment_buildings_seoul.jpg" rel="nofollow">Sgroey</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<h2>✉️ What changed with the postal code?</h2>
+<p><strong>It got shorter, and it got tied to the road, not the mail carrier.</strong> Korea swapped its 6-digit postal code, in use since 2000, for a 5-digit one on August 1, 2015, built on the new road-name system. An address copied from an older site or document may still carry the wrong one.</p>
+<table>
+<thead>
+<tr>
+<th>Digit position</th>
+<th>What it identifies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First 3 digits</td>
+<td>The city, county, or autonomous district</td>
+</tr>
+<tr>
+<td>Last 2 digits</td>
+<td>A sequential number within that area</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">About 34,000 of these codes exist nationwide, each tied to fixed landmarks like roads, rivers, and railways rather than a postal route. Source: Jeonbuk Ilbo, checked 2026-11-12.</p>
+
+<p>Korea Post wrote to all 20,800,000 households nationwide twice during 2014 to warn them before the switch, and the warning worked: a year after launch, 96 of every 100 pieces of mail already carried the new 5-digit code. Mail still printed with the old 6-digit code started drawing a non-standard postage surcharge from August 1, 2016.</p>
+<div class="me"><b>My take</b>
+If a string of unfamiliar Korean words and numbers makes you want to just hand your phone to a driver, that's the right instinct. The system is logical once you know the trick, but it wasn't built to be decoded on the spot in an alley with a suitcase. <u>Save the full address, not just the building number</u>, and let a map app's pin do the counting a basic number was always meant to do. That's the part worth remembering over the arithmetic.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Pull up your stay's listing and copy the complete road-name address, including the building and unit number, into a note before you need it in a hurry. A partial address is exactly how the Jamsil-style mix-ups above happen.</li>
+<li><b>What locals argue about</b> Whether the system is actually finished: the government's 2015 budget for road-name and building-number work fell 32% to 5.77 billion won (about $4.31 million at ₩1,338.73/$1), down from 8.47 billion won in 2014, even as 88% of apartment complexes still shared one address.</li>
+<li><b>Watch for</b> faded or missing building-number plates. Gwangju alone counted 127,848 of them in 2020, many installed around 2011 and worn down by rain and sun since, with replacement stuck in a dispute over whether the city or the building's owner should pay.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Do I ever actually need the old lot-number (jibun) address?</dt>
+<dd><b>Mostly just for property paperwork.</b> Land and building-title records kept the jibun lot number, since registration for land itself never moved onto the new format. A tenant or a tourist can go years without ever needing it; a buyer closing on an apartment can't skip it.</dd>
+<dt>What if my driver still can't find the door?</dt>
+<dd><b>Send a live GPS pin instead of reading the address out loud.</b> A string of unfamiliar syllables is easy to mishear over a phone speaker, and even a perfectly correct address still only narrows a visit down to one stretch of pavement, not a specific gate, floor, or tower entrance.</dd>
+</dl></div>
+
+<p>An address that reads like a ruler still beats one that reads like a raffle ticket, even if it takes a block to get used to doing the math. Next time someone hands you a Korean address, save the whole string, road name and building number together, and let the map count the meters for you.</p>
+<p class="notice">Prices and hours were checked on 2026-11-12; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/why-google-maps-still-cant-navigate-you.html">Why Google Maps Still Can&#x27;t Navigate You in Korea</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/the-200000-trash-bag-mistake-visitors.html">The ₩200,000 Trash Bag Mistake Visitors Make in Korea</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[press] <a href="https://www.mt.co.kr/society/2014/01/02/2014010216534276397">Money Today, full rollout of the road-name address as Korea's legal address from Jan 1, 2014</a></li>
+<li>[press] <a href="https://www.mt.co.kr/politics/2014/11/07/2014110709497610961">Money Today (the300), Jamsil Elle's apartment complex address case, 19,542 single-address complexes, 2015 budget cut</a></li>
+<li>[other] <a href="https://en.wikipedia.org/wiki/Addresses_in_South_Korea">Wikipedia, "Addresses in South Korea" (basic-number rule, rollout/retirement dates, jibun land-title exception)</a></li>
+<li>[other] <a href="https://centers.ibs.re.kr/html/living_en/housing/addy.html">Institute for Basic Science International Center, living guide on Korean road-name addresses (building-number example)</a></li>
+<li>[press] <a href="https://www.jjan.kr/article/20150408544918">Jeonbuk Ilbo, 5-digit postal code structure and nationwide rollout</a></li>
+<li>[press] <a href="https://weekly.khan.co.kr/article/201608161714581">Kyunghyang Weekly (우정 이야기), one-year adoption rate and postage surcharge</a></li>
+<li>[press] <a href="https://www.asiae.co.kr/en/article/2020062310073960712">Asia Economy (English), Gwangju building-number plate deterioration and budget dispute</a></li>
+<li>[other] <a href="https://www.investing.com/currencies/usd-krw-historical-data">Investing.com, USD/KRW closing rate, Nov 11, 2026</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-11-12-korean-address-system-explained--></div>
+</div></div></main></div></div></body></html>
