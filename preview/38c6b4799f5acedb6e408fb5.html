@@ -1,0 +1,355 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Seoul&#x27;s Ddareungi Bike Share: What a Visitor Actually Pays</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Seoul&#x27;s Ddareungi Bike Share: What a Visitor Actually Pays</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Seoul_Bike_Station.jpg/1280px-Seoul_Bike_Station.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Ddareungi costs ₩1,000 an hour with no account needed, covers 2,799 stations, and the one fine locals argue about never lands on cyclists.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>A one-hour ride costs ₩1,000</b>: buy it as a guest with a card, no Korean ID or account required.</li>
+<li><b>The dock is rarely the real problem</b>: it's the app's card registration and SMS step that trips visitors up, not finding a bike.</li>
+<li><b>Set up payment before you need it</b>: <u>register your card in the app on hotel Wi-Fi the night before</u>, so a failed verification text doesn't strand you at an empty dock.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Seoul_Bike_Station.jpg/1280px-Seoul_Bike_Station.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A Ddareungi rental terminal at night, its sign explaining how to rent without registering as a member or Foreign Tourist, a bike parked in front" width="1200" height="1600" loading="lazy"/><figcaption>A Ddareungi rental terminal at night, its sign explaining how to rent without registering as a member or Foreign Tourist, a bike parked in front · Photo: <a href="https://commons.wikimedia.org/wiki/File:Seoul_Bike_Station.jpg" rel="nofollow">LittleT889</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩1,000</b><span>🚲 a 1-hour day pass</span><i>no membership or deposit needed</i></div>
+<div><b>2,799</b><span>📍 rental stations citywide</span><i>end of 2025, still growing</i></div>
+<div><b>₩200</b><span>⏱️ overtime, every 5 minutes</span><i>once your pass's clock runs out</i></div>
+<div><b>No fine</b><span>⛑️ for skipping a helmet</span><i>e-scooter riders get fined ₩20,000; Ddareungi riders don't</i></div>
+</div>
+
+
+
+<p>Ever stood outside a palace wall, phone battery dropping, and eyed a row of white-and-green bikes nobody else seemed to want? Seoul parks thousands of them at almost every subway exit and park gate, free for the taking the moment a card goes through. The part you only notice watching a local do it is how little ceremony is involved: tap a phone, pull a bike loose, pedal off mid-sentence.</p>
+<p>Fifteen minutes later you're riding along the Han River with actual wind on your face, which no subway car has ever managed. Whether you're doing the same by sundown depends less on your legs than on whether the app's payment screen cooperates first.</p>
+<details class="term"><summary>"QR-type" vs. "LCD-type" Ddareungi bike — what's the difference?</summary><p>Both rent the same way in the end, but two console generations are still mixed into the fleet. A QR-type bike unlocks when the app's camera scans the code on its handlebars; an older LCD-type bike needs its bike number typed into the app first, then a rental code punched into the small screen mounted on the bars</p></details>
+
+<h2>💰 What does Ddareungi actually cost, and do you need to join first?</h2>
+<p><strong>A one-hour day pass costs ₩1,000 (about $0.75 at ~₩1,337.5/$1), and nobody has to prove they live in Korea to buy one.</strong> <a href="https://news.seoul.go.kr/traffic/archives/33719">Seoul's own public bike fee schedule</a> lists the exact same ₩1,000 rate whether the rider is a registered member or a one-time guest, and the same holds for the ₩2,000 two-hour and ₩3,000 three-hour options. Going past the pass's limit adds ₩200 every 5 minutes.</p>
+<p>That guest access isn't new or fragile. Since noon on July 7, 2017, non-members, foreign tourists included, have been able to skip identity verification, account sign-up, and a deposit entirely, paying only by mobile micropayment or credit card. <em>The catch is that guest pricing only covers a day pass; a season pass still needs a registered account.</em></p>
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th>1-hour</th>
+<th>2-hour</th>
+<th>3-hour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day pass (member or guest)</td>
+<td>₩1,000 ($0.75)</td>
+<td>₩2,000 ($1.50)</td>
+<td>₩3,000 ($2.24)</td>
+</tr>
+<tr>
+<td>7-day season pass</td>
+<td>₩3,000 ($2.24)</td>
+<td>₩4,000 ($2.99)</td>
+<td>not offered</td>
+</tr>
+<tr>
+<td>30-day season pass</td>
+<td>₩5,000 ($3.74)</td>
+<td>₩7,000 ($5.23)</td>
+<td>not offered</td>
+</tr>
+<tr>
+<td>180-day season pass</td>
+<td>₩15,000 ($11.21)</td>
+<td>₩20,000 ($14.95)</td>
+<td>not offered</td>
+</tr>
+<tr>
+<td>365-day season pass</td>
+<td>₩30,000 ($22.43)</td>
+<td>₩40,000 ($29.91)</td>
+<td>not offered</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">A season pass looks like the better deal on paper, but it only pays off past a week of near-daily rides; a short trip almost always comes out cheaper on day passes alone. Rates per Seoul's official fee schedule, USD at ~₩1,337.5/$1 (Nov 11, 2026 close). Sourced 2026-11-19</p>
+
+<p>The 3-hour tier is barely a year old: Seoul added it on November 13, 2025. The network behind these passes is bigger than it looks from one station: about 45,000 bikes across 2,799 rental stations by the end of 2025, up from 2,719 in 2022, and 5.06 million people have signed up as members over the service's first decade.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="Ddareungi rental stations citywide" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">Ddareungi rental stations citywide</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">2,699</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">2,729</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">2,759</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">2,789</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">2,819</text><text x="56.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2022</text><text x="244.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2023</text><text x="432.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2024</text><text x="620.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">2025</text><polyline points="56.0,247.3 244.0,159.9 432.0,151.8 620.0,84.7" fill="none" stroke="var(--accent,#1F5AF6)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="56.0" cy="247.3" r="4" fill="var(--accent,#1F5AF6)"/><text x="56.0" y="237.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">2,719</text><circle cx="244.0" cy="159.9" r="4" fill="var(--accent,#1F5AF6)"/><text x="244.0" y="149.9" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">2,762</text><circle cx="432.0" cy="151.8" r="4" fill="var(--accent,#1F5AF6)"/><text x="432.0" y="141.8" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">2,766</text><circle cx="620.0" cy="84.7" r="4" fill="var(--accent,#1F5AF6)"/><text x="620.0" y="74.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">2,799</text></svg><figcaption>자료: <a href="https://mediahub.seoul.go.kr/archives/2016829" rel="nofollow">Seoul Metropolitan Government fact-check brief, checked 2026-11-19</a></figcaption></figure>
+
+<h2>📍 Where do you actually find one, and how does unlocking work?</h2>
+<p><strong>Stations sit at almost every subway exit and park gate, so the real question in Seoul isn't whether one exists nearby, it's whether it has an open slot.</strong> Tourists are a small but fast-growing share of who's asking: foreign riders logged 50,599 rides between January and September 2025, up from 20,163 in the same months of 2019.</p>
+<p>Unlocking takes one of two forms depending on which console the bike happens to have, QR scan or typed code, and either way the app's own map shows which nearby docks still have bikes or open slots before you walk over. <em>A dock reading empty on the map is usually accurate within a minute or two, not a glitch worth arguing with.</em></p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Seoul_Bike_31590.jpg/1280px-Seoul_Bike_31590.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A white Ddareungi bike with a green-rimmed front wheel and a wire basket, docked beside a historic stone wall with city traffic behind it" width="1200" height="675" loading="lazy"/><figcaption>A white Ddareungi bike with a green-rimmed front wheel and a wire basket, docked beside a historic stone wall with city traffic behind it · Photo: <a href="https://commons.wikimedia.org/wiki/File:Seoul_Bike_31590.jpg" rel="nofollow">*Youngjin</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure>
+
+<p>Payment inside the app has also widened recently: KakaoPay and Samsung Pay were added as options, with NaverPay scheduled to follow. All three assume a Korean-linked account, though, so <u>a foreign-issued card through the regular checkout screen is still the more dependable route for a short visit</u>.</p>
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Seoul_Bike_22907_terminal.jpg/1280px-Seoul_Bike_22907_terminal.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A close-up of a Ddareungi bike&#x27;s rental terminal mounted on the handlebars, its small screen and card slot visible" width="1200" height="800" loading="lazy"/><figcaption>A close-up of a Ddareungi bike&#x27;s rental terminal mounted on the handlebars, its small screen and card slot visible · Photo: <a href="https://commons.wikimedia.org/wiki/File:Seoul_Bike_22907_terminal.jpg" rel="nofollow">*Youngjin</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure>
+
+<h2>⛑️ What's the one rule nobody enforces, and where does this fall apart for a visitor?</h2>
+<p><strong>Korean law requires a helmet for anyone cycling on a road or bike lane, but a Ddareungi rider who skips one faces no fine at all.</strong> The 2018 Road Traffic Act amendment that made helmets mandatory left the enforcement decree without a penalty clause for bicycles, a gap the city never closed. Compare that to an e-scooter, where riding bare-headed costs ₩20,000.</p>
+<details class="term"><summary>Member vs. non-member pricing — does it actually matter here?</summary><p>For a day pass, no: Seoul's fee schedule charges members and non-members the identical ₩1,000/₩2,000/₩3,000 rate. The difference only shows up if you'd rather buy a week or a year at once, since those season rates are member-only.</p></details>
+
+<p>The other place a visitor can get tripped up has nothing to do with the bike itself. Seoul's short-term Climate Companion Card, the 1-to-7-day transit pass sold since October 1, 2026, covers subway and bus but explicitly leaves out Ddareungi and the Han River ferry. <em>Assuming that pass covers a bike ride is the kind of mistake that only shows up once you're standing at the dock with a card that won't scan.</em></p>
+<div class="me"><b>My take</b>
+First time on a bike in traffic that doesn't move the way it does back home isn't a confidence builder, and it's fine to admit that before you've pedaled a single block. If I were visiting with only a few days to spare, I'd test one along the Han River path first, away from intersections, before trusting a Ddareungi through actual city streets. Once the app and the card are both working, the real decision left is just how much walking you're willing to trade for ₩1,000 an hour.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Ride the Han River path between two bridges near where you're staying. It's flat, separated from car traffic, and long enough to feel like you got your ₩1,000 worth before the clock runs out.</li>
+<li><b>What locals argue about</b> Whether the helmet rule should carry an actual fine. A one-month helmet-lending pilot lost 23.8% of the helmets it handed out, only 3% of riders used one anyway, and 88% of a city survey opposed making helmets mandatory for Ddareungi, so the law stays on the books unenforced.</li>
+<li><b>Watch for</b> The clock only resets when you dock the bike and start a fresh rental; ride past your pass's limit without returning it and the overtime adds up at ₩200 every 5 minutes.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Can a child ride along, or is this strictly an adult, solo thing?</dt>
+<dd>Solo riders must be 13 or older, but a guardian can now buy a family pass, launched in April 2025, to bring a younger child along under supervision. About 30,000 of these sold in the pass's first six months, and 78% of that buying happened on weekends.</dd>
+<dt>What if every dock near me is completely full when I need to return the bike?</dt>
+<dd>Seoul tracks the busiest stations by name and staffs 330 of them directly during commute hours, and it pays riders 100 mileage points for docking or renting at a station running over 200% or under 30% of capacity at those times. In practice, that means checking the app's live map for the next-closest station with space is worth doing before you start circling the block.</dd>
+</dl></div>
+
+<p>Ddareungi is one of the few things in Seoul that's actually cheaper than it looks on paper, and the app is the only part worth testing before you actually need it to work. Register a card the night before, on hotel Wi-Fi, and the rest of the trip is just picking a dock with an open slot.</p>
+<p class="notice">Prices and hours were checked on 2026-11-19; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/seoul-taxis-for-visitors-what-apps.html">Seoul Taxis for Visitors: What the Apps Actually Cost</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/09/what-t-money-card-actually-costs-in.html">What a T-money Card Actually Costs in Seoul</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://news.seoul.go.kr/traffic/archives/33719">Seoul Metropolitan Government transport portal, Ddareungi fee schedule</a></li>
+<li>[official] <a href="https://news.seoul.go.kr/traffic/archives/515711">Seoul Metropolitan Government press release, new 3-hour and family passes</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2016177">Seoul Metropolitan Government (mediahub), Ddareungi 10th-anniversary figures</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/1094609">Seoul Metropolitan Government (mediahub), 2017 non-member/foreign-tourist access policy</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2016829">Seoul Metropolitan Government (mediahub), rental-station count fact-check</a></li>
+<li>[official] <a href="https://news.seoul.go.kr/traffic/archives/510651">Seoul Metropolitan Government, short-term Climate Companion Card page</a></li>
+<li>[press] <a href="https://www.asiae.co.kr/en/article/2023091421050587848">Asia Economy / Korea Herald affiliate, helmet rule and enforcement</a></li>
+<li>[official] <a href="https://apps.apple.com/kr/app/%EC%84%9C%EC%9A%B8%EC%9E%90%EC%A0%84%EA%B1%B0-%EB%94%B0%EB%A6%89%EC%9D%B4/id1037272004">Seoul Bike app listing (publisher: Seoul Metropolitan Government), App Store</a></li>
+<li>[other] <a href="https://kbthink.com/investment/fx/daily/261112.html">KB Think, USD/KRW daily exchange rate close</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-11-19-seoul-ddareungi-bike-share-for-visitors--></div>
+</div></div></main></div></div></body></html>
