@@ -1,0 +1,388 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Seoul&#x27;s Hangang Bus: What It Costs and What Changes Dec 1</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">Seoul&#x27;s Hangang Bus: What It Costs and What Changes Dec 1</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Hangang_Bus_%28103%29_-_1.jpg/1280px-Hangang_Bus_%28103%29_-_1.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">Seoul's Han River water bus costs ₩3,000 flat, just added a Seoul Forest stop, and cuts sailings from 40 to 32 a day starting December 1.</p><div class="tldr"><b>Quick answer</b><ul>
+<li><b>One ride costs ₩3,000</b>: no reservation needed, pay by transit card, same price whether you ride one stop or the whole line.</li>
+<li><b>Weekends aren't ₩3,000 forever</b>: a ₩6,000-8,000 weekend tier is under review, not active yet, and wouldn't arrive before spring 2027.</li>
+<li><b>Plan around Dec 1</b>: <u>treat the ride as the first or last stop of your day</u>, since sailings drop from 40 to 32 a day for winter.</li>
+</ul></div><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Hangang_Bus_%28103%29_-_1.jpg/1280px-Hangang_Bus_%28103%29_-_1.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A white and blue Hangang Bus ferry on the Han River, a railway bridge with a passing train in the background" width="1200" height="800" loading="lazy"/><figcaption>A white and blue Hangang Bus ferry on the Han River, a railway bridge with a passing train in the background · Photo: <a href="https://commons.wikimedia.org/wiki/File:Hangang_Bus_(103)_-_1.jpg" rel="nofollow">Lee Jeong Woo/Ministry of Culture, Sports and Tourism</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure><div class="kv">
+<div><b>₩3,000</b><span>🚤 a one-way Hangang Bus ride</span><i>flat fare, pay like the subway</i></div>
+<div><b>8</b><span>📍 river piers from Dec 1</span><i>up from 7, Seoul Forest just joined</i></div>
+<div><b>32</b><span>⏰ daily sailings this winter</span><i>down from 40, starting Dec 1</i></div>
+<div><b>603,293</b><span>🧍 riders in year one</span><i>through Sep 14, 2026</i></div>
+</div>
+
+
+
+<p>Ever watched a city bus pull away and wished, just once, it had been a boat instead? Step onto the Hangang Bus at Yeouido as the sun drops behind the 63 Building, and the engine noise fades into something closer to a ferry crossing than a commute. The deck's glass runs floor to ceiling, so the bridges slide past at eye level instead of overhead, and for a few minutes the Han River does the work the subway usually does underground.</p>
+<p>That quiet is still new. The service only turned one year old this past September, and it spent a chunk of its first winter running on half its route after a boat hit the riverbed. What's left by late 2026 is a system that works, prices that are still genuinely cheap, and a December schedule change worth knowing before you show up at a pier expecting the summer timetable.</p>
+<details class="term"><summary>What's 기후동행패스, the card everyone pays with?</summary><p>Seoul's transit pass used to be called the Climate Card (기후동행카드); it was folded into a national program called "Everyone's Card" (모두의카드) and relaunched as 기후동행패스 on September 1, 2026. Old Climate Cards stopped working for new charges that day, so a card bought before September needs swapping at a subway station if it's still in a wallet somewhere.</p></details>
+
+<h2>🚤 What does a ride actually cost, and when does that change?</h2>
+<p><strong>A single Hangang Bus ride is ₩3,000 (about $2.25 at ~₩1,333/$1) for an adult, ₩1,800 ($1.35) for a teen aged 13-18, and ₩1,100 ($0.83) for a child aged 6-12, the same price no matter which pier you board at or get off at.</strong> <a href="https://mediahub.seoul.go.kr/archives/2017244">Seoul's own transport portal</a> confirms this flat structure, and a July 2026 update repeats the identical numbers, so the fare hasn't moved since the route was rebuilt. Cash doesn't work at all; tap a transit card or buy a paper ticket from the pier kiosk if you're card-less.</p>
+<p>That flat rate won't last on weekends forever. Seoul is reviewing a ₩6,000 base fare for weekends and holidays, rising to ₩8,000 if you book a reserved seat, against a ₩5,000 reserved weekday option; none of this is active yet, and city officials say it would need a public hearing and council review before taking effect, likely around spring 2027. <em>A Seoul Research Institute survey of 2,107 riders found a median willingness to pay of ₩8,248 a ride, which is why the city picked ₩6,000 as a number most weekend riders would still accept.</em></p>
+<details class="term"><summary>What does a "reserved" (예약) fare actually buy you?</summary><p>A reserved ticket guarantees you a seat on a specific sailing instead of showing up and hoping there's room. It costs more than the standby fare, and right now it's only part of the weekend plan under review, not something most riders pay today.</p></details>
+
+<p>Ride often, and the per-trip math changes. The city's current transit page lists Hangang Bus under its "frequent rider" tier: once regular rides on ~₩3,000 regional transport add up, a monthly ₩100,000 flat-rate pass (₩90,000 for youth, seniors or larger families; ₩80,000 for low-income or three-child households) covers unlimited trips, replacing the old Climate Card's ₩5,000 Hangang-Bus-only add-on from last year. Cross more than 33 single rides in a month and that math flips: the Plus pass already costs less than paying ₩3,000 a trip.</p>
+<table>
+<thead>
+<tr>
+<th>Way to see the river</th>
+<th style="text-align: right;">Price (KRW / USD)</th>
+<th>What you get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hangang Bus, single ride</td>
+<td style="text-align: right;">₩3,000 ($2.25)</td>
+<td>One leg, any distance, any pier pair</td>
+</tr>
+<tr>
+<td>Hangang Bus, Plus pass</td>
+<td style="text-align: right;">₩100,000/mo ($75.00)</td>
+<td>Unlimited rides plus other ~₩3,000 regional transit</td>
+</tr>
+<tr>
+<td>Hangang Bus, weekend (proposed)</td>
+<td style="text-align: right;">₩6,000-8,000 ($4.50-$6.00)</td>
+<td>Not active; pending council review</td>
+</tr>
+<tr>
+<td>Ddareungi bike, 1-hour pass</td>
+<td style="text-align: right;">₩1,000 ($0.75)</td>
+<td>Pedal power, your own pace</td>
+</tr>
+<tr>
+<td>E-Land Cruise, day cruise</td>
+<td style="text-align: right;">₩18,900-19,900 ($14.18-$14.93)</td>
+<td>A tourist boat with seagull feeding, Yeouido only</td>
+</tr>
+<tr>
+<td>E-Land Cruise, moonlight dinner</td>
+<td style="text-align: right;">₩139,000 ($104.28)</td>
+<td>Dinner and a live show, Yeouido-Banpo Bridge round trip</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">The Hangang Bus is public transit priced like a subway ride; the cruise is entertainment priced like a night out. Seoul's own operator points to that gap when defending the weekend fare review, noting even an ₩8,000 reserved ride stays well under cruise prices. Rates checked 2026-11-20</p>
+
+<h2>📍 Where do the piers go, and what's new with Seoul Forest?</h2>
+<p><strong>Eight piers make up the network from December 1, split into an East route through Jamsil and a West route through Magok, both meeting at Yeouido.</strong> The West route links Magok and Mangwon to Yeouido; the East route runs from Jamsil through Ttukseom, the newly added Seoul Forest stop, then on to Oksu and finally Apgujeong before reaching Yeouido, so Oksu and Apgujeong are both served on every sailing instead of alternating as before.</p>
+<details class="term"><summary>What's the difference between the East and West routes?</summary><p>Seoul split what used to be one long Magok-to-Jamsil line into two shorter routes that both stop at Yeouido. Riding from Jamsil to Magok now means getting off at Yeouido and changing boats, with an 18-minute transfer wait built into the winter schedule.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Hangang_Bus_Magok_Station_20250918_%2802%29.jpg/1280px-Hangang_Bus_Magok_Station_20250918_%2802%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A &#x27;Hangang Bus Station (Magok)&#x27; pier sign pointing toward the floating dock, its convenience store and waiting area, visitors walking down the gangway" width="1200" height="800" loading="lazy"/><figcaption>A &#x27;Hangang Bus Station (Magok)&#x27; pier sign pointing toward the floating dock, its convenience store and waiting area, visitors walking down the gangway · Photo: <a href="https://commons.wikimedia.org/wiki/File:Hangang_Bus_Magok_Station_20250918_(02).jpg" rel="nofollow">Republic of  Korea</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<p>Each pier earns its stop. Ttukseom's riverside park has a café and photo-friendly lawns right by the dock, Yeouido's own pier sits next to a Starbucks, and free shuttle buses link Magok and Jamsil piers to the nearest subway station every 15 to 30 minutes on weekdays; Apgujeong pier gets its own shuttle loop on the same schedule. Bring a bike if you want: every vessel carries 20 bike-rack spaces alongside wheelchair spaces and priority seating.</p>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Piers (west to east)</th>
+<th style="text-align: right;">Daily round trips (pre-Dec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>West</td>
+<td>Magok → Mangwon → Yeouido</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td>East</td>
+<td>Jamsil → Ttukseom → Seoul Forest → Oksu → Apgujeong → Yeouido</td>
+<td style="text-align: right;">16</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Seoul Forest joined the regular East-route stop list starting with the December schedule; before that it only ran during a spring garden-festival trial. Checked 2026-11-20</p>
+
+<h2>⏰ What changes on December 1, and is it still safe after last year's accident?</h2>
+<p><strong>Starting December 1, 2026 through February 28, 2027, the Hangang Bus runs fewer, more predictably spaced trips: 32 sailings a day instead of 40, with both routes settling into a flat one-hour interval instead of anywhere from 20 minutes to 90 minutes apart.</strong> The East route's hours shrink to 11:00-21:04, down from 11:00-21:30, and the West route moves to 11:22-20:42, down from 11:20-21:39. If you're transferring between routes at Yeouido, budget the newly fixed 18-minute wait rather than hoping for a quick hop.</p>
+<p><u>Build the Hangang Bus into your plan as the first or last thing you do that day, not a connection you're racing to catch.</u> A one-hour interval means missing a sailing by five minutes costs you most of an hour, something the old, denser summer schedule mostly forgave.</p>
+<p>There's a second, slower-moving change behind the schedule, and it ties straight back to safety. Starting January 2027, Seoul will add mooring posts at all seven original piers one at a time, Jamsil first, to cut down on pier sway and make docking more stable in strong wind or high water; each pier closes to boat service while its own upgrade is underway, with exact dates posted on the Hangang Bus site as they're scheduled.</p>
+<p>That caution traces back to a real incident. On November 15, 2025, a vessel struck the riverbed after a route deviation tied to poor buoy visibility, and the city ran only the Magok-Yeouido half of the line for months while it investigated. The fix wasn't cosmetic: Seoul surveyed and dredged the 8.9km channel near Hannam Bridge where the grounding happened, installed an alarm that sounds the moment a boat drifts off its charted course, and swapped the accident site's buoys for taller ones, up from 1.4m to 4.5m.</p>
+<p>Full-route service came back on March 1, 2026. Since then, Seoul reports zero accidents, a 99.3% on-time rate, and 97.3% rider satisfaction from more than 3,500 people surveyed, and ridership tells its own story about the before and after.</p>
+<figure class="chart"><svg viewBox="0 0 640 340" width="100%" role="img" aria-label="Hangang Bus riders, before and after the March restart" style="max-width:640px;font-family:inherit;font-variant-numeric:tabular-nums"><text x="56" y="24" font-size="15" font-weight="700" fill="var(--ink,#141A21)">Hangang Bus riders, before and after the March restart</text><line x1="56" x2="620" y1="288.0" y2="288.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="292.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">5,923.75riders</text><line x1="56" x2="620" y1="227.0" y2="227.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="231.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">153,785.12riders</text><line x1="56" x2="620" y1="166.0" y2="166.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="170.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">301,646.5riders</text><line x1="56" x2="620" y1="105.0" y2="105.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="109.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">449,507.88riders</text><line x1="56" x2="620" y1="44.0" y2="44.0" stroke="var(--line,#E4E8EC)" stroke-width="1"/><text x="48" y="48.0" font-size="11" text-anchor="end" fill="var(--muted,#8A94A0)">597,369.25riders</text><text x="197.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Sep 2025–Feb 2026 (partial route)</text><text x="479.0" y="308" font-size="12" text-anchor="middle" fill="var(--muted,#8A94A0)">Mar–Sep 2026 (full route restored)</text><rect x="108.9" y="247.3" width="176.2" height="40.7" rx="3" fill="var(--accent,#1F5AF6)"/><text x="197.0" y="241.3" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">104,498riders</text><rect x="390.9" y="84.7" width="176.2" height="203.3" rx="3" fill="var(--accent,#1F5AF6)"/><text x="479.0" y="78.7" font-size="12" font-weight="700" text-anchor="middle" fill="var(--ink,#141A21)">498,795riders</text></svg><figcaption>자료: <a href="https://news.tf.co.kr/read/life/2366822.htm" rel="nofollow">Seoul Metropolitan Government figures, reported by The Fact, checked 2026-11-20</a></figcaption></figure>
+
+<p class="table-note">About 104,500 people rode during the rocky partial-service months; nearly five times as many, 498,795, rode in the roughly six months after the full route came back, 83% of the service's entire first-year total. Figures from Seoul city, reported by The Fact, checked 2026-11-20</p>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Hangang_Bus_Yeouido_%2807%29.jpg/1280px-Hangang_Bus_Yeouido_%2807%29.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A passenger photographing the Seoul skyline from a Hangang Bus&#x27;s open rear deck, the river and railing visible below" width="1200" height="800" loading="lazy"/><figcaption>A passenger photographing the Seoul skyline from a Hangang Bus&#x27;s open rear deck, the river and railing visible below · Photo: <a href="https://commons.wikimedia.org/wiki/File:Hangang_Bus_Yeouido_(07).jpg" rel="nofollow">Republic of  Korea</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<div class="me"><b>My take</b>
+Reading "boat hits riverbed" in a headline is enough to make anyone cross a thing off their list, and that reaction makes sense before you look at what actually changed afterward. If I were visiting with one evening free, I'd book the Hangang Bus for the view, not for getting somewhere on time, since a one-hour interval makes it a poor substitute for the subway if you're actually trying to catch a flight or a dinner reservation. Ride it the way you'd ride a cruise you're not paying cruise prices for, and the accident history stops being the thing that decides your evening.
+</div>
+
+<div class="deeper"><b>Go deeper</b><ul>
+<li><b>If you have one more hour</b> Get off at Ttukseom and walk the riverside park before catching a later sailing back; it's the one pier built around lingering rather than just boarding.</li>
+<li><b>What locals argue about</b> Whether a public ferry should ever charge tourist-style weekend prices. The operator says even ₩8,000 only recovers a fraction of the roughly ₩11,000-20,000 it costs to run one full trip, so the debate isn't really about greed, it's about who should cover the rest.</li>
+<li><b>Watch for</b> Pier-by-pier closures starting January 2027 as mooring upgrades roll out; a pier you planned around could be shut that week.</li>
+</ul></div>
+
+<div class="faq"><b>FAQ</b><dl>
+<dt>Can I bring my e-scooter or e-bike along for the ride?</dt>
+<dd>No. Electric personal mobility devices, e-scooters and e-bikes included, are banned from the vessel outright, a rule easy to miss since an ordinary pedal bike is explicitly welcome in the rack spaces. Roll up on an e-scooter and expect to be turned away at the ramp, not just asked to fold it up.</dd>
+<dt>Why is there a numbered ticket system, and do I need one?</dt>
+<dd>Grab a printed queue number from the kiosk the moment you reach the dock, because Saturday afternoons and the evening commute rush fill each departure in ticket order, not by who happens to be standing nearest the ramp. Skip that step, and the next boat can pull out three-quarters empty while people who showed up after you board ahead of you, purely because they're holding a lower number.</dd>
+</dl></div>
+
+<p>The Hangang Bus earned its first year the hard way, and what's running now is a steadier, smaller, more honestly scheduled version of the thing that launched with a lot of noise in 2025. Book around the hourly winter interval, bring a transit card, and treat the ride itself as the destination.</p>
+<p class="notice">Prices and hours were checked on 2026-11-20; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/11/seouls-ddareungi-bike-share-what.html">Seoul&#x27;s Ddareungi Bike Share: What a Visitor Actually Pays</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/seoul-forest-seongsu-dong-free-day-plan.html">Seoul Forest + Seongsu-dong: A Free Day Plan</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2017244">Seoul Metropolitan Government (mediahub), full-route resumption, East/West routes, safety fixes</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2019976">Seoul Metropolitan Government (mediahub), December 2026 winter schedule and mooring upgrades</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2019484">Seoul Metropolitan Government (mediahub), one-year performance figures (on-time rate, satisfaction)</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2018687">Seoul Metropolitan Government (mediahub), July 2026 Hangang Bus fare and route overview</a></li>
+<li>[official] <a href="https://news.seoul.go.kr/traffic/archives/517687">Seoul Metropolitan Government transit portal, frequent-rider Plus pass fare</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2018492">Seoul Metropolitan Government (mediahub), Climate Card Plus / Plus pass launch</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2019060">Seoul Metropolitan Government (mediahub), Climate Card to 기후동행패스 transition (Sept 2026)</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2015615">Seoul Metropolitan Government (mediahub), launch-day pier and shuttle details</a></li>
+<li>[official] <a href="https://mediahub.seoul.go.kr/archives/2015050">Seoul Metropolitan Government (mediahub), onboard facilities and capacity</a></li>
+<li>[official] <a href="https://www.elandcruise.com">E-Land Cruise official booking page, Han River tourist cruise fares</a></li>
+<li>[press] <a href="https://news.bizwatch.co.kr/article/real_estate/2026/09/29/0030">BizWatch, proposed weekend/holiday fare review and cost recovery</a></li>
+<li>[press] <a href="https://www.wikitree.co.kr/articles/1152179">WikiTree, fare review status and city statement</a></li>
+<li>[press] <a href="https://news.tf.co.kr/read/life/2366822.htm">The Fact (news.tf.co.kr), one-year cumulative ridership figures</a></li>
+<li>[other] <a href="https://kbthink.com/investment/fx/daily/261119.html">KB Think, USD/KRW daily exchange rate close</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-11-20-seoul-hangang-bus-cost-guide--></div>
+</div></div></main></div></div></body></html>
