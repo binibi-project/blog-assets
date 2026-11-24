@@ -1,0 +1,407 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>How to Make Andong Guksi (Korean Soybean Noodle Soup)</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+/*
+-----------------------------------------------
+Korea with Binibi theme (from 비니비의 이것저것노트 v3)
+본문 + 오른쪽 사이드바(검색·카테고리·월별), 카드 목록에 날짜·라벨, 다크 모드 자동
+Blogger가 자동 삽입하는 부품(검색·라벨·보관함·추천글·프로필·Attribution·신고)의 자리를 전부 명시
+----------------------------------------------- */
+:root{
+  --bg:#FFFFFF; --bg2:#F5F7F9; --line:#E4E8EC;
+  --ink:#141A21; --ink2:#4B5563; --muted:#8A94A0;
+  --accent:#1F5AF6; --accent-soft:#E8EEFF;
+  --notice-bg:#FFF7E6; --notice-line:#F0C36D;
+  --radius:14px; --wrap:1080px; --side:280px;
+  --font:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F1317; --bg2:#171C22; --line:#242B33;
+    --ink:#E8ECF0; --ink2:#B4BCC6; --muted:#7C8794;
+    --accent:#6C9BFF; --accent-soft:#1B2740;
+    --notice-bg:#2A2416; --notice-line:#7A5E1E;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:-0.01em;font-variant-numeric:tabular-nums}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+img{max-width:100%;height:auto;border-radius:10px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+
+/* Blogger 기본 요소 정리 */
+.navbar,#navbar,.blogger-clickTrap{display:none!important}
+body{padding-top:0!important}
+.section,.widget{margin:0}
+.widget h2{display:none}
+.post-header,.post-footer-line-3,.post-location,.post-icons,.post-share-buttons,.feed-links,.post-timestamp{display:none}
+.hidden-widgets{display:none}
+
+/* 헤더 */
+.site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:64px}
+#header{flex:0 0 auto}
+#header .titlewrapper h1,#header .titlewrapper h1 a{margin:0;font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1;display:inline-flex;align-items:center;gap:8px}
+#header .titlewrapper h1::before{content:"";width:26px;height:26px;border-radius:7px;background:url('https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@main/icon-en2-180.png') center/cover no-repeat;display:inline-block;flex:none}
+#header .descriptionwrapper{display:none}
+.site-nav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{white-space:nowrap;font-size:14px;font-weight:600;color:var(--ink2);padding:8px 12px;border-radius:999px}
+.site-nav a:hover{background:var(--bg2);text-decoration:none;color:var(--ink)}
+
+/* 홈 히어로 */
+.hero{padding:48px 0 8px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h2{margin:0 0 10px;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-0.035em}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:16px;max-width:56ch}
+@media (max-width:600px){.hero{padding:30px 0 6px}.hero h2{font-size:26px}}
+
+/* 2단 레이아웃 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) var(--side);gap:48px;padding:16px 0 56px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr);gap:32px}}
+body.item-view .layout{grid-template-columns:minmax(0,1fr) var(--side)}
+@media (max-width:900px){body.item-view .layout{grid-template-columns:minmax(0,1fr)}}
+.layout>*{min-width:0}
+.post-body img,.post-body svg,.post-body iframe{max-width:100%;height:auto}
+
+/* 목록: 날짜 라벨 + 카드 */
+h2.date-header{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px;text-transform:uppercase}
+.date-outer:first-child h2.date-header{margin-top:6px}
+.blog-posts .post-outer{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin:0 0 14px;transition:transform .15s ease,border-color .15s ease}
+.blog-posts .post-outer:hover{transform:translateY(-2px);border-color:var(--accent)}
+.post-title{margin:0 0 8px;font-size:22px;line-height:1.35;font-weight:800;letter-spacing:-0.02em}
+.post-title a{color:var(--ink)}
+.post-title a:hover{text-decoration:none;color:var(--accent)}
+.post-body{color:var(--ink2);font-size:16px}
+.jump-link{margin-top:10px}
+.jump-link a{font-weight:700;font-size:14px}
+.post-body img.thumb{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin:4px 0 14px}
+body.item-view .post-body img.thumb{display:none}
+.post-footer{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.post-footer-line{display:contents}
+.post-author{font-weight:600;color:var(--ink2)}
+.post-labels{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.post-labels a{background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px}
+.post-labels a:hover{text-decoration:none}
+.post-comment-link{margin-left:auto}
+.blog-pager{display:flex;justify-content:space-between;margin:28px 0 0;font-weight:600}
+.blog-pager .home-link{display:none}
+.status-msg-wrap{margin:28px 0 0;width:100%}
+.status-msg-body{position:static;padding:0;background:transparent;color:var(--muted);font-size:15px}
+.status-msg-border,.status-msg-bg{display:none}
+
+/* 글 페이지 */
+body.item-view .blog-posts .post-outer{background:transparent;border:0;padding:0;margin:0}
+body.item-view .blog-posts .post-outer:hover{transform:none}
+body.item-view h2.date-header{margin:34px 0 6px}
+body.item-view .post-title{font-size:34px;line-height:1.25;margin:0 0 22px}
+body.item-view .post-body{color:var(--ink);font-size:17.5px}
+.post-body p.deck{margin:0 0 18px;color:var(--ink2);font-size:17px;line-height:1.7}
+.blog-posts .post-body p.deck{margin:0}
+body.item-view .post-footer{border-top:1px solid var(--line);padding-top:16px;margin-top:36px}
+@media (max-width:600px){body.item-view .post-title{font-size:27px}}
+.post-body p{margin:0 0 1.15em}
+.post-body h2{font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:2em 0 .7em;padding-left:14px;border-left:4px solid var(--accent);line-height:1.35}
+.post-body h3{font-size:19px;font-weight:700;margin:1.6em 0 .6em}
+.post-body ul,.post-body ol{padding-left:1.4em;margin:0 0 1.15em}
+.post-body li{margin-bottom:.35em}
+.post-body blockquote{margin:1.4em 0;padding:14px 18px;background:var(--bg2);border-left:4px solid var(--line);border-radius:0 10px 10px 0;color:var(--ink2)}
+.post-body table{width:100%;border-collapse:collapse;font-size:15px;margin:1.2em 0;display:block;overflow-x:auto}
+.post-body th,.post-body td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+@media (max-width:600px){.post-body table{font-size:14px}.post-body th,.post-body td{white-space:nowrap;padding:8px 10px}}
+.post-body th{background:var(--bg2);font-weight:700;white-space:nowrap}
+.post-body code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg2);padding:2px 6px;border-radius:6px}
+.post-body sup{font-size:11px;line-height:0;margin-left:2px}
+.post-body sup a{color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;font-weight:600}
+.post-body sup a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.post-body .notice{background:var(--notice-bg);border:1px solid var(--notice-line);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--ink2);margin:2em 0 0}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+/* 강조 */
+.post-body strong{font-weight:800;color:var(--ink)}
+.post-body em{font-style:normal;color:var(--accent);font-weight:600}
+.post-body u{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px}
+.post-body mark{background:var(--accent-soft);color:var(--ink);padding:0 4px;border-radius:3px}
+/* 핵심 숫자 타일 */
+.post-body .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 1.4em}
+.post-body .kv>div{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.post-body .kv b{display:block;font-size:26px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--ink)}
+.post-body .kv span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+.post-body .kv i{font-style:normal;font-size:12px;font-weight:700;color:var(--accent)}
+/* 3줄 요약 */
+.post-body .tldr{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin:0 0 1.6em;font-size:15.5px}
+.post-body .tldr>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.post-body .tldr ul{margin:0;padding-left:1.2em}
+.post-body .tldr li{margin-bottom:.3em}
+/* 차트 */
+.post-body figure.chart{margin:1.4em 0;padding:16px 16px 10px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.post-body figure.chart svg{display:block;width:100%;height:auto}
+.post-body figure.chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+/* 표 */
+.post-body table{border-radius:10px;border:1px solid var(--line)}
+.post-body td b{font-weight:800}
+.post-body .check{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:1.4em 0}
+.post-body .check>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .check ul{margin:0;padding-left:1.2em}
+.post-body .tldr li b,.post-body .check li b{color:var(--ink)}
+/* 자주 묻는 질문: 질문은 굵게, 답은 첫 마디가 결론 */
+.post-body .faq{border-top:1px solid var(--line);margin:2em 0 1.4em;padding-top:1em}
+.post-body .faq>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.post-body .faq dl{margin:0}
+.post-body .faq dt{font-weight:700;color:var(--ink);margin:1em 0 .3em;padding-left:1.6em;position:relative}
+.post-body .faq dt::before{content:'Q';position:absolute;left:0;color:var(--accent);font-weight:800}
+.post-body .faq dd{margin:0 0 .6em;padding-left:1.6em;color:var(--ink2)}
+/* 표 바로 아래 한 줄 캡션(출처·기준일) */
+.post-body p.table-note{font-size:13px;color:var(--muted);margin:-.6em 0 1.2em}
+/* 다음에 읽을 글: 손으로 고른 링크 2개 */
+.post-body .next{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:2em 0 1em}
+.post-body .next>b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.post-body .next ul{margin:0;padding-left:1.1em}
+.post-body .next a{font-weight:700}
+/* 작성자 상자: 캐릭터 + 소개 + 이 글을 만드는 방법 */
+.post-body .author{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:14px;padding:16px 18px;margin:2.4em 0 0}
+.post-body .author img{width:96px;height:128px;border-radius:12px;object-fit:cover;flex:none;margin:0;border:0}
+.post-body .author b{display:block;color:var(--ink);font-size:16px}
+.post-body .author p{margin:.2em 0 0;font-size:14.5px;line-height:1.6;color:var(--ink2)}
+.post-body .author p.how{font-size:13px;color:var(--muted);margin-top:.5em}
+/* 제 경우 (1인칭 관점) */
+.post-body .me{border:1px dashed var(--accent);border-radius:12px;padding:14px 18px;margin:1.6em 0;font-size:15.5px;color:var(--ink)}
+.post-body .me b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+/* 대표 사진 */
+.post-body figure.cover{margin:0 0 1.4em}
+.post-body figure.cover img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px}
+.post-body figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+/* 본문 이미지 */
+.post-body figure.img{margin:1.4em 0}
+.post-body figure.img img{width:100%;max-height:520px;object-fit:cover;border-radius:12px}
+.post-body figure.img figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+/* 용어 설명 드롭박스 */
+.post-body details.term{border:1px solid var(--line);border-radius:10px;background:var(--bg2);margin:.9em 0;padding:0}
+.post-body details.term summary{cursor:pointer;padding:10px 14px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+.post-body details.term summary::before{content:"?";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;flex:0 0 auto}
+.post-body details.term summary::-webkit-details-marker{display:none}
+.post-body details.term[open] summary{border-bottom:1px solid var(--line)}
+.post-body details.term p{margin:0;padding:10px 14px 12px;font-size:14.5px;color:var(--ink2)}
+/* 더 깊이 */
+.post-body .deeper{border:1px solid var(--line);border-left:4px solid var(--ink2);border-radius:0 12px 12px 0;padding:14px 18px;margin:1.6em 0;background:var(--bg)}
+.post-body .deeper b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+.post-body .deeper ul{margin:0;padding-left:1.2em}
+.post-body .deeper li{margin-bottom:.45em}
+
+/* 댓글 */
+.comments{margin-top:36px}
+.comments h4{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 10px}
+#comment-post-message{margin-top:20px}
+
+/* 사이드바 */
+.sidebar .widget{margin:0 0 30px}
+.sidebar .widget h2{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.sidebar ul{list-style:none;margin:0;padding:0}
+.sidebar li{margin:0}
+/* 검색 */
+.BlogSearch table,.BlogSearch tbody{display:block;width:100%}
+.BlogSearch tr{display:flex;gap:6px;align-items:center}
+.BlogSearch td{display:block;padding:0;border:0}
+.BlogSearch td.gsc-input{flex:1}
+.BlogSearch input.gsc-input{width:100%;height:40px;font:inherit;font-size:14px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink);outline:none;margin:0}
+.BlogSearch input.gsc-input:focus{border-color:var(--accent)}
+.BlogSearch input.gsc-search-button{height:40px;font:inherit;font-size:13px;font-weight:700;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;margin:0}
+/* 카테고리(라벨) → 칩 */
+.sidebar .Label ul{display:flex;flex-wrap:wrap;gap:8px}
+.sidebar .Label li a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:5px 12px;border-radius:999px}
+.sidebar .Label li a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.sidebar .Label li span{font-size:12px;color:var(--muted);margin-left:2px}
+/* 월별 보관함 → 평평한 목록 */
+.sidebar .BlogArchive .toggle,.sidebar .BlogArchive ul.posts{display:none}
+.sidebar .BlogArchive li.archivedate{padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.sidebar .BlogArchive li.archivedate a{color:var(--ink2);font-weight:600}
+.sidebar .BlogArchive .post-count{color:var(--muted);font-size:12px;margin-left:4px}
+.sidebar .BlogArchive ul.hierarchy ul.hierarchy{padding-left:12px}
+/* 사이드바 소개 박스 */
+.side-about{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14px;color:var(--ink2);margin-bottom:30px}
+.side-about strong{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+
+/* 푸터 */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);padding:32px 0 44px;font-size:14px;color:var(--muted)}
+.site-footer .PageList ul{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer .PageList a{color:var(--ink2);font-weight:600}
+.footer-note{margin:0 0 10px;max-width:60ch}
+.footer-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;font-size:12px;color:var(--muted)}
+.footer-meta .section,.footer-meta .widget,.footer-meta .widget-content,.footer-meta h3{display:inline;margin:0;font-size:12px;font-weight:400;text-align:left!important}
+.footer-meta .widget{margin-right:16px}
+.footer-meta a{color:var(--muted)}
+
+.preview-bar{background:#FFF4D6;color:#5B4500;font-size:13px;line-height:1.5;padding:8px 16px;text-align:center}
+</style></head>
+<body class="item-view"><div class="preview-bar">Preview (private draft). Merging the PR publishes it.</div>
+<header class="site-header"><div class="wrap"><div id="header"><div class="titlewrapper"><h1>Korea with Binibi</h1></div></div></div></header>
+<div class="wrap"><div class="layout" style="grid-template-columns:minmax(0,1fr)"><main><div class="blog-posts"><div class="post-outer">
+<h3 class="post-title">How to Make Andong Guksi (Korean Soybean Noodle Soup)</h3><div class="post-body"><img class="thumb" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Korean.noodle-Kalguksu-01.jpg/1280px-Korean.noodle-Kalguksu-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="" width="1200" height="675" loading="lazy"/><p class="deck">A real Andong guksi recipe: the soybean-powder dough ratio, why Andong itself barely serves it, and how to make it at home.</p><!--more--><figure class="cover"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Korean.noodle-Kalguksu-01.jpg/1280px-Korean.noodle-Kalguksu-01.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A bowl of kalguksu with clear broth, hand-cut noodles, a soft-boiled egg half, cucumber, scallion and shredded dried seaweed on top" width="1200" height="803" loading="lazy"/><figcaption>A bowl of kalguksu with clear broth, hand-cut noodles, a soft-boiled egg half, cucumber, scallion and shredded dried seaweed on top · Photo: <a href="https://commons.wikimedia.org/wiki/File:Korean.noodle-Kalguksu-01.jpg" rel="nofollow">by jslander</a> / Wikimedia Commons (CC BY 2.0)</figcaption></figure><p>The noodle soup called Andong guksi isn't really something you can find much in Andong anymore, and that gap is most of why it's worth learning to make at home. In the hills north of the city, a food critic visiting one old head-family house in the summer of 2019 wrote down a line from its elderly jongbu, the woman who had run that kitchen for decades: "the men would catch the sweetfish, boil it down, and that became the broth," she told him, describing a dish her household once saved for ancestral rites. English-language pages about Andong guksi today mostly repeat that it's "the original form of kalguksu" without saying what actually separates the two, and a 2020 feature in <a href="https://www.imaeil.com/page/view/2020101614224052847">Imaeil (매일신문)</a> fills in both gaps: the dough, and how rare the real thing has become even where it was born.</p>
+<div class="kv">
+<div><b>2</b><span>🍜 servings</span><i>adapted from Kimchimari's kalguksu</i></div>
+<div><b>1 hr 10 min</b><span>⏰ prep + cook</span><i>30 min prep, 40 min at the stove</i></div>
+<div><b>30-40%</b><span>🫘 soybean ratio</span><i>share of the dry mix that's soybean powder, not wheat</i></div>
+<div><b>&lt;5</b><span>🏮 Andong shops using the name</span><i>restaurants in Andong itself still serving it as "Andong guksi"</i></div>
+</div>
+
+<h2>🫘 Why soybean powder, and not an egg, is what makes it Andong</h2>
+<p><strong>The dough, not the broth, is what separates Andong guksi from ordinary kalguksu.</strong> A 2020 Imaeil feature on Andong's remaining noodle shops says the one real difference is soybean powder mixed into the flour, usually making up 30-40% of the dry mix; push it higher and the dough smells of raw soybean and tears easily while you roll it. The paper also notes that real Andong-style bowls skip the extras common in Seoul, no egg strands, nothing to make the noodles glossy, because the point of the dish was always the plain, slightly rough bite of the dough itself.</p>
+<details class="term"><summary>Why "guksi" and not "guksu" (noodles)?</summary><p>Guksu (국수) is standard Korean for noodles; guksi is the local Gyeongsang-region word for the same thing, and it's the form Andong natives use for their own dish.</p></details>
+
+<p>That gap between the real thing and its reputation runs deeper than the dough. The same Imaeil feature counts how few restaurants in Andong itself still serve a dish under the name "Andong guksi," fewer than you can count on one hand, while noodle shops carrying that sign line up across Seoul in Mapo, Gangnam and Jongno instead. Wheat itself used to be the limiting ingredient: in the Joseon era it was expensive enough that a bowl of noodles was a special-occasion food for yangban households, and getting served guksi at someone's ancestral rite was something a guest could brag about afterward.</p>
+<details class="term"><summary>Geonjin guksi vs. nureun guksi</summary><p>Geonjin guksi (건진국시) is boiled, rinsed in cold water and served in a chilled broth; nureun guksi (누른국시), the version most people actually cook and eat today, goes straight from the pot into warm broth. Geonjin guksi is the rarer, more labor-intensive one, traditionally made with broth boiled down from dried sweetfish for ancestral-rite tables; it's largely disappeared from home kitchens.</p></details>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Soy_powder.jpg/1280px-Soy_powder.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A loose pile of pale yellow soybean powder, the kind mixed into Andong-style noodle dough" width="1200" height="922" loading="lazy"/><figcaption>A loose pile of pale yellow soybean powder, the kind mixed into Andong-style noodle dough · Photo: <a href="https://commons.wikimedia.org/wiki/File:Soy_powder.jpg" rel="nofollow">Tiia Monto</a> / Wikimedia Commons (CC BY-SA 3.0)</figcaption></figure>
+
+<h2>🍜 What you need, and the one ratio that decides the dough</h2>
+<p><strong>Weigh the soybean powder instead of eyeballing it, since the ratio is the recipe.</strong> The dough and broth quantities below are doubled from <a href="https://kimchimari.com/kalguksu-korean-knife-cut-noodle-soup/">Kimchimari's kalguksu</a> recipe, with the soybean-powder swap and the plainer, egg-free topping adapted from the Imaeil feature on Andong-style noodles.</p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th style="text-align: right;">Amount</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All-purpose (wheat) flour</td>
+<td style="text-align: right;">170 g</td>
+<td>about 60-70% of the dry mix</td>
+</tr>
+<tr>
+<td>Soybean powder (roasted, 볶은 콩가루)</td>
+<td style="text-align: right;">70-100 g</td>
+<td>30-40% of the dry mix; more and the dough smells raw and tears</td>
+</tr>
+<tr>
+<td>Salt</td>
+<td style="text-align: right;">1/2 tsp</td>
+<td>for the dough</td>
+</tr>
+<tr>
+<td>Water</td>
+<td style="text-align: right;">about 135 ml</td>
+<td>warm, added a little at a time</td>
+</tr>
+<tr>
+<td>Water, for broth</td>
+<td style="text-align: right;">950 ml (4 cups)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dried anchovies</td>
+<td style="text-align: right;">1/3 cup</td>
+<td></td>
+</tr>
+<tr>
+<td>Dried kelp (dashima)</td>
+<td style="text-align: right;">1 piece, about 2x3 in</td>
+<td></td>
+</tr>
+<tr>
+<td>Dried shrimp</td>
+<td style="text-align: right;">1 Tbsp, optional</td>
+<td></td>
+</tr>
+<tr>
+<td>Guk ganjang (soup soy sauce)</td>
+<td style="text-align: right;">1 tsp</td>
+<td></td>
+</tr>
+<tr>
+<td>Salt, for broth</td>
+<td style="text-align: right;">1/2 tsp</td>
+<td></td>
+</tr>
+<tr>
+<td>Zucchini</td>
+<td style="text-align: right;">1 small, cut into matchsticks</td>
+<td></td>
+</tr>
+<tr>
+<td>Onion</td>
+<td style="text-align: right;">1/2, sliced thin</td>
+<td></td>
+</tr>
+<tr>
+<td>Potato, optional</td>
+<td style="text-align: right;">1 small, cut into matchsticks</td>
+<td>thickens the broth</td>
+</tr>
+<tr>
+<td>Green onion</td>
+<td style="text-align: right;">2 stalks, chopped</td>
+<td></td>
+</tr>
+<tr>
+<td>Minced beef</td>
+<td style="text-align: right;">a small handful</td>
+<td>pan-fried plain with a pinch of salt, no soy-garlic marinade</td>
+</tr>
+<tr>
+<td>Soy sauce, for the table</td>
+<td style="text-align: right;">to taste</td>
+<td>stirred with chopped scallion, a pinch of chili flakes if you want heat</td>
+</tr>
+</tbody>
+</table>
+<p class="table-note">Dough and broth adapted from Kimchimari's kalguksu recipe; soybean ratio and plain topping from a 2020 Imaeil feature, checked 2026-11-24.</p>
+
+<p>Andong cooks traditionally roll that dough out thin enough to let light through it, the way a food writer once compared it to hanji paper. <strong>That thinness is also why a stand mixer doesn't really help here</strong>; it's a rolling-pin job, same as the original recipe calls for.</p>
+<p>If your grocery store only stocks plain soy flour, that's not quite the same thing: look for a bag labeled "roasted soy powder," made from grilled and crushed soybeans, since that's the roasted version Andong-style dough is actually built on.</p>
+<div class="faq"><b>FAQ</b><dl>
+<dt>Can I cook extra and portion it out across the week?</dt>
+<dd><strong>Not really, not without losing the bite.</strong> Leftovers left sitting in their own broth swell within hours, so plan for a single sitting instead of stretching one pot across several meals.</dd>
+<dt>Is "Andong guksi" the same thing as "Andong guksu"?</dt>
+<dd><strong>They're two names for one dish, and nobody has settled which spelling wins.</strong> A reporter who spent an afternoon eating it with a food critic in 2019 never picked a side in his own write-up, since locals use both terms interchangeably.</dd>
+</dl></div>
+
+<figure class="img"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Kalguksu_with_Gamja-Ongsimi_20220430_001.jpg/1280px-Kalguksu_with_Gamja-Ongsimi_20220430_001.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" alt="A metal bowl of kalguksu with potato-dough chunks, carrot, cucumber, sesame seeds and crumbled seaweed on top, two kimchi side dishes next to it" width="1200" height="851" loading="lazy"/><figcaption>A metal bowl of kalguksu with potato-dough chunks, carrot, cucumber, sesame seeds and crumbled seaweed on top, two kimchi side dishes next to it · Photo: <a href="https://commons.wikimedia.org/wiki/File:Kalguksu_with_Gamja-Ongsimi_20220430_001.jpg" rel="nofollow">Mobius6</a> / Wikimedia Commons (CC BY-SA 4.0)</figcaption></figure>
+
+<h2>🥣 How to make it, and where it usually goes wrong</h2>
+<p><strong>Start the dough before anything else, since it needs at least 30 minutes to rest.</strong> Mix the flour and soybean powder in the ratio above, add the salt, then work in the warm water a little at a time until it forms a rough ball.</p>
+<ol>
+<li>
+<p>Knead the dough about 10 times until it's smooth, wrap it well, and let it rest at least 30 minutes, or up to a day in the fridge.</p>
+</li>
+<li>
+<p>Simmer the dried anchovies and kelp, plus the dried shrimp if you're using it, in the 950 ml of water for 30 minutes. Pull the kelp out after 15-20 minutes, before it turns slimy.</p>
+</li>
+<li>
+<p>Strain out the solids, season the broth with the guk ganjang and salt, add the onion, and simmer about 5 minutes until it turns translucent.</p>
+</li>
+<li>
+<p>Roll the rested dough out thin on a floured board, fold it a few times, and slice it into thin strips with a knife; toss the cut noodles in flour right away so they don't clump.</p>
+</li>
+<li>
+<p>Add the zucchini (and potato, if using) to the broth, bring it back up to a boil, then add the noodles and cook 3-5 minutes, tasting at the 3-minute mark.</p>
+</li>
+<li>
+<p>While the noodles cook, pan-fry the minced beef plain with a pinch of salt so it's ready the moment the pot is done.</p>
+</li>
+<li>
+<p>Ladle into bowls, top with the beef and chopped green onion, and let everyone stir in their own soy-scallion sauce at the table rather than seasoning the whole pot.</p>
+</li>
+</ol>
+<p><strong>Most of what goes wrong happens before the noodles ever hit the pot.</strong> <em>A dough that's too wet won't hold the thin roll Andong guksi is known for</em>, so add water in small amounts and stop as soon as the dough comes together, even if it still looks a little rough. The other common miss is timing: homemade noodles this thin cook fast, and three minutes at a real boil is usually enough, so walking away for a phone call is how a careful dough turns into mush in the bowl.</p>
+<div class="me"><b>My take</b>
+The guksi came right after a morning spent walking through a few of Andong's old seowon on that September 2026 trip, and next to the richer, chili-dark jjimdak we ate later, it was the plainer of the two dishes, the one that let the dough do the talking. <u>Weigh the soybean powder the first time instead of guessing</u>, so you have a real number to adjust from on the second batch. <strong>If you only have the ingredients and the afternoon for one Andong noodle project, this is the one that actually teaches you something about the region's cooking, not just its flavor.</strong>
+</div>
+
+<p><strong>Make the dough once at the lower 30% soybean ratio before deciding you want it stronger, and skip the egg if you're tempted to add one for looks.</strong> The plain version is the one that still holds a place in a handful of kitchens in Andong itself, which is a better reason to get it right than any amount of garnish would be.</p>
+<p class="notice">Prices and hours were checked on 2026-11-24; they change, so double-check before you go.</p>
+<div class="next"><b>Read next</b><ul><li><a href="https://korea-by-numbers.blogspot.com/2026/10/how-to-make-andong-jjimdak-korean.html">How to Make Andong Jjimdak (Korean Braised Chicken)</a></li><li><a href="https://korea-by-numbers.blogspot.com/2026/10/what-is-seowon-inside-koreas-confucian.html">What Is a Seowon? Inside Korea&#x27;s Confucian Academies</a></li></ul></div>
+
+<h2>Sources</h2>
+<ul>
+<li>[other] <a href="https://kimchimari.com/kalguksu-korean-knife-cut-noodle-soup/">Kimchimari, "Kalguksu (Korean Knife-Cut Noodle Soup) with Homemade Noodles" by Sue, reference recipe adapted for dough and broth quantities, steps, and the note on Andong-style soybean dough</a></li>
+<li>[press] <a href="https://www.imaeil.com/page/view/2020101614224052847">Imaeil (매일신문), "[안동을 걷다, 먹다] 3. 오늘은 안동국시," feature on Andong noodle shops (soybean ratio, no-egg style, few remaining Andong restaurants vs. many in Seoul, Joseon-era history, geonjin/nureun broth notes)</a></li>
+<li>[press] <a href="https://www.journalist.or.kr/m/m_article.html?no=58243">The Journalist (저널리스트), "그 옛날엔 양반만 먹었다는 안동국수 혹은, '안동국시'" (jongbu's sweetfish-broth quote, 국시 dialect term, 2019 visit)</a></li>
+<li>[press] <a href="https://view.asiae.co.kr/en/article/2022052611063472901">Asia Economy (아시아경제), "Do You Know 'Geonjinguksu'?... 'Andong Guksi' That Stimulates Your Appetite in the Hot Summer" (geonjin vs. nureun guksu definitions, thin-as-hanji dough detail)</a></li>
+<li>[other] <a href="https://groceryeshop.us/products/assi-roasted-soy-powder-pound-16-ounce">Groceryeshop.us, Assi Roasted Soy Powder 16 oz product page (roasted vs. plain soy flour naming)</a></li>
+</ul><div class="author"><img src="https://cdn.jsdelivr.net/gh/binibi-project/blog-assets@cb92786aa04eedf1a1dc56e668e2da27bfc78cac/author-la-480.jpg" alt="Illustration of Binibi, the author (AI-drawn)" width="96" height="128"/><div><b>Binibi</b><p>A Korean living in Seoul who checks the timetable before trusting the brochure.</p><p class="how">Drafted and researched with AI help, checked against the sources, then read and approved by me before it goes up.</p></div></div><!--post:2026-11-24-andong-guksi-recipe--></div>
+</div></div></main></div></div></body></html>
